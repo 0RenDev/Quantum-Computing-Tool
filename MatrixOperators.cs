@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Accord.Math;
-// All of the Matrix Operations are contained here.
+
 
 namespace MatrixOperators
 {
