@@ -13,12 +13,19 @@ namespace MultithreadedMatmul
 
     class Matrix
     {
+        // Number of rows
         private int Row { get; set; }
+
+        // Number of rows
         private int Column { get; set; }
+
+        // Array of doubles to store Matrix
         double[,] arr;
 
+        // Static lock object for used for multithreading
         private static Object _lock = new Object();
 
+        // Constructor for Matrix
         public Matrix(int row, int column)
         {
             Row = row;
@@ -26,6 +33,7 @@ namespace MultithreadedMatmul
             arr = new double[row, column];
         }
 
+        // Get a single row of a matrix
         public double[] GetRow(int rowNumber)
         {
             return Enumerable.Range(0, Row)
@@ -33,6 +41,7 @@ namespace MultithreadedMatmul
                 .ToArray();
         }
 
+        // Get a single column of a matrix
         public double[] GetColumn(int columnNumber)
         {
             return Enumerable.Range(0, Column)
@@ -40,6 +49,7 @@ namespace MultithreadedMatmul
                 .ToArray();
         }
 
+        // Fill a matrix with random double
         public void RandomValues()
         {
             Random rand = new Random();
@@ -52,69 +62,49 @@ namespace MultithreadedMatmul
             }
         }
 
-        public static void VectorMul(int tmp,  Matrix a, Matrix b, Matrix r)
-        {
-            int i = tmp / b.Column;
-            int j = tmp % b.Column;
-
-            double[] x = a.GetRow(i);
-            double[] y = b.GetColumn(j);
-
-            double sum = 0;
-            for (int k = 0; k < x.Length; k++)
-            {
-                sum += x[k] * y[k];
-            }
-
-            lock(_lock)
-            {
-                r.arr[i, j] = sum;
-            }
-
-
-            Console.WriteLine("Calculating [" + i + ", " + j + "]");
-        }
-
-        public static Matrix operator *(Matrix a, Matrix b)
-        {
-            Matrix result = new Matrix(a.Row, a.Column);
-            List<Thread> threads = new List<Thread>();
-
-            for(int i = 0; i < a.Row * b.Column; i++)
-            {
-                int temp = i;
-                Thread thread = new Thread(() => VectorMul(temp, a, b, result));
-                thread.Start();
-                threads.Add(thread);
-            }
-
-            // foreach(Thread thread in threads) { thread.Join(); }
-
-            return result;
-        }
-
+        /*
+         * This method performs a fast multithreaded matrix multiplication.
+         * It utilizes the a thread pool to allow all of the threads to run concurrently
+         * without getting into a deadlock
+         */
         public static Matrix MatrixMultiply(Matrix a, Matrix b)
         {
+            // Get dimensions of the matrices
             int m = a.Row;
             int n = a.Column;
             int p = b.Column;
 
+            // Create a matrix to return
             Matrix result = new Matrix(m,p);
 
-            // May use Environment.ProcessorCount
-            int numThreads = Environment.ProcessorCount; // Or set it according to your system or requirement
-            ManualResetEvent[] doneEvents = new ManualResetEvent[numThreads];
+            
+            /*
+             * Set the number of threads based on system requirements
+             * We want enough threads to run the operation quickly, but not so many 
+             * that it drastically starves the CPU
+             */
+            int numThreads = Environment.ProcessorCount; 
+            ManualResetEvent[] doneEvents = new ManualResetEvent[numThreads]; // Create a list of reset events to wait on threads
+
+            // Calculate the number of rows handled by a single thread
             int rowsPerThread = m / numThreads;
             Console.WriteLine("Num Threads: " + numThreads);
             Console.WriteLine("Rows per thread: " + rowsPerThread);
 
+            // Spawn threads
             for (int i = 0; i < numThreads; i++)
             {
+                // Calculate which range ith thread is operating on
                 int startRow = i * rowsPerThread;
                 int endRow = (i == numThreads - 1) ? m : (i + 1) * rowsPerThread;
+
+                // Set the event as not done
                 doneEvents[i] = new ManualResetEvent(false);
+
+                // Add a delegate to the thread pool
                 ThreadPool.QueueUserWorkItem(delegate (object state)
                 {
+                    // Perform a matrix multiplication
                     for (int row = startRow; row < endRow; row++)
                     {
                         for (int col = 0; col < p; col++)
@@ -127,14 +117,16 @@ namespace MultithreadedMatmul
                             result.arr[row, col] = sum;
                         }
                     }
-                    ((ManualResetEvent)state).Set();
+                    ((ManualResetEvent)state).Set(); // Set thread as up when operation is done
                 }, doneEvents[i]);
             }
-
+            
+            // Wait for all threads to finish and return
             WaitHandle.WaitAll(doneEvents);
             return result;
         }
 
+        // Performs a naive n^3 matrix multiplication
         public static Matrix ElemMatMul(Matrix a, Matrix b)
         {
 
@@ -153,6 +145,7 @@ namespace MultithreadedMatmul
             return result;
         }
 
+        // Checks equality of two matrices
         public static bool operator ==(Matrix a, Matrix b)
         {
             if (a.Row != b.Row || a.Column != b.Column) return false;
@@ -170,6 +163,7 @@ namespace MultithreadedMatmul
             return true;
         }
 
+        // Checks inequality of two matrices
         public static bool operator !=(Matrix a, Matrix b)
         {
             if (a.Row != b.Row || a.Column != b.Column) return true;
@@ -187,6 +181,7 @@ namespace MultithreadedMatmul
             return false;
         }
 
+        // Print a matrix
         public void Print()
         {
             Console.WriteLine("Matrix: " + Row + "x"+ Column);
