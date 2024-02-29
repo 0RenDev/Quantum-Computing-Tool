@@ -1,8 +1,5 @@
 from qiskit import QuantumCircuit
 from qiskit.quantum_info import Statevector 
-from qiskit.visualization import plot_histogram, plot_bloch_multivector
-import matplotlib.pyplot as plt
-import numpy as n
 import qiskit.quantum_info as qi
 
 # Create the quantum circuit with two qbits = 0, 1
