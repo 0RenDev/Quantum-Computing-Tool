@@ -93,11 +93,8 @@ namespace LinearAlgebra
             Complex[,] array = new Complex[m1, n2];
             Matrix result = new Matrix(array);
 
-            /*
-             * Set the number of threads based on system requirements
-             * We want enough threads to run the operation quickly, but not so many 
-             * that it drastically starves the CPU
-             */
+            // Set the number of threads based on system requirements. We want enough threads to run the operation quickly, but not so many that it drastically starves the CPU
+          
             int numThreads = Environment.ProcessorCount;
             ManualResetEvent[] doneEvents = new ManualResetEvent[numThreads]; // Create a list of reset events to wait on threads
 
@@ -119,7 +116,7 @@ namespace LinearAlgebra
                 // Add a delegate to the thread pool
                 ThreadPool.QueueUserWorkItem(delegate (object state)
                 {
-                    // Perform a matrix multiplication
+                    // Perform a matrix multiplication. Not sure why there are warnings here. should fix 
                     for (int row = startRow; row < endRow; row++)
                     {
                         for (int col = 0; col < n2; col++)
@@ -161,9 +158,7 @@ namespace LinearAlgebra
             return true;
         }
  
-        //operations to add
-        //tensor product between two matrices
-        // Tensor product between two matrices
+        // Tensor product between two matrices. simple appoarch
         public static Matrix TensorProduct(Matrix matrix1, Matrix matrix2)
         {
             int rows1 = matrix1.rows;
@@ -171,6 +166,7 @@ namespace LinearAlgebra
             int rows2 = matrix2.rows;
             int cols2 = matrix2.cols;
 
+            // Tensor product matrix is an n*mxk*p matrix for two matrices nxk and mxp
             Complex[,] resultElements = new Complex[rows1 * rows2, cols1 * cols2];
 
             for (int i = 0; i < rows1; i++)
