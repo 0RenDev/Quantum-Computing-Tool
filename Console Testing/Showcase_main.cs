@@ -11,8 +11,12 @@ class Program
     {
         // instance containong examples
         Showcases example = new Showcases();
-        // run specific example
-        example.vector_times_matrix();
+
+        // run specific examples
+        example.timeTestTensor(44, 41, 96, 82);
+        example.timeTestTensor(106, 12, 90, 16);
+
+        //example.vector_times_matrix();
         //example.mmultThreadedMult();
 
         Console.ReadKey();  
