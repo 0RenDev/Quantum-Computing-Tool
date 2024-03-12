@@ -1,7 +1,4 @@
-﻿using System.Numerics;
-using System.Threading;
-
-namespace LinearAlgebra
+﻿namespace LinearAlgebra
 {
     // this is one of the library classes 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -187,7 +184,23 @@ namespace LinearAlgebra
         }
 
         // Vector- Vector Inner Product
+
+
+
         // euclidean norm^2 = Inner Product of vector with itself
+        public static Complex EuclideanNorm(Vector vector)
+        {
+            Complex[] elements = vector.elements;
+            int len = elements.Length;
+
+            Complex sum = new Complex(0.0, 0.0);
+            for(int i = 0; i < elements; i++)
+            {
+                
+            }
+        }
+
+
         // The Cauchy–Schwarz inequality
     }
 
