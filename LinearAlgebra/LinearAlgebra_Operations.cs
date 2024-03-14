@@ -1,5 +1,5 @@
-﻿using System.Numerics;
-using System.Threading;
+﻿using System.ComponentModel;
+using System.Numerics;
 
 namespace LinearAlgebra
 {
@@ -114,22 +114,25 @@ namespace LinearAlgebra
                 doneEvents[i] = new ManualResetEvent(false);
 
                 // Add a delegate to the thread pool
-                ThreadPool.QueueUserWorkItem(delegate (object state)
+                ThreadPool.QueueUserWorkItem(delegate (object? state)
                 {
-                    // Perform a matrix multiplication. Not sure why there are warnings here. should fix 
-                    for (int row = startRow; row < endRow; row++)
+                    if (state != null)
                     {
-                        for (int col = 0; col < n2; col++)
+                        for (int row = startRow; row < endRow; row++)
                         {
-                            Complex sum = 0;
-                            for (int k = 0; k < n1; k++)
+                            for (var col = 0; col < n2; col++)
                             {
-                                sum += a.elements[row, k] * b.elements[k, col];
+                                Complex sum = 0;
+                                for (int k = 0; k < n1; k++)
+                                {
+                                    sum += a.elements[row, k] * b.elements[k, col];
+                                }
+                                result.elements[row, col] = sum;
                             }
-                            result.elements[row, col] = sum;
                         }
+                        ((ManualResetEvent)state).Set(); // Set thread as up when operation is done
                     }
-                    ((ManualResetEvent)state).Set(); // Set thread as up when operation is done
+                    
                 }, doneEvents[i]);
             }
 
@@ -187,7 +190,97 @@ namespace LinearAlgebra
         }
 
         // Vector- Vector Inner Product
+        public static Complex InnerProduct(Vector vector1, Vector vector2)
+        {
+
+            Complex[] elements1 = vector1.elements;
+            int len1 = elements1.Length;
+            Complex[] elements2 = vector2.elements;
+            int len2 = elements2.Length;
+
+
+            if(vector1 == null || vector2 == null)
+            {
+                throw new ArgumentNullException("One or more input arguments are Null.");
+            }
+
+          
+            if(len1 != len2)
+            {
+                throw new ArgumentException("Two vectors must have the same length to perform an inner product.");
+            }
+
+            if(len1 == 0)
+            {
+                return Complex.Zero;
+            }
+
+            Complex innerProduct = Complex.Zero;
+
+            for(int i = 0; i < len1; i++)
+            {
+                innerProduct += elements1[i] * elements2[i];
+            }
+            
+            return innerProduct;
+        }
+
+        // Vector- Vector Outer Product
+        public static Matrix? OuterProduct(Vector vector1, Vector vector2)
+        {
+
+            Complex[] elements1 = vector1.elements;
+            int len1 = elements1.Length;
+            Complex[] elements2 = vector2.elements;
+            int len2 = elements2.Length;
+
+
+            if (vector1 == null || vector2 == null)
+            {
+                throw new ArgumentNullException("One or more input arguments are null.");
+            }
+
+
+            if (len1 != len2)
+            {
+                throw new ArgumentException("Two vectors must have the same length to perform an outer product.");
+            }
+
+            if (len1 == 0)
+            {
+                throw new ArgumentException("One or more vectors has a length of zero.");
+            }
+
+            Matrix outerProduct = new(len1, len2);
+
+            for (int i = 0; i < len1; i++)
+            {
+                for(int j = 0; j < len2; j++)
+                {
+                    outerProduct.elements[i, j] = elements1[i] * elements2[j];
+                }
+                
+            }
+
+            return outerProduct;
+        }
+
         // euclidean norm^2 = Inner Product of vector with itself
+        public static Complex EuclideanNorm(Vector vector)
+        {
+            Complex[] elements = vector.elements;
+            int len = elements.Length;
+
+            Complex sum = Complex.Zero;
+            for(int i = 0; i < len; i++)
+            {
+                sum += Complex.Pow(elements[i], 2.0);
+            }
+
+            return Complex.Sqrt(sum);
+        }
+
+
         // The Cauchy–Schwarz inequality
 
         public static double Determinant(Matrix matrix)

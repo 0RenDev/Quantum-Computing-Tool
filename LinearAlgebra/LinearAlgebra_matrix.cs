@@ -41,6 +41,13 @@ namespace LinearAlgebra
             }
         }
 
+        public Matrix(int rows, int columns)
+        {
+            this.rows = rows;
+            this.cols = columns;
+            this.elements = new Complex[rows, columns];
+        }
+        
         // Constructor to initialize a matrix with complex numbers using a 2D array
         public Matrix(Complex[,] elements)
         {
