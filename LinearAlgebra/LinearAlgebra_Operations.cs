@@ -225,7 +225,45 @@ namespace LinearAlgebra
             return innerProduct;
         }
 
+        // Vector- Vector Outer Product
+        public static Matrix? OuterProduct(Vector vector1, Vector vector2)
+        {
 
+            Complex[] elements1 = vector1.elements;
+            int len1 = elements1.Length;
+            Complex[] elements2 = vector2.elements;
+            int len2 = elements2.Length;
+
+
+            if (vector1 == null || vector2 == null)
+            {
+                throw new ArgumentNullException("One or more input arguments are null.");
+            }
+
+
+            if (len1 != len2)
+            {
+                throw new ArgumentException("Two vectors must have the same length to perform an outer product.");
+            }
+
+            if (len1 == 0)
+            {
+                throw new ArgumentException("One or more vectors has a length of zero.");
+            }
+
+            Matrix outerProduct = new(len1, len2);
+
+            for (int i = 0; i < len1; i++)
+            {
+                for(int j = 0; j < len2; j++)
+                {
+                    outerProduct.elements[i, j] = elements1[i] * elements2[j];
+                }
+                
+            }
+
+            return outerProduct;
+        }
 
         // euclidean norm^2 = Inner Product of vector with itself
         public static Complex EuclideanNorm(Vector vector)
