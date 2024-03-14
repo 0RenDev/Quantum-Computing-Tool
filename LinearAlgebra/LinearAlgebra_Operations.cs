@@ -226,7 +226,7 @@ namespace LinearAlgebra
         }
 
         // Vector- Vector Outer Product
-        public static Matrix? OuterProduct(Vector vector1, Vector vector2)
+        public static Matrix OuterProduct(Vector vector1, Vector vector2)
         {
 
             Complex[] elements1 = vector1.elements;

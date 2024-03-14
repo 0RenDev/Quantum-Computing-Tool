@@ -2,6 +2,8 @@ using System;
 using System.Numerics;
 using LinearAlgebra;
 using NUnit.Framework;
+using Vector = LinearAlgebra.Vector;
+
 
 namespace Linear_Algebra_Testing
 {
@@ -149,6 +151,36 @@ namespace Linear_Algebra_Testing
 
             // Act & Assert
             Assert.Throws<ArgumentException>(() => Operations.MatrixMultiply(matrix2, matrix1));
+        }
+
+        [Test]
+        public void InnerProduct_Success()
+        {
+            // Arrange 
+            Vector vector1 = new([1, 2, 3, 4, 5]);
+            Vector vector2 = new([6, 7, 8, 9, 10]);
+
+            // Act
+            Complex result = Operations.InnerProduct(vector1, vector2);
+
+            // Assert
+            Complex expected = 130;
+            Assert.That(result, Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void OuterProduct_Success()
+        {
+            // Arrange
+            Vector vector1 = new([1, 2, 3, 4, 5]);
+            Vector vector2 = new([6, 7, 8, 9, 10]);
+
+            // Act 
+            Matrix result = Operations.OuterProduct(vector1, vector2);
+
+            // Assert
+            Complex[,] expected = new Complex[,] { { 6, 7, 8, 9, 10 }, { 12, 14, 16, 18, 20 }, { 18, 21, 24, 27, 30 }, { 24, 28, 32, 36, 40 }, { 30, 35, 40, 45, 50 } };
+            MatrixTestUtilities.AssertMatrixAreEqual(expected, result.elements);
         }
     }
 }
