@@ -1,4 +1,6 @@
-﻿namespace LinearAlgebra
+﻿using System.Numerics;
+
+namespace LinearAlgebra
 {
     // this is one of the library classes 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -111,22 +113,25 @@
                 doneEvents[i] = new ManualResetEvent(false);
 
                 // Add a delegate to the thread pool
-                ThreadPool.QueueUserWorkItem(delegate (object state)
+                ThreadPool.QueueUserWorkItem(delegate (object? state)
                 {
-                    // Perform a matrix multiplication. Not sure why there are warnings here. should fix 
-                    for (int row = startRow; row < endRow; row++)
+                    if (state != null)
                     {
-                        for (int col = 0; col < n2; col++)
+                        for (int row = startRow; row < endRow; row++)
                         {
-                            Complex sum = 0;
-                            for (int k = 0; k < n1; k++)
+                            for (var col = 0; col < n2; col++)
                             {
-                                sum += a.elements[row, k] * b.elements[k, col];
+                                Complex sum = 0;
+                                for (int k = 0; k < n1; k++)
+                                {
+                                    sum += a.elements[row, k] * b.elements[k, col];
+                                }
+                                result.elements[row, col] = sum;
                             }
-                            result.elements[row, col] = sum;
                         }
+                        ((ManualResetEvent)state).Set(); // Set thread as up when operation is done
                     }
-                    ((ManualResetEvent)state).Set(); // Set thread as up when operation is done
+                    
                 }, doneEvents[i]);
             }
 
@@ -194,10 +199,12 @@
             int len = elements.Length;
 
             Complex sum = new Complex(0.0, 0.0);
-            for(int i = 0; i < elements; i++)
+            for(int i = 0; i < len; i++)
             {
-                
+                sum += Complex.Pow(elements[i], 2.0);
             }
+
+            return Complex.Sqrt(sum);
         }
 
 
