@@ -154,6 +154,35 @@ namespace Linear_Algebra_Testing
         }
 
         [Test]
+        public void MatrixDeterminant_Invalid_ThrowsException()
+        {
+            Matrix matrix = new Matrix(new Complex[,] { { 2 }, { 3 } });
+            Assert.Throws<ArgumentException>(() => Operations.Determinant(matrix));
+        }
+
+        [Test]
+        public void MatrixDeterminant_Success()
+        {
+            // Arrange
+            Matrix matrix = new Matrix(new Complex[,] { { 1, 5, 5, 8 }, { 2, 3, 4, 5 }, { 4, 55, 2, 6 }, { 6, 6, 1, 1 } });
+            int expected = 1659;
+
+
+            // Assert
+            Assert.That(Operations.Determinant(matrix), Is.EqualTo(expected));
+        }
+
+        [Test]
+        public void IdentityMatrixGeneration_Success()
+        {
+            Matrix matrix = Operations.GenerateIdentityMatrix(3);
+            // Arrange
+            Complex[,] expectedElements = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } };
+            MatrixTestUtilities.AssertMatrixAreEqual(expectedElements, matrix.elements);
+
+        }
+
+        [Test]
         public void InnerProduct_Success()
         {
             // Arrange 
