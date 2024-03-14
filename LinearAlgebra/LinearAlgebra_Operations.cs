@@ -282,6 +282,159 @@ namespace LinearAlgebra
 
 
         // The Cauchy–Schwarz inequality
+
+        public static double Determinant(Matrix matrix)
+        {
+            if (matrix.rows != matrix.cols)
+                throw new ArgumentException("Matrix must be square.");
+
+            int size = matrix.rows;
+
+            if (size == 1)
+            {
+                return matrix.elements[0, 0].Real;
+            }
+            else if (size == 2)
+            {
+                return matrix.elements[0, 0].Real * matrix.elements[1, 1].Real -
+                       matrix.elements[0, 1].Real * matrix.elements[1, 0].Real;
+            }
+            else
+            {
+                double det = 0;
+                int sign = 1;
+
+                for (int j = 0; j < size; j++)
+                {
+                    Matrix subMatrix = GetSubMatrix(matrix, 0, j);
+                    det += sign * matrix.elements[0, j].Real * Determinant(subMatrix);
+                    sign = -sign;
+                }
+
+                return det;
+            }
+        }
+
+        private static Matrix GetSubMatrix(Matrix matrix, int rowToRemove, int colToRemove)
+        {
+            int size = matrix.rows;
+            Complex[,] elements = new Complex[size - 1, size - 1];
+            int rowCount = 0, colCount;
+
+            for (int i = 0; i < size; i++)
+            {
+                if (i == rowToRemove)
+                    continue;
+
+                colCount = 0;
+                for (int j = 0; j < size; j++)
+                {
+                    if (j == colToRemove)
+                        continue;
+
+                    elements[rowCount, colCount] = matrix.elements[i, j];
+                    colCount++;
+                }
+                rowCount++;
+            }
+
+            return new Matrix(elements);
+        }
+
+        public static Matrix GenerateIdentityMatrix(int size)
+        {
+            Complex[,] elements = new Complex[size, size];
+
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    elements[i, j] = (i == j) ? Complex.One : Complex.Zero;
+                }
+            }
+
+            return new Matrix(elements);
+        }
+
+
+        // Method to compute the inverse of a matrix.
+        public static Matrix Invert(Matrix matrix)
+        {
+            if (matrix.rows != matrix.cols)
+            {
+                throw new InvalidOperationException("Matrix must be square for inversion.");
+            }
+
+            if (Determinant(matrix) == 0)
+            {
+                throw new InvalidOperationException("Matrix is singular and cannot be inverted.");
+            }
+
+            int size = matrix.rows;
+            Matrix identity = Operations.GenerateIdentityMatrix(size);
+            Matrix augmentedMatrix = JoinMatrices(matrix, identity);
+
+            // Apply Gauss-Jordan elimination
+            for (int i = 0; i < size; i++)
+            {
+                // Divide the row by the diagonal element to make it 1
+                Complex divisor = augmentedMatrix.elements[i, i];
+                for (int j = 0; j < 2 * size; j++)
+                {
+                    augmentedMatrix.elements[i, j] /= divisor;
+                }
+
+                // Eliminate other elements in the column
+                for (int k = 0; k < size; k++)
+                {
+                    if (k != i)
+                    {
+                        Complex factor = augmentedMatrix.elements[k, i];
+                        for (int j = 0; j < 2 * size; j++)
+                        {
+                            augmentedMatrix.elements[k, j] -= factor * augmentedMatrix.elements[i, j];
+                        }
+                    }
+                }
+            }
+
+            // Extract the inverse matrix
+            Complex[,] inverseElements = new Complex[size, size];
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    inverseElements[i, j] = augmentedMatrix.elements[i, j + size];
+                }
+            }
+
+            return new Matrix(inverseElements);
+        }
+
+        // Method to join two matrices
+        public static Matrix JoinMatrices(Matrix matrix1, Matrix matrix2)
+        {
+            int rows = matrix1.rows;
+            int cols = matrix1.cols + matrix2.cols;
+            Complex[,] joinedElements = new Complex[rows, cols];
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < matrix1.cols; j++)
+                {
+                    joinedElements[i, j] = matrix1.elements[i, j];
+                }
+
+                for (int j = 0; j < matrix2.cols; j++)
+                {
+                    joinedElements[i, j + matrix1.cols] = matrix2.elements[i, j];
+                }
+            }
+
+            return new Matrix(joinedElements);
+        }
     }
+
+
 
 }
