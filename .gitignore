@@ -34,3 +34,25 @@
 /LinearAlgebra/obj/LinearAlgebra.csproj.nuget.g.props
 /LinearAlgebra/obj/project.nuget.cache
 /LinearAlgebra/obj/project.assets.json
+/Linear Algebra Testing/bin/Debug/net8.0/Linear Algebra Testing.dll
+/Linear Algebra Testing/bin/Debug/net8.0/Linear Algebra Testing.pdb
+/Linear Algebra Testing/bin/Debug/net8.0/LinearAlgebra.dll
+/Linear Algebra Testing/bin/Debug/net8.0/LinearAlgebra.pdb
+/Linear Algebra Testing/bin/Debug/net8.0/nunit_random_seed.tmp
+/Linear Algebra Testing/obj/Debug/net8.0/ref/Linear Algebra Testing.dll
+/Linear Algebra Testing/obj/Debug/net8.0/refint/Linear Algebra Testing.dll
+*.Up2Date
+/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.csproj.CoreCompileInputs.cache
+/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.csproj.FileListAbsolute.txt
+/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.dll
+/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.pdb
+/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.genruntimeconfig.cache
+*.json
+/LinearAlgebra/bin/Debug/net8.0/LinearAlgebra.dll
+/LinearAlgebra/bin/Debug/net8.0/LinearAlgebra.pdb
+/LinearAlgebra/obj/Debug/net8.0/ref/LinearAlgebra.dll
+/LinearAlgebra/obj/Debug/net8.0/refint/LinearAlgebra.dll
+/LinearAlgebra/obj/Debug/net8.0/LinearAlgebra.csproj.CoreCompileInputs.cache
+/LinearAlgebra/obj/Debug/net8.0/LinearAlgebra.csproj.FileListAbsolute.txt
+/LinearAlgebra/obj/Debug/net8.0/LinearAlgebra.dll
+/LinearAlgebra/obj/Debug/net8.0/LinearAlgebra.pdb
