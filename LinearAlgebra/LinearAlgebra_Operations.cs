@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System.ComponentModel;
+using System.Numerics;
 
 namespace LinearAlgebra
 {
@@ -189,6 +190,40 @@ namespace LinearAlgebra
         }
 
         // Vector- Vector Inner Product
+        public static Complex InnerProduct(Vector vector1, Vector vector2)
+        {
+
+            Complex[] elements1 = vector1.elements;
+            int len1 = elements1.Length;
+            Complex[] elements2 = vector2.elements;
+            int len2 = elements2.Length;
+
+
+            if(vector1 == null || vector2 == null)
+            {
+                throw new ArgumentNullException("One or more input arguments are Null.");
+            }
+
+          
+            if(len1 != len2)
+            {
+                throw new ArgumentException("Two vectors must have the same length to perform an inner product.");
+            }
+
+            if(len1 == 0)
+            {
+                return Complex.Zero;
+            }
+
+            Complex innerProduct = Complex.Zero;
+
+            for(int i = 0; i < len1; i++)
+            {
+                innerProduct += elements1[i] * elements2[i];
+            }
+            
+            return innerProduct;
+        }
 
 
 
@@ -198,7 +233,7 @@ namespace LinearAlgebra
             Complex[] elements = vector.elements;
             int len = elements.Length;
 
-            Complex sum = new Complex(0.0, 0.0);
+            Complex sum = Complex.Zero;
             for(int i = 0; i < len; i++)
             {
                 sum += Complex.Pow(elements[i], 2.0);
