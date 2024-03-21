@@ -3,6 +3,7 @@ using System.Numerics; // Required for Complex numbers
 using System.Runtime.Intrinsics;
 using Console_Testing;
 using LinearAlgebra;
+using QuantumCircuit;
 
 class Program
 {
@@ -15,6 +16,16 @@ class Program
         // run specific examples
         example.timeTestTensor(44, 41, 96, 82);
         example.timeTestTensor(106, 12, 90, 16);
+
+        QuantumCircuitObject cs = new QuantumCircuitObject("Test");
+        cs.AddQuantumLine("X");
+        cs.pushBackH("X");
+        cs.pushBackH("X");
+        cs.pushBackH("X");
+
+        //cs.AddQuantumLine("Y");
+        //cs.pushBackH("Y");
+        //cs.printCircuit();
 
         //example.vector_times_matrix();
         //example.mmultThreadedMult();
