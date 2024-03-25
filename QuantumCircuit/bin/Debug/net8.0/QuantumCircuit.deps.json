@@ -6,20 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "Console Testing/1.0.0": {
-        "dependencies": {
-          "LinearAlgebra": "1.0.0",
-          "QuantumCircuit": "1.0.0"
-        },
-        "runtime": {
-          "Console Testing.dll": {}
-        }
-      },
-      "LinearAlgebra/1.0.0": {
-        "runtime": {
-          "LinearAlgebra.dll": {}
-        }
-      },
       "QuantumCircuit/1.0.0": {
         "dependencies": {
           "LinearAlgebra": "1.0.0"
@@ -27,21 +13,21 @@
         "runtime": {
           "QuantumCircuit.dll": {}
         }
+      },
+      "LinearAlgebra/1.0.0": {
+        "runtime": {
+          "LinearAlgebra.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "Console Testing/1.0.0": {
+    "QuantumCircuit/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "LinearAlgebra/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "QuantumCircuit/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
