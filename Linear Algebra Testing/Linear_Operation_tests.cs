@@ -107,7 +107,7 @@ namespace Linear_Algebra_Testing
             Matrix matrix2 = new Matrix(new Complex[,] { { 1, 2 }, { 3, 4 } });
 
             // Act
-            bool result = Operations.isEqual(matrix1, matrix2);
+            bool result = Operations.IsEqual(matrix1, matrix2);
 
             // Assert
             Assert.IsTrue(result);
@@ -121,7 +121,7 @@ namespace Linear_Algebra_Testing
             Matrix matrix2 = new Matrix(new Complex[,] { { 1, 2 }, { 3, 5 } });
 
             // Act
-            bool result = Operations.isEqual(matrix1, matrix2);
+            bool result = Operations.IsEqual(matrix1, matrix2);
 
             // Assert
             Assert.IsFalse(result);
