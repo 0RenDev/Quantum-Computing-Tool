@@ -1,13 +1,7 @@
 ﻿using LinearAlgebra;
-using System;
-using System.Collections.Generic;
-using System.Data.Common;
+using Quantum;
 using System.Diagnostics;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Console_Testing
 {
@@ -17,7 +11,7 @@ namespace Console_Testing
     {
 
         // private method used to generate random matrices of m x n size for use in the showcases
-        private Matrix generateRandomMatrix(int m, int n)
+        private static Matrix GenerateRandomMatrix(int m, int n)
         {
             Random rand = new Random();
 
@@ -36,7 +30,7 @@ namespace Console_Testing
 
 
         // simple showcase that performs a vector matrix multiplication 
-        public void vector_times_matrix()
+        public static void Vector_times_matrix()
         {
             // simple vector matrix multiplication
             Matrix vector = new Matrix(new Complex[,] { { 1 }, { 2 }, { 3 } });
@@ -58,7 +52,7 @@ namespace Console_Testing
 
 
         // showcases the difference in performance between the naive matrix multipication and a multithreaded variation 
-        public void multThreadedMult()
+        public static void MultThreadedMult()
         {
             int n = 125;
             int m = 1000;
@@ -72,8 +66,8 @@ namespace Console_Testing
             Stopwatch watch1 = new Stopwatch();
 
             // populate matrices
-            Matrix A = generateRandomMatrix(n, m);
-            Matrix B = generateRandomMatrix(m, k);
+            Matrix A = GenerateRandomMatrix(n, m);
+            Matrix B = GenerateRandomMatrix(m, k);
 
             watch1 = new Stopwatch();
             watch1.Start();
@@ -87,12 +81,12 @@ namespace Console_Testing
             watch1.Stop();
             Console.WriteLine("Elementary MatMul time : " + watch1.ElapsedMilliseconds);
 
-            Console.WriteLine("PASSED: " + (Operations.isEqual(C1, C2)));
+            Console.WriteLine("PASSED: " + (Operations.IsEqual(C1, C2)));
         }
 
 
         // tests the time needed to perform a tensor product on given sized matrices
-        public void timeTestTensor(int m, int n, int k, int p)
+        public static void TimeTestTensor(int m, int n, int k, int p)
         {
 
 
@@ -100,8 +94,8 @@ namespace Console_Testing
             Random rand = new Random();
 
             // populate matrices
-            Matrix A = generateRandomMatrix(n, m);
-            Matrix B = generateRandomMatrix(m, k);
+            Matrix A = GenerateRandomMatrix(n, m);
+            Matrix B = GenerateRandomMatrix(m, k);
 
             Stopwatch stopwatch = new Stopwatch();
 
@@ -113,6 +107,40 @@ namespace Console_Testing
             Console.WriteLine("Matrices of " + m + "x" + n + " and " + k + "x" + p + "matrices");
             // add something that displays the dim of the resulting matrix
             Console.WriteLine($"Matrix Tensor Product: {time.TotalMilliseconds} milliseconds");
+        }
+
+        public static void QbitEvolutionDemo()
+        {
+            Complex[,] x = { { 0, 1 }, { 1, 0 } };
+            Complex[,] y = { { 0, -1*Complex.ImaginaryOne }, { Complex.ImaginaryOne, 0 } };
+            Complex[,] z = { { 1, 0 }, { 0, -1 } };
+            Complex[,] h = { { 1 / Complex.Sqrt(2), 1 / Complex.Sqrt(2) }, { 1 / Complex.Sqrt(2), -1 / Complex.Sqrt(2) } };
+            Complex[,] s = { { 1, 0 }, { 0, Complex.ImaginaryOne } };
+            Complex[,] t = { { 1, 0 }, { 0, (1 + Complex.ImaginaryOne) / Complex.Sqrt(2) } };
+
+            Operator X = new Operator(x);
+            Operator Y = new Operator(y);
+            Operator Z = new Operator(z);
+            Operator H = new Operator(h);
+            Operator S = new Operator(s);
+            Operator T = new Operator(t);
+
+
+            Console.WriteLine("X Operator:\n" + X.ToString() + "\n");
+
+            Complex[] state = { 1, 0 };
+            Qbit q = new Qbit(state);
+
+            Console.WriteLine("Initial State Vector:\n" + q.ToString() + "\n");
+
+            q.Evolve(H);
+            q.Evolve(T);
+            q.Evolve(H);
+            q.Evolve(T);
+            q.Evolve(Z);
+
+            Console.WriteLine("State Vector after evolution:\n" + q.ToString() + "\n");
+
         }
 
     }
