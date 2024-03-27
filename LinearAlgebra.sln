@@ -5,9 +5,11 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearAlgebra", "LinearAlgebra\LinearAlgebra.csproj", "{138F5532-55DC-4D5C-9EBB-99EF7FB7B4E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linear Algebra Testing", "Linear Algebra Testing\Linear Algebra Testing.csproj", "{C98AFF24-7130-45D4-A1E8-4EEC218AC47B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linear Algebra Testing", "Linear Algebra Testing\Linear Algebra Testing.csproj", "{C98AFF24-7130-45D4-A1E8-4EEC218AC47B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console Testing", "Console Testing\Console Testing.csproj", "{7A9AA255-B89A-472A-8D8C-A7F92E94E3A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console Testing", "Console Testing\Console Testing.csproj", "{7A9AA255-B89A-472A-8D8C-A7F92E94E3A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quantum", "Quantum\Quantum.csproj", "{EAC6492E-9513-42AA-856C-A0AB2669E540}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{7A9AA255-B89A-472A-8D8C-A7F92E94E3A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A9AA255-B89A-472A-8D8C-A7F92E94E3A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A9AA255-B89A-472A-8D8C-A7F92E94E3A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC6492E-9513-42AA-856C-A0AB2669E540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC6492E-9513-42AA-856C-A0AB2669E540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC6492E-9513-42AA-856C-A0AB2669E540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC6492E-9513-42AA-856C-A0AB2669E540}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
