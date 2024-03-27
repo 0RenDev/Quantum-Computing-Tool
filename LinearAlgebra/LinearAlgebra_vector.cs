@@ -12,6 +12,13 @@ namespace LinearAlgebra
         // Array to store vector elements
         public Complex[] elements;
 
+        public Vector(int rows)
+        {
+            this.rows = rows;
+            cols = 1;
+            elements = new Complex[rows];
+        }
+
         // Constructor to initialize a vector with complex numbers
         public Vector(Complex[] elements)
         {
@@ -39,27 +46,30 @@ namespace LinearAlgebra
         }
 
         // Determine whether this is a row or column vector
-        public bool isRowVector() { return rows == 1; }
+        public bool IsRowVector() { return rows == 1; }
 
 
-        public bool isColVector() { return cols == 1; }
+        public bool IsColVector() { return cols == 1; }
 
         // Transpose a Vector by swapping is rows and columns. Preserves original Vector and returns new Vector
-        public Vector Transpose(Vector vector)
+        public static Vector Transpose(Vector vector)
         {
-            Vector transposed = new Vector(vector.elements);
-
-            // Transposing is effectively swapping rows to columns for Vectors
-            transposed.cols = vector.rows;
-            transposed.rows = vector.cols;
+            Vector transposed = new Vector(vector.elements)
+            {
+                // Transposing is effectively swapping rows to columns for Vectors
+                cols = vector.rows,
+                rows = vector.cols
+            };
 
             return transposed;
         }
 
+        public Matrix ToMatrix => new Matrix(rows, cols, elements);
+
         // Override ToString
         public override string ToString()
         {
-            string vectorString = "";
+            string vectorString = "Vector:\n";
 
             foreach (var complexNumber in elements)
             {
