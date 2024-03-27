@@ -9,13 +9,13 @@ namespace LinearAlgebra
     // Operations class containing common linear algebra operations
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------
     public class Operations
-    {
-        // matrix addition
+    {   
+        // Matrix addition
         public static Matrix Add(Matrix matrix1, Matrix matrix2)
         {
             if (matrix1.cols != matrix2.cols || matrix1.rows != matrix2.rows)
             {
-                throw new ArgumentException("The number of columns in the first matrix must match the number of rows in the second matrix.");
+                throw new ArgumentException("The dimensions of both matrices must match.");
             }
 
             Complex[,] addedElements = new Complex[matrix2.rows, matrix1.cols];
@@ -28,32 +28,36 @@ namespace LinearAlgebra
                 }
             }
             return new Matrix(addedElements);
-        }
+        }   
 
 
-        // matrix multplied by scaler
-        public static Matrix Multscaler(Matrix matrix1 , Complex scaler)
+
+        // Matrix subtraction
+        public static Matrix Subtract(Matrix matrix1, Matrix matrix2)
         {
+            if (matrix1.cols != matrix2.cols || matrix1.rows != matrix2.rows)
+            {
+                throw new ArgumentException("The dimensions of both matrices must match.");
+            }
 
-            Complex[,] scaledElements = new Complex[matrix1.rows, matrix1.cols];
+            Complex[,] resultElements = new Complex[matrix1.rows, matrix1.cols];
 
             for (int i = 0; i < matrix1.rows; i++)
             {
                 for (int j = 0; j < matrix1.cols; j++)
                 {
-                    scaledElements[i, j] = scaler * matrix1.elements[i, j];
+                    resultElements[i, j] = matrix1.elements[i, j] - matrix2.elements[i, j];
                 }
             }
-            return new Matrix(scaledElements);
+            return new Matrix(resultElements);
         }
+
 
 
         // Matrix-Matrix multiplication
         // naive approach should be replaced by multithreaded or other method
         public static Matrix Multiply(Matrix matrix1, Matrix matrix2)
         {
-
-
             if (matrix1.cols != matrix2.rows)
             {
                 throw new ArgumentException("The number of columns in the first matrix must match the number of rows in the second matrix.");
@@ -75,7 +79,7 @@ namespace LinearAlgebra
             return new Matrix(resultElements);
         }
 
-
+        // Multi-threaded matrix multiplication
         public static Matrix MatrixMultiply(Matrix a, Matrix b)
         {
             // Get dimensions of the matrices
@@ -95,7 +99,7 @@ namespace LinearAlgebra
             Matrix result = new Matrix(array);
 
             // Set the number of threads based on system requirements. We want enough threads to run the operation quickly, but not so many that it drastically starves the CPU
-          
+
             int numThreads = Environment.ProcessorCount;
             ManualResetEvent[] doneEvents = new ManualResetEvent[numThreads]; // Create a list of reset events to wait on threads
 
@@ -133,7 +137,7 @@ namespace LinearAlgebra
                         }
                         ((ManualResetEvent)state).Set(); // Set thread as up when operation is done
                     }
-                    
+
                 }, doneEvents[i]);
             }
 
@@ -144,6 +148,7 @@ namespace LinearAlgebra
             return result;
         }
 
+        // Matrix + vector multiplication
         public static Vector MatrixVectorMult(Matrix matrix, Vector vector)
         {
             if(matrix.cols != vector.rows)
@@ -165,10 +170,28 @@ namespace LinearAlgebra
             return new Vector(result); 
         }
 
+        // Matrix multplied by scaler
+        public static Matrix Multscaler(Matrix matrix1, Complex scaler)
+        {
+
+            Complex[,] scaledElements = new Complex[matrix1.rows, matrix1.cols];
+
+            for (int i = 0; i < matrix1.rows; i++)
+            {
+                for (int j = 0; j < matrix1.cols; j++)
+                {
+                    scaledElements[i, j] = scaler * matrix1.elements[i, j];
+                }
+            }
+            return new Matrix(scaledElements);
+        }
+
+
+
         // Checks equality of two matrices
         public static bool IsEqual(Matrix a, Matrix b)
         {
-            if (a.rows != b.rows || a.cols != b.cols) return false;
+            if (a.rows != b.rows || a.cols != b.cols) return false; // If dimensions don't match, they aren't equal
 
             int rows = a.rows;
             int cols = b.cols;
@@ -176,13 +199,15 @@ namespace LinearAlgebra
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    if (a.elements[i, j] != b.elements[i, j]) return false;
+                    if (a.elements[i, j] != b.elements[i, j]) return false; // If each element does not match, they aren't equal
                 }
             }
 
-            return true;
+            return true; // Else, they are equal
         }
- 
+
+
+
         // Tensor product between two matrices. simple appoarch
         public static Matrix TensorProduct(Matrix matrix1, Matrix matrix2)
         {
@@ -211,7 +236,9 @@ namespace LinearAlgebra
             return new Matrix(resultElements);
         }
 
-        // Vector- Vector Inner Product
+
+
+        // Vector- Vector Inner Product (dot product)
         public static Complex InnerProduct(Vector vector1, Vector vector2)
         {
 
@@ -287,24 +314,31 @@ namespace LinearAlgebra
             return outerProduct;
         }
 
-        // euclidean norm^2 = Inner Product of vector with itself
-        public static Complex EuclideanNorm(Vector vector)
-        {
-            Complex[] elements = vector.elements;
-            int len = elements.Length;
 
-            Complex sum = Complex.Zero;
-            for(int i = 0; i < len; i++)
+
+        // euclidean norm^2 = Inner Product of vector with itself (magnitude)
+        public static double EuclideanNorm(Vector vector)
+        {
+            double sum = 0.0; 
+
+            for (int i = 0; i < vector.elements.Length; i++)
             {
-                sum += Complex.Pow(elements[i], 2.0);
+                sum += Complex.Abs(vector.elements[i]) * Complex.Abs(vector.elements[i]); // Absolute value squared
             }
 
-            return Complex.Sqrt(sum);
+            return Math.Sqrt(sum); // Return the square root of the sum.
+        }
+
+        // EuclideanNorm returned as a complex number
+        public static Complex EuclideanNormAsComplex(Vector vector)
+        {
+            return new Complex(EuclideanNorm(vector), 0);
         }
 
 
-        // The Cauchy–Schwarz inequality
 
+        // The Cauchy–Schwarz inequality
+        // Calculate determinant of a matrix
         public static double Determinant(Matrix matrix)
         {
             if (matrix.rows != matrix.cols)
@@ -312,24 +346,29 @@ namespace LinearAlgebra
 
             int size = matrix.rows;
 
-            if (size == 1)
+            if (size == 1) // Base case for 1x1
             {
                 return matrix.elements[0, 0].Real;
             }
-            else if (size == 2)
+            else if (size == 2) // Base case for 2x2
             {
                 return matrix.elements[0, 0].Real * matrix.elements[1, 1].Real -
                        matrix.elements[0, 1].Real * matrix.elements[1, 0].Real;
             }
             else
             {
+                // Recursive case for matrices larger than 2x2
                 double det = 0;
-                int sign = 1;
+                int sign = 1; // utility variable to alternate signs in expansion
 
                 for (int j = 0; j < size; j++)
                 {
-                    Matrix subMatrix = GetSubMatrix(matrix, 0, j);
+                    // Get subMatrix by removing 1st row and current column
+                    Matrix subMatrix = GetSubMatrix(matrix, 0, j); 
+                    // Recursive call to get the determinant of submatrix
+                    // Accumulate all the rsults, adjusting based on the sign
                     det += sign * matrix.elements[0, j].Real * Determinant(subMatrix);
+                    // Inverse sign
                     sign = -sign;
                 }
 
@@ -337,6 +376,8 @@ namespace LinearAlgebra
             }
         }
 
+        // Utility method for determinant method
+        // Generates a submatrix by removing a row and a column from the input matrix
         private static Matrix GetSubMatrix(Matrix matrix, int rowToRemove, int colToRemove)
         {
             int size = matrix.rows;
@@ -345,16 +386,17 @@ namespace LinearAlgebra
 
             for (int i = 0; i < size; i++)
             {
-                if (i == rowToRemove)
+                if (i == rowToRemove) // Skip the row to remove
                     continue;
 
                 colCount = 0;
                 for (int j = 0; j < size; j++)
                 {
-                    if (j == colToRemove)
+                    if (j == colToRemove) // Skip the column to remove
                         continue;
 
-                    elements[rowCount, colCount] = matrix.elements[i, j];
+                    // Assign the remaining elements to the new submatrix
+                    elements[rowCount, colCount] = matrix.elements[i, j]; 
                     colCount++;
                 }
                 rowCount++;
@@ -363,6 +405,9 @@ namespace LinearAlgebra
             return new Matrix(elements);
         }
 
+
+
+        // Returns a matrix with 1's along the diagonal (A*I = A)
         public static Matrix GenerateIdentityMatrix(int size)
         {
             Complex[,] elements = new Complex[size, size];
@@ -371,12 +416,14 @@ namespace LinearAlgebra
             {
                 for (int j = 0; j < size; j++)
                 {
-                    elements[i, j] = (i == j) ? Complex.One : Complex.Zero;
+                    // Fill matrix with 1's on the diagonal and 0 everywhere else
+                    elements[i, j] = (i == j) ? Complex.One : Complex.Zero; 
                 }
             }
 
             return new Matrix(elements);
         }
+
 
 
         // Method to compute the inverse of a matrix.

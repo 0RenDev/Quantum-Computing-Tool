@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using System.Text;
 
 namespace LinearAlgebra
 {
@@ -45,13 +46,22 @@ namespace LinearAlgebra
             return new Vector(conjugateElements);
         }
 
+        // Calculate the conjugate of each element in place
+        public void ConjugateInPlace()
+        {
+            for (int i = 0; i < rows; i++)
+            {
+                elements[i] = Complex.Conjugate(elements[i]); 
+            }
+        }
+
         // Determine whether this is a row or column vector
         public bool IsRowVector() { return rows == 1; }
 
 
         public bool IsColVector() { return cols == 1; }
 
-        // Transpose a Vector by swapping is rows and columns. Preserves original Vector and returns new Vector
+        // Transpose a Vector by swapping its rows and columns. Preserves original Vector and returns new Vector
         public static Vector Transpose(Vector vector)
         {
             Vector transposed = new Vector(vector.elements)
@@ -64,19 +74,28 @@ namespace LinearAlgebra
             return transposed;
         }
 
+        // Transpose a Vector in place
+        public void TransposeInPlace()
+        {
+            // Swap rows and cols
+            int temp = rows;
+            rows = cols;
+            cols = temp;
+        }
+
         public Matrix ToMatrix => new Matrix(rows, cols, elements);
 
         // Override ToString
         public override string ToString()
         {
-            string vectorString = "Vector:\n";
+            StringBuilder vectorString = new StringBuilder("Vector:\n");
 
             foreach (var complexNumber in elements)
             {
-                vectorString += $"{complexNumber.Real}+{complexNumber.Imaginary}i\n";
+                vectorString.AppendFormat("{0}+{1}i\n", complexNumber.Real, complexNumber.Imaginary);
             }
 
-            return vectorString;
+            return vectorString.ToString();
         }
     }
 }
