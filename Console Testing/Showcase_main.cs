@@ -3,6 +3,7 @@ using System.Numerics; // Required for Complex numbers
 using System.Runtime.Intrinsics;
 using Console_Testing;
 using LinearAlgebra;
+using QuantumCircuit;
 
 class Program
 {

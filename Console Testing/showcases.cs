@@ -2,6 +2,7 @@
 using Quantum;
 using System.Diagnostics;
 using System.Numerics;
+using QuantumCircuit;
 
 namespace Console_Testing
 {
