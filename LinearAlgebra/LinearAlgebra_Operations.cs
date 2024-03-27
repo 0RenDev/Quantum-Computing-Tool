@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics;
 using System.Numerics;
 
 namespace LinearAlgebra
@@ -143,8 +144,29 @@ namespace LinearAlgebra
             return result;
         }
 
+        public static Vector MatrixVectorMult(Matrix matrix, Vector vector)
+        {
+            if(matrix.cols != vector.rows)
+            {
+                throw new ArgumentException("Left Multiplications must have similar dimensions.");
+            }
+
+            int matrixCols = matrix.cols;
+            int rows = matrix.rows;
+
+            Complex[] result = new Complex[rows];
+
+            for(int i = 0; i < rows; i++)
+            {
+                Vector row = new Vector(matrix.GetRow(i));
+                result[i] = InnerProduct(row, vector);
+            }
+
+            return new Vector(result); 
+        }
+
         // Checks equality of two matrices
-        public static bool isEqual(Matrix a, Matrix b)
+        public static bool IsEqual(Matrix a, Matrix b)
         {
             if (a.rows != b.rows || a.cols != b.cols) return false;
 
