@@ -3,65 +3,6 @@
 ################################################################################
 
 /.vs
-/Console Testing/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
-/Console Testing/obj/Debug/net8.0/Console Testing.AssemblyInfo.cs
-/Console Testing/obj/Debug/net8.0/Console Testing.AssemblyInfoInputs.cache
-/Console Testing/obj/Debug/net8.0/Console Testing.assets.cache
-/Console Testing/obj/Debug/net8.0/Console Testing.csproj.AssemblyReference.cache
-/Console Testing/obj/Debug/net8.0/Console Testing.GeneratedMSBuildEditorConfig.editorconfig
-/Console Testing/obj/Console Testing.csproj.nuget.dgspec.json
-/Console Testing/obj/project.assets.json
-/Console Testing/obj/project.nuget.cache
-/Console Testing/obj/Console Testing.csproj.nuget.g.props
-/Linear Algebra Testing/bin/Debug/net8.0/CoverletSourceRootsMapping_Linear Algebra Testing
-/Linear Algebra Testing/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
-/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.AssemblyInfo.cs
-/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.AssemblyInfoInputs.cache
-/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.assets.cache
-/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.csproj.AssemblyReference.cache
-/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.GeneratedMSBuildEditorConfig.editorconfig
-/Linear Algebra Testing/obj/Linear Algebra Testing.csproj.nuget.dgspec.json
-/Linear Algebra Testing/obj/Linear Algebra Testing.csproj.nuget.g.props
-/Linear Algebra Testing/obj/Linear Algebra Testing.csproj.nuget.g.targets
-/Linear Algebra Testing/obj/project.assets.json
-/Linear Algebra Testing/obj/project.nuget.cache
-/LinearAlgebra/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
-/LinearAlgebra/obj/Debug/net8.0/LinearAlgebra.AssemblyInfo.cs
-/LinearAlgebra/obj/Debug/net8.0/LinearAlgebra.assets.cache
-/LinearAlgebra/obj/Debug/net8.0/LinearAlgebra.AssemblyInfoInputs.cache
-/LinearAlgebra/obj/Debug/net8.0/LinearAlgebra.GeneratedMSBuildEditorConfig.editorconfig
-/LinearAlgebra/obj/LinearAlgebra.csproj.nuget.dgspec.json
-/LinearAlgebra/obj/LinearAlgebra.csproj.nuget.g.props
-/LinearAlgebra/obj/project.nuget.cache
-/LinearAlgebra/obj/project.assets.json
-/Linear Algebra Testing/bin/Debug/net8.0/Linear Algebra Testing.dll
-/Linear Algebra Testing/bin/Debug/net8.0/Linear Algebra Testing.pdb
-/Linear Algebra Testing/bin/Debug/net8.0/LinearAlgebra.dll
-/Linear Algebra Testing/bin/Debug/net8.0/LinearAlgebra.pdb
-/Linear Algebra Testing/bin/Debug/net8.0/nunit_random_seed.tmp
-/Linear Algebra Testing/obj/Debug/net8.0/ref/Linear Algebra Testing.dll
-/Linear Algebra Testing/obj/Debug/net8.0/refint/Linear Algebra Testing.dll
-*.Up2Date
-/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.csproj.CoreCompileInputs.cache
-/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.csproj.FileListAbsolute.txt
-/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.dll
-/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.pdb
-/Linear Algebra Testing/obj/Debug/net8.0/Linear Algebra Testing.genruntimeconfig.cache
-*.json
-/LinearAlgebra/bin/Debug/net8.0/LinearAlgebra.dll
-/LinearAlgebra/bin/Debug/net8.0/LinearAlgebra.pdb
-/LinearAlgebra/obj/Debug/net8.0/ref/LinearAlgebra.dll
-/LinearAlgebra/obj/Debug/net8.0/refint/LinearAlgebra.dll
-/LinearAlgebra/obj/Debug/net8.0/LinearAlgebra.csproj.CoreCompileInputs.cache
-/LinearAlgebra/obj/Debug/net8.0/LinearAlgebra.csproj.FileListAbsolute.txt
-/LinearAlgebra/obj/Debug/net8.0/LinearAlgebra.dll
-/LinearAlgebra/obj/Debug/net8.0/LinearAlgebra.pdb
-/Console Testing/obj/Debug/net8.0/Console Testing.AssemblyInfo.cs
-/Console Testing/obj/Debug/net8.0/Console Testing.AssemblyInfoInputs.cache
-/Console Testing/obj/Debug/net8.0/Console Testing.assets.cache
-/Console Testing/obj/Debug/net8.0/Console Testing.csproj.AssemblyReference.cache
-/Console Testing/obj/Debug/net8.0/Console Testing.GeneratedMSBuildEditorConfig.editorconfig
-/Console Testing/obj/Console Testing.csproj.nuget.dgspec.json
-/Console Testing/obj/Console Testing.csproj.nuget.g.props
-/Console Testing/obj/project.assets.json
-/Console Testing/obj/project.nuget.cache
+*/bin
+*/obj
+*/Debug
