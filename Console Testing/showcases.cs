@@ -126,18 +126,13 @@ namespace Console_Testing
             Operator S = new Operator(s);
             Operator T = new Operator(t);
 
-
-            Console.WriteLine("X Operator:\n" + X.ToString() + "\n");
-
             Complex[] state = { 1, 0 };
             Qbit q = new Qbit(state);
 
             Console.WriteLine("Initial State Vector:\n" + q.ToString() + "\n");
 
-            q.Evolve(H);
-            q.Evolve(T);
-            q.Evolve(H);
-            q.Evolve(T);
+            q.Evolve(X);
+            q.Evolve(Y);
             q.Evolve(Z);
 
             Console.WriteLine("State Vector after evolution:\n" + q.ToString() + "\n");
