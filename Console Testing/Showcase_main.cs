@@ -17,21 +17,15 @@ class Program
         //example.timeTestTensor(44, 41, 96, 82);
         //example.timeTestTensor(106, 12, 90, 16);
 
-        //QuantumCircuitObject cs = new QuantumCircuitObject("Test");
-        //cs.AddQuantumLine("X");
-        //cs.pushBackH("X");
-        //cs.pushBackH("X");
-        //cs.pushBackH("X");
 
-        //cs.AddQuantumLine("Y");
-        //cs.pushBackH("Y");
-        //cs.printCircuit();
+
+
 
         //example.vector_times_matrix();
         //example.mmultThreadedMult();
 
-        Showcases.QbitEvolutionDemo();   
-
+        //Showcases.QbitEvolutionDemo();   
+        Showcases.QuantumAdderConstruction();
 
         Console.ReadKey();  
     }

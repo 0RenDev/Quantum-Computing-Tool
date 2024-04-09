@@ -11,8 +11,8 @@ namespace QuantumCircuit
 {
     internal class Gate
     {
-        String gateType;
-        Matrix operation;
+        protected String gateType;
+        protected Matrix operation;
 
         // The following are for the likes of CNOT or swap. 
         // Just a thought.
@@ -27,9 +27,54 @@ namespace QuantumCircuit
             this.operation = operation;
         }
 
-        public String getGateType()
+        public virtual String getGateType()
         {
             return gateType;
         }
+    }
+
+    internal class MultiLineGateRoot : Gate
+    {
+        // Additional properties for MultiLineGate
+        protected String[] targets;
+        protected int[] targetsIndexes;
+
+        public MultiLineGateRoot(String gateType, Matrix operation, String[] targets, int[] targetsIndexes)
+            : base(gateType, operation)
+        {
+            this.targetsIndexes = targetsIndexes;
+            this.targets = targets;
+        }
+
+        public override string getGateType()
+        {
+            String returnString = "[" + gateType + " targetting at:";
+            for (int i = 0; i < targets.Length; i++)
+            {
+                returnString += " " + targets[i] + targetsIndexes[i];
+            }
+            return returnString + "]";
+        }
+    }
+    internal class MultiLineGateTarget : Gate
+    {
+        // Additional properties for MultiLineGate
+        protected String source;
+        protected int sourceIndex;
+
+        public MultiLineGateTarget(string gateType, Matrix operation, string source, int sourceIndex)
+            : base(gateType, operation)
+        {
+            this.source = source;
+            this.sourceIndex = sourceIndex;
+        }
+
+        public override string getGateType()
+        {
+            String returnString = "[" + gateType + " from " + source + sourceIndex + "]";
+            return returnString;
+        }
+
+
     }
 }
