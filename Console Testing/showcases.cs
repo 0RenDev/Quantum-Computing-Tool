@@ -29,6 +29,33 @@ namespace Console_Testing
             return new Matrix(array);
         }
 
+        static Complex[] GenerateRandomStatevector(int numQubits)
+        {
+            // Calculate the length of the statevector (2^numQubits)
+            int statevectorLength = 1 << numQubits;
+            Complex[] statevector = new Complex[statevectorLength];
+
+            // Populate statevector with random complex numbers
+            Random rand = new Random();
+            double normSquaredSum = 0;
+            for (int i = 0; i < statevector.Length; i++)
+            {
+                double real = rand.NextDouble();
+                double imag = rand.NextDouble();
+                statevector[i] = new Complex(real, imag);
+                normSquaredSum += Math.Pow(statevector[i].Magnitude, 2);
+            }
+
+            // Normalize the statevector
+            double normalizationFactor = Math.Sqrt(normSquaredSum);
+            for (int i = 0; i < statevector.Length; i++)
+            {
+                statevector[i] /= normalizationFactor;
+            }
+
+            return statevector;
+        }
+
 
         // simple showcase that performs a vector matrix multiplication 
         public static void Vector_times_matrix()
@@ -113,7 +140,7 @@ namespace Console_Testing
         public static void QbitEvolutionDemo()
         {
             Complex[,] x = { { 0, 1 }, { 1, 0 } };
-            Complex[,] y = { { 0, -1*Complex.ImaginaryOne }, { Complex.ImaginaryOne, 0 } };
+            Complex[,] y = { { 0, -1 * Complex.ImaginaryOne }, { Complex.ImaginaryOne, 0 } };
             Complex[,] z = { { 1, 0 }, { 0, -1 } };
             Complex[,] h = { { 1 / Complex.Sqrt(2), 1 / Complex.Sqrt(2) }, { 1 / Complex.Sqrt(2), -1 / Complex.Sqrt(2) } };
             Complex[,] s = { { 1, 0 }, { 0, Complex.ImaginaryOne } };
@@ -193,6 +220,113 @@ namespace Console_Testing
             QA.printCircuit();
 
         }
+
+
+        public void MeasurementTest()
+        {
+            for (int numQubits = 1; numQubits < 6; numQubits++)
+            {
+                Complex[] statevector = GenerateRandomStatevector(numQubits);
+
+                // Print the generated statevector
+                Console.WriteLine("Generated statevector:");
+                for (int i = 0; i < statevector.Length; i++)
+                {
+                    Console.WriteLine("|" + Convert.ToString(i, 2).PadLeft(numQubits, '0') + "> = " + statevector[i]);
+                }
+
+                // get probabilites vector
+                double[] probabilites = StatevectorProbabilities(statevector);
+
+                // Print the generated statevector
+                Console.WriteLine("Probability vector:");
+                for (int i = 0; i < probabilites.Length; i++)
+                {
+                    Console.WriteLine("|" + Convert.ToString(i, 2).PadLeft(numQubits, '0') + "> = " + probabilites[i]);
+                }
+
+                // measurments 
+                for (int i = 0; i < 10; i++)
+                {
+                    int measurement = MeasureProbabilities(probabilites);
+                    Console.WriteLine("Measurement outcome: " + Convert.ToString(measurement, 2).PadLeft((int)Math.Log(statevector.Length, 2), '0'));
+                }
+            }
+        }
+
+
+
+
+
+
+        public static double[] StatevectorProbabilities(Complex[] statevector)
+        {
+            // Check if the input vector is a valid statevector
+            if (!IsValidStatevector(statevector))
+            {
+                throw new ArgumentException("Invalid statevector. The norm (magnitude) of the statevector must equal 1.");
+            }
+
+            // Calculate unnormalized probabilities
+            double[] unnormalizedProbabilities = new double[statevector.Length];
+            for (int i = 0; i < statevector.Length; i++)
+            {
+                unnormalizedProbabilities[i] = Math.Pow(statevector[i].Magnitude, 2);
+            }
+
+            // Calculate normalization factor
+            double normalizationFactor = 0;
+            for (int i = 0; i < unnormalizedProbabilities.Length; i++)
+            {
+                normalizationFactor += unnormalizedProbabilities[i];
+            }
+
+            // Normalize probabilities
+            double[] probabilities = new double[statevector.Length];
+            for (int i = 0; i < probabilities.Length; i++)
+            {
+                probabilities[i] = unnormalizedProbabilities[i] / normalizationFactor;
+            }
+
+            return probabilities;
+        }
+
+        private int MeasureProbabilities(double[] probabilities)
+        {
+            // Perform measurement
+            Random random = new Random();
+            double rand = random.NextDouble();
+            double cumulativeProbability = 0;
+            int measurementOutcome = -1;
+            for (int i = 0; i < probabilities.Length; i++)
+            {
+                cumulativeProbability += probabilities[i];
+                if (rand < cumulativeProbability)
+                {
+                    measurementOutcome = i;
+                    break;
+                }
+            }
+
+            return measurementOutcome;
+        }
+
+        public static bool IsValidStatevector(Complex[] statevector)
+        {
+            // Calculate the norm (magnitude) of the statevector
+            double norm = 0;
+            for (int i = 0; i < statevector.Length; i++)
+            {
+                norm += Math.Pow(statevector[i].Magnitude, 2);
+            }
+
+            // Check if the norm equals 1 (within a small tolerance)
+            return Math.Abs(norm - 1) < 1e-10;
+        }
+
+
+
+
 
     }
 }

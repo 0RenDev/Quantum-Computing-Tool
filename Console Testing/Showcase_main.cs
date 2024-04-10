@@ -17,15 +17,13 @@ class Program
         //example.timeTestTensor(44, 41, 96, 82);
         //example.timeTestTensor(106, 12, 90, 16);
 
-
-
-
-
         //example.vector_times_matrix();
         //example.mmultThreadedMult();
 
         //Showcases.QbitEvolutionDemo();   
-        Showcases.QuantumAdderConstruction();
+        //Showcases.QuantumAdderConstruction();
+
+        example.MeasurementTest();
 
         Console.ReadKey();  
     }
