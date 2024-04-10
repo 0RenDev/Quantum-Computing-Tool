@@ -33,5 +33,9 @@ namespace QuantumCircuit
                 Console.Write("--" + gate.getGateType());
             }
         }
+        public int getLength()
+        {
+            return gates.Count;
+        }
     }
 }

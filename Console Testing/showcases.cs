@@ -139,5 +139,60 @@ namespace Console_Testing
 
         }
 
+        public static void QuantumConstructionPlay()
+        {
+            QuantumCircuitObject cs = new QuantumCircuitObject("Test");
+            cs.AddQuantumLine("X");
+            cs.AddQuantumLine("Y");
+            cs.AddQuantumLine("Z");
+            cs.AddQuantumLine("D");
+            String[] tofPushbacks = { "Y", "Z", "D" };
+            cs.pushBackTOF("X", tofPushbacks);
+            cs.pushBackH("X");
+            cs.pushBackH("X");
+            cs.pushBackH("X");
+
+            cs.pushBackH("Y");
+            cs.pushBackCNOT("X", "Y");
+            cs.pushBackZ("X");
+            cs.pushBackY("Y");
+
+            cs.pushBackY("Z");
+            cs.pushBackH("D");
+            String[] tofPushbacks2 = { "X", "Y" };
+            cs.pushBackTOF("Z", tofPushbacks2);
+            cs.pushBackCNOT("Y", "X");
+            cs.printCircuit();
+            /*
+        QuantumCircuitObject cs = new QuantumCircuitObject("Test");
+        cs.AddQuantumLine("X");
+        cs.AddQuantumLine("Y");
+        //cs.pushBackH("X");
+        cs.pushBackCNOT("X", "Y");
+        cs.printCircuit();*/
+        }
+
+        public static void QuantumAdderConstruction()
+        {
+
+            QuantumCircuitObject QA = new QuantumCircuitObject("Adder");
+            QA.AddQuantumLine("q[0]");
+            QA.AddQuantumLine("q[1]");
+            QA.AddQuantumLine("q[2]");
+            QA.AddQuantumLine("q[3]");
+
+            QA.pushBackX("q[0]");
+            QA.pushBackX("q[2]");
+            QA.pushBackCNOT("q[3]", ["q[0]", "q[1]"]);
+
+            QA.pushBackCNOT("q[1]", ["q[0]"]);
+            QA.pushBackCNOT("q[3]", ["q[1]", "q[2]"]);
+            QA.pushBackCNOT("q[2]", ["q[1]"]);
+            QA.pushBackCNOT("q[1]", ["q[0]"]);
+
+            QA.printCircuit();
+
+        }
+
     }
 }
