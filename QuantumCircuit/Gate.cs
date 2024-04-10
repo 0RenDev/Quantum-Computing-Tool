@@ -46,6 +46,7 @@ namespace QuantumCircuit
             this.targets = targets;
         }
 
+        // returns string representation of the gate, giving type and target qbits, O(n) with minimal memory usage
         public override string getGateType()
         {
             String returnString = "[" + gateType + " targetting at:";

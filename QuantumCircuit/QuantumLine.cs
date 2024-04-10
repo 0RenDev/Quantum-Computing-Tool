@@ -8,6 +8,7 @@ namespace QuantumCircuit
 {
     internal class QuantumLine
     {
+        // Stores list of gates applied to this line
         List<Gate> gates = new List<Gate>();
         private String name;
 
@@ -26,6 +27,7 @@ namespace QuantumCircuit
             gates.Add(newGate);
         }
 
+        // prints all gates on this line to the console, O(n)
         public void printGates()
         {
             foreach (Gate gate in gates)
