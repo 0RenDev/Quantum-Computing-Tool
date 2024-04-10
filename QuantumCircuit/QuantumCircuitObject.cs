@@ -103,7 +103,7 @@ namespace QuantumCircuit
                 if (quantumLine.getName() == qlName)
                 {
                     // Define the X gate matrix (quantum bit flip)
-                    Matrix matrix = new Matrix(new Complex[,] { { 1, 0 }, { 0, 1 } });
+                    Matrix matrix = new Matrix(new Complex[,] { { 0, 1 }, { 1, 0 } });
                     // Create new gate instance and add it to the quantum line
                     Gate newGate = new Gate("X", matrix);
                     quantumLine.addGate(newGate);
