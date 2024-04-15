@@ -3,6 +3,12 @@ using System.Numerics;
 using Quantum;
 using NUnit.Framework;
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+// This is the QuantumTest class where we store and run tests on our various implementations to see if they perform accurately and efficiently
+// it has the following methods: InitializeQbit_WrongLength & _NotValid, Evolve_Success()
+//                               QuantumTestUtilities (check each method for more detailed descriptions)
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 namespace QuantumTests
 {
     [TestFixture]

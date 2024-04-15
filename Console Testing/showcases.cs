@@ -4,10 +4,15 @@ using System.Diagnostics;
 using System.Numerics;
 using QuantumCircuit;
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+//this class is meant to contain tests that will run in main when the tests are too complicated to be made into a test case
+// or require some amount of interaction. they should be written as a method then added into main
+// it has the following methods: GenerateRandomMatrix, Vector_times_matrix, MultThreadedMult, TimeTestTensor,
+//                               QbitEvolutionDemo, QuantumConstructionPlay, QuantumAdderConstruction (check each method for more detailed descriptions)
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
 namespace Console_Testing
 {
-    // this class is meant to contain tests that will run in main when the tests are too complicated to be made into a test case
-    // or require some amount of interaction. they should be written as a method then added into main
+
     internal class Showcases
     {
 

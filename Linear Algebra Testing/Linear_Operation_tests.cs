@@ -4,11 +4,15 @@ using LinearAlgebra;
 using NUnit.Framework;
 using Vector = LinearAlgebra.Vector;
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+// This class acts as test cases for the operations class. to run the tests click on "Test" on the top bar and click on "Run all Tests"
+// it has the following methods: Add_MatrixAddition, Multscaler_matrixMultiplicationByScaler,  (check each method for more detailed descriptions)
+//                               Multiply_VectorMatrix_Simple_ValidResult, 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 namespace Linear_Algebra_Testing
 {
-    // this class acts as test cases for the operations class. to run the tests click on "Test" on the top bar and click on "Run all Tests"
-
     [TestFixture]
     public class OperationsTests
     {

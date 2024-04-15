@@ -6,6 +6,11 @@ using System.Xml.Schema;
 using LinearAlgebra;
 using Vector = LinearAlgebra.Vector;
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+// This is the Qbit class representing an instance of the Qbit
+// it has the following methods: Evolve, ToString, IsValid, IsEqual (check each method for more detailed descriptions)
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 namespace Quantum
 {
     public class Qbit

@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+// This is the QuantumLine class representing our implementation of a Quantum Line
+// it has the methods addGate and printGate along with standard getters (check each method for more detailed descriptions)
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 namespace QuantumCircuit
 {
     internal class QuantumLine

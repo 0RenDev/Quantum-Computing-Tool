@@ -6,6 +6,10 @@ using System.Numerics;
 using LinearAlgebra;
 using System.Text;
 using System.Threading.Tasks;
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+// This is the Gate class representing our base implementations of Quantum Logic Gates
+// it has the following methods:
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 namespace QuantumCircuit
 {

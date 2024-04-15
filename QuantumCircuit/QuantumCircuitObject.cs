@@ -3,6 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Numerics;
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+// This is the QuantumCircuit representing our implementation of a Quantum Circuit
+// it has the following methods: AddQuantumLine, QuantumLineExists, pushBackH,
+//                               pushBackY, pushBackX, pushBackZ, pushBackCNOT,
+//                               pushBackTOF (check each method for more detailed descriptions)
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 namespace QuantumCircuit
 {
     public class QuantumCircuitObject
@@ -42,26 +50,26 @@ namespace QuantumCircuit
         }
     
 
-    public void pushBackH(String qlName)
-        {
-            if(QuantumLineExists(qlName))
+        public void pushBackH(String qlName)
             {
-                foreach (var quantumLine in quantumLines)
+                if(QuantumLineExists(qlName))
                 {
-                    if (quantumLine.getName() == qlName)
+                    foreach (var quantumLine in quantumLines)
                     {
-                        Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
-                        matrix = Operations.Multscaler(matrix, 1 / Math.Sqrt(2));
-                        Gate newGate = new Gate("H", matrix);
-                        quantumLine.addGate(newGate);
-                        Console.WriteLine("H gate added at " + qlName);
+                        if (quantumLine.getName() == qlName)
+                        {
+                            Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
+                            matrix = Operations.Multscaler(matrix, 1 / Math.Sqrt(2));
+                            Gate newGate = new Gate("H", matrix);
+                            quantumLine.addGate(newGate);
+                            Console.WriteLine("H gate added at " + qlName);
+                        }
                     }
+                } else
+                {
+                    Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
                 }
-            } else
-            {
-                Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
             }
-        }
 
         public void pushBackY(String qlName)
         {
@@ -83,6 +91,7 @@ namespace QuantumCircuit
                 Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
             }
         }
+
         public void pushBackX(String qlName)
         {
             if (QuantumLineExists(qlName))
@@ -103,6 +112,7 @@ namespace QuantumCircuit
                 Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
             }
         }
+
         public void pushBackZ(String qlName)
         {
             if (QuantumLineExists(qlName))
@@ -123,6 +133,8 @@ namespace QuantumCircuit
                 Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
             }
         }
+
+
         public void pushBackCNOT(String qlSource, String qlTarget)
         {
             if (QuantumLineExists(qlSource) && (QuantumLineExists(qlTarget)))
@@ -147,8 +159,8 @@ namespace QuantumCircuit
                         quantumLine.addGate(newGate);
                         Console.WriteLine("CNOT gate added at " + qlSource + " with target as " + qlTarget);
                     }
-                    
                 }
+
                 foreach (var quantumLine in quantumLines)
                 {
                     if (quantumLine.getName() == qlTarget)
@@ -166,6 +178,8 @@ namespace QuantumCircuit
                 Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
             }
         }
+
+
         public void pushBackTOF(String qlSource, String[] qlTargets)
         {
             int sourceIndex = -1;
@@ -278,6 +292,7 @@ namespace QuantumCircuit
                 }
             }
         }
+
         public void printCircuit()
         {
             Console.WriteLine("Quantum circuit: " + name);
