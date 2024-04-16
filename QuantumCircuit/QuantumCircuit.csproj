@@ -11,6 +11,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\LinearAlgebra\LinearAlgebra.csproj" />
+		<ProjectReference Include="..\Quantum\Quantum.csproj" />
 	</ItemGroup>
 
 </Project>

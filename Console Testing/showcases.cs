@@ -153,16 +153,16 @@ namespace Console_Testing
             cs.pushBackH("X");
 
             cs.pushBackH("Y");
-            cs.pushBackCNOT("X", "Y");
-            cs.pushBackZ("X");
+            cs.PushBackCNOT("X", "Y");
+            cs.PushBackZ("X");
             cs.pushBackY("Y");
 
             cs.pushBackY("Z");
             cs.pushBackH("D");
             String[] tofPushbacks2 = { "X", "Y" };
             cs.pushBackTOF("Z", tofPushbacks2);
-            cs.pushBackCNOT("Y", "X");
-            cs.printCircuit();
+            cs.PushBackCNOT("Y", "X");
+            cs.PrintCircuit();
             /*
         QuantumCircuitObject cs = new QuantumCircuitObject("Test");
         cs.AddQuantumLine("X");
@@ -183,14 +183,14 @@ namespace Console_Testing
 
             QA.pushBackX("q[0]");
             QA.pushBackX("q[2]");
-            QA.pushBackCNOT("q[3]", ["q[0]", "q[1]"]);
+            QA.PushBackCNOT("q[3]", ["q[0]", "q[1]"]);
 
-            QA.pushBackCNOT("q[1]", ["q[0]"]);
-            QA.pushBackCNOT("q[3]", ["q[1]", "q[2]"]);
-            QA.pushBackCNOT("q[2]", ["q[1]"]);
-            QA.pushBackCNOT("q[1]", ["q[0]"]);
+            QA.PushBackCNOT("q[1]", ["q[0]"]);
+            QA.PushBackCNOT("q[3]", ["q[1]", "q[2]"]);
+            QA.PushBackCNOT("q[2]", ["q[1]"]);
+            QA.PushBackCNOT("q[1]", ["q[0]"]);
 
-            QA.printCircuit();
+            QA.PrintCircuit();
 
         }
 

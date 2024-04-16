@@ -1,22 +1,56 @@
 ﻿using LinearAlgebra;
+using Quantum;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
 
 namespace QuantumCircuit
 {
+    /// <summary>
+    ///   <br />
+    /// </summary>
     public class QuantumCircuitObject
     {
-        List<ClassicalLine> classicalLines = new List<ClassicalLine>();
-        List<QuantumLine> quantumLines = new List<QuantumLine>();
-        String name;
+        /// <summary>
+        /// The classical lines
+        /// </summary>
+        private readonly List<ClassicalLine> classicalLines = [];
+        /// <summary>
+        /// The quantum lines
+        /// </summary>
+        private readonly List<QuantumLine> quantumLines = [];
+        /// <summary>
+        /// The name
+        /// </summary>
+        private string name;
 
-        public QuantumCircuitObject(String name)
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>
+        /// The name.
+        /// </value>
+        public string Name
+        {
+            get => name;
+            set => name = value;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QuantumCircuitObject"/> class.
+        /// </summary>
+        /// <param name="name">The name.</param>
+        public QuantumCircuitObject(string name)
         {
             this.name = name;
         }
 
-        public void AddQuantumLine(String qlName)
+        /// <summary>
+        /// Adds the quantum line.
+        /// </summary>
+        /// <param name="qlName">Name of the ql.</param>
+        /// <returns></returns>
+        public void AddQuantumLine(string qlName)
         {
             if (!QuantumLineExists(qlName))
             {
@@ -29,32 +63,43 @@ namespace QuantumCircuit
             }
         }
 
+        /// <summary>
+        /// Quantums the line exists.
+        /// </summary>
+        /// <param name="name">The name.</param>
+        /// <returns></returns>
         private bool QuantumLineExists(string name)
         {
             foreach (QuantumLine line in quantumLines)
             {
-                if (line.getName() == name)
+                if (line.GetName() == name)
                 {
                     return true;
                 }
             }
             return false;
         }
-    
 
-    public void pushBackH(String qlName)
+
+        /// <summary>
+        /// Pushes the back h.
+        /// </summary>
+        /// <param name="qlName">Name of the ql.</param>
+        /// <returns></returns>
+        public void pushBackH(string qlName)
         {
             if(QuantumLineExists(qlName))
             {
                 foreach (var quantumLine in quantumLines)
                 {
-                    if (quantumLine.getName() == qlName)
+                    if (quantumLine.GetName() == qlName)
                     {
                         Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
                         matrix = Operations.Multscaler(matrix, 1 / Math.Sqrt(2));
-                        Gate newGate = new Gate("H", matrix);
-                        quantumLine.addGate(newGate);
+                        Gate newGate = new Gate("H", new Operator(matrix));
+                        quantumLine.AddGate(newGate);
                         Console.WriteLine("H gate added at " + qlName);
+                        break;
                     }
                 }
             } else
@@ -63,17 +108,22 @@ namespace QuantumCircuit
             }
         }
 
-        public void pushBackY(String qlName)
+        /// <summary>
+        /// Pushes the back y.
+        /// </summary>
+        /// <param name="qlName">Name of the ql.</param>
+        /// <returns></returns>
+        public void pushBackY(string qlName)
         {
             if (QuantumLineExists(qlName))
             {
                 foreach (var quantumLine in quantumLines)
                 {
-                    if (quantumLine.getName() == qlName)
+                    if (quantumLine.GetName() == qlName)
                     {
                         Matrix matrix = new Matrix(new Complex[,] { { 0, new Complex(1, -1) }, { new Complex(1, 1), 0 } });
-                        Gate newGate = new Gate("Y", matrix);
-                        quantumLine.addGate(newGate);
+                        Gate newGate = new Gate("Y", new Operator(matrix));
+                        quantumLine.AddGate(newGate);
                         Console.WriteLine("Y gate added at " + qlName);
                     }
                 }
@@ -83,17 +133,22 @@ namespace QuantumCircuit
                 Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
             }
         }
-        public void pushBackX(String qlName)
+        /// <summary>
+        /// Pushes the back x.
+        /// </summary>
+        /// <param name="qlName">Name of the ql.</param>
+        /// <returns></returns>
+        public void pushBackX(string qlName)
         {
             if (QuantumLineExists(qlName))
             {
                 foreach (var quantumLine in quantumLines)
                 {
-                    if (quantumLine.getName() == qlName)
+                    if (quantumLine.GetName() == qlName)
                     {
                         Matrix matrix = new Matrix(new Complex[,] { { 1, 0 }, { 0, 1 } });
-                        Gate newGate = new Gate("X", matrix);
-                        quantumLine.addGate(newGate);
+                        Gate newGate = new Gate("X", new Operator(matrix));
+                        quantumLine.AddGate(newGate);
                         Console.WriteLine("X gate added at " + qlName);
                     }
                 }
@@ -103,17 +158,22 @@ namespace QuantumCircuit
                 Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
             }
         }
-        public void pushBackZ(String qlName)
+        /// <summary>
+        /// Pushes the back z.
+        /// </summary>
+        /// <param name="qlName">Name of the ql.</param>
+        /// <returns></returns>
+        public void PushBackZ(string qlName)
         {
             if (QuantumLineExists(qlName))
             {
                 foreach (var quantumLine in quantumLines)
                 {
-                    if (quantumLine.getName() == qlName)
+                    if (quantumLine.GetName() == qlName)
                     {
                         Matrix matrix = new Matrix(new Complex[,] { { 1, 0 }, { 0, -1 } });
-                        Gate newGate = new Gate("Z", matrix);
-                        quantumLine.addGate(newGate);
+                        Gate newGate = new Gate("Z", new Operator(matrix));
+                        quantumLine.AddGate(newGate);
                         Console.WriteLine("Z gate added at " + qlName);
                     }
                 }
@@ -123,40 +183,46 @@ namespace QuantumCircuit
                 Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
             }
         }
-        public void pushBackCNOT(String qlSource, String qlTarget)
+        /// <summary>
+        /// Pushes the back cnot.
+        /// </summary>
+        /// <param name="qlSource">The ql source.</param>
+        /// <param name="qlTarget">The ql target.</param>
+        /// <returns></returns>
+        public void PushBackCNOT(string qlSource, string qlTarget)
         {
             if (QuantumLineExists(qlSource) && (QuantumLineExists(qlTarget)))
             {
                 int sourceIndex = -1;
                 foreach (var quantumLine in quantumLines)
                 {
-                    if (quantumLine.getName() == qlSource)
+                    if (quantumLine.GetName() == qlSource)
                     {
-                        sourceIndex = quantumLine.getLength();
+                        sourceIndex = quantumLine.GetLength();
                         Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
-                        String[] targets = { qlTarget };
+                        string[] targets = { qlTarget };
                         int[] targetIndex = new int[1];
                         for(int i = 0; i < quantumLines.Count; i++)
                         {
-                            if (quantumLines[i].getName() == qlTarget)
+                            if (quantumLines[i].GetName() == qlTarget)
                             {
-                                targetIndex[0] = quantumLines[i].getLength();
+                                targetIndex[0] = quantumLines[i].GetLength();
                             }
                         }
-                        MultiLineGateRoot newGate = new MultiLineGateRoot("CNOT", matrix, targets, targetIndex);
-                        quantumLine.addGate(newGate);
+                        MultiLineGateRoot newGate = new MultiLineGateRoot("CNOT", new Operator(matrix), targets, targetIndex);
+                        quantumLine.AddGate(newGate);
                         Console.WriteLine("CNOT gate added at " + qlSource + " with target as " + qlTarget);
                     }
                     
                 }
                 foreach (var quantumLine in quantumLines)
                 {
-                    if (quantumLine.getName() == qlTarget)
+                    if (quantumLine.GetName() == qlTarget)
                     {
                         Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
-                        String[] targets = { qlTarget };
-                        MultiLineGateTarget newGate = new MultiLineGateTarget("CNOT TARG", matrix, qlSource, sourceIndex);
-                        quantumLine.addGate(newGate);
+                        string[] targets = { qlTarget };
+                        MultiLineGateTarget newGate = new MultiLineGateTarget("CNOT TARG", new Operator(matrix), qlSource, sourceIndex);
+                        quantumLine.AddGate(newGate);
                         Console.WriteLine("CNOT gate Target added at " + qlTarget + " with source as " + qlSource);
                     }
                 }
@@ -166,7 +232,13 @@ namespace QuantumCircuit
                 Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
             }
         }
-        public void pushBackTOF(String qlSource, String[] qlTargets)
+        /// <summary>
+        /// Pushes the back tof.
+        /// </summary>
+        /// <param name="qlSource">The ql source.</param>
+        /// <param name="qlTargets">The ql targets.</param>
+        /// <returns></returns>
+        public void pushBackTOF(string qlSource, string[] qlTargets)
         {
             int sourceIndex = -1;
             int[] indexes = new int[qlTargets.Length];
@@ -174,23 +246,23 @@ namespace QuantumCircuit
             {
                 foreach (var quantumLine in quantumLines)
                 {
-                    if (quantumLine.getName() == qlSource)
+                    if (quantumLine.GetName() == qlSource)
                     {
-                        sourceIndex = quantumLine.getLength();
+                        sourceIndex = quantumLine.GetLength();
                         for(int i = 0; i < qlTargets.Length; i++)
                         {
                             for(int j = 0; j < quantumLines.Count; j++)
                             {
-                                if (qlTargets[i] == quantumLines[j].getName())
+                                if (qlTargets[i] == quantumLines[j].GetName())
                                 {
-                                    indexes[i] = quantumLines[j].getLength();
+                                    indexes[i] = quantumLines[j].GetLength();
                                 }
                             }
                         }
                         // Need to figure out how this shindig works.
                         Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
-                        MultiLineGateRoot newGate = new MultiLineGateRoot("TOF", matrix, qlTargets, indexes);
-                        quantumLine.addGate(newGate);
+                        MultiLineGateRoot newGate = new MultiLineGateRoot("TOF", new Operator(matrix), qlTargets, indexes);
+                        quantumLine.AddGate(newGate);
                         Console.WriteLine("TOF gate added at " + qlSource);
                     }
                 }
@@ -206,12 +278,12 @@ namespace QuantumCircuit
                 {
                     foreach (var quantumLine in quantumLines)
                     {
-                        if (quantumLine.getName() == qlTargets[i])
+                        if (quantumLine.GetName() == qlTargets[i])
                         {
                             // Need to figure out how this shindig works.
                             Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
-                            MultiLineGateTarget newGate = new MultiLineGateTarget("TOF", matrix, qlSource, sourceIndex);
-                            quantumLine.addGate(newGate);
+                            MultiLineGateTarget newGate = new MultiLineGateTarget("TOF", new Operator(matrix), qlSource, sourceIndex);
+                            quantumLine.AddGate(newGate);
                             Console.WriteLine("TOF gate added at " + qlSource);
                         }
                     }
@@ -222,7 +294,13 @@ namespace QuantumCircuit
             }
         }
 
-        public void pushBackCNOT(String qlSource, String[] qlTargets)
+        /// <summary>
+        /// Pushes the back cnot.
+        /// </summary>
+        /// <param name="qlSource">The ql source.</param>
+        /// <param name="qlTargets">The ql targets.</param>
+        /// <returns></returns>
+        public void PushBackCNOT(string qlSource, string[] qlTargets)
         {
             int sourceIndex = -1;
             int[] indexes = new int[qlTargets.Length];
@@ -230,23 +308,23 @@ namespace QuantumCircuit
             {
                 foreach (var quantumLine in quantumLines)
                 {
-                    if (quantumLine.getName() == qlSource)
+                    if (quantumLine.GetName() == qlSource)
                     {
-                        sourceIndex = quantumLine.getLength();
+                        sourceIndex = quantumLine.GetLength();
                         for (int i = 0; i < qlTargets.Length; i++)
                         {
                             for (int j = 0; j < quantumLines.Count; j++)
                             {
-                                if (qlTargets[i] == quantumLines[j].getName())
+                                if (qlTargets[i] == quantumLines[j].GetName())
                                 {
-                                    indexes[i] = quantumLines[j].getLength();
+                                    indexes[i] = quantumLines[j].GetLength();
                                 }
                             }
                         }
                         // Need to figure out how this shindig works.
                         Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
-                        MultiLineGateRoot newGate = new MultiLineGateRoot("CNOT", matrix, qlTargets, indexes);
-                        quantumLine.addGate(newGate);
+                        MultiLineGateRoot newGate = new MultiLineGateRoot("CNOT", new Operator(matrix), qlTargets, indexes);
+                        quantumLine.AddGate(newGate);
                         Console.WriteLine("CNOT gate added at " + qlSource);
                     }
                 }
@@ -262,12 +340,12 @@ namespace QuantumCircuit
                 {
                     foreach (var quantumLine in quantumLines)
                     {
-                        if (quantumLine.getName() == qlTargets[i])
+                        if (quantumLine.GetName() == qlTargets[i])
                         {
                             // Need to figure out how this shindig works.
                             Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
-                            MultiLineGateTarget newGate = new MultiLineGateTarget("CNOT", matrix, qlSource, sourceIndex);
-                            quantumLine.addGate(newGate);
+                            MultiLineGateTarget newGate = new MultiLineGateTarget("CNOT", new Operator(matrix), qlSource, sourceIndex);
+                            quantumLine.AddGate(newGate);
                             Console.WriteLine("CNOT gate added at " + qlSource);
                         }
                     }
@@ -278,20 +356,47 @@ namespace QuantumCircuit
                 }
             }
         }
-        public void printCircuit()
+        /// <summary>
+        /// Prints the circuit.
+        /// </summary>
+        /// <returns></returns>
+        public void PrintCircuit()
         {
             Console.WriteLine("Quantum circuit: " + name);
             foreach (var quantumLine in quantumLines)
             {
-                Console.Write(quantumLine.getName());
-                quantumLine.printGates();
+                Console.Write(quantumLine.GetName());
+                quantumLine.PrintGates();
                 Console.WriteLine();
             }
         }
 
-        public void printOutput()
+        /// <summary>
+        /// Prints the output.
+        /// </summary>
+        /// <returns></returns>
+        public void PrintOutput()
         {
-
+            throw new NotImplementedException();
         }
+
+        public int QuantumLinesCount()
+        {
+            return quantumLines.Count;
+        }
+
+        public string[] GetQuantumLineGates(string quantumLineName)
+        {
+            foreach (var quantumLine in quantumLines)
+            {
+                if (quantumLine.GetName() == quantumLineName)
+                {
+                    return quantumLine.GetGates();
+                }
+            }
+
+            return [];
+        }
+        
     }
 }

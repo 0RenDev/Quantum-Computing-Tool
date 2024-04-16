@@ -6,28 +6,29 @@ using System.Numerics;
 using LinearAlgebra;
 using System.Text;
 using System.Threading.Tasks;
+using Quantum;
 
 namespace QuantumCircuit
 {
     internal class Gate
     {
-        protected String gateType;
-        protected Matrix operation;
+        protected string gateType;
+        protected Operator operation;
 
         // The following are for the likes of CNOT or swap. 
         // Just a thought.
-        String rootName;
+        string rootName;
         int rootIndex;
-        String targetName;
+        string targetName;
         int targetIndex;
 
-        public Gate(String gateType, Matrix operation)
+        public Gate(string gateType, Operator operation)
         {
             this.gateType = gateType;
             this.operation = operation;
         }
 
-        public virtual String getGateType()
+        public virtual string getGateType()
         {
             return gateType;
         }
@@ -36,10 +37,10 @@ namespace QuantumCircuit
     internal class MultiLineGateRoot : Gate
     {
         // Additional properties for MultiLineGate
-        protected String[] targets;
+        protected string[] targets;
         protected int[] targetsIndexes;
 
-        public MultiLineGateRoot(String gateType, Matrix operation, String[] targets, int[] targetsIndexes)
+        public MultiLineGateRoot(string gateType, Operator operation, string[] targets, int[] targetsIndexes)
             : base(gateType, operation)
         {
             this.targetsIndexes = targetsIndexes;
@@ -48,10 +49,10 @@ namespace QuantumCircuit
 
         public override string getGateType()
         {
-            String returnString = "[" + gateType + " targetting at:";
+            string returnString = "[" + gateType + " targetting at:";
             for (int i = 0; i < targets.Length; i++)
             {
-                returnString += " " + targets[i] + targetsIndexes[i];
+                returnString += " " + targets[i] + ":" + targetsIndexes[i];
             }
             return returnString + "]";
         }
@@ -62,7 +63,7 @@ namespace QuantumCircuit
         protected String source;
         protected int sourceIndex;
 
-        public MultiLineGateTarget(string gateType, Matrix operation, string source, int sourceIndex)
+        public MultiLineGateTarget(string gateType, Operator operation, string source, int sourceIndex)
             : base(gateType, operation)
         {
             this.source = source;

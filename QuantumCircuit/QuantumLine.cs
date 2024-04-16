@@ -8,32 +8,43 @@ namespace QuantumCircuit
 {
     internal class QuantumLine
     {
-        List<Gate> gates = new List<Gate>();
-        private String name;
+        readonly List<Gate> gates = [];
+        private readonly string name;
 
         public QuantumLine(string name)
         {
             this.name = name;
         }
 
-        public String getName()
+        public string GetName()
         {
             return name;
         }
 
-        public void addGate(Gate newGate)
+        public void AddGate(Gate newGate)
         {
             gates.Add(newGate);
         }
 
-        public void printGates()
+        public string[] GetGates()
+        {
+            string[] gateTypes = new string[gates.Count];
+            int i = 0;
+            foreach(Gate gate in gates)
+            {
+                gateTypes[i] = gate.getGateType();
+            }
+            return gateTypes;
+        }
+
+        public void PrintGates()
         {
             foreach (Gate gate in gates)
             {
                 Console.Write("--" + gate.getGateType());
             }
         }
-        public int getLength()
+        public int GetLength()
         {
             return gates.Count;
         }
