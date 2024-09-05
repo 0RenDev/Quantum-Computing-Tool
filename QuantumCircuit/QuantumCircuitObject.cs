@@ -45,6 +45,11 @@ namespace QuantumCircuit
             this.name = name;
         }
 
+        public void Evolve(List<Qbit>)
+        {
+
+        }
+
         /// <summary>
         /// Adds the quantum line.
         /// </summary>
@@ -86,7 +91,7 @@ namespace QuantumCircuit
         /// </summary>
         /// <param name="qlName">Name of the ql.</param>
         /// <returns></returns>
-        public void pushBackH(string qlName)
+        public void PushBackH(string qlName)
         {
             if(QuantumLineExists(qlName))
             {
@@ -113,7 +118,7 @@ namespace QuantumCircuit
         /// </summary>
         /// <param name="qlName">Name of the ql.</param>
         /// <returns></returns>
-        public void pushBackY(string qlName)
+        public void PushBackY(string qlName)
         {
             if (QuantumLineExists(qlName))
             {
@@ -138,7 +143,7 @@ namespace QuantumCircuit
         /// </summary>
         /// <param name="qlName">Name of the ql.</param>
         /// <returns></returns>
-        public void pushBackX(string qlName)
+        public void PushBackX(string qlName)
         {
             if (QuantumLineExists(qlName))
             {
@@ -238,7 +243,7 @@ namespace QuantumCircuit
         /// <param name="qlSource">The ql source.</param>
         /// <param name="qlTargets">The ql targets.</param>
         /// <returns></returns>
-        public void pushBackTOF(string qlSource, string[] qlTargets)
+        public void PushBackTOF(string qlSource, string[] qlTargets)
         {
             int sourceIndex = -1;
             int[] indexes = new int[qlTargets.Length];

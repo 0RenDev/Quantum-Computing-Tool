@@ -147,20 +147,20 @@ namespace Console_Testing
             cs.AddQuantumLine("Z");
             cs.AddQuantumLine("D");
             String[] tofPushbacks = { "Y", "Z", "D" };
-            cs.pushBackTOF("X", tofPushbacks);
-            cs.pushBackH("X");
-            cs.pushBackH("X");
-            cs.pushBackH("X");
+            cs.PushBackTOF("X", tofPushbacks);
+            cs.PushBackH("X");
+            cs.PushBackH("X");
+            cs.PushBackH("X");
 
-            cs.pushBackH("Y");
+            cs.PushBackH("Y");
             cs.PushBackCNOT("X", "Y");
             cs.PushBackZ("X");
-            cs.pushBackY("Y");
+            cs.PushBackY("Y");
 
-            cs.pushBackY("Z");
-            cs.pushBackH("D");
+            cs.PushBackY("Z");
+            cs.PushBackH("D");
             String[] tofPushbacks2 = { "X", "Y" };
-            cs.pushBackTOF("Z", tofPushbacks2);
+            cs.PushBackTOF("Z", tofPushbacks2);
             cs.PushBackCNOT("Y", "X");
             cs.PrintCircuit();
             /*
@@ -181,8 +181,8 @@ namespace Console_Testing
             QA.AddQuantumLine("q[2]");
             QA.AddQuantumLine("q[3]");
 
-            QA.pushBackX("q[0]");
-            QA.pushBackX("q[2]");
+            QA.PushBackX("q[0]");
+            QA.PushBackX("q[2]");
             QA.PushBackCNOT("q[3]", ["q[0]", "q[1]"]);
 
             QA.PushBackCNOT("q[1]", ["q[0]"]);

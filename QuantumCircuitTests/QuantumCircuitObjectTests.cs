@@ -36,7 +36,7 @@ namespace QuantumCircuit.Tests
             // Write a Unit Test to check if the Hadamard gate is added to the QuantumLine
             QuantumCircuitObject qco = new("test");
             qco.AddQuantumLine("test");
-            qco.pushBackH("test");
+            qco.PushBackH("test");
             string[] gates = qco.GetQuantumLineGates("test");
             Assert.AreEqual(1, gates.Length);
             Assert.AreEqual("H", gates[0]);
@@ -48,7 +48,7 @@ namespace QuantumCircuit.Tests
             // Write a Unit Test to check if the Y gate is added to the QuantumLine
             QuantumCircuitObject qco = new("test");
             qco.AddQuantumLine("test");
-            qco.pushBackY("test");
+            qco.PushBackY("test");
             string[] gates = qco.GetQuantumLineGates("test");
             Assert.AreEqual(1, gates.Length);
             Assert.AreEqual("Y", gates[0]);
@@ -60,7 +60,7 @@ namespace QuantumCircuit.Tests
             // Write a Unit Test to check if the X gate is added to the QuantumLine
             QuantumCircuitObject qco = new("test");
             qco.AddQuantumLine("test");
-            qco.pushBackX("test");
+            qco.PushBackX("test");
             string[] gates = qco.GetQuantumLineGates("test");
             Assert.AreEqual(1, gates.Length);
             Assert.AreEqual("X", gates[0]);
@@ -107,7 +107,7 @@ namespace QuantumCircuit.Tests
             qco.AddQuantumLine("test3");
 
             string[] targets = { "test2", "test3" };
-            qco.pushBackTOF("test1", targets);
+            qco.PushBackTOF("test1", targets);
             string[] gates = qco.GetQuantumLineGates("test1");
             Assert.AreEqual(1, gates.Length);
             Assert.AreEqual("[TOF targetting at: test2:0 test3:0]", gates[0]);
