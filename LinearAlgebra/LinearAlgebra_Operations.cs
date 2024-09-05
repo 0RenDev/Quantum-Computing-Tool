@@ -163,7 +163,7 @@ namespace LinearAlgebra
 
             for(int i = 0; i < rows; i++)
             {
-                Vector row = new Vector(matrix.GetRow(i));
+                Vector row = new(matrix.GetRow(i));
                 result[i] = InnerProduct(row, vector);
             }
 

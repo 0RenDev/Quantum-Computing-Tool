@@ -100,7 +100,7 @@ namespace Linear_Algebra_Testing
 
 
         [Test]
-        public void isEqual_MatricesEqual_ReturnsTrue()
+        public void IsEqual_MatricesEqual_ReturnsTrue()
         {
             // Arrange
             Matrix matrix1 = new Matrix(new Complex[,] { { 1, 2 }, { 3, 4 } });
@@ -114,7 +114,7 @@ namespace Linear_Algebra_Testing
         }
 
         [Test]
-        public void isEqual_MatricesNotEqual_ReturnsFalse()
+        public void IsEqual_MatricesNotEqual_ReturnsFalse()
         {
             // Arrange
             Matrix matrix1 = new Matrix(new Complex[,] { { 1, 2 }, { 3, 4 } });
