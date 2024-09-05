@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuit", "QuantumCi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumTests", "QuantumTests\QuantumTests.csproj", "{4B6B80D9-CC52-41FB-AEB9-1DAAC1631441}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuitTests", "QuantumCircuitTests\QuantumCircuitTests.csproj", "{95502234-E3D4-4DDB-A9AB-F3D2DA7C9540}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{4B6B80D9-CC52-41FB-AEB9-1DAAC1631441}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B6B80D9-CC52-41FB-AEB9-1DAAC1631441}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B6B80D9-CC52-41FB-AEB9-1DAAC1631441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95502234-E3D4-4DDB-A9AB-F3D2DA7C9540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95502234-E3D4-4DDB-A9AB-F3D2DA7C9540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95502234-E3D4-4DDB-A9AB-F3D2DA7C9540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95502234-E3D4-4DDB-A9AB-F3D2DA7C9540}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

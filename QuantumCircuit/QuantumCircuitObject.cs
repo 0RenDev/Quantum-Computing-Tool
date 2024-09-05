@@ -323,5 +323,23 @@ namespace QuantumCircuit
         {
 
         }
+
+        public int QuantumLinesCount()
+        {
+            return QuantumLines.Count;
+        }
+
+        public string[] GetQuantumLineGates(string quantumLineName)
+        {
+            foreach (var quantumLine in QuantumLines)
+            {
+                if (quantumLine.GetName() == quantumLineName)
+                {
+                    return quantumLine.GetGates();
+                }
+            }
+
+            return [];
+        }
     }
 }

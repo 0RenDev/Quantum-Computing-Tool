@@ -27,6 +27,17 @@ namespace QuantumCircuit
             gates.Add(newGate);
         }
 
+        public string[] GetGates()
+        {
+            string[] gateTypes = new string[gates.Count];
+            int i = 0;
+            foreach (Gate gate in gates)
+            {
+                gateTypes[i] = gate.GetGateType();
+            }
+            return gateTypes;
+        }
+
         // prints all gates on this line to the console, O(n)
         public void PrintGates()
         {
