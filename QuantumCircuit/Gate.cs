@@ -31,6 +31,11 @@ namespace QuantumCircuit
         {
             return gateType;
         }
+
+        public virtual string GetGateType()
+        {
+            return gateType;
+        }
     }
 
     internal class MultiLineGateRoot : Gate
@@ -70,12 +75,10 @@ namespace QuantumCircuit
             this.sourceIndex = sourceIndex;
         }
 
-        public override string getGateType()
+        public override string GetGateType()
         {
             String returnString = "[" + gateType + " from " + source + sourceIndex + "]";
             return returnString;
         }
-
-
     }
 }
