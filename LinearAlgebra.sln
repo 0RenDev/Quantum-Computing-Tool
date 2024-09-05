@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quantum", "Quantum\Quantum.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuit", "QuantumCircuit\QuantumCircuit.csproj", "{513E460C-52DB-4765-A0C9-B8C6F901E844}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumTests", "QuantumTests\QuantumTests.csproj", "{4B6B80D9-CC52-41FB-AEB9-1DAAC1631441}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumTests", "QuantumTests\QuantumTests.csproj", "{4B6B80D9-CC52-41FB-AEB9-1DAAC1631441}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
