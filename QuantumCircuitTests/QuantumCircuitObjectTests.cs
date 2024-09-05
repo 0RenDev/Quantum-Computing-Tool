@@ -79,6 +79,5 @@ namespace QuantumCircuit.Tests
             Assert.AreEqual("Z", gates[0]);
 
         }
-
     }
 }

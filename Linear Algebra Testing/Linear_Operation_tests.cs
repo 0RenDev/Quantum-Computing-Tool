@@ -98,6 +98,48 @@ namespace Linear_Algebra_Testing
             MatrixTestUtilities.AssertMatrixAreEqual(expectedElements, resultMatrix.elements);
         }
 
+        [Test]
+        public void TensorProduct_LargeMatrices_Success()
+        {
+            // Arrange
+            int size = 50; // Define a large size for the matrices
+            Complex[,] elements1 = new Complex[size, size];
+            Complex[,] elements2 = new Complex[size, size];
+
+            // Initialize the matrices with some values
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    elements1[i, j] = new Complex(i + 1, j + 1);
+                    elements2[i, j] = new Complex(j + 1, i + 1);
+                }
+            }
+
+            Matrix matrix1 = new Matrix(elements1);
+            Matrix matrix2 = new Matrix(elements2);
+
+            // Act
+            Matrix resultMatrix = Operations.TensorProduct(matrix1, matrix2);
+
+            // Assert
+            Complex[,] expectedElements = new Complex[size * size, size * size];
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    for (int m = 0; m < size; m++)
+                    {
+                        for (int n = 0; n < size; n++)
+                        {
+                            expectedElements[i * size + m, j * size + n] = elements1[i, j] * elements2[m, n];
+                        }
+                    }
+                }
+            }
+
+            MatrixTestUtilities.AssertMatrixAreEqual(expectedElements, resultMatrix.elements);
+        }
 
         [Test]
         public void IsEqual_MatricesEqual_ReturnsTrue()

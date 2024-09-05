@@ -236,8 +236,6 @@ namespace LinearAlgebra
             return new Matrix(resultElements);
         }
 
-
-
         // Vector- Vector Inner Product (dot product)
         public static Complex InnerProduct(Vector vector1, Vector vector2)
         {
@@ -502,6 +500,7 @@ namespace LinearAlgebra
 
             return new Matrix(joinedElements);
         }
+
     }
 
 
