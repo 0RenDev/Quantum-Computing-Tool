@@ -17,25 +17,25 @@ namespace QuantumCircuit
             this.name = name;
         }
 
-        public String getName()
+        public String GetName()
         {
             return name;
         }
 
-        public void addGate(Gate newGate)
+        public void AddGate(Gate newGate)
         {
             gates.Add(newGate);
         }
 
         // prints all gates on this line to the console, O(n)
-        public void printGates()
+        public void PrintGates()
         {
             foreach (Gate gate in gates)
             {
                 Console.Write("--" + gate.getGateType());
             }
         }
-        public int getLength()
+        public int GetLength()
         {
             return gates.Count;
         }
