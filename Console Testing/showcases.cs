@@ -137,8 +137,10 @@ namespace Console_Testing
             Console.WriteLine($"Matrix Tensor Product: {time.TotalMilliseconds} milliseconds");
         }
 
+        // Demonstrates the evolution of a qubit state by using varying quantum operators
         public static void QbitEvolutionDemo()
         {
+            // Define matrices representing the required quantum gates
             Complex[,] x = { { 0, 1 }, { 1, 0 } };
             Complex[,] y = { { 0, -1 * Complex.ImaginaryOne }, { Complex.ImaginaryOne, 0 } };
             Complex[,] z = { { 1, 0 }, { 0, -1 } };
@@ -146,6 +148,7 @@ namespace Console_Testing
             Complex[,] s = { { 1, 0 }, { 0, Complex.ImaginaryOne } };
             Complex[,] t = { { 1, 0 }, { 0, (1 + Complex.ImaginaryOne) / Complex.Sqrt(2) } };
 
+            // Make operator objects for each matrix
             Operator X = new Operator(x);
             Operator Y = new Operator(y);
             Operator Z = new Operator(z);
@@ -153,42 +156,57 @@ namespace Console_Testing
             Operator S = new Operator(s);
             Operator T = new Operator(t);
 
+            // Initailize qubit in state |0> 
             Complex[] state = { 1, 0 };
             Qbit q = new Qbit(state);
 
             Console.WriteLine("Initial State Vector:\n" + q.ToString() + "\n");
 
+            // Apply X, Y, Z operators sequentially to qubit
             q.Evolve(X);
             q.Evolve(Y);
             q.Evolve(Z);
 
+            // Display final qubit state
             Console.WriteLine("State Vector after evolution:\n" + q.ToString() + "\n");
 
         }
 
+        // Demonstrates the creation of a simple quantum circuit object
         public static void QuantumConstructionPlay()
         {
+            // Initialize quantum circuit object
             QuantumCircuitObject cs = new QuantumCircuitObject("Test");
+
+            // Add quantum lines
             cs.AddQuantumLine("X");
             cs.AddQuantumLine("Y");
             cs.AddQuantumLine("Z");
             cs.AddQuantumLine("D");
+
+            // Push tof gate with control Y, Z, D with target X
             String[] tofPushbacks = { "Y", "Z", "D" };
             cs.PushBackTOF("X", tofPushbacks);
+
+            // Apply three Hadamard gates to X
             cs.PushBackH("X");
             cs.PushBackH("X");
             cs.PushBackH("X");
 
+            // Apply various gates to different lines
             cs.PushBackH("Y");
             cs.PushBackCNOT("X", "Y");
             cs.PushBackZ("X");
             cs.PushBackY("Y");
 
+            // Apply more gates to Z and D
             cs.PushBackY("Z");
             cs.PushBackH("D");
             String[] tofPushbacks2 = { "X", "Y" };
             cs.PushBackTOF("Z", tofPushbacks2);
             cs.PushBackCNOT("Y", "X");
+
+            // Print result
             cs.PrintCircuit();
             /*
         QuantumCircuitObject cs = new QuantumCircuitObject("Test");
@@ -199,24 +217,30 @@ namespace Console_Testing
         cs.printCircuit();*/
         }
 
+        // Demonstrates a quantum adder circuit
         public static void QuantumAdderConstruction()
         {
-
+            // Create a new quantum circuit object 
             QuantumCircuitObject QA = new QuantumCircuitObject("Adder");
+
+            // Add four quantum lines
             QA.AddQuantumLine("q[0]");
             QA.AddQuantumLine("q[1]");
             QA.AddQuantumLine("q[2]");
             QA.AddQuantumLine("q[3]");
 
+            // Apply X gate to q[0] and q[2] 
             QA.PushBackX("q[0]");
             QA.PushBackX("q[2]");
-            QA.PushBackCNOT("q[3]", ["q[0]", "q[1]"]);
 
+            // Apply CNOT gates with different controls and targets to form the adder logic
+            QA.PushBackCNOT("q[3]", ["q[0]", "q[1]"]);
             QA.PushBackCNOT("q[1]", ["q[0]"]);
             QA.PushBackCNOT("q[3]", ["q[1]", "q[2]"]);
             QA.PushBackCNOT("q[2]", ["q[1]"]);
             QA.PushBackCNOT("q[1]", ["q[0]"]);
 
+            // Print result
             QA.PrintCircuit();
 
         }
