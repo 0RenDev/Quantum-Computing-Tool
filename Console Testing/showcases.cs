@@ -186,7 +186,7 @@ namespace Console_Testing
 
             // Push tof gate with control Y, Z, D with target X
             String[] tofPushbacks = { "Y", "Z", "D" };
-            cs.PushBackTOF("X", tofPushbacks);
+            cs.PushBackTOF(tofPushbacks, "X");
 
             // Apply three Hadamard gates to X
             cs.PushBackH("X");
@@ -203,7 +203,7 @@ namespace Console_Testing
             cs.PushBackY("Z");
             cs.PushBackH("D");
             String[] tofPushbacks2 = { "X", "Y" };
-            cs.PushBackTOF("Z", tofPushbacks2);
+            cs.PushBackTOF(tofPushbacks, "Z");
             cs.PushBackCNOT("Y", "X");
 
             // Print result
@@ -215,6 +215,20 @@ namespace Console_Testing
         //cs.pushBackH("X");
         cs.pushBackCNOT("X", "Y");
         cs.printCircuit();*/
+        }
+
+        public static void TofGateTest()
+        {
+            QuantumCircuitObject QA = new QuantumCircuitObject("TofTest");
+
+            QA.AddQuantumLine("q[0]");
+            QA.AddQuantumLine("q[1]");
+            QA.AddQuantumLine("q[2]");
+            QA.PushBackH("q[0]");
+            QA.PushBackH("q[2]");
+            QA.PushBackH("q[2]");
+            QA.PushBackTOF(["q[0]", "q[1]"], "q[2]");
+            QA.PrintCircuit();
         }
 
         // Demonstrates a quantum adder circuit

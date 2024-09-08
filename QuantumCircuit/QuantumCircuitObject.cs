@@ -178,36 +178,36 @@ namespace QuantumCircuit
                     Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
                     String[] targets = { qlTarget };
                     // Create and add the target part of CNOT to target line
-                    MultiLineGateTarget newGate = new MultiLineGateTarget("CNOT TARG", matrix, qlSource, sourceIndex);
+                    MultiLineGateTarget newGate = new MultiLineGateTarget("CNOT TARG", matrix, [qlSource], [sourceIndex]);
                     quantumLine.AddGate(newGate);
                     Console.WriteLine("CNOT gate Target added at " + qlTarget + " with source as " + qlSource);
                 }
             }
         }
 
-        public void PushBackTOF(String qlSource, String[] qlTargets)
+        public void PushBackTOF(String[] qlSources, String qlTarget)
         {
-            int sourceIndex = -1;
-            int[] indexes = new int[qlTargets.Length];
+            int targetIndex = -1;
+            int[] indexes = new int[qlSources.Length];
             // Check if the line is in the circuit, if not, print error
-            if (!QuantumLineExists(qlSource))
+            if (!QuantumLineExists(qlTarget))
             {
                 Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
                 return;
             }
-            
+
             foreach (var quantumLine in QuantumLines)
             {
                 // If the quantum line's name is not the source, skip to the next line
-                if (!(quantumLine.GetName() == qlSource)) continue;
+                if (!(quantumLine.GetName() == qlTarget)) continue;
 
-                sourceIndex = quantumLine.GetLength();
+                targetIndex = quantumLine.GetLength();
                 // For each target name, find corresponding quantum line and track its length
-                for (int i = 0; i < qlTargets.Length; i++)
+                for (int i = 0; i < qlSources.Length; i++)
                 {
                     for (int j = 0; j < QuantumLines.Count; j++)
                     {
-                        if (qlTargets[i] == QuantumLines[j].GetName())
+                        if (qlSources[i] == QuantumLines[j].GetName())
                         {
                             indexes[i] = QuantumLines[j].GetLength();
                         }
@@ -216,33 +216,33 @@ namespace QuantumCircuit
                 // TODO: Initalize Toffoli gate
                 Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
                 // Create a TOF gate as a root gate on the source line
-                MultiLineGateRoot newGate = new MultiLineGateRoot("TOF", matrix, qlTargets, indexes);
+                MultiLineGateTarget newGate = new MultiLineGateTarget("TOF", matrix, qlSources, indexes);
                 quantumLine.AddGate(newGate);
-                Console.WriteLine("TOF gate added at " + qlSource);
+                Console.WriteLine("TOF gate added at " + qlTarget);
 
             }
-            
 
-            for(int i = 0; i < qlTargets.Length; i++)
+
+            for (int i = 0; i < qlSources.Length; i++)
             {
                 // Check if the target lines are in the circuit, else print error
-                if (!QuantumLineExists(qlTargets[i]))
+                if (!QuantumLineExists(qlSources[i]))
                 {
-                    Console.WriteLine("Error, quantum line " + qlTargets[i] + " DNE!");
+                    Console.WriteLine("Error, quantum line " + qlSources[i] + " DNE!");
                     return;
                 }
-                
+
                 foreach (var quantumLine in QuantumLines)
                 {
                     // If line's name is not in target, skip to the next line
-                    if (!(quantumLine.GetName() == qlTargets[i])) continue;
-                    
+                    if (!(quantumLine.GetName() == qlSources[i])) continue;
+
                     // TODO: Initalize Toffoli gate
                     Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
                     // Create a TOF gate as a target gate on the target line
-                    MultiLineGateTarget newGate = new MultiLineGateTarget("TOF", matrix, qlSource, sourceIndex);
+                    MultiLineGateRoot newGate = new MultiLineGateRoot("TOF", matrix, [qlTarget], [targetIndex]);
                     quantumLine.AddGate(newGate);
-                    Console.WriteLine("TOF gate added at " + qlSource);
+                    Console.WriteLine("TOF gate added at " + qlTarget);
 
                 }
             }
@@ -299,7 +299,7 @@ namespace QuantumCircuit
                         // TODO: Initailize CNOT gate
                         Matrix matrix = new Matrix(new Complex[,] { { 1, 1 }, { 1, -1 } });
                         // Create a CNOT gate as the target gate on the target quantum line
-                        MultiLineGateTarget newGate = new MultiLineGateTarget("CNOT", matrix, qlSource, sourceIndex);
+                        MultiLineGateTarget newGate = new MultiLineGateTarget("CNOT", matrix, [qlSource], [sourceIndex]);
                         quantumLine.AddGate(newGate);
                         Console.WriteLine("CNOT gate added at " + qlSource);
                     }

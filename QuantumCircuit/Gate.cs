@@ -65,20 +65,24 @@ namespace QuantumCircuit
     internal class MultiLineGateTarget : Gate
     {
         // Additional properties for MultiLineGate
-        protected String source;
-        protected int sourceIndex;
+        protected String[] sources;
+        protected int[] sourceIndexes;
 
-        public MultiLineGateTarget(string gateType, Matrix operation, string source, int sourceIndex)
+        public MultiLineGateTarget(string gateType, Matrix operation, string[] sources, int[] sourceIndexes)
             : base(gateType, operation)
         {
-            this.source = source;
-            this.sourceIndex = sourceIndex;
+            this.sources = sources;
+            this.sourceIndexes = sourceIndexes;
         }
 
-        public override string GetGateType()
+        public override string getGateType()
         {
-            String returnString = "[" + gateType + " from " + source + sourceIndex + "]";
-            return returnString;
+            String returnString = "[" + gateType + " from:";
+            for (int i = 0; i < sources.Length; i++)
+            {
+                returnString += " " + sources[i] + sourceIndexes[i];
+            }
+            return returnString + "]";
         }
     }
 }

@@ -18,12 +18,19 @@ class Program
         //example.timeTestTensor(106, 12, 90, 16);
 
         //example.vector_times_matrix();
-        //example.mmultThreadedMult();
+        Console.WriteLine("125x1000 Matrix x 1000x350 Matrix Matrix Testing");
+        //Showcases.MultThreadedMult();
+        Console.WriteLine("-------------\nQuantum Adder Structure");
+        Showcases.QuantumAdderConstruction();
 
-        //Showcases.QbitEvolutionDemo();   
-        //Showcases.QuantumAdderConstruction();
+        Console.WriteLine("-------------\nTof Test Structure");
+        Showcases.TofGateTest();
 
-        example.MeasurementTest();
+        Console.WriteLine("-------------\nQbit Evolution Demo");
+        //Showcases.QbitEvolutionDemo();
+
+        Console.WriteLine("-------------\nMeasurement Test");
+        //example.MeasurementTest();
 
         Console.ReadKey();  
     }
