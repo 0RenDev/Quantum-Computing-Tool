@@ -380,6 +380,19 @@ namespace QuantumCircuit
                     maxGates = quantumLine.GetLength();
                 }
             }
+
+            for (int i = 0; i < maxGates; i++)
+            {
+                foreach (var quantumLine in QuantumLines)
+                {
+                    if (quantumLine.GetLength() > i)
+                    {
+                        Gate gate = quantumLine.GetGate(i);
+                        quantumRegister.Update(gate.Apply(quantumRegister.State));
+
+                    }
+                }
+            }
         }
     }
 }

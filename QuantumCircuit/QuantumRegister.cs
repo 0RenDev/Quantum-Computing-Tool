@@ -34,5 +34,10 @@ namespace QuantumCircuit
             State = state;
             QbitCount = (int)Math.Log(state.Length, 2);
         }
+
+        public void Update(Complex[] state)
+        {
+            State = state;
+        }
     }
 }
