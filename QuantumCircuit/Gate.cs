@@ -27,14 +27,14 @@ namespace QuantumCircuit
             this.operation = operation;
         }
 
-        public virtual String getGateType()
+        public virtual string GetGateType()
         {
             return gateType;
         }
 
-        public virtual string GetGateType()
+        public virtual Matrix Apply(Matrix input)
         {
-            return gateType;
+            return operation * input;
         }
     }
 
@@ -52,7 +52,7 @@ namespace QuantumCircuit
         }
 
         // returns string representation of the gate, giving type and target qbits, O(n) with minimal memory usage
-        public override string getGateType()
+        public override string GetGateType()
         {
             String returnString = "[" + gateType + " targetting at:";
             for (int i = 0; i < targets.Length; i++)
@@ -75,7 +75,7 @@ namespace QuantumCircuit
             this.sourceIndexes = sourceIndexes;
         }
 
-        public override string getGateType()
+        public override string GetGateType()
         {
             String returnString = "[" + gateType + " from:";
             for (int i = 0; i < sources.Length; i++)
@@ -83,6 +83,11 @@ namespace QuantumCircuit
                 returnString += " " + sources[i] + sourceIndexes[i];
             }
             return returnString + "]";
+        }
+
+        public override Matrix Apply(Matrix input)
+        {
+            return operation * input;
         }
     }
 }

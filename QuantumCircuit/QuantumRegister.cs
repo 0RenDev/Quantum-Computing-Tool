@@ -9,8 +9,8 @@ namespace QuantumCircuit
 {
     public class QuantumRegister
     {
-        public Complex[] State { get; private set; };
-        public int QbitCount { get; private set; };
+        public Complex[] State { get; private set; }
+        public int QbitCount { get; private set; }
 
         public QuantumRegister(int qbitCount)
         {
