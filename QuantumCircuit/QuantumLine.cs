@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LinearAlgebra;
 
 namespace QuantumCircuit
 {
@@ -25,6 +26,11 @@ namespace QuantumCircuit
         public void AddGate(Gate newGate)
         {
             gates.Add(newGate);
+        }
+
+        public Gate GetGate(int index)
+        {
+            return gates[index];
         }
 
         public string[] GetGates()

@@ -32,9 +32,14 @@ namespace QuantumCircuit
             return gateType;
         }
 
-        public virtual Matrix Apply(Matrix input)
+        public Matrix GetOperator()
         {
-            return operation * input;
+            return operation;
+        }
+
+        public virtual Complex[] Apply(Complex[] state)
+        {
+            return Operations.MatrixVectorMult(operation, new LinearAlgebra.Vector(state)).GetState();
         }
     }
 

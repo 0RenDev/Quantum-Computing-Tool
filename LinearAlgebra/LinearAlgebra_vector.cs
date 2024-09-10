@@ -85,6 +85,8 @@ namespace LinearAlgebra
 
         public Matrix ToMatrix => new Matrix(rows, cols, elements);
 
+        public Complex[] GetState() => elements;
+
         // Override ToString
         public override string ToString()
         {
