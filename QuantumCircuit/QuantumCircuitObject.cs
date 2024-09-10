@@ -44,6 +44,28 @@ namespace QuantumCircuit
         }
     
 
+    public void PushBackIdentity(String qlName)
+        {
+        // Check if the line is in the circuit, else print error
+        if (!QuantumLineExists(qlName))
+            {
+            Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
+        }
+
+        foreach (var quantumLine in QuantumLines)
+            {
+            if (quantumLine.GetName() == qlName)
+                {
+                // Define the identity matrix
+                Matrix matrix = new Matrix(new Complex[,] { { 1, 0 }, { 0, 1 } });
+                // Create new gate instance and add it to the line
+                Gate newGate = new Gate("I", matrix);
+                quantumLine.AddGate(newGate);
+                Console.WriteLine("Identity gate added at " + qlName);
+            }
+        }
+    }
+
     public void PushBackH(String qlName)
         {
             // Check if the line is in the circuit, else print error
@@ -340,6 +362,24 @@ namespace QuantumCircuit
             }
 
             return [];
+        }
+
+        public void Execute()
+        {
+            // Convert the quantum circuit to a quantum register
+            // Convert the quantum lines into a matrix of gates
+            // For each column of the matrix, apply nonentangling gates to the quantum register, then apply entangling gates
+
+            QuantumRegister quantumRegister = new(QuantumLinesCount());
+
+            int maxGates = 0;
+            foreach (var quantumLine in QuantumLines)
+            {
+                if (quantumLine.GetLength() > maxGates)
+                {
+                    maxGates = quantumLine.GetLength();
+                }
+            }
         }
     }
 }
