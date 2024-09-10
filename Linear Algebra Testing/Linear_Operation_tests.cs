@@ -84,7 +84,7 @@ namespace Linear_Algebra_Testing
         }
 
         [Test]
-        public void TensorProduct_MatrixTensorProduct_Success()
+        public void TensorProduct_MatrixTensorProduct1_Success()
         {
             // Arrange
             Matrix matrix1 = new Matrix(new Complex[,] { { 1, 2 }, { 3, 4 } });
@@ -95,6 +95,36 @@ namespace Linear_Algebra_Testing
 
             // Assert
             Complex[,] expectedElements = { { 5, 6, 10, 12 }, { 7, 8, 14, 16 }, { 15, 18, 20, 24 }, { 21, 24, 28, 32 } };
+            MatrixTestUtilities.AssertMatrixAreEqual(expectedElements, resultMatrix.elements);
+        }
+
+        [Test]
+        public void TensorProduct_MatrixTensorProduct2_Success()
+        {
+            // Arrange
+            Matrix matrix1 = new Matrix(new Complex[,] { { 1, 0 } });
+            Matrix matrix2 = new Matrix(new Complex[,] { { 1, 0 } });
+
+            // Act
+            Matrix resultMatrix = Operations.TensorProduct(matrix1, matrix2);
+
+            // Assert
+            Complex[,] expectedElements = { { 1, 0, 0, 0 } };
+            MatrixTestUtilities.AssertMatrixAreEqual(expectedElements, resultMatrix.elements);
+        }
+
+        [Test]
+        public void TensorProduct_MatrixTensorProduct3_Success()
+        {
+            // Arrange
+            Matrix matrix1 = new Matrix(new Complex[,] { { 1, 0, 0, 0 } });
+            Matrix matrix2 = new Matrix(new Complex[,] { { 1, 0} });
+
+            // Act
+            Matrix resultMatrix = Operations.TensorProduct(matrix1, matrix2);
+
+            // Assert
+            Complex[,] expectedElements = { { 1, 0, 0, 0, 0, 0, 0, 0 } };
             MatrixTestUtilities.AssertMatrixAreEqual(expectedElements, resultMatrix.elements);
         }
 
