@@ -43,7 +43,7 @@ namespace QuantumCircuit
         {
             foreach (Gate gate in gates)
             {
-                Console.Write("--" + gate.getGateType());
+                Console.Write("--" + gate.GetGateType());
             }
         }
         public int GetLength()
