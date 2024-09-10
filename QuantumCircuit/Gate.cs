@@ -31,6 +31,11 @@ namespace QuantumCircuit
         {
             return gateType;
         }
+
+        public virtual Matrix Apply(Matrix input)
+        {
+            return operation * input;
+        }
     }
 
     internal class MultiLineGateRoot : Gate
@@ -78,6 +83,11 @@ namespace QuantumCircuit
                 returnString += " " + sources[i] + sourceIndexes[i];
             }
             return returnString + "]";
+        }
+
+        public override Matrix Apply(Matrix input)
+        {
+            return operation * input;
         }
     }
 }
