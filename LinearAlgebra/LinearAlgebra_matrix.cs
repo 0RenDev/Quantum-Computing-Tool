@@ -57,6 +57,13 @@ namespace LinearAlgebra
             this.cols = elements.GetLength(1);
         }
 
+        public Matrix(Vector elements)
+        {
+            this.elements = new Complex[elements.rows, elements.cols];
+            
+
+        }
+
         // Get a single row of a matrix
         public Complex[] GetRow(int rowNumber)
         {
@@ -303,6 +310,17 @@ namespace LinearAlgebra
                 {
                     this.elements[i, j] -= matrixOther.elements[i, j];
                 }
+            }
+        }
+    }
+
+    public class Idenity : Matrix
+    {
+        public Idenity(int size) : base(size, size)
+        {
+            for (int i = 0; i < size; i++)
+            {
+                elements[i, i] = 1;
             }
         }
     }

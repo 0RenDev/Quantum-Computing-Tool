@@ -1,4 +1,5 @@
 ﻿using LinearAlgebra;
+using QuantumCircuit;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
@@ -329,7 +330,7 @@ namespace QuantumCircuit
             }
         }
         
-        // prints information about each quantumLine in the circuit to the console, O(n)
+        // prints information about each qubit in the circuit to the console, O(n)
         public void PrintCircuit()
         {
             Console.WriteLine("Quantum circuit: " + name);
@@ -370,7 +371,9 @@ namespace QuantumCircuit
             // Convert the quantum lines into a matrix of gates
             // For each column of the matrix, apply nonentangling gates to the quantum register, then apply entangling gates
 
-            QuantumRegister quantumRegister = new(QuantumLinesCount());
+            int qubitCount = QuantumLinesCount();
+
+            QuantumRegister quantumRegister = new QuantumRegister(qubitCount);
 
             int maxGates = 0;
             foreach (var quantumLine in QuantumLines)
@@ -381,18 +384,26 @@ namespace QuantumCircuit
                 }
             }
 
-            for (int i = 0; i < maxGates; i++)
+            // For each time step, tensor all gates together to get operator
+            for (int t = 0; t < maxGates; t++)
             {
+                Matrix operatorMatrix = new Idenity(2); // Start with identity matrix
                 foreach (var quantumLine in QuantumLines)
                 {
-                    if (quantumLine.GetLength() > i)
+                    if (t < quantumLine.GetLength())
                     {
-                        Gate gate = quantumLine.GetGate(i);
-                        quantumRegister.Update(gate.Apply(quantumRegister.State));
-
+                        operatorMatrix = Operations.TensorProduct(operatorMatrix, quantumLine.GetGate(t).GetOperator());
+                    }
+                    else
+                    {
+                        operatorMatrix = Operations.TensorProduct(operatorMatrix, new Idenity(2)); // Tensor with identity if no gate
                     }
                 }
+
+                // Apply the operator to the quantum register
+                quantumRegister.Update(Operations.MatrixVectorMult(operatorMatrix, new LinearAlgebra.Vector(quantumRegister.State)).GetState());
             }
         }
+
     }
 }
