@@ -417,7 +417,7 @@ namespace QuantumCircuit
             // For each time step, tensor all gates together to get operator
             for (int t = 0; t < maxGates; t++)
             {
-                Matrix operatorMatrix = ; // Start with identity matrix
+                Matrix operatorMatrix = new Idenity(2); // Start with identity matrix
                 foreach (var quantumLine in QuantumLines)
                 {
                     if (t < quantumLine.GetLength())

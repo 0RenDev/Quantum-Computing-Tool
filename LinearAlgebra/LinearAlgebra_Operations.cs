@@ -236,6 +236,25 @@ namespace LinearAlgebra
             return new Matrix(resultElements);
         }
 
+        public static Vector TensorProductofVectors(Vector vector1, Vector vector2)
+        {
+            int rows1 = vector1.rows;
+            int rows2 = vector2.rows;
+
+            Complex[] new_elements = new Complex[rows1 * rows2];
+
+            for (int i = 0; i < rows1; i++)
+            {
+                for (int j = 0; j < rows2; j++)
+                {
+                    new_elements[i * rows2 + j] = vector1.elements[i] * vector2.elements[j];
+                }
+            }
+
+
+            return new Vector(new_elements);
+        }
+
         // Vector- Vector Inner Product (dot product)
         public static Complex InnerProduct(Vector vector1, Vector vector2)
         {

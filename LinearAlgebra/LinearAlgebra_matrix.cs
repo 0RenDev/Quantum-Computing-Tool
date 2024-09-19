@@ -264,9 +264,9 @@ namespace LinearAlgebra
         public static bool operator ==(Matrix a, Matrix b)
         {
             // Check for null on left side.
-            if (ReferenceEquals(a, null))
+            if (a is null)
             {
-                return ReferenceEquals(b, null);
+                return b is null;
             }
 
             // Use IsEqual to check for equality.
@@ -276,6 +276,20 @@ namespace LinearAlgebra
         public static bool operator !=(Matrix a, Matrix b)
         {
             return !(a == b);
+        }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is null)
+            {
+                return false;
+            }
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
 
         // In-place operations to cut down on memory overhead, they alter the instance that calls them and preserves the other one
