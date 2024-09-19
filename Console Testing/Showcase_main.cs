@@ -3,7 +3,7 @@ using System.Numerics; // Required for Complex numbers
 using System.Runtime.Intrinsics;
 using Console_Testing;
 using LinearAlgebra;
-using QuantumCircuit;
+
 
 class Program
 {
@@ -18,19 +18,22 @@ class Program
         //example.timeTestTensor(106, 12, 90, 16);
 
         //example.vector_times_matrix();
-        Console.WriteLine("125x1000 Matrix x 1000x350 Matrix Matrix Testing");
+        //Console.WriteLine("125x1000 Matrix x 1000x350 Matrix Matrix Testing");
         //Showcases.MultThreadedMult();
-        Console.WriteLine("-------------\nQuantum Adder Structure");
-        Showcases.QuantumAdderConstruction();
 
-        Console.WriteLine("-------------\nTof Test Structure");
-        Showcases.TofGateTest();
-
-        Console.WriteLine("-------------\nQbit Evolution Demo");
+        /*
+          
+         These are broken due to the new implementation
+          
+        //Console.WriteLine("-------------\nQuantum Adder Structure");
+        //Showcases.QuantumAdderConstruction();
+        //Console.WriteLine("-------------\nTof Test Structure");
+        //Showcases.TofGateTest();
+        //Console.WriteLine("-------------\nQbit Evolution Demo");
         //Showcases.QbitEvolutionDemo();
-
-        Console.WriteLine("-------------\nMeasurement Test");
-        //example.MeasurementTest();
+        */
+        
+        example.HalfAdderTest();
 
         Console.ReadKey();  
     }

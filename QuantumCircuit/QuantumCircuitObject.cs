@@ -3,6 +3,7 @@ using QuantumCircuit;
 using System;
 using System.Collections.Generic;
 using System.Numerics;
+using System.Collections.Generic;
 
 namespace QuantumCircuit
 {
@@ -13,6 +14,9 @@ namespace QuantumCircuit
         // List that keeps track of the quantum lines in the circuit
         List<QuantumLine> QuantumLines = [];
         readonly String name;
+
+        // Testing out using a Queue for gates
+        Queue<Gate> Gates = new Queue<Gate>();
 
         public QuantumCircuitObject(String name)
         {
@@ -155,6 +159,32 @@ namespace QuantumCircuit
                     Console.WriteLine("Z gate added at " + qlName);
                 }
             }
+        }
+
+        public void PushBackCNOT2(String qlSource, String qlTarget)
+        {
+            // Check if the source and target lines are in the circuit, if not, print error
+            if (!QuantumLineExists(qlSource) || !QuantumLineExists(qlTarget))
+            {
+                Console.WriteLine("Error: Quantum line with name " + name + " does not exist.");
+                return;
+            }
+            
+            int sourceIndex = -1;
+            int targetIndex = -1;
+            for(int q = 0; q < QuantumLines.Count; q++)
+            {
+                if (QuantumLines[q].GetName() == qlSource)
+                {
+                    sourceIndex = q;
+                } else if (QuantumLines[q].GetName() == qlTarget)
+                {
+                    targetIndex = q;
+                }
+            }
+
+            CNOT gate = new CNOT(targetIndex);
+            Console.WriteLine("CNOT gate added at " + qlSource + " with target as " + qlTarget);
         }
 
         public void PushBackCNOT(String qlSource, String qlTarget)
@@ -365,7 +395,7 @@ namespace QuantumCircuit
             return [];
         }
 
-        public void Execute()
+        public Complex[] Execute()
         {
             // Convert the quantum circuit to a quantum register
             // Convert the quantum lines into a matrix of gates
@@ -387,7 +417,7 @@ namespace QuantumCircuit
             // For each time step, tensor all gates together to get operator
             for (int t = 0; t < maxGates; t++)
             {
-                Matrix operatorMatrix = new Idenity(2); // Start with identity matrix
+                Matrix operatorMatrix = ; // Start with identity matrix
                 foreach (var quantumLine in QuantumLines)
                 {
                     if (t < quantumLine.GetLength())
@@ -403,6 +433,8 @@ namespace QuantumCircuit
                 // Apply the operator to the quantum register
                 quantumRegister.Update(Operations.MatrixVectorMult(operatorMatrix, new LinearAlgebra.Vector(quantumRegister.State)).GetState());
             }
+
+            return quantumRegister.State;
         }
 
     }

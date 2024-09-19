@@ -1,8 +1,7 @@
 ﻿using LinearAlgebra;
-using Quantum;
 using System.Diagnostics;
 using System.Numerics;
-using QuantumCircuit;
+using QuantumCircuits;
 
 namespace Console_Testing
 {
@@ -137,40 +136,52 @@ namespace Console_Testing
             Console.WriteLine($"Matrix Tensor Product: {time.TotalMilliseconds} milliseconds");
         }
 
-        // Demonstrates the evolution of a qubit state by using varying quantum operators
-        public static void QbitEvolutionDemo()
+
+        public void HalfAdderTest()
         {
-            // Define matrices representing the required quantum gates
-            Complex[,] x = { { 0, 1 }, { 1, 0 } };
-            Complex[,] y = { { 0, -1 * Complex.ImaginaryOne }, { Complex.ImaginaryOne, 0 } };
-            Complex[,] z = { { 1, 0 }, { 0, -1 } };
-            Complex[,] h = { { 1 / Complex.Sqrt(2), 1 / Complex.Sqrt(2) }, { 1 / Complex.Sqrt(2), -1 / Complex.Sqrt(2) } };
-            Complex[,] s = { { 1, 0 }, { 0, Complex.ImaginaryOne } };
-            Complex[,] t = { { 1, 0 }, { 0, (1 + Complex.ImaginaryOne) / Complex.Sqrt(2) } };
+            // build a circuit with one quantum and one classical line
+            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(3, 1);
 
-            // Make operator objects for each matrix
-            Operator X = new Operator(x);
-            Operator Y = new Operator(y);
-            Operator Z = new Operator(z);
-            Operator H = new Operator(h);
-            Operator S = new Operator(s);
-            Operator T = new Operator(t);
+            // half adder
 
-            // Initailize qubit in state |0> 
-            Complex[] state = { 1, 0 };
-            Qbit q = new Qbit(state);
+            //input bits
+            qc.addGateX(0);
+            qc.addGateX(1);
 
-            Console.WriteLine("Initial State Vector:\n" + q.ToString() + "\n");
+            qc.addGateTOF(2, 1, 0);
+            qc.addGateCX(1, 0);
 
-            // Apply X, Y, Z operators sequentially to qubit
-            q.Evolve(X);
-            q.Evolve(Y);
-            q.Evolve(Z);
+            // print out circuit
+            Console.WriteLine(qc.ToString());
 
-            // Display final qubit state
-            Console.WriteLine("State Vector after evolution:\n" + q.ToString() + "\n");
+            CircuitExecution exe = new CircuitExecution(qc);
+
+            // print out execution columns
+            Console.WriteLine(exe.ToString());
+
+            // returns the statevector after executing all columns
+            Console.WriteLine(exe.ExecuteCircuit());
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+       /*
+        * 
+        * 
+        * 
+         New implementation broke these showcases 
+
 
         // Demonstrates the creation of a simple quantum circuit object
         public static void QuantumConstructionPlay()
@@ -214,7 +225,7 @@ namespace Console_Testing
         cs.AddQuantumLine("Y");
         //cs.pushBackH("X");
         cs.pushBackCNOT("X", "Y");
-        cs.printCircuit();*/
+        cs.printCircuit();
         }
 
         public static void TofGateTest()
@@ -258,113 +269,7 @@ namespace Console_Testing
             QA.PrintCircuit();
 
         }
-
-
-        public void MeasurementTest()
-        {
-            for (int numQubits = 1; numQubits < 6; numQubits++)
-            {
-                Complex[] statevector = GenerateRandomStatevector(numQubits);
-
-                // Print the generated statevector
-                Console.WriteLine("Generated statevector:");
-                for (int i = 0; i < statevector.Length; i++)
-                {
-                    Console.WriteLine("|" + Convert.ToString(i, 2).PadLeft(numQubits, '0') + "> = " + statevector[i]);
-                }
-
-                // get probabilites vector
-                double[] probabilites = StatevectorProbabilities(statevector);
-
-                // Print the generated statevector
-                Console.WriteLine("Probability vector:");
-                for (int i = 0; i < probabilites.Length; i++)
-                {
-                    Console.WriteLine("|" + Convert.ToString(i, 2).PadLeft(numQubits, '0') + "> = " + probabilites[i]);
-                }
-
-                // measurments 
-                for (int i = 0; i < 10; i++)
-                {
-                    int measurement = MeasureProbabilities(probabilites);
-                    Console.WriteLine("Measurement outcome: " + Convert.ToString(measurement, 2).PadLeft((int)Math.Log(statevector.Length, 2), '0'));
-                }
-            }
-        }
-
-
-
-
-
-
-        public static double[] StatevectorProbabilities(Complex[] statevector)
-        {
-            // Check if the input vector is a valid statevector
-            if (!IsValidStatevector(statevector))
-            {
-                throw new ArgumentException("Invalid statevector. The norm (magnitude) of the statevector must equal 1.");
-            }
-
-            // Calculate unnormalized probabilities
-            double[] unnormalizedProbabilities = new double[statevector.Length];
-            for (int i = 0; i < statevector.Length; i++)
-            {
-                unnormalizedProbabilities[i] = Math.Pow(statevector[i].Magnitude, 2);
-            }
-
-            // Calculate normalization factor
-            double normalizationFactor = 0;
-            for (int i = 0; i < unnormalizedProbabilities.Length; i++)
-            {
-                normalizationFactor += unnormalizedProbabilities[i];
-            }
-
-            // Normalize probabilities
-            double[] probabilities = new double[statevector.Length];
-            for (int i = 0; i < probabilities.Length; i++)
-            {
-                probabilities[i] = unnormalizedProbabilities[i] / normalizationFactor;
-            }
-
-            return probabilities;
-        }
-
-        private int MeasureProbabilities(double[] probabilities)
-        {
-            // Perform measurement
-            Random random = new Random();
-            double rand = random.NextDouble();
-            double cumulativeProbability = 0;
-            int measurementOutcome = -1;
-            for (int i = 0; i < probabilities.Length; i++)
-            {
-                cumulativeProbability += probabilities[i];
-                if (rand < cumulativeProbability)
-                {
-                    measurementOutcome = i;
-                    break;
-                }
-            }
-
-            return measurementOutcome;
-        }
-
-        public static bool IsValidStatevector(Complex[] statevector)
-        {
-            // Calculate the norm (magnitude) of the statevector
-            double norm = 0;
-            for (int i = 0; i < statevector.Length; i++)
-            {
-                norm += Math.Pow(statevector[i].Magnitude, 2);
-            }
-
-            // Check if the norm equals 1 (within a small tolerance)
-            return Math.Abs(norm - 1) < 1e-10;
-        }
-
-
-
-
+    */
 
     }
 }
