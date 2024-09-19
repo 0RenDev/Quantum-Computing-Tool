@@ -23,6 +23,26 @@ namespace LinearAlgebra
             values = new Dictionary<(int, int), Complex>();
         }
 
+        public SparseMatrix(Complex[,] matrix)
+        {
+            Rows = matrix.GetLength(0);
+            Cols = matrix.GetLength(1);
+            values = new Dictionary<(int, int), Complex>();
+            
+            for (int i = 0; i < Rows; i++)
+            {
+                for (int j = 0; j < Cols; j++)
+                {
+                    Complex value = matrix[i, j];
+                    if (value != 0.0)
+                    {
+                        values[(i, j)] = value;
+                    }
+                }
+            }
+
+        }
+
         public static SparseMatrix FromMatrix(Matrix matrix)
         {
             int rows = matrix.rows;
