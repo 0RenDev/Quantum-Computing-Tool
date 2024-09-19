@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace QuantumCircuit
 {
-    internal class Gate
+    public class Gate
     {
         protected String gateType;
         protected Matrix operation;
@@ -40,6 +40,15 @@ namespace QuantumCircuit
         public virtual Complex[] Apply(Complex[] state)
         {
             return Operations.MatrixVectorMult(operation, new LinearAlgebra.Vector(state)).GetState();
+        }
+    }
+
+    public class CNOT : Gate
+    {
+        private int TargetIndex { get; }
+        public CNOT(int targetIndex) : base("CNOT", new Matrix(new Complex[,] { { 1, 0, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0, 0, 1 }, { 0, 0, 1, 0 } }))
+        {
+            this.TargetIndex = targetIndex;
         }
     }
 
@@ -88,11 +97,6 @@ namespace QuantumCircuit
                 returnString += " " + sources[i] + sourceIndexes[i];
             }
             return returnString + "]";
-        }
-
-        public override Matrix Apply(Matrix input)
-        {
-            return operation * input;
         }
     }
 }

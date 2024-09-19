@@ -9,9 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1QuantumCircuits\QuantumCircuits.csproj" />
     <ProjectReference Include="..\LinearAlgebra\LinearAlgebra.csproj" />
-    <ProjectReference Include="..\QuantumCircuit\QuantumCircuit.csproj" />
-	<ProjectReference Include="..\Quantum\Quantum.csproj" />
   </ItemGroup>
 
 </Project>

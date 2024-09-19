@@ -3,6 +3,7 @@ using QuantumCircuit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using Assert = NUnit.Framework.Assert;
@@ -78,6 +79,21 @@ namespace QuantumCircuit.Tests
             Assert.AreEqual(1, gates.Length);
             Assert.AreEqual("Z", gates[0]);
 
+        }
+
+        [Test]
+        public void QuantumRegisterExecutionTest()
+        {
+            QuantumCircuitObject circuit = new("test");
+            circuit.AddQuantumLine("q1");
+            circuit.AddQuantumLine("q2");
+            circuit.PushBackH("q1");
+            circuit.PushBackCNOT2("q2", "q1");
+            circuit.PushBackX("q2");
+
+            Complex[] final_state = circuit.Execute();
+
+            Assert.AreEqual(final_state, new Complex[] { 0, 1 / Complex.Sqrt(2), 1 / Complex.Sqrt(2), 0 });
         }
     }
 }
