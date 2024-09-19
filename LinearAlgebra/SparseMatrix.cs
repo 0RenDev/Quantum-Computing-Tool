@@ -23,6 +23,26 @@ namespace LinearAlgebra
             values = new Dictionary<(int, int), Complex>();
         }
 
+        public SparseMatrix(Complex[,] matrix)
+        {
+            Rows = matrix.GetLength(0);
+            Cols = matrix.GetLength(1);
+            values = new Dictionary<(int, int), Complex>();
+
+            for (int i = 0; i < Rows; i++)
+            {
+                for (int j = 0; j < Cols; j++)
+                {
+                    Complex value = matrix[i, j];
+                    if (value != 0.0)
+                    {
+                        values[(i, j)] = value;
+                    }
+                }
+            }
+
+        }
+
         public static SparseMatrix FromMatrix(Matrix matrix)
         {
             int rows = matrix.rows;
@@ -111,6 +131,25 @@ namespace LinearAlgebra
             return result;
         }
 
+        public Complex[] MultiplyWithVector(Complex[] vector)
+        {
+            if (Cols != vector.Length)
+                throw new InvalidOperationException("Matrix column count must match vector length.");
+
+            Complex[] result = new Complex[Rows];
+
+            foreach (var entry in values)
+            {
+                int row = entry.Key.Item1;
+                int col = entry.Key.Item2;
+                Complex value = entry.Value;
+
+                result[row] += value * vector[col];
+            }
+
+            return result;
+        }
+
         // Method to display the sparse matrix (for debugging purposes)
         public void Print()
         {
@@ -122,6 +161,18 @@ namespace LinearAlgebra
                 }
                 Console.WriteLine();
             }
+        }
+
+        public static SparseMatrix Identity(int size)
+        {
+            SparseMatrix identityMatrix = new SparseMatrix(size, size);
+
+            for (int i = 0; i < size; i++)
+            {
+                identityMatrix[i, i] = 1.0; // Set diagonal elements to 1
+            }
+
+            return identityMatrix;
         }
     }
 }
