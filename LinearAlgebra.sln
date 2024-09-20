@@ -21,6 +21,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuits", "ClassLib
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuitConsoleTesting", "QuantumCircuitConsoleTesting\QuantumCircuitConsoleTesting.csproj", "{6A0B637D-3A96-4148-A4DB-1AA504AF6C0B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuit-Sean", "QuantumCircuit-Sean\QuantumCircuit-Sean.csproj", "{06D14F32-E3BF-4E82-9FF7-9BF114CF108A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuit-SeanTests", "QuantumCircuit-SeanTests\QuantumCircuit-SeanTests.csproj", "{078AE667-6DE2-42D9-957C-D3FD58DB8779}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumCircuit_QConsole", "QuantumCircuit_QConsole\QuantumCircuit_QConsole.csproj", "{B0FDC202-B7EA-46B5-BCD0-2EB033873BF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +69,18 @@ Global
 		{6A0B637D-3A96-4148-A4DB-1AA504AF6C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A0B637D-3A96-4148-A4DB-1AA504AF6C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A0B637D-3A96-4148-A4DB-1AA504AF6C0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06D14F32-E3BF-4E82-9FF7-9BF114CF108A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06D14F32-E3BF-4E82-9FF7-9BF114CF108A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06D14F32-E3BF-4E82-9FF7-9BF114CF108A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06D14F32-E3BF-4E82-9FF7-9BF114CF108A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{078AE667-6DE2-42D9-957C-D3FD58DB8779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078AE667-6DE2-42D9-957C-D3FD58DB8779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078AE667-6DE2-42D9-957C-D3FD58DB8779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078AE667-6DE2-42D9-957C-D3FD58DB8779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0FDC202-B7EA-46B5-BCD0-2EB033873BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0FDC202-B7EA-46B5-BCD0-2EB033873BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0FDC202-B7EA-46B5-BCD0-2EB033873BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0FDC202-B7EA-46B5-BCD0-2EB033873BF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
