@@ -12,7 +12,7 @@ namespace LinearAlgebra
     {
         // Dictionary to store non-zero values in the matrix.
         // Key is a tuple (row, column) and value is the non-zero element.
-        private Dictionary<(int, int), Complex> values;
+        private readonly ConcurrentDictionary<(int, int), Complex> values;
         public int Rows { get; private set; }
         public int Cols { get; private set; }
 
@@ -21,14 +21,14 @@ namespace LinearAlgebra
         {
             Rows = rows;
             Cols = cols;
-            values = new Dictionary<(int, int), Complex>();
+            values = new ConcurrentDictionary<(int, int), Complex>();
         }
 
         public SparseMatrix(Complex[,] matrix)
         {
             Rows = matrix.GetLength(0);
             Cols = matrix.GetLength(1);
-            values = new Dictionary<(int, int), Complex>();
+            values = new ConcurrentDictionary<(int, int), Complex>();
 
             for (int i = 0; i < Rows; i++)
             {
@@ -68,19 +68,8 @@ namespace LinearAlgebra
         // Indexer to get or set matrix values
         public Complex this[int row, int col]
         {
-            get
-            {
-                if (values.ContainsKey((row, col)))
-                    return values[(row, col)];
-                return 0.0;
-            }
-            set
-            {
-                if (value != 0.0)
-                    values[(row, col)] = value;
-                else
-                    values.Remove((row, col));  // Ensure zero values are removed from dictionary
-            }
+            get => values.TryGetValue((row, col), out var value) ? value : 0.0;
+            set => values[(row, col)] = value;
         }
 
         // Matrix multiplication (SparseMatrix * SparseMatrix)
@@ -130,6 +119,54 @@ namespace LinearAlgebra
 
                     // Assign the product of the matrix values to the correct position in the result
                     result[newRow, newCol] = value * otherValue;
+                }
+            }
+
+            return result;
+        }
+
+        public SparseMatrix ParallelTensorProduct(SparseMatrix other)
+        {
+            SparseMatrix result = new SparseMatrix(Rows * other.Rows, Cols * other.Cols);
+
+            // Local accumulators for each thread
+            var threadLocalAccumulators = new ThreadLocal<Dictionary<(int, int), Complex>>(() => new Dictionary<(int, int), Complex>(), true);
+
+            _ = Parallel.ForEach(values, entry =>
+            {
+                int row = entry.Key.Item1;
+                int col = entry.Key.Item2;
+                Complex value = entry.Value;
+
+                var localAccumulator = threadLocalAccumulators.Value;
+
+                foreach (var otherEntry in other.values)
+                {
+                    int otherRow = otherEntry.Key.Item1;
+                    int otherCol = otherEntry.Key.Item2;
+                    Complex otherValue = otherEntry.Value;
+
+                    // Compute the new row and column indices in the tensor product matrix
+                    int newRow = row * other.Rows + otherRow;
+                    int newCol = col * other.Cols + otherCol;
+
+                    // Use the thread-local dictionary for accumulation
+                    if (localAccumulator.ContainsKey((newRow, newCol)))
+                        localAccumulator[(newRow, newCol)] += value * otherValue;
+                    else
+                        localAccumulator[(newRow, newCol)] = value * otherValue;
+                }
+            });
+
+            // Merge the thread-local accumulators into the final result
+            foreach (var localDict in threadLocalAccumulators.Values)
+            {
+                foreach (var entry in localDict)
+                {
+                    if (result.values.ContainsKey(entry.Key))
+                        result.values[entry.Key] += entry.Value;
+                    else
+                        result.values[entry.Key] = entry.Value;
                 }
             }
 

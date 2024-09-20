@@ -77,7 +77,14 @@ namespace QuantumCircuit_Sean
                 {
                     continue; // Skip scalars, as they don't modify the state
                 }
-                result = result.TensorProduct(expression[i]);
+                if (QbitCount < 15)
+                {
+                    result = result.TensorProduct(expression[i]);
+                } else
+                {
+                    result = result.ParallelTensorProduct(expression[i]);
+                }
+                
             }
 
             return result;

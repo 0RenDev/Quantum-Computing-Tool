@@ -11,7 +11,7 @@ class Program
     {
         for (int i = 0; i < 12; i++)
         {
-            int size = 14;
+            int size = 10;
             QuantumCirucit_Q circuit = new QuantumCirucit_Q(size, 0);
             QuantumRegister register = new QuantumRegister(size);
             for (int j = 0; j < size; j++)
