@@ -60,7 +60,7 @@ namespace QuantumCircuit_Sean
                 else if (targetQubits.Contains(i))
                 {
                     // Apply the gate matrix for the target qubits
-                    expression[i] = gateMatrix;
+                    expression[i] = gateMatrix; 
                 }
                 else
                 {
@@ -92,14 +92,16 @@ namespace QuantumCircuit_Sean
 
             // Build the tensor product of the gate and identities for unaffected qubits
             SparseMatrix fullGateMatrix = BuildFullGateMatrix(gateMatrix, controlQubits, targetQubits);
-            fullGateMatrix.Print();
+            // fullGateMatrix.Print();
 
             // Apply the resulting matrix to the state vector
             State = fullGateMatrix.MultiplyWithVector(State);
+            /**
             foreach (Complex number in State)
             {
                 Console.WriteLine(number);
             }
+            **/
         }
 
         public double[] ProbabilityVector()
