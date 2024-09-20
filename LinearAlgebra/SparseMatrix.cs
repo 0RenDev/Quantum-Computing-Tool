@@ -107,7 +107,6 @@ namespace LinearAlgebra
             return result;
         }
 
-        // Tensor product (Kronecker product)
         public SparseMatrix TensorProduct(SparseMatrix other)
         {
             SparseMatrix result = new SparseMatrix(Rows * other.Rows, Cols * other.Cols);
@@ -124,7 +123,12 @@ namespace LinearAlgebra
                     int otherCol = otherEntry.Key.Item2;
                     Complex otherValue = otherEntry.Value;
 
-                    result[row * other.Rows + otherRow, col * other.Cols + otherCol] = value * otherValue;
+                    // Compute the new row and column indices in the tensor product matrix
+                    int newRow = row * other.Rows + otherRow;
+                    int newCol = col * other.Cols + otherCol;
+
+                    // Assign the product of the matrix values to the correct position in the result
+                    result[newRow, newCol] = value * otherValue;
                 }
             }
 
@@ -144,6 +148,7 @@ namespace LinearAlgebra
                 int col = entry.Key.Item2;
                 Complex value = entry.Value;
 
+                // Perform the matrix-vector multiplication and accumulate the result for each row
                 result[row] += value * vector[col];
             }
 

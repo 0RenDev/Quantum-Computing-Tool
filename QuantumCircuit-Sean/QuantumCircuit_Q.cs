@@ -1,16 +1,10 @@
 ﻿namespace QuantumCircuit_Sean
 {
-    public class QuantumCirucit_Q
+    public class QuantumCirucit_Q(int qubits, int classicalBits)
     {
-        public int Qubits { get; private set; }
-        public int ClassicalBits { get; private set; }
-        private Queue<Gate> Gates = new Queue<Gate>();
-
-        public QuantumCirucit_Q(int qubits, int classicalBits)
-        {
-            Qubits = qubits;
-            ClassicalBits = classicalBits;
-        }
+        public int Qubits { get; private set; } = qubits;
+        public int ClassicalBits { get; private set; } = classicalBits;
+        private Queue<Gate> Gates = new();
 
         public void AddGate(Gate gate)
         {

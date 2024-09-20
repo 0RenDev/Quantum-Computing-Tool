@@ -26,7 +26,7 @@ namespace QuantumCircuit_Sean.Tests
         }
 
         [Test()]
-        public void TwoQubitNoControlTest()
+        public void TwoQubitNoControlTest1()
         {
             QuantumCirucit_Q circuit = new QuantumCirucit_Q(2, 0);
             QuantumRegister register = new QuantumRegister(2);
@@ -39,12 +39,25 @@ namespace QuantumCircuit_Sean.Tests
         }
 
         [Test()]
-        public void TwoQubitWithControlTest()
+        public void TwoQubitNoControlTest2()
         {
             QuantumCirucit_Q circuit = new QuantumCirucit_Q(2, 0);
             QuantumRegister register = new QuantumRegister(2);
             circuit.AddGate(new X(0));
             circuit.AddGate(new H(1));
+
+            circuit.Execute(register);
+
+            Assert.That(register.State, Is.EqualTo(new Complex[] { 0, 0, 1 / Complex.Sqrt(2), 1 / Complex.Sqrt(2) }));
+        }
+
+        [Test()]
+        public void TwoQubitWithControlTest()
+        {
+            QuantumCirucit_Q circuit = new QuantumCirucit_Q(2, 0);
+            QuantumRegister register = new QuantumRegister(2);
+            circuit.AddGate(new H(0));
+            circuit.AddGate(new X(1));
             circuit.AddGate(new CX(0, 1));
 
             circuit.Execute(register);
@@ -53,7 +66,36 @@ namespace QuantumCircuit_Sean.Tests
             {
                 Console.WriteLine(number);
             }
-            Assert.That(register.State, Is.EqualTo(new Complex[] { 0, 1, 0, 0 }));
+
+            foreach(double number in register.ProbabilityVector())
+            {
+                Console.WriteLine(number);
+            }
+            Assert.That(register.ProbabilityVector(), Is.EqualTo(new double[] { 0, 0.5, 0.5, 0 }));
+        }
+
+        [Test()]
+        public void ThreeQubitWithControlTest()
+        {
+            QuantumCirucit_Q circuit = new QuantumCirucit_Q(3, 0);
+            QuantumRegister register = new QuantumRegister(3);
+            circuit.AddGate(new H(0));
+            circuit.AddGate(new CX(0, 1));
+            circuit.AddGate(new X(1));
+            circuit.AddGate(new CX(1, 2));
+
+            circuit.Execute(register);
+
+            foreach (Complex number in register.State)
+            {
+                Console.WriteLine(number);
+            }
+
+            foreach (double number in register.ProbabilityVector())
+            {
+                Console.WriteLine(number);
+            }
+            Assert.That(register.ProbabilityVector(), Is.EqualTo(new double[] { 0, 0.5, 0, 0, 0, 0, 0.5, 0 }));
         }
     }
 }
