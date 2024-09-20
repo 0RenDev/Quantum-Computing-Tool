@@ -45,6 +45,7 @@ namespace QuantumCircuits
             quantumLines[target].Add(x);
         }
 
+        
         public void addGateH(int target)
         {
             if (target > quantumLines.Length)

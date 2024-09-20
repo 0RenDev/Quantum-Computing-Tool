@@ -10,8 +10,10 @@ class Program
     // The main is meant to be freely changed to contain any number of showcases. It should not contain any permanent code and is purely for testing the code written in the library
     static void Main()
     {
-        // instance containong examples
+        // instance containing examples
         Showcases example = new Showcases();
+
+        
 
         // run specific examples
         //example.timeTestTensor(44, 41, 96, 82);
@@ -34,6 +36,8 @@ class Program
         */
         
         example.HalfAdderTest();
+
+        
 
         Console.ReadKey();  
     }
