@@ -83,6 +83,21 @@ namespace LinearAlgebra
             cols = temp;
         }
 
+        public bool IsApproximatelyEqual(Vector other, double tolerance = 1e-10)
+        {
+            if (this.rows != other.rows || this.cols != other.cols)
+                return false;
+
+            for (int i = 0; i < this.elements.Length; i++)
+            {
+                if (Complex.Abs(this.elements[i] - other.elements[i]) > tolerance)
+                    return false;
+            }
+
+            return true;
+        }
+
+
         public Matrix ToMatrix => new Matrix(rows, cols, elements);
 
         public Complex[] GetState() => elements;
