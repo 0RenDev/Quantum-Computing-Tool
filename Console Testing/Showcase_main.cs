@@ -13,6 +13,36 @@ class Program
         // instance containing examples
         Showcases example = new Showcases();
 
+
+        //Attempted testing for dictionary I'm not super sure if I did this right but regardless I'm leaving it here as a record
+        /*
+        int n = 14; 
+        QuantumCircuitBuilder qc = new QuantumCircuitBuilder(n, 0);
+
+        qc = new(12, 0);
+        qc.addGateH(0);
+        qc.addGateH(1);
+        qc.addGateH(2);
+        qc.addGateH(3);
+        qc.addGateH(4);
+        qc.addGateH(5);
+        qc.addGateH(6);
+        qc.addGateH(7);
+        qc.addGateH(8);
+        qc.addGateH(9);
+        qc.addGateH(10);
+        qc.addGateH(11);
+        //qc.addGateH(12);
+        //qc.addGateH(13);
+        CircuitExecution exe = new CircuitExecution(qc);
+
+        exe.ExecuteCircuit();
+        */
+
+
+        // testing for 2D array, not important will delete before merge
+
+        /*
         int n = 14; 
         QuantumCircuitBuilder qc = new QuantumCircuitBuilder(n, 0);
 
@@ -29,6 +59,7 @@ class Program
         CircuitExecution exe = new CircuitExecution(qc);
 
         exe.ExecuteCircuit();
+        */
 
         // run specific examples
         //example.timeTestTensor(44, 41, 96, 82);
