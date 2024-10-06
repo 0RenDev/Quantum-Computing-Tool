@@ -13,7 +13,22 @@ class Program
         // instance containing examples
         Showcases example = new Showcases();
 
-        
+        int n = 14; 
+        QuantumCircuitBuilder qc = new QuantumCircuitBuilder(n, 0);
+
+
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                //input bits
+                qc.addGateH(j);
+            }
+        }
+
+        CircuitExecution exe = new CircuitExecution(qc);
+
+        exe.ExecuteCircuit();
 
         // run specific examples
         //example.timeTestTensor(44, 41, 96, 82);
