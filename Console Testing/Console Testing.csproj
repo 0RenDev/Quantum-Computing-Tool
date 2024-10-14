@@ -11,7 +11,6 @@
   <ItemGroup>
     <ProjectReference Include="..\QuantumCircuits\QuantumCircuits.csproj" />
     <ProjectReference Include="..\LinearAlgebra\LinearAlgebra.csproj" />
-    <ProjectReference Include="..\QuantumCircuit-Sean\QuantumCircuit-Sean.csproj" />
   </ItemGroup>
 
 </Project>
