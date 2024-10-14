@@ -32,8 +32,10 @@ class Program
         //Console.WriteLine("-------------\nQbit Evolution Demo");
         //Showcases.QbitEvolutionDemo();
         */
-        
-        example.HalfAdderTest();
+
+        example.TestCircuit();
+
+        //example.PerformanceTestCircuit(14);
 
         Console.ReadKey();  
     }

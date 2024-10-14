@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Numerics;
 using QuantumCircuits;
+using Microsoft.Win32;
 
 namespace Console_Testing
 {
@@ -137,19 +138,22 @@ namespace Console_Testing
         }
 
 
-        public void HalfAdderTest()
+        public void TestCircuit()
         {
             // build a circuit with one quantum and one classical line
-            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(3, 1);
+            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(3, 0);
 
             // half adder
 
             //input bits
             qc.addGateX(0);
-            qc.addGateX(1);
-
+            qc.addGateH(1);
+            qc.addGateH(2);
             qc.addGateTOF(2, 1, 0);
-            qc.addGateCX(1, 0);
+            qc.addGateZ(0);
+            qc.addGateCX(2, 1);
+            qc.addGateT(0);
+
 
             // print out circuit
             Console.WriteLine(qc.ToString());
@@ -160,116 +164,137 @@ namespace Console_Testing
             Console.WriteLine(exe.ToString());
 
             // returns the statevector after executing all columns
-            Console.WriteLine(exe.ExecuteCircuit());
+            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+
+            Console.WriteLine(result.ToString());
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-       /*
-        * 
-        * 
-        * 
-         New implementation broke these showcases 
-
-
-        // Demonstrates the creation of a simple quantum circuit object
-        public static void QuantumConstructionPlay()
+        public void PerformanceTestCircuit(int size)
         {
-            // Initialize quantum circuit object
-            QuantumCircuitObject cs = new QuantumCircuitObject("Test");
 
-            // Add quantum lines
-            cs.AddQuantumLine("X");
-            cs.AddQuantumLine("Y");
-            cs.AddQuantumLine("Z");
-            cs.AddQuantumLine("D");
+            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(size, 0);
 
-            // Push tof gate with control Y, Z, D with target X
-            String[] tofPushbacks = { "Y", "Z", "D" };
-            cs.PushBackTOF(tofPushbacks, "X");
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    //input bits
+                    qc.addGateH(j);
+                }
+            }
 
-            // Apply three Hadamard gates to X
-            cs.PushBackH("X");
-            cs.PushBackH("X");
-            cs.PushBackH("X");
+            // print out circuit
+            // Console.WriteLine(qc.ToString());
 
-            // Apply various gates to different lines
-            cs.PushBackH("Y");
-            cs.PushBackCNOT("X", "Y");
-            cs.PushBackZ("X");
-            cs.PushBackY("Y");
+            CircuitExecution exe = new CircuitExecution(qc);
 
-            // Apply more gates to Z and D
-            cs.PushBackY("Z");
-            cs.PushBackH("D");
-            String[] tofPushbacks2 = { "X", "Y" };
-            cs.PushBackTOF(tofPushbacks, "Z");
-            cs.PushBackCNOT("Y", "X");
+            // print out execution columns
+           // Console.WriteLine(exe.ToString());
 
-            // Print result
-            cs.PrintCircuit();
-            /*
-        QuantumCircuitObject cs = new QuantumCircuitObject("Test");
-        cs.AddQuantumLine("X");
-        cs.AddQuantumLine("Y");
-        //cs.pushBackH("X");
-        cs.pushBackCNOT("X", "Y");
-        cs.printCircuit();
-        }
+            // returns the statevector after executing all columns
+            LinearAlgebra.Vector result = exe.ExecuteCircuit();
 
-        public static void TofGateTest()
-        {
-            QuantumCircuitObject QA = new QuantumCircuitObject("TofTest");
+            //Console.WriteLine(result.ToString());
 
-            QA.AddQuantumLine("q[0]");
-            QA.AddQuantumLine("q[1]");
-            QA.AddQuantumLine("q[2]");
-            QA.PushBackH("q[0]");
-            QA.PushBackH("q[2]");
-            QA.PushBackH("q[2]");
-            QA.PushBackTOF(["q[0]", "q[1]"], "q[2]");
-            QA.PrintCircuit();
-        }
-
-        // Demonstrates a quantum adder circuit
-        public static void QuantumAdderConstruction()
-        {
-            // Create a new quantum circuit object 
-            QuantumCircuitObject QA = new QuantumCircuitObject("Adder");
-
-            // Add four quantum lines
-            QA.AddQuantumLine("q[0]");
-            QA.AddQuantumLine("q[1]");
-            QA.AddQuantumLine("q[2]");
-            QA.AddQuantumLine("q[3]");
-
-            // Apply X gate to q[0] and q[2] 
-            QA.PushBackX("q[0]");
-            QA.PushBackX("q[2]");
-
-            // Apply CNOT gates with different controls and targets to form the adder logic
-            QA.PushBackCNOT("q[3]", ["q[0]", "q[1]"]);
-            QA.PushBackCNOT("q[1]", ["q[0]"]);
-            QA.PushBackCNOT("q[3]", ["q[1]", "q[2]"]);
-            QA.PushBackCNOT("q[2]", ["q[1]"]);
-            QA.PushBackCNOT("q[1]", ["q[0]"]);
-
-            // Print result
-            QA.PrintCircuit();
+            Console.WriteLine("finished");
 
         }
-    */
-
     }
 }
+
+      
+        /*
+         * 
+         * 
+         * 
+          New implementation broke these showcases 
+
+
+         // Demonstrates the creation of a simple quantum circuit object
+         public static void QuantumConstructionPlay()
+         {
+             // Initialize quantum circuit object
+             QuantumCircuitObject cs = new QuantumCircuitObject("Test");
+
+             // Add quantum lines
+             cs.AddQuantumLine("X");
+             cs.AddQuantumLine("Y");
+             cs.AddQuantumLine("Z");
+             cs.AddQuantumLine("D");
+
+             // Push tof gate with control Y, Z, D with target X
+             String[] tofPushbacks = { "Y", "Z", "D" };
+             cs.PushBackTOF(tofPushbacks, "X");
+
+             // Apply three Hadamard gates to X
+             cs.PushBackH("X");
+             cs.PushBackH("X");
+             cs.PushBackH("X");
+
+             // Apply various gates to different lines
+             cs.PushBackH("Y");
+             cs.PushBackCNOT("X", "Y");
+             cs.PushBackZ("X");
+             cs.PushBackY("Y");
+
+             // Apply more gates to Z and D
+             cs.PushBackY("Z");
+             cs.PushBackH("D");
+             String[] tofPushbacks2 = { "X", "Y" };
+             cs.PushBackTOF(tofPushbacks, "Z");
+             cs.PushBackCNOT("Y", "X");
+
+             // Print result
+             cs.PrintCircuit();
+             /*
+         QuantumCircuitObject cs = new QuantumCircuitObject("Test");
+         cs.AddQuantumLine("X");
+         cs.AddQuantumLine("Y");
+         //cs.pushBackH("X");
+         cs.pushBackCNOT("X", "Y");
+         cs.printCircuit();
+         }
+
+         public static void TofGateTest()
+         {
+             QuantumCircuitObject QA = new QuantumCircuitObject("TofTest");
+
+             QA.AddQuantumLine("q[0]");
+             QA.AddQuantumLine("q[1]");
+             QA.AddQuantumLine("q[2]");
+             QA.PushBackH("q[0]");
+             QA.PushBackH("q[2]");
+             QA.PushBackH("q[2]");
+             QA.PushBackTOF(["q[0]", "q[1]"], "q[2]");
+             QA.PrintCircuit();
+         }
+
+         // Demonstrates a quantum adder circuit
+         public static void QuantumAdderConstruction()
+         {
+             // Create a new quantum circuit object 
+             QuantumCircuitObject QA = new QuantumCircuitObject("Adder");
+
+             // Add four quantum lines
+             QA.AddQuantumLine("q[0]");
+             QA.AddQuantumLine("q[1]");
+             QA.AddQuantumLine("q[2]");
+             QA.AddQuantumLine("q[3]");
+
+             // Apply X gate to q[0] and q[2] 
+             QA.PushBackX("q[0]");
+             QA.PushBackX("q[2]");
+
+             // Apply CNOT gates with different controls and targets to form the adder logic
+             QA.PushBackCNOT("q[3]", ["q[0]", "q[1]"]);
+             QA.PushBackCNOT("q[1]", ["q[0]"]);
+             QA.PushBackCNOT("q[3]", ["q[1]", "q[2]"]);
+             QA.PushBackCNOT("q[2]", ["q[1]"]);
+             QA.PushBackCNOT("q[1]", ["q[0]"]);
+
+             // Print result
+             QA.PrintCircuit();
+
+         }
+     */

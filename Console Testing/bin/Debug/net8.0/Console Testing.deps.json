@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Console Testing/1.0.0": {
+        "dependencies": {
+          "LinearAlgebra": "1.0.0",
+          "QuantumCircuit-Sean": "1.0.0",
+          "QuantumCircuits": "1.0.0"
+        },
+        "runtime": {
+          "Console Testing.dll": {}
+        }
+      },
+      "LinearAlgebra/1.0.0": {
+        "runtime": {
+          "LinearAlgebra.dll": {}
+        }
+      },
+      "QuantumCircuit-Sean/1.0.0": {
+        "dependencies": {
+          "LinearAlgebra": "1.0.0"
+        },
+        "runtime": {
+          "QuantumCircuit-Sean.dll": {}
+        }
+      },
+      "QuantumCircuits/1.0.0": {
+        "dependencies": {
+          "LinearAlgebra": "1.0.0"
+        },
+        "runtime": {
+          "QuantumCircuits.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Console Testing/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LinearAlgebra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QuantumCircuit-Sean/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QuantumCircuits/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

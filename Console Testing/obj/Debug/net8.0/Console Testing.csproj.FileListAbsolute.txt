@@ -1,0 +1,20 @@
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\bin\Debug\net8.0\Console Testing.exe
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\bin\Debug\net8.0\Console Testing.deps.json
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\bin\Debug\net8.0\Console Testing.runtimeconfig.json
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\bin\Debug\net8.0\Console Testing.dll
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\bin\Debug\net8.0\Console Testing.pdb
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\bin\Debug\net8.0\LinearAlgebra.dll
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\bin\Debug\net8.0\QuantumCircuits.dll
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\bin\Debug\net8.0\QuantumCircuits.pdb
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\bin\Debug\net8.0\LinearAlgebra.pdb
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\obj\Debug\net8.0\Console Testing.csproj.AssemblyReference.cache
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\obj\Debug\net8.0\Console Testing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\obj\Debug\net8.0\Console Testing.AssemblyInfoInputs.cache
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\obj\Debug\net8.0\Console Testing.AssemblyInfo.cs
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\obj\Debug\net8.0\Console Testing.csproj.CoreCompileInputs.cache
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\obj\Debug\net8.0\Console .DDB198C3.Up2Date
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\obj\Debug\net8.0\Console Testing.dll
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\obj\Debug\net8.0\refint\Console Testing.dll
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\obj\Debug\net8.0\Console Testing.pdb
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\obj\Debug\net8.0\Console Testing.genruntimeconfig.cache
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\Console Testing\obj\Debug\net8.0\ref\Console Testing.dll
