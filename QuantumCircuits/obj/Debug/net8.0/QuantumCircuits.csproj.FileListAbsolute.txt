@@ -1,0 +1,15 @@
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\bin\Debug\net8.0\QuantumCircuits.deps.json
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\bin\Debug\net8.0\QuantumCircuits.dll
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\bin\Debug\net8.0\QuantumCircuits.pdb
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\bin\Debug\net8.0\LinearAlgebra.dll
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\bin\Debug\net8.0\LinearAlgebra.pdb
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\obj\Debug\net8.0\QuantumCircuits.csproj.AssemblyReference.cache
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\obj\Debug\net8.0\QuantumCircuits.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\obj\Debug\net8.0\QuantumCircuits.AssemblyInfoInputs.cache
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\obj\Debug\net8.0\QuantumCircuits.AssemblyInfo.cs
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\obj\Debug\net8.0\QuantumCircuits.csproj.CoreCompileInputs.cache
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\obj\Debug\net8.0\QuantumC.24829A25.Up2Date
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\obj\Debug\net8.0\QuantumCircuits.dll
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\obj\Debug\net8.0\refint\QuantumCircuits.dll
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\obj\Debug\net8.0\QuantumCircuits.pdb
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\ClassLibrary1QuantumCircuits\obj\Debug\net8.0\ref\QuantumCircuits.dll

@@ -1,0 +1,6 @@
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\QuantumCircuitTests\bin\Debug\net8.0\CoverletSourceRootsMapping_QuantumCircuitTests
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\QuantumCircuitTests\obj\Debug\net8.0\QuantumCircuitTests.csproj.AssemblyReference.cache
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\QuantumCircuitTests\obj\Debug\net8.0\QuantumCircuitTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\QuantumCircuitTests\obj\Debug\net8.0\QuantumCircuitTests.AssemblyInfoInputs.cache
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\QuantumCircuitTests\obj\Debug\net8.0\QuantumCircuitTests.AssemblyInfo.cs
+C:\Users\Backb\OneDrive\Desktop\Quantum-Computing-Tool-main\Quantum-Computing-Tool-main\QuantumCircuitTests\obj\Debug\net8.0\QuantumCircuitTests.csproj.CoreCompileInputs.cache
