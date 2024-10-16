@@ -152,7 +152,21 @@ namespace QuantumCircuits
             quantumLines[control2].Add(tofc2);
 
         }
+
+        public void addGateZ(int target)
+        {
+            if (target >= quantumLines.Length)
+            {
+                throw new ArgumentException("target outside of circuit bounds");
+            }
+
+            Gate z = new Gate(GateTypes.ZGT, target, new List<int> { }, quantumLines[target].Count);
+
+            quantumLines[target].Add(z);
+        }
+
         
+
 
         // add more gates here
 

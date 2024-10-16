@@ -15,6 +15,9 @@ namespace QuantumCircuits
         TOF, // Toffoli Gate Target
         TOC, // Toffoli Gate Target
         NOP, // No Operation or Identity Gate
+        ZGT,  // Z Gate
+        SWAP, // Swap Gate
+        CZ   // Controlled-Z Gate
     }
 
     public class Gate

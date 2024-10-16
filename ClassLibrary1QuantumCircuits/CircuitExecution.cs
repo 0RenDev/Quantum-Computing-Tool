@@ -50,6 +50,10 @@ namespace QuantumCircuits
                                                                     { 0, 0 ,0 ,0, 0, 0 ,1 ,0},
                                                                     { 0, 0 ,0 ,1, 0, 0 ,0 ,0},});
 
+        private Matrix zgate = new Matrix(new Complex[,] { { 1, 0 },
+                                                   { 0, -1 } });
+
+
 
 
 
@@ -219,6 +223,8 @@ namespace QuantumCircuits
                     return toffoliflipped;
                 case GateTypes.TOC:
                     return toffoli;
+                case GateTypes.ZGT:
+                    return zgate;
                 default:
                     return nopgate;
             }
