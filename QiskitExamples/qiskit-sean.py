@@ -1,6 +1,6 @@
 from qiskit.quantum_info import Statevector, Operator
-from qiskit.visualization import plot_histogram
 from qiskit import QuantumCircuit
+from qiskit.visualization import plot_histogram
 import matplotlib.pyplot as plt
 import numpy as np
 

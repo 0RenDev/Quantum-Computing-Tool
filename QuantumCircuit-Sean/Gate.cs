@@ -43,7 +43,7 @@ namespace QuantumCircuit_Sean
     public class CX(int control, int target) : Gate(new SparseMatrix(new Complex[,] { { 1, 0, 0, 0 },
                                                                                       { 0, 1, 0, 0 },
                                                                                       { 0, 0, 0, 1 },
-                                                                                      { 0, 0, 1, 0 } }), [control], [target])
+                                                                                      { 0, 0, 1, 0 } }), [target], [control])
     {
 
     }

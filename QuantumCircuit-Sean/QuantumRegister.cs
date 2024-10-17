@@ -70,6 +70,7 @@ namespace QuantumCircuit_Sean
             }
 
             SparseMatrix result = scalar;
+            //expression = expression.Reverse().ToArray();
             for (int i = 0; i < QbitCount; i++)
             {
                 SparseMatrix term = expression[i];
