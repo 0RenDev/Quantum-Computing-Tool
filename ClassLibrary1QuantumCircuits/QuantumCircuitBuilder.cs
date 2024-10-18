@@ -1,6 +1,7 @@
 ﻿using LinearAlgebra;
 using System;
 using System.Numerics;
+using System.Reflection.Metadata;
 using System.Text;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -97,6 +98,19 @@ namespace QuantumCircuits
             quantumLines[control].Add(cxc);
         }
 
+        public void addGateSWAP(int targetOne, int targetTwo){
+            if(targetOne > quantumLines.Length || targetTwo > quantumLines.Length){
+                throw new ArgumentException("both targets are outside control bounds");
+            }
+
+
+            Gate swapOne = new Gate(GateTypes.SWAP, targetOne, new List<int> { targetTwo}, quantumLines[targetOne].Count);
+            Gate swapTwo = new Gate(GateTypes.SWAP, targetTwo, new List<int> { targetOne}, quantumLines[targetTwo].Count);
+            
+
+            quantumLines[targetOne].Add(swapOne);
+            quantumLines[targetTwo].Add(swapTwo);
+        }
 
 
         public void addGateTOF(int target, int control1, int control2)
