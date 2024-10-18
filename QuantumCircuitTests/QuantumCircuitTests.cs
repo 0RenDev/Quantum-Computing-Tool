@@ -23,7 +23,7 @@ namespace QuantumCircuit.Tests
             QuantumCircuitBuilder qc = new(2, 0);
 
             qc.addGateH(1);
-            qc.addGateCX(0, 1);
+            qc.addGateCX(1, 0);
             qc.addGateX(1);
 
             CircuitExecution exe = new(qc); 

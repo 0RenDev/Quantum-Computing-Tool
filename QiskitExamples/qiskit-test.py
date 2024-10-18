@@ -4,10 +4,10 @@ import numpy as np
 
 u = Statevector([1, 0, 0, 0])
 qreg_q = QuantumRegister(2, 'q')
-circuit = QuantumCircuit(qreg_q)
+circuit = QuantumCircuit(2)
 
-circuit.h(qreg_q[0])
-circuit.cx(0, 1)
+circuit.h(1)
+circuit.cx(1, 0)
 circuit.x(1)
 u = u.evolve(circuit)
 
