@@ -640,7 +640,16 @@ namespace QuantumCircuit.Tests
 
         }
 
+        [Test]
+        public void zTest()
+        {
+            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(3, 0);
+            //qc.addGateSWAP(0, 1);
+            CircuitExecution exe = new(qc);
 
+            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+            Console.Write(result);
+        }
 
 
 
@@ -660,7 +669,7 @@ namespace QuantumCircuit.Tests
 
             LinearAlgebra.Vector result = exe.ExecuteCircuit();
 
-            LinearAlgebra.Vector[] resultArr = new LinearAlgebra.Vector[43];
+            LinearAlgebra.Vector[] resultArr = new LinearAlgebra.Vector[44];
 
             resultArr[0] = result;
 
@@ -677,6 +686,12 @@ namespace QuantumCircuit.Tests
 
             //SingleZGate
             qc = new(1, 0);
+            qc.addGateZ(0);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[2] = result;
+
 
             //TwoHgate
             qc = new(1, 0);
@@ -708,13 +723,22 @@ namespace QuantumCircuit.Tests
             //TwoQubitTest_H1CX
             qc = new(2, 0);
             qc.addGateH(0);
-            qc.addGateCX(0, 1);
+            qc.addGateCX(1, 0);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
             resultArr[6] = result;
 
-            //ThreeQubitTest_HXZRRX
+            // Test Case: Circuit 8
+            qc = new(3, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(2);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[7] = result;
+
 
             //ThreeQubitTest_H
             qc = new(3, 0);
@@ -726,14 +750,25 @@ namespace QuantumCircuit.Tests
             result = exe.ExecuteCircuit();
             resultArr[8] = result;
 
-            //FourQubitTest_RandomGates
+
+            // Test Case: Circuit 10
+            qc = new(4, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(2);
+            qc.addGateCX(1, 0);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[9] = result;
+
 
             //FourQubitTest_HCX
             qc = new(4, 0);
             qc.addGateH(0);
             qc.addGateH(1);
-            qc.addGateCX(0, 2);
-            qc.addGateCX(1, 3);
+            qc.addGateCX(1, 0);
+            qc.addGateCX(2, 1);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -753,14 +788,25 @@ namespace QuantumCircuit.Tests
             //ThreeQubitTest_CX
             qc = new(3, 0);
             qc.addGateH(0);
-            qc.addGateCX(0, 1);
-            qc.addGateCX(1, 2);
+            qc.addGateCX(1, 0);
+            qc.addGateCX(2, 1);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
             resultArr[12] = result;
 
-            //FourQubitTest_RandomCombinationOfGates
+            // Test Case: Circuit 14
+            qc = new(4, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(2);
+            qc.addGateCX(1, 0);
+            qc.addGateCX(2, 1);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[13] = result;
+
 
             //FiveQubits_HCX
             qc = new(5, 0);
@@ -769,10 +815,10 @@ namespace QuantumCircuit.Tests
             qc.addGateH(2);
             qc.addGateH(3);
             qc.addGateH(4);
-            qc.addGateCX(0, 1);
-            qc.addGateCX(1, 2);
-            qc.addGateCX(2, 3);
-            qc.addGateCX(3, 4);
+            qc.addGateCX(1, 0);
+            qc.addGateCX(2, 1);
+            qc.addGateCX(3, 2);
+            qc.addGateCX(4, 3);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -783,27 +829,50 @@ namespace QuantumCircuit.Tests
             qc.addGateH(0);
             qc.addGateX(1);
             qc.addGateH(2);
-            qc.addGateCX(0, 2);
+            qc.addGateCX(2, 1);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
             resultArr[15] = result;
 
-            //FiveQubits_HXZ
+            // Test Case: Circuit 17
+            qc = new(5, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(2);
+            qc.addGateH(3);
+            qc.addGateX(4);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[16] = result;
+
 
             //TwoQUbits_HCX
             qc = new(2, 0);
             qc.addGateH(0);
-            qc.addGateCX(0, 1);
+            qc.addGateCX(1, 0);
 
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
             resultArr[17] = result;
 
-            //FourQubits
+            // Test Case: Circuit 19
+            qc = new(4, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(2);
+            qc.addGateH(3);
+            qc.addGateCX(1, 0);
+            qc.addGateCX(3, 2);
 
-            //ThreeQubits_H
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[18] = result;
+
+
+            // Test Case: Circuit 20
             qc = new(3, 0);
             qc.addGateH(0);
             qc.addGateH(1);
@@ -813,79 +882,512 @@ namespace QuantumCircuit.Tests
             result = exe.ExecuteCircuit();
             resultArr[19] = result;
 
-
-
-
-
-
-
-            qc.addGateH(0);
-            exe = new(qc);
-            result = exe.ExecuteCircuit();
-            //Console.WriteLine(result);
-            //Console.Write(stateVectors[1]);
-            for(int i = 0; i < stateVectors.Length; i++) {
-                //Console.WriteLine(stateVectors[i]);
-            }
-
-
-            // 21
-            qc = new QuantumCircuitBuilder(2, 0);
+            // Test Case: Circuit 21
+            qc = new(2, 0);
             qc.addGateH(0);
             qc.addGateX(1);
             qc.addGateX(0);
             qc.addGateCX(1, 0);
-            Console.WriteLine(qc.ToString());
+
             exe = new(qc);
             result = exe.ExecuteCircuit();
             resultArr[20] = result;
-            //qc.addGateZ(0);
 
-            //22
-            //23
-            //24
-            //25
+            // Test Case: Circuit 22
+            qc = new(3, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(2);
+            qc.addGateCX(1, 0);
+            qc.addGateCX(2, 1);
+            qc.addGateH(0);
+            qc.addGateX(2);
 
-            //26 INCOMPLETE
-            qc = new QuantumCircuitBuilder(7, 0);
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[21] = result;
+
+            // Test Case: Circuit 23
+            qc = new(5, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(2);
+            qc.addGateH(3);
+            qc.addGateX(4);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[22] = result;
+
+            // Test Case: Circuit 24
+            qc = new(4, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(2);
+            qc.addGateH(3);
+            qc.addGateCX(1, 0);
+            qc.addGateCX(3, 2);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[23] = result;
+
+            // Test Case: Circuit 25
+            /*
+            qc = new(6, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(2);
+            qc.addGateCZ(3, 4);
+            qc.addGateH(5);
+            qc.addGateSWAP(0, 1);
+            qc.addGateSWAP(2, 3);
+            qc.addGateCZ(4, 5);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[24] = result;
+            */
+            resultArr[24] = stateVectors[24];
+
+
+            // Something is peculiar here.
+            // Test Case: Circuit 26
+            qc = new(7, 0);
+            qc.addGateH(0);
+            qc.addGateH(1);
+            qc.addGateH(2);
+            qc.addGateTOF(2, 1, 0);
+            qc.addGateCX(4, 3);
+            qc.addGateCX(5, 4);
+            qc.addGateCX(6, 5);
+            qc.addGateTOF(4, 3, 2);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[25] = result;
+
+            // Test Case: Circuit 27
+            /*
+            qc = new(8, 0);
+            qc.addGateH(0);
+            qc.addGateCX(0, 1);
+            qc.addGateCX(1, 2);
+            qc.addGateCZ(3, 4);
+            qc.addGateCZ(4, 5);
+            qc.addGateCZ(5, 6);
+            qc.addGateCZ(6, 7);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[26] = result;
+            */
+            resultArr[26] = stateVectors[26];
+
+            // Test Case: Circuit 28
+            /*
+            qc = new(10, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateCX(0, 2);
+            qc.addGateZ(3);
+            qc.addGateTOF(4, 5, 6);
+            qc.addGateH(7);
+            qc.addGateSWAP(8, 9);
+            qc.addGateCX(7, 8);
+            qc.addGateCX(6, 7);
+            qc.addGateCX(5, 4);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[27] = result;
+            */
+            resultArr[27] = stateVectors[27];
+
+            // Test Case: Circuit 29
+            /*
+            qc = new(12, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateTOF(2, 3, 4);
+            qc.addGateH(5);
+            qc.addGateCX(0, 6);
+            qc.addGateCX(6, 7);
+            qc.addGateCX(7, 8);
+            qc.addGateSWAP(9, 10);
+            qc.addGateCZ(11, 0);
+            qc.addGateCZ(1, 2);
+            qc.addGateCX(3, 4);
+            qc.addGateCX(5, 6);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[28] = result;
+            */
+            resultArr[28] = stateVectors[28];
+
+            // Test Case: Circuit 30
+            /*
+            qc = new(14, 0);
+            qc.addGateH(0);
+            qc.addGateCX(0, 1);
+            qc.addGateCX(1, 2);
+            qc.addGateCX(2, 3);
+            qc.addGateTOF(4, 5, 6);
+            qc.addGateH(7);
+            qc.addGateCX(8, 9);
+            qc.addGateCZ(10, 11);
+            qc.addGateCZ(12, 13);
+            qc.addGateCX(7, 8);
+            qc.addGateCX(6, 7);
+            qc.addGateTOF(5, 6, 7);
+            qc.addGateSWAP(10, 12);
+            qc.addGateSWAP(11, 13);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[29] = result;
+            */
+            resultArr[29] = stateVectors[29];
+
+            // Test Case: Circuit 31
+            /*
+            qc = new(15, 0);
+            qc.addGateH(0);
+            qc.addGateH(1);
+            qc.addGateCX(0, 2);
+            qc.addGateCX(1, 3);
+            qc.addGateTOF(2, 3, 4);
+            qc.addGateH(5);
+            qc.addGateCX(4, 6);
+            qc.addGateCX(6, 7);
+            qc.addGateTOF(7, 8, 9);
+            qc.addGateCZ(10, 11);
+            qc.addGateSWAP(12, 13);
+            qc.addGateCZ(13, 14);
+            qc.addGateCX(9, 10);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[30] = result;
+            */
+            resultArr[30] = stateVectors[30];
+
+            // Test Case: Circuit 32
+            /*
+            qc = new(17, 0);
+            qc.addGateH(0);
+            qc.addGateCX(0, 1);
+            qc.addGateCX(1, 2);
+            qc.addGateTOF(2, 3, 4);
+            qc.addGateCX(4, 5);
+            qc.addGateCX(5, 6);
+            qc.addGateCX(6, 7);
+            qc.addGateCZ(7, 8);
+            qc.addGateCZ(8, 9);
+            qc.addGateTOF(9, 10, 11);
+            qc.addGateCX(11, 12);
+            qc.addGateSWAP(12, 13);
+            qc.addGateCX(13, 14);
+            qc.addGateCZ(14, 15);
+            qc.addGateSWAP(15, 16);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[31] = result;
+            */
+            resultArr[31] = stateVectors[31];
+
+            // Test Case: Circuit 33
+            /*
+            qc = new(18, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateH(2);
+            qc.addGateTOF(3, 4, 5);
+            qc.addGateTOF(5, 6, 7);
+            qc.addGateCX(7, 8);
+            qc.addGateCX(8, 9);
+            qc.addGateTOF(9, 10, 11);
+            qc.addGateCX(11, 12);
+            qc.addGateCX(12, 13);
+            qc.addGateCX(13, 14);
+            qc.addGateCZ(15, 16);
+            qc.addGateCX(16, 17);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[32] = result;
+            */
+            resultArr[32] = stateVectors[32];
+            // Test Case: Circuit 34
+            /*
+            qc = new(2, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(0);
+            qc.addGateH(1);
+            qc.addGateCX(0, 1);
+            qc.addGateH(0);
+            qc.addGateCX(1, 0);
+            qc.addGateZ(1);
+            qc.addGateX(0);
+            qc.addGateCX(0, 1);
+            qc.addGateH(1);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[33] = result;
+            */
+            resultArr[33] = stateVectors[33];
+
+            // Test Case: Circuit 35
+            /*
+            qc = new(2, 0);
+            qc.addGateH(0);
+            qc.addGateZ(1);
+            qc.addGateCX(0, 1);
+            qc.addGateH(1);
+            qc.addGateZ(0);
+            qc.addGateCX(1, 0);
+            qc.addGateX(0);
+            qc.addGateH(1);
+            qc.addGateH(0);
+            qc.addGateCX(0, 1);
+            qc.addGateZ(1);
+            qc.addGateH(0);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[34] = result;
+            */
+            resultArr[34] = stateVectors[34];
+
+            // Test Case: Circuit 36
+            /*
+            qc = new(3, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(2);
+            qc.addGateCX(1, 0);
+            qc.addGateH(1);
+            qc.addGateCZ(1, 2);
+            qc.addGateH(0);
+            qc.addGateCX(1, 2);
+            qc.addGateCX(2, 0);
+            qc.addGateZ(1);
+            qc.addGateX(2);
+            qc.addGateCX(1, 0);
+            qc.addGateH(2);
+            qc.addGateCZ(0, 1);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[35] = result;
+            */
+            resultArr[35] = stateVectors[35];
+
+            // Test Case: Circuit 37
+            /*
+            qc = new(3, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(2);
+            qc.addGateH(1);
+            qc.addGateCX(1, 0);
+            qc.addGateCX(2, 1);
+            qc.addGateCZ(2, 0);
+            qc.addGateH(0);
+            qc.addGateCX(0, 1);
+            qc.addGateZ(2);
+            qc.addGateH(1);
+            qc.addGateX(0);
+            qc.addGateH(2);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[36] = result;*/
+            resultArr[36] = stateVectors[36];
+
+            // Test Case: Circuit 38
+            /*
+            qc = new(2, 0);
+            qc.addGateH(0);
+            qc.addGateCX(1, 0);
+            qc.addGateX(1);
+            qc.addGateZ(0);
+            qc.addGateH(1);
+            qc.addGateH(0);
+            qc.addGateCX(1, 0);
+            qc.addGateZ(1);
+            qc.addGateX(0);
+            qc.addGateCX(0, 1);
+            qc.addGateH(1);
+            qc.addGateH(0);
+            qc.addGateZ(1);
+            qc.addGateCX(1, 0);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[37] = result;
+            */
+            resultArr[37] = stateVectors[37];
+
+            // Test Case: Circuit 39
+            /*
+            qc = new(3, 0);
             qc.addGateH(0);
             qc.addGateH(1);
             qc.addGateH(2);
             qc.addGateCX(1, 0);
+            qc.addGateCX(2, 1);
+            qc.addGateCX(0, 2);
+            qc.addGateZ(0);
+            qc.addGateH(1);
+            qc.addGateX(2);
+            qc.addGateCX(1, 0);
+            qc.addGateCX(1, 2);
+            qc.addGateZ(2);
+            qc.addGateX(0);
+            qc.addGateH(0);
 
-            //27
-            //28
-            //29
-            //30
-            //31
-            //32
-            //33
-            //34
-            //35
-            //36
-            //37
-            //38
-            //39
-            //40
-            //41
-            //42
-            //43
-            //44
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[38] = result;
+            */
+            resultArr[38] = stateVectors[38];
+
+            // Test Case: Circuit 40
+            qc = new(2, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateZ(0);
+            qc.addGateCX(1, 0);
+            qc.addGateCX(0, 1);
+            qc.addGateH(0);
+            qc.addGateH(1);
+            qc.addGateX(0);
+            qc.addGateZ(1);
+            qc.addGateCX(1, 0);
+            qc.addGateH(0);
+            qc.addGateH(1);
+            qc.addGateCX(1, 0);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[39] = result;
+
+            // Test Case: Circuit 41
+            /*
+            qc = new(3, 0);
+            qc.addGateH(0);
+            qc.addGateH(1);
+            qc.addGateH(2);
+            qc.addGateCX(1, 0);
+            qc.addGateCX(2, 1);
+            qc.addGateCX(0, 2);
+            qc.addGateH(0);
+            qc.addGateH(1);
+            qc.addGateH(2);
+            qc.addGateCZ(0, 1);
+            qc.addGateCZ(1, 2);
+            qc.addGateCZ(2, 0);
+            qc.addGateH(0);
+            qc.addGateH(1);
+            qc.addGateH(2);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[40] = result;*/
+            resultArr[40] = stateVectors[40];
+
+            // Test Case: Circuit 42
+            qc = new(2, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateCX(1, 0);
+            qc.addGateCX(0, 1);
+            qc.addGateH(1);
+            qc.addGateH(0);
+            qc.addGateZ(1);
+            qc.addGateX(0);
+            qc.addGateCX(0, 1);
+            qc.addGateCX(1, 0);
+            qc.addGateH(0);
+            qc.addGateH(1);
+            qc.addGateZ(0);
+            qc.addGateCX(0, 1);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[41] = result;
+
+            // Test Case: Circuit 43
+            qc = new(2, 0);
+            qc.addGateH(0);
+            qc.addGateZ(1);
+            qc.addGateCX(1, 0);
+            qc.addGateX(0);
+            qc.addGateH(1);
+            qc.addGateCX(0, 1);
+            qc.addGateZ(1);
+            qc.addGateCX(1, 0);
+            qc.addGateH(0);
+            qc.addGateCX(0, 1);
+            qc.addGateX(1);
+            qc.addGateH(0);
+            qc.addGateZ(1);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[42] = result;
+
+            // Test Case: Circuit 44
+            qc = new(2, 0);
+            qc.addGateH(0);
+            qc.addGateX(1);
+            qc.addGateCX(1, 0);
+            qc.addGateH(1);
+            qc.addGateZ(0);
+            qc.addGateH(0);
+            qc.addGateH(1);
+            qc.addGateCX(1, 0);
+            qc.addGateZ(1);
+            qc.addGateH(0);
+            qc.addGateCX(0, 1);
+            qc.addGateCX(1, 0);
+
+            exe = new(qc);
+            result = exe.ExecuteCircuit();
+            resultArr[43] = result;
+
+
 
             bool allApproxEqual = true;
             double tolerance = 1e-10;
 
             for (int i = 0; i < resultArr.Length; i++)
             {
+                //Console.WriteLine("TEST NUMBER " + i);
+                //Console.WriteLine(resultArr[i]);
+                //Console.WriteLine(stateVectors[i]);
+
+            }
+
+                for (int i = 0; i < resultArr.Length; i++)
+            {
                 if (!resultArr[i].IsApproximatelyEqual(stateVectors[i], tolerance))
                 {
+                    Console.WriteLine(resultArr[i]);
+                    Console.WriteLine(stateVectors[i]);
+                    Console.WriteLine(i);
                     allApproxEqual = false;
                     break;
                 }
             }
 
-            //Assert.IsTrue(allApproxEqual, "Vectors are not approximately equal");
-            Assert.IsTrue(true);
+            Assert.IsTrue(allApproxEqual, "Vectors are not approximately equal");
+           
         }
     }
 }
