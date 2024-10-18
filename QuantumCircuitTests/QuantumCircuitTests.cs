@@ -35,6 +35,24 @@ namespace QuantumCircuit.Tests
             Assert.AreEqual(result.GetState(), new Complex[] { 0, 1 / Complex.Sqrt(2), 1 / Complex.Sqrt(2), 0 });
         }
 
+        [Test]
+        public void QuantumCircuitExecutionTest1()
+        {
+            QuantumCircuitBuilder qc = new(3, 0);
+
+            qc.addGateH(1);
+            qc.addGateCX(1, 0);
+            qc.addGateX(1);
+
+            CircuitExecution exe = new(qc);
+
+            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+
+            Console.WriteLine(result.ToString());
+
+            Assert.AreEqual(result.GetState(), new Complex[] { 0, 1 / Complex.Sqrt(2), 1 / Complex.Sqrt(2), 0 });
+        }
+
         public static LinearAlgebra.Vector[] ReadStateVectorsFromCsv(string filename)
         {
             // Create a list to hold the vectors
