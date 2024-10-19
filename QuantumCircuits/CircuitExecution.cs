@@ -238,6 +238,51 @@ namespace QuantumCircuits
             return toffoliGate;
         }
 
+        public int MeasureMultiQubit(int qubitIndex)
+        {
+            int stateSize = stateVector.Length;
+            int halfSize = stateSize / 2;
+            Complex[] zeroState = new Complex[halfSize];
+            Complex[] oneState = new Complex[halfSize];
+
+            double probabilityZero = 0.0;
+            for (int i = 0; i < halfSize; i++)
+            {
+                probabilityZero += stateVector[i].Magnitude * stateVector[i].Magnitude;
+                zeroState[i] = stateVector[i];
+                oneState[i] = stateVector[i + halfSize];
+            }
+
+            double randomValue = new Random().NextDouble();
+            if (randomValue < probabilityZero)
+            {
+                // Collapse to |0⟩
+                stateVector = Normalize(zeroState);
+                return 0;
+            }
+            else
+            {
+                // Collapse to |1⟩
+                stateVector = Normalize(oneState);
+                return 1;
+            }
+        }
+
+        private static Complex[] Normalize(Complex[] state)
+        {
+            double norm = 0;
+            for (int i = 0; i < state.Length; i++)
+            {
+                norm += state[i].Magnitude * state[i].Magnitude;
+            }
+            norm = Math.Sqrt(norm);
+            for (int i = 0; i < state.Length; i++)
+            {
+                state[i] /= norm;
+            }
+            return state;
+        }
+
         /*
          * 
          * Full measurement operations
