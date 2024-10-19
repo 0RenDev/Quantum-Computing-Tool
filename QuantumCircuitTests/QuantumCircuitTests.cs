@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Globalization;
 using Assert = NUnit.Framework.Assert;
+using System.Runtime.Serialization;
 
 namespace QuantumCircuit.Tests
 {
@@ -52,6 +53,148 @@ namespace QuantumCircuit.Tests
             Console.WriteLine(result.ToString());
 
             Assert.AreEqual(result.GetState(), new Complex[] { 0, 1 / Complex.Sqrt(2), 0, 0, 0, 0, 1 / Complex.Sqrt(2), 0 });
+        }
+
+        [Test]
+        public void QuantumCircuitMeasurementTest0()
+        {
+            QuantumCircuitBuilder qc = new(2, 1);
+
+            qc.addGateH(0);
+            qc.addGateCX(0, 1);
+
+            CircuitExecution exe = new(qc);
+
+            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+
+            Console.WriteLine(result.ToString());
+
+            int[] measurement = exe.MeasureAllQubits();
+
+            foreach (int i in measurement)
+            {
+                Console.WriteLine(i);
+            }
+
+            Assert.IsTrue((measurement[0] == 1 && measurement[1] == 1) || (measurement[0] == 0 && measurement[1] == 0));
+        }
+
+        [Test]
+        public void QuantumCircuitMeasurementTest1()
+        {
+            int[] measurement = new int[3];
+            int stateOneCount = 0;
+            int stateTwoCount = 0;
+
+            bool allCorrect = true;
+            for(int i = 0; i < 1024; i++)
+            {
+                QuantumCircuitBuilder qc = new(3, 1);
+
+                qc.addGateH(0);
+                qc.addGateCX(0, 1);
+                qc.addGateY(0);
+                qc.addGateX(1);
+                qc.addGateX(0);
+                qc.addGateCX(1, 2);
+
+                CircuitExecution exe = new(qc);
+
+                LinearAlgebra.Vector result = exe.ExecuteCircuit();
+
+                measurement = exe.MeasureAllQubits();
+
+                if (measurement[0] == 1 && measurement[1] == 0 && measurement[2] == 0)
+                {
+                    stateOneCount++;
+                }
+                else if (measurement[0] == 0 && measurement[1] == 1 && measurement[2] == 1)
+                {
+                    stateTwoCount++;
+                }
+
+                allCorrect = allCorrect && ((measurement[0] == 1 && measurement[1] == 0 && measurement[2] == 0) || (measurement[0] == 0 && measurement[1] == 1 && measurement[2] == 1));
+                if (!allCorrect)
+                {
+                    break;
+                }
+            }
+
+            Console.WriteLine("State One Count: " + stateOneCount);
+            Console.WriteLine("State Two Count: " + stateTwoCount);
+            Console.WriteLine("Satte One Probability: " + (double)stateOneCount / 1024);
+            Console.WriteLine("State Two Probability: " + (double)stateTwoCount / 1024);
+
+            Assert.IsTrue(allCorrect);
+        }
+
+        [Test]
+        public void QuantumCircuitMeasurementTest2()
+        {
+            int[] measurement = new int[3];
+            int stateOneCount = 0;
+            int stateTwoCount = 0;
+            int stateThreeCount = 0;
+            int stateFourCount = 0;
+
+            bool allCorrect = true;
+            for (int i = 0; i < 1024; i++)
+            {
+                QuantumCircuitBuilder qc = new(3, 1);
+
+                qc.addGateT(0);
+                qc.addGateCX(0, 1);
+                qc.addGateCX(0, 2);
+                qc.addGateZ(1);
+                qc.addGateH(2);
+                qc.addGateCX(0, 1);
+                qc.addGateH(0);
+
+                CircuitExecution exe = new(qc);
+
+                LinearAlgebra.Vector result = exe.ExecuteCircuit();
+
+                measurement = exe.MeasureAllQubits();
+
+                bool[] states = [
+                                    (measurement[0] == 0 && measurement[1] == 0 && measurement[2] == 0),
+                                    (measurement[0] == 1 && measurement[1] == 0 && measurement[2] == 0),
+                                    (measurement[0] == 0 && measurement[1] == 0 && measurement[2] == 1),
+                                    (measurement[0] == 1 && measurement[1] == 0 && measurement[2] == 1)
+                                ];
+
+                if (states[0])
+                {
+                    stateOneCount++;
+                }
+                else if (states[1])
+                {
+                    stateTwoCount++;
+                } else if (states[2])
+                {
+                    stateThreeCount++;
+                } else if (states[3])
+                {
+                    stateFourCount++;
+                }
+
+                allCorrect = allCorrect && (states[0] || states[1] || states[2] || states[3]);
+                if (!allCorrect)
+                {
+                    break;
+                }
+            }
+
+            Console.WriteLine("State One Count: " + stateOneCount);
+            Console.WriteLine("State Two Count: " + stateTwoCount);
+            Console.WriteLine("State Three Count: " + stateThreeCount);
+            Console.WriteLine("State Four Count: " + stateFourCount);
+            Console.WriteLine("Satte One Probability: " + (double)stateOneCount / 1024);
+            Console.WriteLine("State Two Probability: " + (double)stateTwoCount / 1024);
+            Console.WriteLine("State Three Probability: " + (double)stateThreeCount / 1024);
+            Console.WriteLine("State Four Probability: " + (double)stateFourCount / 1024);
+
+            Assert.IsTrue(allCorrect);
         }
 
         public static LinearAlgebra.Vector[] ReadStateVectorsFromCsv(string filename)

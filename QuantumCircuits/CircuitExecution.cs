@@ -238,35 +238,111 @@ namespace QuantumCircuits
             return toffoliGate;
         }
 
-        public int MeasureMultiQubit(int qubitIndex)
+        public int MeasureEntangledQubit(int targetQubit)
         {
             int stateSize = stateVector.Length;
-            int halfSize = stateSize / 2;
-            Complex[] zeroState = new Complex[halfSize];
-            Complex[] oneState = new Complex[halfSize];
+            int qubitCount = QbitCount;
 
+            // Arrays to store the collapsed states for measurement 0 or 1
+            Complex[] zeroState = new Complex[stateSize];
+            Complex[] oneState = new Complex[stateSize];
+
+            // Variables to store the probabilities of measuring 0 or 1
             double probabilityZero = 0.0;
-            for (int i = 0; i < halfSize; i++)
+            double probabilityOne = 0.0;
+
+            // Loop over all basis states
+            for (int i = 0; i < stateSize; i++)
             {
-                probabilityZero += stateVector[i].Magnitude * stateVector[i].Magnitude;
-                zeroState[i] = stateVector[i];
-                oneState[i] = stateVector[i + halfSize];
+                // Check the value of the target qubit in the basis state 'i'
+                bool isTargetQubitZero = ((i >> targetQubit) & 1) == 0;
+
+                if (isTargetQubitZero)
+                {
+                    // Group states where target qubit is 0
+                    probabilityZero += stateVector[i].Magnitude * stateVector[i].Magnitude;
+                    zeroState[i] = stateVector[i];
+                }
+                else
+                {
+                    // Group states where target qubit is 1
+                    probabilityOne += stateVector[i].Magnitude * stateVector[i].Magnitude;
+                    oneState[i] = stateVector[i];
+                }
             }
 
+            // Normalize the probabilities
+            probabilityZero = Math.Sqrt(probabilityZero);
+            probabilityOne = Math.Sqrt(probabilityOne);
+
+            // Randomly select 0 or 1 based on their probabilities
             double randomValue = new Random().NextDouble();
             if (randomValue < probabilityZero)
             {
-                // Collapse to |0⟩
+                // Collapse to the |0⟩ state
                 stateVector = Normalize(zeroState);
                 return 0;
             }
             else
             {
-                // Collapse to |1⟩
+                // Collapse to the |1⟩ state
                 stateVector = Normalize(oneState);
                 return 1;
             }
         }
+
+        public int[] MeasureAllQubits()
+        {
+            int qubitCount = QbitCount;
+            int stateSize = stateVector.Length;
+
+            // Array to store measurement results
+            int[] measurementResults = new int[qubitCount];
+
+            // Calculate the probabilities for each basis state
+            double[] probabilities = new double[stateSize];
+            for (int i = 0; i < stateSize; i++)
+            {
+                probabilities[i] = stateVector[i].Magnitude * stateVector[i].Magnitude;
+            }
+
+            // Select a basis state randomly based on the probabilities
+            double randomValue = new Random().NextDouble();
+            double cumulativeProbability = 0.0;
+            int selectedState = 0;
+            for (int i = 0; i < stateSize; i++)
+            {
+                cumulativeProbability += probabilities[i];
+                if (randomValue < cumulativeProbability)
+                {
+                    selectedState = i;
+                    break;
+                }
+            }
+
+            // Convert the selected basis state (integer) to a bitstring for measurement results
+            for (int qubit = 0; qubit < qubitCount; qubit++)
+            {
+                measurementResults[qubit] = (selectedState >> qubit) & 1; // Extract the qubit values
+            }
+
+            // Collapse the state to the selected basis state
+            for (int i = 0; i < stateSize; i++)
+            {
+                if (i == selectedState)
+                {
+                    stateVector[i] = new Complex(1, 0); // Set the selected state to amplitude 1
+                }
+                else
+                {
+                    stateVector[i] = new Complex(0, 0); // Set all other states to amplitude 0
+                }
+            }
+
+            return measurementResults;
+        }
+
+
 
         private static Complex[] Normalize(Complex[] state)
         {
