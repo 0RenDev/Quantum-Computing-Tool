@@ -238,6 +238,9 @@ namespace QuantumCircuits
             return toffoliGate;
         }
 
+        // This method measures a single qubit in a state vector
+        // This method will likely get changed and be used for partial measurements
+        // Not ready for use yet
         public int MeasureEntangledQubit(int targetQubit)
         {
             int stateSize = stateVector.Length;
@@ -291,6 +294,9 @@ namespace QuantumCircuits
             }
         }
 
+        // This method measures all qubits in a state vector
+        // Right now it returns the reverse of Qiskit because of Qiskit's little-endian convention
+        // We can change the order if we want
         public int[] MeasureAllQubits()
         {
             int qubitCount = QbitCount;
