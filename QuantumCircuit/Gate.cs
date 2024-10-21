@@ -52,6 +52,14 @@ namespace QuantumCircuit
         }
     }
 
+    public class SWAP : Gate{
+        private int TargetIndex { get;}
+
+        public SWAP(int targetIndex) : base("SWAP", new Matrix(new Complex[,] {{ 1, 0, 0, 0 }, { 0, 0, 1, 0 }, { 0, 1, 0, 0 }, { 0, 0, 0, 1 }})){
+            this.TargetIndex = targetIndex;
+        }
+    }
+
     internal class MultiLineGateRoot : Gate
     {
         // Additional properties for MultiLineGate

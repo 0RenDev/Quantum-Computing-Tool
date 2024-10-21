@@ -32,6 +32,10 @@ namespace QuantumCircuits
                                                                    { 0, 0 ,1 ,0 },
                                                                    { 0, 1, 0, 0 } });
 
+        private Matrix swapgate = new Matrix(new Complex[,] { {1, 0, 0, 0},
+                                                              {0, 0, 1, 0},
+                                                              {0, 1, 0, 0},
+                                                              {0, 0, 0, 1} });
         private Matrix toffoli = new Matrix(new Complex[,] { { 1, 0 ,0 ,0, 0, 0 ,0 ,0},
                                                              { 0, 1 ,0 ,0, 0, 0 ,0 ,0},
                                                              { 0, 0 ,1 ,0, 0, 0 ,0 ,0},
@@ -149,6 +153,9 @@ namespace QuantumCircuits
                         }
                         break;
 
+                    case GateTypes.SWAP:
+                        
+
                     case GateTypes.TOF:
                         if (currentColumn[index - 1].type != GateTypes.TOC && currentColumn[index - 2].type != GateTypes.TOC )
                         {
@@ -219,6 +226,8 @@ namespace QuantumCircuits
                     return cxgate;
                 case GateTypes.CXT:
                     return cxgateflipped;
+                case GateTypes.SWAP:
+                    return swapgate; 
                 case GateTypes.TOF:
                     return toffoliflipped;
                 case GateTypes.TOC:
