@@ -149,8 +149,8 @@ namespace QuantumCircuits
                         }
                         break;
 
-                    //case GateTypes.SWAP:
-
+                    case GateTypes.SWAP:
+                        
 
                     case GateTypes.TOF:
                         if (currentColumn[index - 1].type != GateTypes.TOC && currentColumn[index - 2].type != GateTypes.TOC )

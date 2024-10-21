@@ -169,7 +169,9 @@ namespace QuantumCircuits
         
 
         // add more gates here
-
+        //public SparseMatrix SWAPCreation(int gatesize, int target1bit, int target2bit){
+            
+        //}
 
         public override string ToString()
         {
