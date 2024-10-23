@@ -106,13 +106,24 @@ namespace LinearAlgebra
         public override string ToString()
         {
             StringBuilder vectorString = new StringBuilder("Vector:\n");
+            int count = 0;
 
             foreach (var complexNumber in elements)
             {
-                vectorString.AppendFormat("{0}+{1}i\n", complexNumber.Real, complexNumber.Imaginary);
+                vectorString.AppendFormat("{0:0.0}+{1:0.0}i, ",
+                                 Math.Round(complexNumber.Real, 10),
+                                 Math.Round(complexNumber.Imaginary, 10));
+                count++;
+
+                // Insert a newline after every 8 elements
+                if (count % 8 == 0)
+                {
+                    vectorString.AppendLine();
+                }
             }
 
-            return vectorString.ToString();
+            // Trim any trailing whitespace or newlines if needed
+            return vectorString.ToString().TrimEnd();
         }
     }
 }
