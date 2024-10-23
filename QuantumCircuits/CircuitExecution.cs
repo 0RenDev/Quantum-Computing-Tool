@@ -53,7 +53,7 @@ namespace QuantumCircuits
                     }
                     else
                     {
-                        Gate spacerNoOp = new NOP(j);
+                        Gate spacerNoOp = new NOP(j, GateTypes.NOP);
                         columnOfGates.Add(spacerNoOp);
                     }
                 }
@@ -79,13 +79,24 @@ namespace QuantumCircuits
 
                     switch (gateType)
                     {
+                        // no operation gates and spacers for proper control bits
                         case GateTypes.NOP:
                             continue;
                         case GateTypes.CXC:
+                            continue;
+                        case GateTypes.TOC:
+                            continue;
+                        case GateTypes.SWT:
+                            continue;
+                        // Actual operations 
+                        case GateTypes.CXT:
                             fullGateMatrix = CNOTCreation(QbitCount, controlQubits[0], targetQubits[0]);
                             break;
                         case GateTypes.TOF:
                             fullGateMatrix = ToffoliCreation(QbitCount, controlQubits[0], controlQubits[1], targetQubits[0]);
+                            break;
+                        case GateTypes.SWP:
+                            fullGateMatrix = SwapCreation(QbitCount, controlQubits[0], targetQubits[0]);
                             break;
                         default:
                             fullGateMatrix = BuildFullGateMatrix(gateMatrix, targetQubits[0]);
@@ -196,8 +207,44 @@ namespace QuantumCircuits
             return cnotGate;
         }
 
-        // add SwapCreation method 
-        // might be similar to CNOT
+        public SparseMatrix SwapCreation(int gatesize, int target1, int target2)
+        {
+            int size = (int)Math.Pow(2, gatesize);  // The size of the matrix is 2^n x 2^n with n = QbitCount
+            SparseMatrix swapGate = new SparseMatrix(size, size);
+
+            // Loop over all states (from 0 to 2^n - 1)
+            for (int i = 0; i < size; i++)
+            {
+                // Convert i to a binary string + pad left the rest of the zeros
+                string basisState = Convert.ToString(i, 2).PadLeft(gatesize, '0');
+                char[] reversedBasisState = basisState.ToCharArray();
+                Array.Reverse(reversedBasisState); // Use little-endian representation
+
+                // Get the values of the two target qubits
+                int targetBit1 = reversedBasisState[target1] - '0';
+                int targetBit2 = reversedBasisState[target2] - '0';
+
+                if (targetBit1 != targetBit2)
+                {
+                    // Swap the target bits if they are different
+                    char temp = reversedBasisState[target1];
+                    reversedBasisState[target1] = reversedBasisState[target2];
+                    reversedBasisState[target2] = temp;
+
+                    // Reverse the modified state back to big-endian before converting to an integer
+                    Array.Reverse(reversedBasisState);
+                    int newIndex = Convert.ToInt32(new string(reversedBasisState), 2);
+                    swapGate[i, newIndex] = 1;
+                }
+                else
+                {
+                    // No change if the target bits are the same
+                    swapGate[i, i] = 1;
+                }
+            }
+
+            return swapGate;
+        }
 
 
         public SparseMatrix ToffoliCreation(int gatesize, int controlbit1, int controlbit2, int targetbit)

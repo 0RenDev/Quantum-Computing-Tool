@@ -109,27 +109,56 @@ namespace QuantumCircuits
             {
                 if (quantumLines[control].Count < quantumLines[target].Count)
                 {
-                    Gate conNop = new NOP(control);
+                    Gate conNop = new NOP(control, GateTypes.NOP);
                     quantumLines[control].Add(conNop);
                 }
                 else
                 {
-                    Gate tarNop = new NOP(target);
+                    Gate tarNop = new NOP(target, GateTypes.NOP);
                     quantumLines[target].Add(tarNop);
                 }
             }
 
             Gate cx = new CX(control, target);
-            Gate con = new NOP(control);
+            Gate con = new NOP(control, GateTypes.CXC);
 
             quantumLines[target].Add(cx);
             quantumLines[control].Add(con);
         }
 
-        // Add SWAP gate
-        // should be similar to CX
+        public void addGateSWP(int target1, int target2)
+        {
+            if (target1 == target2)
+            {
+                throw new ArgumentException("target and control cannot be the same value");
+            }
 
-        
+            if (target1 > quantumLines.Length || target2 > quantumLines.Length)
+            {
+                throw new ArgumentException("target or control outside of circuit bounds");
+            }
+
+            while (quantumLines[target1].Count != quantumLines[target2].Count)
+            {
+                if (quantumLines[target1].Count < quantumLines[target2].Count)
+                {
+                    Gate tar1Nop = new NOP(target1, GateTypes.NOP);
+                    quantumLines[target1].Add(tar1Nop);
+                }
+                else
+                {
+                    Gate tar2Nop = new NOP(target2, GateTypes.NOP);
+                    quantumLines[target2].Add(tar2Nop);
+                }
+            }
+
+            Gate swp = new SWAP(target1, target2);
+            Gate tar = new NOP(target2, GateTypes.SWT);
+
+            quantumLines[target1].Add(swp);
+            quantumLines[target2].Add(tar);
+        }
+
         public void addGateTOF(int control1, int control2, int target)
         {
             if (target == control1 ||  target == control2)
@@ -147,24 +176,24 @@ namespace QuantumCircuits
             {
                 if (quantumLines[control1].Count < quantumLines[target].Count)
                 {
-                    Gate conNop = new NOP(control1);
+                    Gate conNop = new NOP(control1, GateTypes.NOP);
                     quantumLines[control1].Add(conNop);
                 }
                 else if (quantumLines[control2].Count < quantumLines[target].Count)
                 {
-                    Gate conNop = new NOP(control2);
+                    Gate conNop = new NOP(control2, GateTypes.NOP);
                     quantumLines[control2].Add(conNop);
                 }
                 else
                 {
-                    Gate tarNop = new NOP(target);
+                    Gate tarNop = new NOP(target, GateTypes.NOP);
                     quantumLines[target].Add(tarNop);
                 }
             }
 
             Gate toft = new Toff(control1, control2, target);
-            Gate con1 = new NOP(control1);
-            Gate con2 = new NOP(control2);
+            Gate con1 = new NOP(control1, GateTypes.TOC);
+            Gate con2 = new NOP(control2, GateTypes.TOC);
 
             quantumLines[control1].Add(con1);
             quantumLines[control2].Add(con2);
@@ -187,10 +216,10 @@ namespace QuantumCircuits
                 {
                     for (int j = 0; j < quantumLines[i].Count; j++)
                     {
-                        result.Append(quantumLines[i][j]);
+                        result.Append(quantumLines[i][j].ToString());
                         if (j < quantumLines[i].Count - 1)
                         {
-                            result.Append(",\t"); // Add comma between elements
+                            result.Append(" - "); // Add comma between elements
                         }
                     }
                 }

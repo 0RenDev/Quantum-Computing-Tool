@@ -15,21 +15,43 @@ namespace QuantumCircuits
             ZGT, 
             TGT,
             HGT, // Hadamard Gate
-            CXC, // Controlled Not Gate 
-            SWP,
+            CXT, // Controlled Not Gate target
+            CXC, // Control of CNOT gate
+            SWP, // swap gate target one
+            SWT, // second target of swap
             TOF, // Toffoli Gate
+            TOC, // controls of toffoli gate
             NOP, // No Operation or Identity Gate
         }
 
-        public class Gate(GateTypes type, SparseMatrix operation, int[] controls, int[] targets)
+    public class Gate(GateTypes type, SparseMatrix operation, int[] controls, int[] targets)
         {
             public GateTypes type { get; private set; } = type;
             public SparseMatrix Operation { get; private set; } = operation;
             public int[] Controls { get; protected set; } = controls;
             public int[] Targets { get; protected set; } = targets;
+            override public String ToString()
+            {
+            return type switch
+            {
+                GateTypes.XGT => "XGT",
+                GateTypes.YGT => "YGT",
+                GateTypes.ZGT => "ZGT",
+                GateTypes.TGT => "TGT",
+                GateTypes.HGT => "HGT",
+                GateTypes.CXC => "CNC",
+                GateTypes.CXT => " C ",
+                GateTypes.SWP => "SWP",
+                GateTypes.SWT => " T ",
+                GateTypes.TOF => "TOF",
+                GateTypes.TOC => " C ",
+                GateTypes.NOP => "   ",
+                _ => type.ToString()
+            };
         }
+    }
 
-    public class NOP(int target) : Gate(GateTypes.NOP, new SparseMatrix(new Complex[,] { { 1, 0 },
+    public class NOP(int target, GateTypes type) : Gate(type, new SparseMatrix(new Complex[,] { { 1, 0 },
                                                                         { 0, 1 } }), [], [target])
     {
 
@@ -64,7 +86,7 @@ namespace QuantumCircuits
 
     }
 
-    public class CX(int control, int target) : Gate(GateTypes.CXC, new SparseMatrix(new Complex[,] { { 1, 0, 0, 0 },
+    public class CX(int control, int target) : Gate(GateTypes.CXT, new SparseMatrix(new Complex[,] { { 1, 0, 0, 0 },
                                                                                                      { 0, 1, 0, 0 },
                                                                                                      { 0, 0, 0, 1 },
                                                                                                      { 0, 0, 1, 0 } }), [control], [target])
@@ -75,7 +97,7 @@ namespace QuantumCircuits
     public class SWAP(int target1, int target2) : Gate(GateTypes.SWP, new SparseMatrix(new Complex[,] { { 1, 0, 0, 0 },
                                                                                                         { 0, 0, 1, 0 },
                                                                                                         { 0, 1, 0, 0 },
-                                                                                                        { 0, 0, 0, 1 } }), [target2], [target1])
+                                                                                                        { 0, 0, 0, 1 } }), [target1], [target2])
     {
 
     }
