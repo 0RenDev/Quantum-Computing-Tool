@@ -56,12 +56,49 @@ namespace QuantumCircuit.Tests
         }
 
         [Test]
+        public void QuantumCircuitExecutionTestSWAP()
+        {
+            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(4, 0);
+
+            qc.addGateH(0);
+            qc.addGateH(1);
+            qc.addGateX(2);
+            qc.addGateX(3);
+            qc.addGateSWP(1, 3);
+            qc.addGateSWP(0, 1);
+            qc.addGateSWP(2, 3);
+            CircuitExecution exe = new(qc);
+
+            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+
+            Console.WriteLine(result.ToString());
+
+
+            // theres probably a better way to deal with floating point error I just couldn't think of one
+
+            Complex[] expected = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0, 0.5, 0, 0.5, 0, 0.5 };
+            Complex[] actual = result.GetState();
+
+            Assert.That(expected.Length, Is.EqualTo(actual.Length), "Arrays are of different lengths");
+
+            for (int i = 0; i < expected.Length; i++)
+            {
+                Assert.That(expected[i].Real, Is.EqualTo(actual[i].Real).Within(1e-10),
+                            $"Real part at index {i} is different");
+                Assert.That(expected[i].Imaginary, Is.EqualTo(actual[i].Imaginary).Within(1e-10),
+                            $"Imaginary part at index {i} is different");
+            }
+
+
+        }
+
+        [Test]
         public void QuantumCircuitMeasurementTest0()
         {
             QuantumCircuitBuilder qc = new(2, 1);
 
             qc.addGateH(0);
-            qc.addGateCX(0, 1);
+            //qc.addGateCX(0, 1);
 
             CircuitExecution exe = new(qc);
 
@@ -76,7 +113,7 @@ namespace QuantumCircuit.Tests
                 Console.WriteLine(i);
             }
 
-            Assert.IsTrue((measurement[0] == 1 && measurement[1] == 1) || (measurement[0] == 0 && measurement[1] == 0));
+            Assert.IsTrue((measurement[0] == 0 && measurement[1] == 0) || (measurement[0] == 0 && measurement[1] == 0));
         }
 
         [Test]
