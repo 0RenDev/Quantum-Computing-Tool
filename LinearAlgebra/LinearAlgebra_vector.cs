@@ -110,9 +110,8 @@ namespace LinearAlgebra
 
             foreach (var complexNumber in elements)
             {
-                vectorString.AppendFormat("{0:0.0}+{1:0.0}i, ",
-                                 Math.Round(complexNumber.Real, 10),
-                                 Math.Round(complexNumber.Imaginary, 10));
+                vectorString.AppendFormat("{0:0.0000}+{1:0.0000}i, ",
+                                       complexNumber.Real,complexNumber.Imaginary);
                 count++;
 
                 // Insert a newline after every 8 elements
