@@ -5,13 +5,27 @@ using System.Text;
 
 namespace QuantumCircuits
 {
+    /// <summary>
+    /// This class is used to build a quantum circuit by adding gates to the circuit lines.
+    /// </summary>
     public class QuantumCircuitBuilder
     {
-        // Declare circuit lines
+        // Declare circuit lines        
+        /// <summary>
+        /// The quantum lines represent the series of quantum gates that are applied to a qubit.
+        /// </summary>
         public List<Gate>[] quantumLines;
+
+        /// <summary>
+        /// The classical lines represent the series of classical gates that are applied to a classical bit.
+        /// </summary>
         public List<Gate>[] classicalLines;
 
-        // Constructor to define the array's length
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QuantumCircuitBuilder"/> class.
+        /// </summary>
+        /// <param name="numQuantumLines">The number quantum lines.</param>
+        /// <param name="numClassicalLines">The number classical lines.</param>
         public QuantumCircuitBuilder(int numQuantumLines, int numClassicalLines)
         {
             // should check of input is > 0
@@ -32,6 +46,11 @@ namespace QuantumCircuits
 
         }
 
+        /// <summary>
+        /// Adds the gate X.
+        /// </summary>
+        /// <param name="target">The target qubit</param>
+        /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
         public void addGateX(int target)
         {
             if(target > quantumLines.Length)
@@ -44,6 +63,11 @@ namespace QuantumCircuits
             quantumLines[target].Add(x);
         }
 
+        /// <summary>
+        /// Adds the gate Y.
+        /// </summary>
+        /// <param name="target">The target qubit</param>
+        /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
         public void addGateY(int target)
         {
             if (target > quantumLines.Length)
@@ -56,6 +80,11 @@ namespace QuantumCircuits
             quantumLines[target].Add(y);
         }
 
+        /// <summary>
+        /// Adds the gate Z.
+        /// </summary>
+        /// <param name="target">The target qubit</param>
+        /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
         public void addGateZ(int target)
         {
             if (target > quantumLines.Length)
@@ -68,6 +97,11 @@ namespace QuantumCircuits
             quantumLines[target].Add(z);
         }
 
+        /// <summary>
+        /// Adds the gate T.
+        /// </summary>
+        /// <param name="target">The target qubit</param>
+        /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
         public void addGateT(int target)
         {
             if (target > quantumLines.Length)
@@ -80,7 +114,11 @@ namespace QuantumCircuits
             quantumLines[target].Add(t);
         }
 
-
+        /// <summary>
+        /// Adds the gate H.
+        /// </summary>
+        /// <param name="target">The target qubit</param>
+        /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
         public void addGateH(int target)
         {
             if (target > quantumLines.Length)
@@ -93,6 +131,16 @@ namespace QuantumCircuits
             quantumLines[target].Add(h);
         }
 
+        /// <summary>
+        /// Adds the gate CX (Controlled Not).
+        /// </summary>
+        /// <param name="control">The control qubit.</param>
+        /// <param name="target">The target qubit.</param>
+        /// <exception cref="System.ArgumentException">
+        /// target and control cannot be the same value
+        /// or
+        /// target or control outside of circuit bounds
+        /// </exception>
         public void addGateCX(int control, int target)
         {
             if (target == control)
@@ -126,6 +174,16 @@ namespace QuantumCircuits
             quantumLines[control].Add(con);
         }
 
+        /// <summary>
+        /// Adds the gate SWP.
+        /// </summary>
+        /// <param name="target1">The first target qubit.</param>
+        /// <param name="target2">The second target qubit.</param>
+        /// <exception cref="System.ArgumentException">
+        /// target and control cannot be the same value
+        /// or
+        /// target or control outside of circuit bounds
+        /// </exception>
         public void addGateSWP(int target1, int target2)
         {
             if (target1 == target2)
@@ -159,6 +217,17 @@ namespace QuantumCircuits
             quantumLines[target2].Add(tar);
         }
 
+        /// <summary>
+        /// Adds the gate TOF.
+        /// </summary>
+        /// <param name="control1">The first control qubit.</param>
+        /// <param name="control2">The second control qubit.</param>
+        /// <param name="target">The target qubit.</param>
+        /// <exception cref="System.ArgumentException">
+        /// target or controls can be the same value
+        /// or
+        /// target or control outside of circuit bounds
+        /// </exception>
         public void addGateTOF(int control1, int control2, int target)
         {
             if (target == control1 ||  target == control2)
@@ -200,9 +269,14 @@ namespace QuantumCircuits
             quantumLines[target].Add(toft);
 
         }
-        
 
 
+        /// <summary>
+        /// Converts to string.
+        /// </summary>
+        /// <returns>
+        /// A <see cref="System.String" /> that represents this instance.
+        /// </returns>
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();

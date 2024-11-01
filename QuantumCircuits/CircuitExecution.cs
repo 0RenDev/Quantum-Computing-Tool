@@ -9,15 +9,41 @@ using System.Threading.Tasks;
 
 namespace QuantumCircuits
 {
+    /// <summary>
+    /// This class is responsible for executing a quantum circuit
+    /// </summary>
     public class CircuitExecution
     {
-
+        /// <summary>
+        /// The circuit object that will be executed
+        /// </summary>
         QuantumCircuitBuilder circuit;
+
+        /// <summary>
+        /// The execution columns reprsent the gates that are executed in each time step.
+        /// </summary>
         List<List<Gate>> executionColumns = new List<List<Gate>>();
 
+        /// <summary>
+        /// Gets the qbit count.
+        /// </summary>
+        /// <value>
+        /// The qbit count.
+        /// </value>
         public int QbitCount { get; private set; }
+
+        /// <summary>
+        /// Gets the state vector.
+        /// </summary>
+        /// <value>
+        /// The state vector.
+        /// </value>
         public Complex[] stateVector { get; private set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CircuitExecution"/> class.
+        /// </summary>
+        /// <param name="inputcircuit">The inputcircuit.</param>
         public CircuitExecution(QuantumCircuitBuilder inputcircuit)
         {
             circuit = inputcircuit;
@@ -61,7 +87,10 @@ namespace QuantumCircuits
             }
         }
 
-
+        /// <summary>
+        /// Executes the quantum circuit.
+        /// </summary>
+        /// <returns>The result statevector as a <see cref="LinearAlgebra.Vector"></returns>
         public LinearAlgebra.Vector ExecuteCircuit()
         {
             while(executionColumns.Count > 0) 
@@ -124,8 +153,12 @@ namespace QuantumCircuits
             return new LinearAlgebra.Vector(stateVector);
         }
 
-
-
+        /// <summary>
+        /// Builds the full gate matrix. In order to build the matrix, it is necessary to tensor the gate matrix with the identity matrix for the unaffected qubits.
+        /// </summary>
+        /// <param name="gateMatrix">The gate operator matrix.</param>
+        /// <param name="targetQubits">The target qubits.</param>
+        /// <returns>A <see cref="LinearAlgebra.SparseMatrix"> reprsentation of the tensored operator matrix.</returns>
         private SparseMatrix BuildFullGateMatrix(SparseMatrix gateMatrix, int targetQubits)
         {
             // Start with the identity matrix for the full qubit space
@@ -168,8 +201,14 @@ namespace QuantumCircuits
 
             return result;
         }
-        
 
+        /// <summary>
+        /// Creates a tensored CNOT operator matrix.
+        /// </summary>
+        /// <param name="gatesize">The size of the gate.</param>
+        /// <param name="controlbit">The control qubit.</param>
+        /// <param name="targetbit">The target qubit.</param>
+        /// <returns>A <see cref="LinearAlgebra.SparseMatrix"> representation of the tensored CNOT operator matrix</returns>
         public SparseMatrix CNOTCreation(int gatesize, int controlbit , int targetbit)
         {
             int size = (int)Math.Pow(2, gatesize);  // The size of the matrix is 2^n x 2^n whith n = QbitCount
@@ -207,6 +246,13 @@ namespace QuantumCircuits
             return cnotGate;
         }
 
+        /// <summary>
+        /// Creates a tensored SWAP operator matrix.
+        /// </summary>
+        /// <param name="gatesize">The size of the gate.</param>
+        /// <param name="target1">The first target qubit.</param>
+        /// <param name="target2">The second target qubit.</param>
+        /// <returns>A <see cref="LinearAlgebra.SparseMatrix"> representation of the tensored SWAP operator matrix</returns>
         public SparseMatrix SwapCreation(int gatesize, int target1, int target2)
         {
             int size = (int)Math.Pow(2, gatesize);  // The size of the matrix is 2^n x 2^n with n = QbitCount
@@ -246,7 +292,14 @@ namespace QuantumCircuits
             return swapGate;
         }
 
-
+        /// <summary>
+        /// Creates a tensored Toffoli operator matrix.
+        /// </summary>
+        /// <param name="gatesize">The size of the gate.</param>
+        /// <param name="controlbit1">The first control qubit.</param>
+        /// <param name="controlbit2">The second control qubit.</param>
+        /// <param name="targetbit">The target qubit.</param>
+        /// <returns>A <see cref="LinearAlgebra.SparseMatrix"> representation of the tensored Tofolli operator matrix</returns>
         public SparseMatrix ToffoliCreation(int gatesize, int controlbit1, int controlbit2, int targetbit)
         {
             int size = (int)Math.Pow(2, gatesize);  // The size of the matrix is 2^n x 2^n with n = QbitCount
@@ -341,16 +394,17 @@ namespace QuantumCircuits
             }
         }
 
-        // This method measures all qubits in a state vector
-        // Right now it returns the reverse of Qiskit because of Qiskit's little-endian convention
-        // We can change the order if we want
-        public int[] MeasureAllQubits()
+        /// <summary>
+        /// Measures all qubits.
+        /// </summary>
+        /// <returns>An <see cref="System.Byte[]"> of bits for the measured state.</returns>
+        public byte[] MeasureAllQubits()
         {
             int qubitCount = QbitCount;
             int stateSize = stateVector.Length;
 
             // Array to store measurement results
-            int[] measurementResults = new int[qubitCount];
+            byte[] measurementResults = new byte[qubitCount];
 
             // Calculate the probabilities for each basis state
             double[] probabilities = new double[stateSize];
@@ -376,7 +430,7 @@ namespace QuantumCircuits
             // Convert the selected basis state (integer) to a bitstring for measurement results
             for (int qubit = 0; qubit < qubitCount; qubit++)
             {
-                measurementResults[qubit] = (selectedState >> qubit) & 1; // Extract the qubit values
+                measurementResults[qubit] = (byte)((selectedState >> qubit) & 1); // Extract the qubit values
             }
 
             // Collapse the state to the selected basis state
@@ -395,8 +449,11 @@ namespace QuantumCircuits
             return measurementResults;
         }
 
-
-
+        /// <summary>
+        /// Normalizes the specified statevector.
+        /// </summary>
+        /// <param name="state">The statevector</param>
+        /// <returns>A normalized statevector as a <see cref="System.Numerics.Complex[]" /></returns>
         private static Complex[] Normalize(Complex[] state)
         {
             double norm = 0;
@@ -412,7 +469,12 @@ namespace QuantumCircuits
             return state;
         }
 
-        // Override the toString method
+        /// <summary>
+        /// Converts to string.
+        /// </summary>
+        /// <returns>
+        /// A <see cref="System.String" /> that represents this instance.
+        /// </returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

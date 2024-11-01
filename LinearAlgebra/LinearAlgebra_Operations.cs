@@ -7,10 +7,19 @@ namespace LinearAlgebra
     // this is one of the library classes 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Operations class containing common linear algebra operations
-    //-------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //-------------------------------------------------------------------------------------------------------------------------------------------------------------    
+    /// <summary>
+    /// This class contains common linear algebra operations that can be performed on matrices and vectors.
+    /// </summary>
     public class Operations
-    {   
-        // Matrix addition
+    {
+        /// <summary>
+        /// Adds the instance with the specified matrix.
+        /// </summary>
+        /// <param name="matrix1">The first matrix.</param>
+        /// <param name="matrix2">The second matrix.</param>
+        /// <returns></returns>
+        /// <exception cref="System.ArgumentException">The dimensions of both matrices must match.</exception>
         public static Matrix Add(Matrix matrix1, Matrix matrix2)
         {
             if (matrix1.cols != matrix2.cols || matrix1.rows != matrix2.rows)
@@ -28,11 +37,17 @@ namespace LinearAlgebra
                 }
             }
             return new Matrix(addedElements);
-        }   
+        }
 
 
 
-        // Matrix subtraction
+        /// <summary>
+        /// Subtracts the specified matrix from the instance.
+        /// </summary>
+        /// <param name="matrix1">The first matrix.</param>
+        /// <param name="matrix2">The second matrix.</param>
+        /// <returns></returns>
+        /// <exception cref="System.ArgumentException">The dimensions of both matrices must match.</exception>
         public static Matrix Subtract(Matrix matrix1, Matrix matrix2)
         {
             if (matrix1.cols != matrix2.cols || matrix1.rows != matrix2.rows)
@@ -54,8 +69,13 @@ namespace LinearAlgebra
 
 
 
-        // Matrix-Matrix multiplication
-        // naive approach should be replaced by multithreaded or other method
+        /// <summary>
+        /// Multiplies the specified matrix with the instance. 
+        /// </summary>
+        /// <param name="matrix1">The first matrix.</param>
+        /// <param name="matrix2">The second matrix.</param>
+        /// <returns></returns>
+        /// <exception cref="System.ArgumentException">The number of columns in the first matrix must match the number of rows in the second matrix.</exception>
         public static Matrix Multiply(Matrix matrix1, Matrix matrix2)
         {
             if (matrix1.cols != matrix2.rows)
@@ -79,7 +99,13 @@ namespace LinearAlgebra
             return new Matrix(resultElements);
         }
 
-        // Multi-threaded matrix multiplication
+        /// <summary>
+        /// Multiplies the matrices concurrently.
+        /// </summary>
+        /// <param name="a">The first matrix.</param>
+        /// <param name="b">The second matrix.</param>
+        /// <returns></returns>
+        /// <exception cref="System.ArgumentException">The number of columns in the first matrix must match the number of rows in the second matrix.</exception>
         public static Matrix MatrixMultiply(Matrix a, Matrix b)
         {
             // Get dimensions of the matrices
@@ -148,7 +174,13 @@ namespace LinearAlgebra
             return result;
         }
 
-        // Matrix + vector multiplication
+        /// <summary>
+        /// Multiplies the matrix with the vector.
+        /// </summary>
+        /// <param name="matrix">The matrix.</param>
+        /// <param name="vector">The vector.</param>
+        /// <returns>A <see cref="Vector"/></returns>
+        /// <exception cref="System.ArgumentException">Left Multiplications must have similar dimensions.</exception>
         public static Vector MatrixVectorMult(Matrix matrix, Vector vector)
         {
             if(matrix.cols != vector.rows)
@@ -170,7 +202,12 @@ namespace LinearAlgebra
             return new Vector(result); 
         }
 
-        // Matrix multplied by scaler
+        /// <summary>
+        /// Multiplies a matrix with a scalar.
+        /// </summary>
+        /// <param name="matrix1">The matrix.</param>
+        /// <param name="scaler">The scaler.</param>
+        /// <returns></returns>
         public static Matrix Multscaler(Matrix matrix1, Complex scaler)
         {
 
@@ -188,7 +225,14 @@ namespace LinearAlgebra
 
 
 
-        // Checks equality of two matrices
+        /// <summary>
+        /// Determines whether the specified a is equal.
+        /// </summary>
+        /// <param name="a">The first matrix.</param>
+        /// <param name="b">The second matrix.</param>
+        /// <returns>
+        ///   <c>true</c> if the specified a is equal; otherwise, <c>false</c>.
+        /// </returns>
         public static bool IsEqual(Matrix a, Matrix b)
         {
             if (a.rows != b.rows || a.cols != b.cols) return false; // If dimensions don't match, they aren't equal
@@ -208,7 +252,12 @@ namespace LinearAlgebra
 
 
 
-        // Tensor product between two matrices. simple appoarch
+        /// <summary>
+        /// Tensors the product.
+        /// </summary>
+        /// <param name="matrix1">The matrix1.</param>
+        /// <param name="matrix2">The matrix2.</param>
+        /// <returns></returns>
         public static Matrix TensorProduct(Matrix matrix1, Matrix matrix2)
         {
             int rows1 = matrix1.rows;

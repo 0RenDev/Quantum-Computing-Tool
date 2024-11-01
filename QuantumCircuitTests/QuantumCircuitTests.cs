@@ -106,7 +106,7 @@ namespace QuantumCircuit.Tests
 
             Console.WriteLine(result.ToString());
 
-            int[] measurement = exe.MeasureAllQubits();
+            byte[] measurement = exe.MeasureAllQubits();
 
             foreach (int i in measurement)
             {
@@ -119,7 +119,7 @@ namespace QuantumCircuit.Tests
         [Test]
         public void QuantumCircuitMeasurementTest1()
         {
-            int[] measurement = new int[3];
+            byte[] measurement = new byte[3];
             int stateOneCount = 0;
             int stateTwoCount = 0;
 
@@ -168,7 +168,7 @@ namespace QuantumCircuit.Tests
         [Test]
         public void QuantumCircuitMeasurementTest2()
         {
-            int[] measurement = new int[3];
+            byte[] measurement = new byte[3];
             int stateOneCount = 0;
             int stateTwoCount = 0;
             int stateThreeCount = 0;
