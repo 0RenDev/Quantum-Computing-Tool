@@ -34,12 +34,12 @@ namespace QuantumCircuits
             {
             return type switch
             {
-                GateTypes.XGT => "XGT",
-                GateTypes.YGT => "YGT",
-                GateTypes.ZGT => "ZGT",
-                GateTypes.TGT => "TGT",
-                GateTypes.HGT => "HGT",
-                GateTypes.CXT => "CXT",
+                GateTypes.XGT => " X ",
+                GateTypes.YGT => " Y ",
+                GateTypes.ZGT => " Z ",
+                GateTypes.TGT => " T ",
+                GateTypes.HGT => " H ",
+                GateTypes.CXT => "CX ",
                 GateTypes.CXC => " C ",
                 GateTypes.SWP => "SWP",
                 GateTypes.SWT => " T ",
