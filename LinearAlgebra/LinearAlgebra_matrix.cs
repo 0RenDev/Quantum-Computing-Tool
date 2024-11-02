@@ -236,7 +236,7 @@ namespace LinearAlgebra
         /// <summary>
         /// Conjugates the <see cref="Matrix"/> in place.
         /// </summary>
-/        public void ConjugateInPlace()
+        public void ConjugateInPlace()
         {
             for (int i = 0; i < rows; i++)
             {

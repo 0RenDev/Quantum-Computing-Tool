@@ -153,6 +153,9 @@ namespace Console_Testing
             qc.addGateZ(0);
             qc.addGateCX(2, 1);
             qc.addGateT(0);
+            //qc.addGateRX(0, Math.PI / 2);
+            //qc.addGateRY(0, Math.PI / 2);
+            //qc.addGateRZ(0, Math.PI / 2);
 
 
             // print out circuit

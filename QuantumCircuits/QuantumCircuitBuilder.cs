@@ -47,16 +47,27 @@ namespace QuantumCircuits
         }
 
         /// <summary>
+        /// Utility function to check for target being out of bounds.
+        /// <summary>
+        /// <param name="target">The target qubit</param>
+        /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
+        private void ValidateTarget(int target, string type = "Target")
+        {
+            if (target < 0 || target >= quantumLines.Length)
+            {
+                throw new ArgumentException($"{type} outside of circuit bounds");
+            }
+        }
+
+
+        /// <summary>
         /// Adds the gate X.
         /// </summary>
         /// <param name="target">The target qubit</param>
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
         public void addGateX(int target)
         {
-            if(target > quantumLines.Length)
-            {
-                throw new ArgumentException("target outside of circuit bounds");
-            }
+            ValidateTarget(target);
 
             Gate x = new X(target);
 
@@ -70,10 +81,7 @@ namespace QuantumCircuits
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
         public void addGateY(int target)
         {
-            if (target > quantumLines.Length)
-            {
-                throw new ArgumentException("target outside of circuit bounds");
-            }
+            ValidateTarget(target);
 
             Gate y = new Y(target);
 
@@ -87,10 +95,7 @@ namespace QuantumCircuits
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
         public void addGateZ(int target)
         {
-            if (target > quantumLines.Length)
-            {
-                throw new ArgumentException("target outside of circuit bounds");
-            }
+            ValidateTarget(target);
 
             Gate z = new Z(target);
 
@@ -104,10 +109,7 @@ namespace QuantumCircuits
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
         public void addGateT(int target)
         {
-            if (target > quantumLines.Length)
-            {
-                throw new ArgumentException("target outside of circuit bounds");
-            }
+            ValidateTarget(target);
 
             Gate t = new T(target);
 
@@ -121,10 +123,7 @@ namespace QuantumCircuits
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
         public void addGateH(int target)
         {
-            if (target > quantumLines.Length)
-            {
-                throw new ArgumentException("target outside of circuit bounds");
-            }
+            ValidateTarget(target);
 
             Gate h = new H(target);
 
@@ -148,12 +147,10 @@ namespace QuantumCircuits
                 throw new ArgumentException("target and control cannot be the same value");
             }
 
-            if ( target > quantumLines.Length || control > quantumLines.Length)
-            {
-                throw new ArgumentException("target or control outside of circuit bounds");
-            }
+            ValidateTarget(target);
+            ValidateTarget(control, "Control");
 
-            while(quantumLines[control].Count != quantumLines[target].Count)
+            while (quantumLines[control].Count != quantumLines[target].Count)
             {
                 if (quantumLines[control].Count < quantumLines[target].Count)
                 {
@@ -191,10 +188,8 @@ namespace QuantumCircuits
                 throw new ArgumentException("target and control cannot be the same value");
             }
 
-            if (target1 > quantumLines.Length || target2 > quantumLines.Length)
-            {
-                throw new ArgumentException("target or control outside of circuit bounds");
-            }
+            ValidateTarget(target1, "Target1");
+            ValidateTarget(target2, "Target2");
 
             while (quantumLines[target1].Count != quantumLines[target2].Count)
             {
@@ -240,6 +235,10 @@ namespace QuantumCircuits
                 throw new ArgumentException("target or control outside of circuit bounds");
             }
 
+            ValidateTarget(control1, "Control1");
+            ValidateTarget(control2, "Control2");
+            ValidateTarget(target);
+
             // add in spacer nops to ensure correct order of execution
             while (quantumLines[control1].Count != quantumLines[target].Count || quantumLines[control2].Count != quantumLines[target].Count)
             {
@@ -270,6 +269,51 @@ namespace QuantumCircuits
 
         }
 
+        /// <summary>
+        /// Adds the gate RX.
+        /// </summary>
+        /// <param name="target">The target qubit</param>
+        /// <param name="theta">Angle of rotation in radians</param>
+        /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
+        public void addGateRX(int target, double theta)
+        {
+            ValidateTarget(target);
+
+            Gate rx = new RX(target, theta);
+
+            quantumLines[target].Add(rx);
+        }
+
+        /// <summary>
+        /// Adds the gate RY.
+        /// </summary>
+        /// <param name="target">The target qubit</param>
+        /// <param name="theta">Angle of rotation in radians</param>
+        /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
+        public void addGateRY(int target, double theta)
+        {
+            ValidateTarget(target);
+
+            Gate ry = new RY(target, theta);
+
+            quantumLines[target].Add(ry);
+        }
+
+        /// <summary>
+        /// Adds the gate RZ.
+        /// </summary>
+        /// <param name="target">The target qubit</param>
+        /// <param name="theta">Angle of rotation in radians</param>
+        /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
+        public void addGateRZ(int target, double theta)
+        {
+            ValidateTarget(target);
+
+            Gate rz = new RZ(target, theta);
+
+            quantumLines[target].Add(rz);
+        }
+
 
         /// <summary>
         /// Converts to string.
@@ -293,7 +337,7 @@ namespace QuantumCircuits
                         result.Append(quantumLines[i][j].ToString());
                         if (j < quantumLines[i].Count - 1)
                         {
-                            result.Append(" - "); // Add comma between elements
+                            result.Append(" - "); // Add hyphen between elements
                         }
                     }
                 }
