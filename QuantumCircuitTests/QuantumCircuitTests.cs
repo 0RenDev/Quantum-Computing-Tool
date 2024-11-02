@@ -113,7 +113,7 @@ namespace QuantumCircuit.Tests
                 Console.WriteLine(i);
             }
 
-            Assert.IsTrue((measurement[0] == 0 && measurement[1] == 0) || (measurement[0] == 0 && measurement[1] == 0));
+            Assert.IsTrue((measurement[0] == 0 && measurement[1] == 0) || (measurement[0] == 1 && measurement[1] == 1));
         }
 
         [Test]
