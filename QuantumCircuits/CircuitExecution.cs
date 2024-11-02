@@ -516,7 +516,7 @@ namespace QuantumCircuits
                 int stateIndex = Array.BinarySearch(cumulativeProbabilities, randomValue);
                 if (stateIndex < 0)
                 {
-                    stateIndex = ~stateIndex;
+                    stateIndex = ~stateIndex; // e.g. -3 becomes 2, bin search returns where it would go but negative if not in the array
                 }
 
                 // the index of the basis state simulated gets converted to base 2, and the left is padded
@@ -540,6 +540,50 @@ namespace QuantumCircuits
             foreach (string bitstring in measurementResults)
             {
                 Console.WriteLine(bitstring);
+            }
+        }
+
+        /// <summary>
+        /// Prints a sideways histogram of measurement results, normalized to a specified number of bars.
+        /// </summary>
+        /// <param name="iterations">The number of simulations to perform.</param>
+        /// <param name="bars">The total number of hyphens to display in the histogram.</param>
+        public void PrintHistogram(int iterations = 1, int bars = 20)
+        {
+            int qubitCount = QbitCount;
+            int stateSize = stateVector.Length;
+
+            List<string> measurementResults = SimulateMeasurements(iterations);
+
+            // generate all possible bitstrings and initialize them to 0
+            Dictionary<string, int> measurementCounts = new Dictionary<string, int>();
+            for (int i = 0; i < stateSize; i++)
+            {
+                string bitstring = Convert.ToString(i, 2).PadLeft(qubitCount, '0');
+                measurementCounts[bitstring] = 0;
+            }
+
+            // each bitstring is initialized to 0 and in the dictionary, now count them
+            foreach (string bitstring in measurementResults)
+            {
+                measurementCounts[bitstring]++;
+            }
+
+            Console.WriteLine("Measurement Histogram:\n");
+            foreach (var kvp in measurementCounts.OrderBy(kvp => kvp.Key))
+            {
+                string bitstring = kvp.Key;
+                int count = kvp.Value;
+
+                // normalize the count based off the #bars and count of bitstrings (=iterations) for each count
+                int numHyphens = (int)Math.Round((double)count * bars / iterations);
+
+                Console.Write($"{bitstring}   |   ");
+                for (int i = 0; i < numHyphens; i++)
+                {
+                    Console.Write("-");
+                }
+                Console.WriteLine("\n");
             }
         }
 

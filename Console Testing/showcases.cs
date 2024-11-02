@@ -153,7 +153,7 @@ namespace Console_Testing
             qc.addGateZ(0);
             qc.addGateCX(2, 1);
             qc.addGateT(0);
-            //qc.addGateRX(0, Math.PI / 2);
+            qc.addGateRX(2, Math.PI / 2);
             //qc.addGateRY(0, Math.PI / 2);
             //qc.addGateRZ(0, Math.PI / 2);
 
@@ -166,13 +166,16 @@ namespace Console_Testing
             // print out execution columns
             Console.WriteLine(exe.ToString());
 
-            // prints bitstrings
-            exe.PrintBitstrings(10);
-
             // returns the statevector after executing all columns
             LinearAlgebra.Vector result = exe.ExecuteCircuit();
 
             Console.WriteLine(result.ToString());
+
+            // prints bitstrings
+            exe.PrintBitstrings(10);
+
+            // prints histogram with 100 iterations and 20 bars
+            exe.PrintHistogram(10000, 50);
         }
 
         public void PerformanceTestCircuit(int size)
