@@ -141,7 +141,7 @@ namespace Console_Testing
         public void TestCircuit()
         {
             // build a circuit with one quantum and one classical line
-            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(3, 0);
+            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(4, 0);
 
             // half adder
 
@@ -166,11 +166,13 @@ namespace Console_Testing
             // print out execution columns
             Console.WriteLine(exe.ToString());
 
+            // prints bitstrings
+            exe.PrintBitstrings(10);
+
             // returns the statevector after executing all columns
             LinearAlgebra.Vector result = exe.ExecuteCircuit();
 
             Console.WriteLine(result.ToString());
-
         }
 
         public void PerformanceTestCircuit(int size)

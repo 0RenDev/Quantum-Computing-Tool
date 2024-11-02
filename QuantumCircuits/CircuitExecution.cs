@@ -407,11 +407,7 @@ namespace QuantumCircuits
             byte[] measurementResults = new byte[qubitCount];
 
             // Calculate the probabilities for each basis state
-            double[] probabilities = new double[stateSize];
-            for (int i = 0; i < stateSize; i++)
-            {
-                probabilities[i] = stateVector[i].Magnitude * stateVector[i].Magnitude;
-            }
+            double[] probabilities = GetStateProbabilities();
 
             // Select a basis state randomly based on the probabilities
             double randomValue = new Random().NextDouble();
@@ -467,6 +463,84 @@ namespace QuantumCircuits
                 state[i] /= norm;
             }
             return state;
+        }
+
+        /// <summary>
+        /// Calculates the probability distribution for the entire system.
+        /// </summary>
+        /// <returns>An array of doubles representing the probability of each basis state.</returns>
+        public double[] GetStateProbabilities()
+        {
+            int stateSize = stateVector.Length;
+            double[] probabilities = new double[stateSize];
+            for (int i = 0; i < stateSize; i++)
+            {
+                probabilities[i] = stateVector[i].Magnitude * stateVector[i].Magnitude;
+            }
+            return probabilities;
+        }
+
+        /// <summary>
+        /// Simulates measurements on the entire quantum system.
+        /// </summary>
+        /// <param name="iterations">The number of simulations to perform.</param>
+        /// <returns>A list of bitstrings representing the measurement outcomes.</returns>
+        public List<string> SimulateMeasurements(int iterations = 1)
+        {
+            int qubitCount = QbitCount;
+            int stateSize = stateVector.Length;
+
+            double[] probabilities = GetStateProbabilities();
+
+            // make it a cumulative distribution for simulations
+            double[] cumulativeProbabilities = new double[stateSize];
+            cumulativeProbabilities[0] = probabilities[0];
+            for (int i = 1; i < stateSize; i++)
+            {
+                cumulativeProbabilities[i] = cumulativeProbabilities[i - 1] + probabilities[i];
+            }
+
+            // fix floating point issues
+            cumulativeProbabilities[stateSize - 1] = 1.0;
+
+            // store bitstrings as they are generated
+            List<string> measurementResults = new List<string>();
+
+            Random random = new Random();
+
+            for (int i = 0; i < iterations; i++)
+            {
+                // generate a random double between 0 and 1, search for where it is/should be in the CDF array
+                // to simulate picking one based on their respective probabilities
+                double randomValue = random.NextDouble();
+                int stateIndex = Array.BinarySearch(cumulativeProbabilities, randomValue);
+                if (stateIndex < 0)
+                {
+                    stateIndex = ~stateIndex;
+                }
+
+                // the index of the basis state simulated gets converted to base 2, and the left is padded
+                // so that it is of size qubitCount with 0's, which is how our system handles the basis representation
+                string bitstring = Convert.ToString(stateIndex, 2).PadLeft(qubitCount, '0');
+
+                measurementResults.Add(bitstring);
+            }
+
+            return measurementResults;
+        }
+
+        /// <summary>
+        /// Prints simulated measurement bitstring(s) to the console.
+        /// </summary>
+        /// <param name="iterations">The number of simulations to perform.</param>
+        public void PrintBitstrings(int iterations = 1)
+        {
+            List<string> measurementResults = SimulateMeasurements(iterations);
+            Console.WriteLine("Bitstrings:\n");
+            foreach (string bitstring in measurementResults)
+            {
+                Console.WriteLine(bitstring);
+            }
         }
 
         /// <summary>
