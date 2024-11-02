@@ -172,10 +172,13 @@ namespace Console_Testing
             Console.WriteLine(result.ToString());
 
             // prints bitstrings
-            exe.PrintBitstrings(10);
+            //exe.PrintBitstrings(10);
 
-            // prints histogram with param1 simulationsand param2 bars
-            exe.PrintHistogram(10000, 50);
+            // prints histogram with param1 simulationed bitstring values and param2 bars
+            exe.SimulateHistogram(10000, 100);
+
+            // prints histogram based off of the probabilities of each basis state
+            exe.PrintHistogram();
         }
 
         public void PerformanceTestCircuit(int size)

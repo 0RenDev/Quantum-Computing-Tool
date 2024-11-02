@@ -481,13 +481,24 @@ namespace QuantumCircuits
         }
 
         /// <summary>
+        /// Calculates the bitstring for a given index input.
+        /// </summary>
+        /// <param name="index">A number that we need to convert to a bitstring.</param>
+        /// <returns>A string representing the bitstring of the inputted index.</returns>
+        private string GetBitstring(int index)
+        {
+            // the index of the basis state simulated gets converted to base 2, and the left is padded
+            // so that it is of size QbitCount with 0's, which is how our system handles the basis representation
+            return Convert.ToString(index, 2).PadLeft(QbitCount, '0');
+        }
+
+        /// <summary>
         /// Simulates measurements on the entire quantum system.
         /// </summary>
         /// <param name="iterations">The number of simulations to perform.</param>
         /// <returns>A list of bitstrings representing the measurement outcomes.</returns>
         public List<string> SimulateMeasurements(int iterations = 1)
         {
-            int qubitCount = QbitCount;
             int stateSize = stateVector.Length;
 
             double[] probabilities = GetStateProbabilities();
@@ -519,9 +530,7 @@ namespace QuantumCircuits
                     stateIndex = ~stateIndex; // e.g. -3 becomes 2, bin search returns where it would go but negative if not in the array
                 }
 
-                // the index of the basis state simulated gets converted to base 2, and the left is padded
-                // so that it is of size qubitCount with 0's, which is how our system handles the basis representation
-                string bitstring = Convert.ToString(stateIndex, 2).PadLeft(qubitCount, '0');
+                string bitstring = GetBitstring(stateIndex);
 
                 measurementResults.Add(bitstring);
             }
@@ -544,13 +553,38 @@ namespace QuantumCircuits
         }
 
         /// <summary>
-        /// Prints a sideways histogram of measurement results, normalized to a specified number of bars.
+        /// Prints a sideways histogram based on the probabilities of each basis state alongside their respective probability.
+        /// </summary>
+        public void PrintHistogram(int bars = 100)
+        {
+            int stateSize = stateVector.Length;
+
+            double[] probabilities = GetStateProbabilities();
+
+            Console.WriteLine("Probability Histogram:\n");
+            for (int i = 0; i < stateSize; i++)
+            {
+                string bitstring = GetBitstring(i);
+
+                double probability = probabilities[i];
+
+                // scale the bar length based off the probability
+                int numBars = (int)Math.Round(probability * bars);
+
+                string formattedProbability = $"{probability:P0}".PadLeft(3);
+
+                Console.Write($"{bitstring}   |   ");
+                Console.WriteLine(new string('#', numBars) + $" {formattedProbability}");
+            }
+        }
+
+        /// <summary>
+        /// Prints a sideways histogram of simulated measurement results, normalized to a specified number of bars.
         /// </summary>
         /// <param name="iterations">The number of simulations to perform.</param>
         /// <param name="bars">The total number of hyphens to display in the histogram.</param>
-        public void PrintHistogram(int iterations = 1, int bars = 20)
+        public void SimulateHistogram(int iterations = 1000, int bars = 100)
         {
-            int qubitCount = QbitCount;
             int stateSize = stateVector.Length;
 
             List<string> measurementResults = SimulateMeasurements(iterations);
@@ -559,7 +593,7 @@ namespace QuantumCircuits
             Dictionary<string, int> measurementCounts = new Dictionary<string, int>();
             for (int i = 0; i < stateSize; i++)
             {
-                string bitstring = Convert.ToString(i, 2).PadLeft(qubitCount, '0');
+                string bitstring = GetBitstring(i);
                 measurementCounts[bitstring] = 0;
             }
 
@@ -576,14 +610,12 @@ namespace QuantumCircuits
                 int count = kvp.Value;
 
                 // normalize the count based off the #bars and count of bitstrings (=iterations) for each count
-                int numHyphens = (int)Math.Round((double)count * bars / iterations);
+                int numBars = (int)Math.Round((double)count * bars / iterations);
+
+                string formattedPercentage = $"{(double)count / iterations:P0}".PadLeft(3);
 
                 Console.Write($"{bitstring}   |   ");
-                for (int i = 0; i < numHyphens; i++)
-                {
-                    Console.Write("-");
-                }
-                Console.WriteLine("\n");
+                Console.WriteLine(new string('#', numBars) + $" {formattedPercentage}");
             }
         }
 
