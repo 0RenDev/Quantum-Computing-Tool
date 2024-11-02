@@ -98,7 +98,7 @@ namespace QuantumCircuit.Tests
             QuantumCircuitBuilder qc = new(2, 1);
 
             qc.addGateH(0);
-            //qc.addGateCX(0, 1);
+            qc.addGateCX(0, 1);
 
             CircuitExecution exe = new(qc);
 

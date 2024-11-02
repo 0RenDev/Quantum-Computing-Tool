@@ -49,13 +49,33 @@ namespace QuantumCircuits
         /// <summary>
         /// Utility function to check for target being out of bounds.
         /// <summary>
-        /// <param name="target">The target qubit</param>
+        /// <param name="target">The target qubit.</param>
+        /// <param name="type">Optional parameter to specify the type of the qubit (control or target).</param>
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
         private void ValidateTarget(int target, string type = "Target")
         {
             if (target < 0 || target >= quantumLines.Length)
             {
                 throw new ArgumentException($"{type} outside of circuit bounds");
+            }
+        }
+
+        /// <summary>
+        /// Utility function to check for qubit equality (each should be distinct).
+        /// <summary>
+        /// <param name="qubits">Array of input qubits to check equality for</param>
+        /// <exception cref="System.ArgumentException"> qubits not distinct</exception>
+        private void ValidateQubits(int[] qubits)
+        {
+            var seenQubits = new HashSet<int>();
+
+            foreach (var qubit in qubits)
+            {
+                // add returns false if it is already in the hashset
+                if (!seenQubits.Add(qubit))
+                {
+                    throw new ArgumentException("Input qubits must be distinct, duplicate found.");
+                }
             }
         }
 
@@ -142,10 +162,7 @@ namespace QuantumCircuits
         /// </exception>
         public void addGateCX(int control, int target)
         {
-            if (target == control)
-            {
-                throw new ArgumentException("target and control cannot be the same value");
-            }
+            ValidateQubits([control, target]);
 
             ValidateTarget(target);
             ValidateTarget(control, "Control");
@@ -183,10 +200,7 @@ namespace QuantumCircuits
         /// </exception>
         public void addGateSWP(int target1, int target2)
         {
-            if (target1 == target2)
-            {
-                throw new ArgumentException("target and control cannot be the same value");
-            }
+            ValidateQubits([target1, target2]);
 
             ValidateTarget(target1, "Target1");
             ValidateTarget(target2, "Target2");
@@ -225,16 +239,8 @@ namespace QuantumCircuits
         /// </exception>
         public void addGateTOF(int control1, int control2, int target)
         {
-            if (target == control1 ||  target == control2)
-            {
-                throw new ArgumentException("target or controls can be the same value");
-            }
+            ValidateQubits([control1, control2, target]);
     
-            if (target > quantumLines.Length || control1 > quantumLines.Length || control2 > quantumLines.Length)
-            {
-                throw new ArgumentException("target or control outside of circuit bounds");
-            }
-
             ValidateTarget(control1, "Control1");
             ValidateTarget(control2, "Control2");
             ValidateTarget(target);

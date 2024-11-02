@@ -153,7 +153,7 @@ namespace Console_Testing
             qc.addGateZ(0);
             qc.addGateCX(2, 1);
             qc.addGateT(0);
-            qc.addGateRX(2, Math.PI / 2);
+            //qc.addGateRX(2, Math.PI / 2);
             //qc.addGateRY(0, Math.PI / 2);
             //qc.addGateRZ(0, Math.PI / 2);
 
@@ -174,7 +174,7 @@ namespace Console_Testing
             // prints bitstrings
             exe.PrintBitstrings(10);
 
-            // prints histogram with 100 iterations and 20 bars
+            // prints histogram with param1 simulationsand param2 bars
             exe.PrintHistogram(10000, 50);
         }
 
