@@ -38,7 +38,7 @@ namespace QuantumCircuits
         /// <value>
         /// The state vector.
         /// </value>
-        public Complex[] stateVector { get; private set; }
+        public Complex[] StateVector { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CircuitExecution"/> class.
@@ -63,8 +63,8 @@ namespace QuantumCircuits
                 tempVectorList.Add(new LinearAlgebra.Vector(new Complex[] { 1, 0 }));
             }
 
-            stateVector = new Complex[1 << circuit.quantumLines.Length];
-            stateVector[0] = 1;
+            StateVector = new Complex[1 << circuit.quantumLines.Length];
+            StateVector[0] = 1;
 
 
             for (int i = 0; i < longestLine; i++)
@@ -99,7 +99,7 @@ namespace QuantumCircuits
                 {
                     Gate gate = executionColumns[0][i];
 
-                    GateTypes gateType = gate.type;
+                    GateTypes gateType = gate.Type;
                     SparseMatrix gateMatrix = gate.Operation;
                     int[] targetQubits = gate.Targets;
                     int[] controlQubits = gate.Controls;
@@ -137,7 +137,7 @@ namespace QuantumCircuits
                     //fullGateMatrix.Print();
 
                     // Apply the resulting matrix to the state vector
-                    stateVector = fullGateMatrix.MultiplyWithVector(stateVector);
+                    StateVector = fullGateMatrix.MultiplyWithVector(StateVector);
 
 
 
@@ -150,7 +150,7 @@ namespace QuantumCircuits
                 }
                 executionColumns.RemoveAt(0);
             }
-            return new LinearAlgebra.Vector(stateVector);
+            return new LinearAlgebra.Vector(StateVector);
         }
 
         /// <summary>
@@ -343,7 +343,7 @@ namespace QuantumCircuits
         // Not ready for use yet
         public int MeasureEntangledQubit(int targetQubit)
         {
-            int stateSize = stateVector.Length;
+            int stateSize = StateVector.Length;
             int qubitCount = QbitCount;
 
             // Arrays to store the collapsed states for measurement 0 or 1
@@ -363,14 +363,14 @@ namespace QuantumCircuits
                 if (isTargetQubitZero)
                 {
                     // Group states where target qubit is 0
-                    probabilityZero += stateVector[i].Magnitude * stateVector[i].Magnitude;
-                    zeroState[i] = stateVector[i];
+                    probabilityZero += StateVector[i].Magnitude * StateVector[i].Magnitude;
+                    zeroState[i] = StateVector[i];
                 }
                 else
                 {
                     // Group states where target qubit is 1
-                    probabilityOne += stateVector[i].Magnitude * stateVector[i].Magnitude;
-                    oneState[i] = stateVector[i];
+                    probabilityOne += StateVector[i].Magnitude * StateVector[i].Magnitude;
+                    oneState[i] = StateVector[i];
                 }
             }
 
@@ -383,13 +383,13 @@ namespace QuantumCircuits
             if (randomValue < probabilityZero)
             {
                 // Collapse to the |0⟩ state
-                stateVector = Normalize(zeroState);
+                StateVector = Normalize(zeroState);
                 return 0;
             }
             else
             {
                 // Collapse to the |1⟩ state
-                stateVector = Normalize(oneState);
+                StateVector = Normalize(oneState);
                 return 1;
             }
         }
@@ -401,7 +401,7 @@ namespace QuantumCircuits
         public byte[] MeasureAllQubits()
         {
             int qubitCount = QbitCount;
-            int stateSize = stateVector.Length;
+            int stateSize = StateVector.Length;
 
             // Array to store measurement results
             byte[] measurementResults = new byte[qubitCount];
@@ -434,11 +434,11 @@ namespace QuantumCircuits
             {
                 if (i == selectedState)
                 {
-                    stateVector[i] = new Complex(1, 0); // Set the selected state to amplitude 1
+                    StateVector[i] = new Complex(1, 0); // Set the selected state to amplitude 1
                 }
                 else
                 {
-                    stateVector[i] = new Complex(0, 0); // Set all other states to amplitude 0
+                    StateVector[i] = new Complex(0, 0); // Set all other states to amplitude 0
                 }
             }
 
@@ -471,11 +471,11 @@ namespace QuantumCircuits
         /// <returns>An array of doubles representing the probability of each basis state.</returns>
         public double[] GetStateProbabilities()
         {
-            int stateSize = stateVector.Length;
+            int stateSize = StateVector.Length;
             double[] probabilities = new double[stateSize];
             for (int i = 0; i < stateSize; i++)
             {
-                probabilities[i] = stateVector[i].Magnitude * stateVector[i].Magnitude;
+                probabilities[i] = StateVector[i].Magnitude * StateVector[i].Magnitude;
             }
             return probabilities;
         }
@@ -499,7 +499,7 @@ namespace QuantumCircuits
         /// <returns>A list of bitstrings representing the measurement outcomes.</returns>
         public List<string> SimulateMeasurements(int iterations = 1)
         {
-            int stateSize = stateVector.Length;
+            int stateSize = StateVector.Length;
 
             double[] probabilities = GetStateProbabilities();
 
@@ -557,7 +557,7 @@ namespace QuantumCircuits
         /// </summary>
         public void PrintHistogram(int bars = 100)
         {
-            int stateSize = stateVector.Length;
+            int stateSize = StateVector.Length;
 
             double[] probabilities = GetStateProbabilities();
 
@@ -585,7 +585,7 @@ namespace QuantumCircuits
         /// <param name="bars">The total number of hyphens to display in the histogram.</param>
         public void SimulateHistogram(int iterations = 1000, int bars = 100)
         {
-            int stateSize = stateVector.Length;
+            int stateSize = StateVector.Length;
 
             List<string> measurementResults = SimulateMeasurements(iterations);
 
@@ -633,12 +633,12 @@ namespace QuantumCircuits
             // Append qubit states
             sb.AppendLine("Qubits StateVector: ");
 
-            foreach (Complex number in stateVector)
+            foreach (Complex number in StateVector)
             {
                 sb.AppendLine(number.ToString());
             }
 
-            sb.Append(stateVector.ToString());
+            sb.Append(StateVector.ToString());
 
             sb.Append("\n");
 

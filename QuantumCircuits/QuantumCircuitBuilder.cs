@@ -85,7 +85,7 @@ namespace QuantumCircuits
         /// </summary>
         /// <param name="target">The target qubit</param>
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
-        public void addGateX(int target)
+        public void AddGateX(int target)
         {
             ValidateTarget(target);
 
@@ -99,7 +99,7 @@ namespace QuantumCircuits
         /// </summary>
         /// <param name="target">The target qubit</param>
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
-        public void addGateY(int target)
+        public void AddGateY(int target)
         {
             ValidateTarget(target);
 
@@ -113,7 +113,7 @@ namespace QuantumCircuits
         /// </summary>
         /// <param name="target">The target qubit</param>
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
-        public void addGateZ(int target)
+        public void AddGateZ(int target)
         {
             ValidateTarget(target);
 
@@ -127,7 +127,7 @@ namespace QuantumCircuits
         /// </summary>
         /// <param name="target">The target qubit</param>
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
-        public void addGateT(int target)
+        public void AddGateT(int target)
         {
             ValidateTarget(target);
 
@@ -141,7 +141,7 @@ namespace QuantumCircuits
         /// </summary>
         /// <param name="target">The target qubit</param>
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
-        public void addGateH(int target)
+        public void AddGateH(int target)
         {
             ValidateTarget(target);
 
@@ -160,7 +160,7 @@ namespace QuantumCircuits
         /// or
         /// target or control outside of circuit bounds
         /// </exception>
-        public void addGateCX(int control, int target)
+        public void AddGateCX(int control, int target)
         {
             ValidateQubits([control, target]);
 
@@ -198,7 +198,7 @@ namespace QuantumCircuits
         /// or
         /// target or control outside of circuit bounds
         /// </exception>
-        public void addGateSWP(int target1, int target2)
+        public void AddGateSWP(int target1, int target2)
         {
             ValidateQubits([target1, target2]);
 
@@ -237,7 +237,7 @@ namespace QuantumCircuits
         /// or
         /// target or control outside of circuit bounds
         /// </exception>
-        public void addGateTOF(int control1, int control2, int target)
+        public void AddGateTOF(int control1, int control2, int target)
         {
             ValidateQubits([control1, control2, target]);
     
@@ -281,7 +281,7 @@ namespace QuantumCircuits
         /// <param name="target">The target qubit</param>
         /// <param name="theta">Angle of rotation in radians</param>
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
-        public void addGateRX(int target, double theta)
+        public void AddGateRX(int target, double theta)
         {
             ValidateTarget(target);
 
@@ -296,7 +296,7 @@ namespace QuantumCircuits
         /// <param name="target">The target qubit</param>
         /// <param name="theta">Angle of rotation in radians</param>
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
-        public void addGateRY(int target, double theta)
+        public void AddGateRY(int target, double theta)
         {
             ValidateTarget(target);
 
@@ -311,7 +311,7 @@ namespace QuantumCircuits
         /// <param name="target">The target qubit</param>
         /// <param name="theta">Angle of rotation in radians</param>
         /// <exception cref="System.ArgumentException">target outside of circuit bounds</exception>
-        public void addGateRZ(int target, double theta)
+        public void AddGateRZ(int target, double theta)
         {
             ValidateTarget(target);
 

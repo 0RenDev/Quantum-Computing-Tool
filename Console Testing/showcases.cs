@@ -146,13 +146,13 @@ namespace Console_Testing
             // half adder
 
             //input bits
-            qc.addGateX(0);
-            qc.addGateH(1);
-            qc.addGateH(2);
-            qc.addGateTOF(2, 1, 0);
-            qc.addGateZ(0);
-            qc.addGateCX(2, 1);
-            qc.addGateT(0);
+            qc.AddGateX(0);
+            qc.AddGateH(1);
+            qc.AddGateH(2);
+            qc.AddGateTOF(2, 1, 0);
+            qc.AddGateZ(0);
+            qc.AddGateCX(2, 1);
+            qc.AddGateT(0);
             //qc.addGateRX(2, Math.PI / 2);
             //qc.addGateRY(0, Math.PI / 2);
             //qc.addGateRZ(0, Math.PI / 2);
@@ -191,7 +191,7 @@ namespace Console_Testing
                 for (int j = 0; j < size; j++)
                 {
                     //input bits
-                    qc.addGateH(j);
+                    qc.AddGateH(j);
                 }
             }
 

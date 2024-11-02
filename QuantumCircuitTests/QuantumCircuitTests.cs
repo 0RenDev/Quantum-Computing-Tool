@@ -23,9 +23,9 @@ namespace QuantumCircuit.Tests
         {
             QuantumCircuitBuilder qc = new(2, 0);
 
-            qc.addGateH(1);
-            qc.addGateCX(1, 0);
-            qc.addGateX(1);
+            qc.AddGateH(1);
+            qc.AddGateCX(1, 0);
+            qc.AddGateX(1);
 
             CircuitExecution exe = new(qc); 
 
@@ -41,10 +41,10 @@ namespace QuantumCircuit.Tests
         {
             QuantumCircuitBuilder qc = new(3, 0);
 
-            qc.addGateH(0);
-            qc.addGateX(1);
-            qc.addGateCX(0, 1);
-            qc.addGateCX(1, 2);
+            qc.AddGateH(0);
+            qc.AddGateX(1);
+            qc.AddGateCX(0, 1);
+            qc.AddGateCX(1, 2);
 
             CircuitExecution exe = new(qc);
 
@@ -60,13 +60,13 @@ namespace QuantumCircuit.Tests
         {
             QuantumCircuitBuilder qc = new QuantumCircuitBuilder(4, 0);
 
-            qc.addGateH(0);
-            qc.addGateH(1);
-            qc.addGateX(2);
-            qc.addGateX(3);
-            qc.addGateSWP(1, 3);
-            qc.addGateSWP(0, 1);
-            qc.addGateSWP(2, 3);
+            qc.AddGateH(0);
+            qc.AddGateH(1);
+            qc.AddGateX(2);
+            qc.AddGateX(3);
+            qc.AddGateSWP(1, 3);
+            qc.AddGateSWP(0, 1);
+            qc.AddGateSWP(2, 3);
             CircuitExecution exe = new(qc);
 
             LinearAlgebra.Vector result = exe.ExecuteCircuit();
@@ -97,8 +97,8 @@ namespace QuantumCircuit.Tests
         {
             QuantumCircuitBuilder qc = new(2, 1);
 
-            qc.addGateH(0);
-            qc.addGateCX(0, 1);
+            qc.AddGateH(0);
+            qc.AddGateCX(0, 1);
 
             CircuitExecution exe = new(qc);
 
@@ -128,12 +128,12 @@ namespace QuantumCircuit.Tests
             {
                 QuantumCircuitBuilder qc = new(3, 1);
 
-                qc.addGateH(0);
-                qc.addGateCX(0, 1);
-                qc.addGateY(0);
-                qc.addGateX(1);
-                qc.addGateX(0);
-                qc.addGateCX(1, 2);
+                qc.AddGateH(0);
+                qc.AddGateCX(0, 1);
+                qc.AddGateY(0);
+                qc.AddGateX(1);
+                qc.AddGateX(0);
+                qc.AddGateCX(1, 2);
 
                 CircuitExecution exe = new(qc);
 
@@ -179,13 +179,13 @@ namespace QuantumCircuit.Tests
             {
                 QuantumCircuitBuilder qc = new(3, 1);
 
-                qc.addGateT(0);
-                qc.addGateCX(0, 1);
-                qc.addGateCX(0, 2);
-                qc.addGateZ(1);
-                qc.addGateH(2);
-                qc.addGateCX(0, 1);
-                qc.addGateH(0);
+                qc.AddGateT(0);
+                qc.AddGateCX(0, 1);
+                qc.AddGateCX(0, 2);
+                qc.AddGateZ(1);
+                qc.AddGateH(2);
+                qc.AddGateCX(0, 1);
+                qc.AddGateH(0);
 
                 CircuitExecution exe = new(qc);
 
@@ -316,7 +316,7 @@ namespace QuantumCircuit.Tests
             LinearAlgebra.Vector[] stateVectors = ReadStateVectorsFromCsv("statevectors.csv");
             QuantumCircuitBuilder qc = new QuantumCircuitBuilder(1,0);
 
-            qc.addGateH(0);
+            qc.AddGateH(0);
 
             CircuitExecution exe = new(qc);
 
@@ -329,7 +329,7 @@ namespace QuantumCircuit.Tests
 
             //SingleXGate
             qc = new(1, 0);
-            qc.addGateX(0);
+            qc.AddGateX(0);
 
             exe = new(qc);
 
@@ -342,8 +342,8 @@ namespace QuantumCircuit.Tests
 
             //TwoHgate
             qc = new(1, 0);
-            qc.addGateH(0);
-            qc.addGateH(0);
+            qc.AddGateH(0);
+            qc.AddGateH(0);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -351,8 +351,8 @@ namespace QuantumCircuit.Tests
 
             //HGateAndXgate
             qc = new(1, 0);
-            qc.addGateH(0);
-            qc.addGateX(0);
+            qc.AddGateH(0);
+            qc.AddGateX(0);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -360,8 +360,8 @@ namespace QuantumCircuit.Tests
 
             //TwoQubitTest_H1X2
             qc = new(2, 0);
-            qc.addGateH(0);
-            qc.addGateX(1);
+            qc.AddGateH(0);
+            qc.AddGateX(1);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -369,8 +369,8 @@ namespace QuantumCircuit.Tests
 
             //TwoQubitTest_H1CX
             qc = new(2, 0);
-            qc.addGateH(0);
-            qc.addGateCX(0, 1);
+            qc.AddGateH(0);
+            qc.AddGateCX(0, 1);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -380,9 +380,9 @@ namespace QuantumCircuit.Tests
 
             //ThreeQubitTest_H
             qc = new(3, 0);
-            qc.addGateH(0);
-            qc.addGateH(1);
-            qc.addGateH(2);
+            qc.AddGateH(0);
+            qc.AddGateH(1);
+            qc.AddGateH(2);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -392,10 +392,10 @@ namespace QuantumCircuit.Tests
 
             //FourQubitTest_HCX
             qc = new(4, 0);
-            qc.addGateH(0);
-            qc.addGateH(1);
-            qc.addGateCX(0, 2);
-            qc.addGateCX(1, 3);
+            qc.AddGateH(0);
+            qc.AddGateH(1);
+            qc.AddGateCX(0, 2);
+            qc.AddGateCX(1, 3);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -403,10 +403,10 @@ namespace QuantumCircuit.Tests
 
             //TwoQubitTest_hx
             qc = new(2, 0);
-            qc.addGateH(0);
-            qc.addGateH(1);
-            qc.addGateX(0);
-            qc.addGateX(1);
+            qc.AddGateH(0);
+            qc.AddGateH(1);
+            qc.AddGateX(0);
+            qc.AddGateX(1);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -414,9 +414,9 @@ namespace QuantumCircuit.Tests
 
             //ThreeQubitTest_CX
             qc = new(3, 0);
-            qc.addGateH(0);
-            qc.addGateCX(0, 1);
-            qc.addGateCX(1, 2);
+            qc.AddGateH(0);
+            qc.AddGateCX(0, 1);
+            qc.AddGateCX(1, 2);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -426,15 +426,15 @@ namespace QuantumCircuit.Tests
 
             //FiveQubits_HCX
             qc = new(5, 0);
-            qc.addGateH(0);
-            qc.addGateH(1);
-            qc.addGateH(2);
-            qc.addGateH(3);
-            qc.addGateH(4);
-            qc.addGateCX(0, 1);
-            qc.addGateCX(1, 2);
-            qc.addGateCX(2, 3);
-            qc.addGateCX(3, 4);
+            qc.AddGateH(0);
+            qc.AddGateH(1);
+            qc.AddGateH(2);
+            qc.AddGateH(3);
+            qc.AddGateH(4);
+            qc.AddGateCX(0, 1);
+            qc.AddGateCX(1, 2);
+            qc.AddGateCX(2, 3);
+            qc.AddGateCX(3, 4);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -442,10 +442,10 @@ namespace QuantumCircuit.Tests
 
             //ThreeQubits
             qc = new(3, 0);
-            qc.addGateH(0);
-            qc.addGateX(1);
-            qc.addGateH(2);
-            qc.addGateCX(0, 2);
+            qc.AddGateH(0);
+            qc.AddGateX(1);
+            qc.AddGateH(2);
+            qc.AddGateCX(0, 2);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -455,8 +455,8 @@ namespace QuantumCircuit.Tests
 
             //TwoQUbits_HCX
             qc = new(2, 0);
-            qc.addGateH(0);
-            qc.addGateCX(0, 1);
+            qc.AddGateH(0);
+            qc.AddGateCX(0, 1);
 
 
             exe = new(qc);
@@ -467,9 +467,9 @@ namespace QuantumCircuit.Tests
 
             //ThreeQubits_H
             qc = new(3, 0);
-            qc.addGateH(0);
-            qc.addGateH(1);
-            qc.addGateH(2);
+            qc.AddGateH(0);
+            qc.AddGateH(1);
+            qc.AddGateH(2);
 
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -481,7 +481,7 @@ namespace QuantumCircuit.Tests
 
 
 
-            qc.addGateH(0);
+            qc.AddGateH(0);
             exe = new(qc);
             result = exe.ExecuteCircuit();
             //Console.WriteLine(result);
@@ -493,10 +493,10 @@ namespace QuantumCircuit.Tests
 
             // 21
             qc = new QuantumCircuitBuilder(2, 0);
-            qc.addGateH(0);
-            qc.addGateX(1);
-            qc.addGateX(0);
-            qc.addGateCX(1, 0);
+            qc.AddGateH(0);
+            qc.AddGateX(1);
+            qc.AddGateX(0);
+            qc.AddGateCX(1, 0);
             Console.WriteLine(qc.ToString());
             exe = new(qc);
             result = exe.ExecuteCircuit();
@@ -510,10 +510,10 @@ namespace QuantumCircuit.Tests
 
             //26 INCOMPLETE
             qc = new QuantumCircuitBuilder(7, 0);
-            qc.addGateH(0);
-            qc.addGateH(1);
-            qc.addGateH(2);
-            qc.addGateCX(1, 0);
+            qc.AddGateH(0);
+            qc.AddGateH(1);
+            qc.AddGateH(2);
+            qc.AddGateCX(1, 0);
 
             //27
             //28

@@ -29,13 +29,13 @@ namespace QuantumCircuits
 
     public class Gate(GateTypes type, SparseMatrix operation, int[] controls, int[] targets)
     {
-        public GateTypes type { get; private set; } = type;
+        public GateTypes Type { get; private set; } = type;
         public SparseMatrix Operation { get; private set; } = operation;
         public int[] Controls { get; protected set; } = controls;
         public int[] Targets { get; protected set; } = targets;
         override public String ToString()
         {
-            return type switch
+            return Type switch
             {
                 GateTypes.XGT => " X ",
                 GateTypes.YGT => " Y ",
@@ -55,7 +55,7 @@ namespace QuantumCircuits
                 //GateTypes.RYG => $"RY({Theta})", can use if we add theta as an input to the gate later on
                 //GateTypes.RZG => $"RZ({Theta})", maybe address later when overhauling visualization process, currently not supported since >3 characters
                 GateTypes.NOP => "   ",
-                _ => type.ToString()
+                _ => Type.ToString()
             };
         }
     }
