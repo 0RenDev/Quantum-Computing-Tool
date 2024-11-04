@@ -652,7 +652,34 @@ namespace QuantumCircuit.Tests
         }
 
 
-
+        [Test]
+        public void massiveQCT()
+        {
+            LinearAlgebra.Vector[] stateVectors = ReadStateVectorsFromCsv("MassiveQubitTest.csv");
+            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(5, 0);  // 5 lines
+        
+            // Build the circuit
+            for (int i = 0; i < 100; i++)  // 100 gates on each line
+            {
+                qc.addGateH(0);
+                qc.addGateTOF(1, 2, 3);
+                qc.addGateX(0);
+                qc.addGateCX(2, 3);
+                qc.addGateZ(4);
+                qc.addGateZ(2);
+                qc.addGateCX(1, 2);
+                qc.addGateH(4);
+            }
+        
+            CircuitExecution exe = new(qc);
+            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+        
+            Console.Write(result);
+            Console.WriteLine(stateVectors[0]);
+        
+            double tolerance = 1e-10;
+            Assert.IsTrue(result.IsApproximatelyEqual(stateVectors[0], tolerance));
+        }
 
         // Very much need Z gate, CCX, CZ.
         [Test]
