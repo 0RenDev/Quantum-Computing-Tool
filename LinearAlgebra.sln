@@ -5,13 +5,28 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearAlgebra", "LinearAlgebra\LinearAlgebra.csproj", "{138F5532-55DC-4D5C-9EBB-99EF7FB7B4E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linear Algebra Testing", "Linear Algebra Testing\Linear Algebra Testing.csproj", "{C98AFF24-7130-45D4-A1E8-4EEC218AC47B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linear Algebra Testing", "Testing\Linear Algebra Testing\Linear Algebra Testing.csproj", "{C98AFF24-7130-45D4-A1E8-4EEC218AC47B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console Testing", "Console Testing\Console Testing.csproj", "{7A9AA255-B89A-472A-8D8C-A7F92E94E3A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console Testing", "Testing\Console Testing\Console Testing.csproj", "{7A9AA255-B89A-472A-8D8C-A7F92E94E3A9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuitTests", "QuantumCircuitTests\QuantumCircuitTests.csproj", "{95502234-E3D4-4DDB-A9AB-F3D2DA7C9540}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quantum", "Quantum\Quantum.csproj", "{EAC6492E-9513-42AA-856C-A0AB2669E540}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuit", "QuantumCircuit\QuantumCircuit.csproj", "{513E460C-52DB-4765-A0C9-B8C6F901E844}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumTests", "Testing\QuantumTests\QuantumTests.csproj", "{4B6B80D9-CC52-41FB-AEB9-1DAAC1631441}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuitTests", "Testing\QuantumCircuitTests\QuantumCircuitTests.csproj", "{95502234-E3D4-4DDB-A9AB-F3D2DA7C9540}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuits", "QuantumCircuits\QuantumCircuits.csproj", "{B3D47062-9AEF-4D4A-9A67-9B4084BBD725}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuits", "ClassLibrary1QuantumCircuits\QuantumCircuits.csproj", "{B3D47062-9AEF-4D4A-9A67-9B4084BBD725}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuitConsoleTesting", "Testing\QuantumCircuitConsoleTesting\QuantumCircuitConsoleTesting.csproj", "{6A0B637D-3A96-4148-A4DB-1AA504AF6C0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuit-Sean", "QuantumCircuit-Sean\QuantumCircuit-Sean.csproj", "{06D14F32-E3BF-4E82-9FF7-9BF114CF108A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumCircuit-SeanTests", "Testing\QuantumCircuit-SeanTests\QuantumCircuit-SeanTests.csproj", "{078AE667-6DE2-42D9-957C-D3FD58DB8779}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumCircuit_QConsole", "QuantumCircuit_QConsole\QuantumCircuit_QConsole.csproj", "{B0FDC202-B7EA-46B5-BCD0-2EB033873BF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

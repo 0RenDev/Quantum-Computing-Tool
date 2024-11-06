@@ -4,3 +4,7 @@ The solution currently consists of three projects:
 1. the library
 2. test cases
 3. console app for demos
+
+To see documentation of the Linear Algebra Library click [HERE](LinearAlgebra/README_LA.md)
+
+To see documentation for the main QC structure click [HERE](QuantumCircuit/README_QC.md)
