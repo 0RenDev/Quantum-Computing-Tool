@@ -8,6 +8,10 @@ namespace LinearAlgebra
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------
     // Matrix class representing a mathematical matrix
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    /// <summary>
+    /// This class represents a matrix in linear algebra. A matrix is a two-dimensional array of complex numbers.
+    /// </summary>
     public class Matrix
     {
         // array dimensions 
@@ -42,14 +46,23 @@ namespace LinearAlgebra
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Matrix"/> class.
+        /// </summary>
+        /// <param name="rows">The number of rows.</param>
+        /// <param name="columns">The number of columns.</param>
         public Matrix(int rows, int columns)
         {
             this.rows = rows;
             this.cols = columns;
             this.elements = new Complex[rows, columns];
         }
-        
-        // Constructor to initialize a matrix with complex numbers using a 2D array
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Matrix"/> class.
+        /// </summary>
+        /// <param name="elements">The elements of the Matrix.</param>
+        /// <exception cref="System.ArgumentNullException">elements</exception>
         public Matrix(Complex[,] elements)
         {
             this.elements = elements ?? throw new ArgumentNullException(nameof(elements)); // if elements is null, throw ArgumentNullException
@@ -57,6 +70,10 @@ namespace LinearAlgebra
             this.cols = elements.GetLength(1);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Matrix"/> class.
+        /// </summary>
+        /// <param name="elements">The elements as a <see cref="Vector"/></param>
         public Matrix(Vector elements)
         {
             this.elements = new Complex[elements.rows, elements.cols];
@@ -64,7 +81,12 @@ namespace LinearAlgebra
 
         }
 
-        // Get a single row of a matrix
+        /// <summary>
+        /// Gets the row.
+        /// </summary>
+        /// <param name="rowNumber">The row index.</param>
+        /// <returns>A specific row of a Matrix as a <see cref="System.Numerics.Complex[]"/></returns>
+        /// <exception cref="System.ArgumentOutOfRangeException">rowNumber - Row number is out of bounds.</exception>
         public Complex[] GetRow(int rowNumber)
         {
             if (rowNumber < 0 || rowNumber >= rows) 
@@ -82,7 +104,12 @@ namespace LinearAlgebra
             return row;
         }
 
-        // Get a single column of a matrix
+        /// <summary>
+        /// Gets the column.
+        /// </summary>
+        /// <param name="columnNumber">The column index.</param>
+        /// <returns>A specific column of a Matrix as a <see cref="System.Numerics.Complex[]"/></returns>
+        /// <exception cref="System.ArgumentOutOfRangeException">columnNumber - Column number is out of bounds.</exception>
         public Complex[] GetColumn(int columnNumber)
         {
             if (columnNumber < 0 || columnNumber >= cols)
@@ -100,7 +127,15 @@ namespace LinearAlgebra
             return column;
         }
 
-        // Get a specific element of the matrix (indexer)
+        /// <summary>
+        /// Gets or sets the element with the specified <see cref="Complex"/> number.
+        /// </summary>
+        /// <value>
+        /// The <see cref="Complex"/>.
+        /// </value>
+        /// <param name="i">The row index.</param>
+        /// <param name="j">The column index.</param>
+        /// <returns>A <see cref="System.Numerics.Complex"/> element.</returns>
         public Complex this[int i, int j]
         {
             get { return elements[i, j]; }
@@ -112,7 +147,10 @@ namespace LinearAlgebra
         // Matrix-related operations that can be done on a single matrix 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // Transpose the matrix
+        /// <summary>
+        /// Transposes this instance.
+        /// </summary>
+        /// <returns>A transposed <see cref="Matrix"/></returns>
         public Matrix Transpose()
         {
             // Create a new matrix with swapped rows and columns
@@ -130,7 +168,10 @@ namespace LinearAlgebra
             return new Matrix(transposedElements);
         }
 
-        // Transpose square matrix in place to reduce memory overhead
+        /// <summary>
+        /// Transposes the <see cref="Matrix"/> in place. 
+        /// </summary>
+        /// <exception cref="System.InvalidOperationException">In-place transpose can only be performed on square matrices.</exception>
         public void TransposeInPlace()
         {
             if (rows != cols)
@@ -149,7 +190,11 @@ namespace LinearAlgebra
             }
         }
 
-        // Calculate the trace of the matrix
+        /// <summary>
+        /// Calculates the trace this instance.
+        /// </summary>
+        /// <returns>The trace of the Matrix as a <see cref="System.Numerics.Complex"/>.</returns>
+        /// <exception cref="System.InvalidOperationException">Trace is only defined for square matrices.</exception>
         public Complex Trace()
         {
             if (rows != cols)
@@ -167,7 +212,10 @@ namespace LinearAlgebra
             return trace;
         }
 
-        // calculate the complex conjugate of the matrix
+        /// <summary>
+        /// Conjugates this instance.
+        /// </summary>
+        /// <returns>A conjugated <see cref="Matrix"/></returns>
         public Matrix Conjugate()
         {
             // Create a new matrix to store result
@@ -185,7 +233,9 @@ namespace LinearAlgebra
             return new Matrix(conjugateElements);
         }
 
-        // Calculate the elemental conjugate for a matrix in place
+        /// <summary>
+        /// Conjugates the <see cref="Matrix"/> in place.
+        /// </summary>
         public void ConjugateInPlace()
         {
             for (int i = 0; i < rows; i++)
@@ -197,7 +247,10 @@ namespace LinearAlgebra
             }
         }
 
-        // Override ToString
+        /// <summary>
+        /// Converts to string.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             int rows = elements.GetLength(0);
@@ -225,21 +278,40 @@ namespace LinearAlgebra
         // Matrix-related operations that involve 2 objects
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // Operator Overloading
-        // Addition 
+        /// <summary>
+        /// Implements the operator op_Addition.
+        /// </summary>
+        /// <param name="matrix1">The first matrix.</param>
+        /// <param name="matrix2">The second matrix.</param>
+        /// <returns>
+        /// The result of the additon.
+        /// </returns>
         public static Matrix operator +(Matrix matrix1, Matrix matrix2)
         {
             return Operations.Add(matrix1, matrix2);
         }
 
-        // Subtraction
+        /// <summary>
+        /// Implements the operator op_Subtraction.
+        /// </summary>
+        /// <param name="matrix1">The first matrix.</param>
+        /// <param name="matrix2">The second matrix.</param>
+        /// <returns>
+        /// The result of the operator.
+        /// </returns>
         public static Matrix operator -(Matrix matrix1, Matrix matrix2)
         {
             return Operations.Subtract(matrix1, matrix2);
         }
 
-        // Multiplication
-        // Matrix x Matrix
+        /// <summary>
+        /// Implements the operator op_Multiply.
+        /// </summary>
+        /// <param name="matrix1">The first matrix.</param>
+        /// <param name="matrix2">The second matrix.</param>
+        /// <returns>
+        /// The result of the subtraction.
+        /// </returns>
         public static Matrix operator *(Matrix matrix1, Matrix matrix2)
         {
             // change to multi-threaded implementation when working also consider dynamic approach where multi-threaded is used
@@ -247,20 +319,40 @@ namespace LinearAlgebra
             return Operations.Multiply(matrix1, matrix2);
         }
 
-        // Matrix x Vector
+        /// <summary>
+        /// Implements the operator op_Multiply.
+        /// </summary>
+        /// <param name="matrix">The matrix.</param>
+        /// <param name="vector">The vector.</param>
+        /// <returns>
+        /// The result of the multiplication.
+        /// </returns>
         public static Vector operator *(Matrix matrix, Vector vector)
         {
             return Operations.MatrixVectorMult(matrix, vector);
         }
 
-        // Matrix x Scalar
+        /// <summary>
+        /// Implements the operator op_Multiply.
+        /// </summary>
+        /// <param name="matrix">The matrix.</param>
+        /// <param name="scalar">The scalar.</param>
+        /// <returns>
+        /// The result of the multiplication.
+        /// </returns>
         public static Matrix operator *(Matrix matrix, Complex scalar)
         {
             return Operations.Multscaler(matrix, scalar);
         }
 
-        // Equality
-        // Floating point comparison could cause issues later down the line, keep this in mind
+        /// <summary>
+        /// Implements the operator op_Equality.
+        /// </summary>
+        /// <param name="a">The first matrix.</param>
+        /// <param name="b">The second matrix.</param>
+        /// <returns>
+        /// The result of the operator.
+        /// </returns>
         public static bool operator ==(Matrix a, Matrix b)
         {
             // Check for null on left side.
@@ -273,11 +365,24 @@ namespace LinearAlgebra
             return Operations.IsEqual(a, b);
         }
 
+        /// <summary>
+        /// Implements the operator op_Inequality.
+        /// </summary>
+        /// <param name="a">The first matrix.</param>
+        /// <param name="b">The second matrix.</param>
+        /// <returns>
+        /// The result of the operator.
+        /// </returns>
         public static bool operator !=(Matrix a, Matrix b)
         {
             return !(a == b);
         }
 
+        /// <summary>
+        /// Equalses the specified object.
+        /// </summary>
+        /// <param name="obj">The object.</param>
+        /// <returns></returns>
         public override bool Equals(object? obj)
         {
             if (obj is null)
@@ -287,13 +392,21 @@ namespace LinearAlgebra
             return base.Equals(obj);
         }
 
+        /// <summary>
+        /// Gets the hash code.
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
             return base.GetHashCode();
         }
 
-        // In-place operations to cut down on memory overhead, they alter the instance that calls them and preserves the other one
-        // Addition
+        /// <summary>
+        /// Adds the Matrices in place.
+        /// </summary>
+        /// <param name="matrixOther">The matrix to add.</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException">The dimensions of both matrices must match.</exception>
         public void AddInPlace(Matrix matrixOther)
         {
             if (this.cols != matrixOther.cols || this.rows != matrixOther.rows) // If size mismatch, throw ArgumentException
@@ -310,7 +423,12 @@ namespace LinearAlgebra
             }
         }
 
-        // Subtraction
+        /// <summary>
+        /// Subtracts the Matrices in place.
+        /// </summary>
+        /// <param name="matrixOther">The other matrix.</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException">The dimensions of both matrices must match.</exception>
         public void SubtractInPlace(Matrix matrixOther)
         {
             if (this.cols != matrixOther.cols || this.rows != matrixOther.rows) // If size mismatch, throw ArgumentException
@@ -328,8 +446,16 @@ namespace LinearAlgebra
         }
     }
 
+    /// <summary>
+    /// This class represents an identity matrix in linear algebra. An identity matrix is a square matrix with ones on the main diagonal and zeros elsewhere.
+    /// </summary>
+    /// <seealso cref="LinearAlgebra.Matrix" />
     public class Idenity : Matrix
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Idenity"/> class.
+        /// </summary>
+        /// <param name="size">The size of the matrix.</param>
         public Idenity(int size) : base(size, size)
         {
             for (int i = 0; i < size; i++)

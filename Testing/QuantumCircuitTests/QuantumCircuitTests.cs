@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using QuantumCircuits;
 using QuantumCircuit_Sean;
 using LinearAlgebra;
