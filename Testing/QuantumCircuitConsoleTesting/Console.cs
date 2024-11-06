@@ -12,11 +12,11 @@ class Test
         // half adder
 
         //input bits
-        qc.addGateX(0);
-        qc.addGateX(1);
+        qc.AddGateX(0);
+        qc.AddGateX(1);
 
-        qc.addGateTOF(2, 1, 0);
-        qc.addGateCX(1, 0);
+        qc.AddGateTOF(2, 1, 0);
+        qc.AddGateCX(1, 0);
     
         // print out circuit
         Console.WriteLine(qc.ToString());

@@ -19,9 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ClassLibrary1QuantumCircuits\QuantumCircuits.csproj" />
-    <ProjectReference Include="..\..\QuantumCircuit-Sean\QuantumCircuit-Sean.csproj" />
-    <ProjectReference Include="..\..\QuantumCircuit\QuantumCircuit.csproj" />
+    <ProjectReference Include="..\..\QuantumCircuits\QuantumCircuits.csproj" />
   </ItemGroup>
 
   <ItemGroup>
