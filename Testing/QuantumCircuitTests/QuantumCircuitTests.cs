@@ -123,7 +123,7 @@ namespace QuantumCircuit.Tests
         [Test]
         public void massiveQCT()
         {
-            LinearAlgebra.Vector[] stateVectors = ReadStateVectorsFromCsv("MassiveQubitTest.csv");
+            LinearAlgebra.Vector[] stateVectors = ReadStateVectorsFromCsv("..\\..\\..\\MassiveQubitTest.csv");
             QuantumCircuitBuilder qc = new QuantumCircuitBuilder(5, 0);  // 5 lines
         
             // Build the circuit
@@ -153,7 +153,7 @@ namespace QuantumCircuit.Tests
         [Test]
         public void QiskitComparisonTest()
         {
-            LinearAlgebra.Vector[] stateVectors = ReadStateVectorsFromCsv("statevectors.csv");
+            LinearAlgebra.Vector[] stateVectors = ReadStateVectorsFromCsv("..\\..\\..\\statevectors.csv");
             QuantumCircuitBuilder qc = new QuantumCircuitBuilder(1,0);
 
 
