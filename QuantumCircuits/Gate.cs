@@ -54,7 +54,7 @@ namespace QuantumCircuits
                 //GateTypes.RXG => $"RX({Theta})", 
                 //GateTypes.RYG => $"RY({Theta})", can use if we add theta as an input to the gate later on
                 //GateTypes.RZG => $"RZ({Theta})", maybe address later when overhauling visualization process, currently not supported since >3 characters
-                GateTypes.NOP => "   ",
+                GateTypes.NOP => "───",
                 _ => Type.ToString()
             };
         }
