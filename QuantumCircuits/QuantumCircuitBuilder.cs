@@ -219,7 +219,7 @@ namespace QuantumCircuits
                 }
             }
 
-            Gate swp = new SWAP(target1, target2);
+            Gate swp = new SWAP(target2, target1);
             Gate tar = new NOP(target2, GateTypes.SWT);
 
             quantumLines[target1].Add(swp);
@@ -329,55 +329,155 @@ namespace QuantumCircuits
         /// </returns>
         public override string ToString()
         {
-            StringBuilder result = new StringBuilder();
-            result.Append("Quantum Lines:\n");
+            // Define the number of lines needed to create a box around each gate
+            StringBuilder[] linesTop = new StringBuilder[quantumLines.Length];
+            StringBuilder[] linesMiddle = new StringBuilder[quantumLines.Length];
+            StringBuilder[] linesBottom = new StringBuilder[quantumLines.Length];
 
+            // Initialize each StringBuilder with the qubit label and starting line
             for (int i = 0; i < quantumLines.Length; i++)
             {
-                result.Append($"Row {i}: ");
-
-                if (quantumLines[i].Count > 0)
-                {
-                    for (int j = 0; j < quantumLines[i].Count; j++)
-                    {
-                        result.Append(quantumLines[i][j].ToString());
-                        if (j < quantumLines[i].Count - 1)
-                        {
-                            result.Append(" - "); // Add hyphen between elements
-                        }
-                    }
-                }
-                else
-                {
-                    result.Append("Empty");
-                }
-                result.AppendLine(); 
+                linesTop[i] = new StringBuilder($"     ");
+                linesMiddle[i] = new StringBuilder($"q{i}: ─");
+                linesBottom[i] = new StringBuilder("     ");
             }
 
-            result.Append("Classical Lines:\n");
+            // Find the maximum number of gates on any line to ensure uniform width
+            int maxGates = quantumLines.Max(line => line.Count);
 
-            for (int i = 0; i < classicalLines.Length; i++)
+            // Build the ASCII representation of each gate on each line
+            for (int pos = 0; pos < maxGates; pos++)
             {
-                result.Append($"Row {i}: ");
-
-                if (classicalLines[i].Count > 0)
+                for (int q = 0; q < quantumLines.Length; q++)
                 {
-                    for (int j = 0; j < classicalLines[i].Count; j++)
+                    if (pos < quantumLines[q].Count)
                     {
-                        result.Append(classicalLines[i][j]);
-                        if (j < classicalLines[i].Count - 1)
-                        {
-                            result.Append(",\t"); // Add comma between elements
-                        }
+                        string[] gateBox = GetBoxedAsciiSymbol(quantumLines[q][pos]);
+                        linesTop[q].Append(gateBox[0]);
+                        linesMiddle[q].Append(gateBox[1]);
+                        linesBottom[q].Append(gateBox[2]);
+
+                        // Adds spacing between gates
+                        linesTop[q].Append(" ");
+                        linesMiddle[q].Append("─");
+                        linesBottom[q].Append(" ");
                     }
+                    else
+                    {
+                        // Adds spacing if there's no gate in this position
+                        linesTop[q].Append("     ");
+                        linesMiddle[q].Append("─────");
+                        linesBottom[q].Append("     ");
+                    }
+                }
+            }
+
+            // Combine all lines together into the final output
+            StringBuilder result = new StringBuilder();
+            for (int i = 0; i < quantumLines.Length; i++)
+            {
+                result.AppendLine(linesTop[i].ToString());
+                result.AppendLine(linesMiddle[i].ToString());
+                result.AppendLine(linesBottom[i].ToString());
+            }
+
+            return result.ToString();
+        }
+
+        /// <summary>
+        /// Helper method for circuit ToString. Makes an array of strings to represent a gate.
+        /// </summary>
+        /// <param name="gate">The <see cref="Gate"/> to generate ASCII symbols for.</param>
+        /// <returns>
+        /// A <see cref="System.String[]"/> array representing the ASCII symbol of the gate.
+        /// </returns>
+        public string[] GetBoxedAsciiSymbol(Gate gate)
+        {
+            string[] gateString = new[] {" "," ",};
+
+
+            if (gate.Type == GateTypes.CXT ||
+                gate.Type == GateTypes.TOF ||
+                gate.Type == GateTypes.SWP)
+            {
+                string topLine = " ";
+                string middleLine = $"┤ {gate.ToString()} ├";
+                string bottomLine = " ";
+
+                if (HasControlAboveOrBelow(gate.Controls, gate.Targets[0], true))
+                {
+                    topLine = "┌──┴──┐";
                 }
                 else
                 {
-                    result.Append("Empty");
+                    topLine = "┌─────┐";
                 }
-                result.AppendLine(); 
+                if (HasControlAboveOrBelow(gate.Controls, gate.Targets[0], false))
+                {
+                    bottomLine = "└──┬──┘";
+                }
+                else
+                {
+                    bottomLine = "└─────┘";
+                }
+                gateString = new[] { topLine, middleLine, bottomLine };
             }
-            return result.ToString();
+            else if (gate.Type == GateTypes.CXC ||
+                gate.Type == GateTypes.TOC ||
+                gate.Type == GateTypes.SWT ||
+                gate.Type == GateTypes.NOP)
+            {
+                gateString = new[] {
+                    "       ",               // Top line
+                   $"──{gate.ToString()}──", // Middle line with control symbol
+                    "       " };             // Bottom line
+            }
+            else
+            {
+                gateString = new[] {
+                    "┌─────┐",                 // Top line
+                   $"┤ {gate.ToString()} ├", // Middle line with gate symbol
+                    "└─────┘" };                 // Bottom line
+            }
+
+            return gateString;
+        }
+
+        /// <summary>
+        /// Checks if there is a control qubit above or below a target qubit.
+        /// </summary>
+        /// <param name="controls">Array of control qubit indices.</param>
+        /// <param name="target">The target qubit index.</param>
+        /// <param name="above">
+        /// <c>true</c> to check for controls above; <c>false</c> to check below.
+        /// </param>
+        /// <returns>
+        /// <c>true</c> if a control qubit is found in the specified direction; otherwise, <c>false</c>.
+        /// </returns>
+        private static bool HasControlAboveOrBelow(int[] controls, int target, bool above)
+        {
+            if (above)
+            {
+                foreach (int value in controls)
+                {
+                    if (value < target)
+                    {
+                        return true;
+                    }
+                }
+            }
+            else
+            {
+                foreach (int value in controls)
+                {
+                    if (value > target)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
     }
 }
+
