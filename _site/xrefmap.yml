@@ -1,0 +1,1952 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: LinearAlgebra
+  name: LinearAlgebra
+  href: api/LinearAlgebra.html
+  commentId: N:LinearAlgebra
+  fullName: LinearAlgebra
+  nameWithType: LinearAlgebra
+- uid: LinearAlgebra.Idenity
+  name: Idenity
+  href: api/LinearAlgebra.Idenity.html
+  commentId: T:LinearAlgebra.Idenity
+  fullName: LinearAlgebra.Idenity
+  nameWithType: Idenity
+- uid: LinearAlgebra.Idenity.#ctor(System.Int32)
+  name: Idenity(int)
+  href: api/LinearAlgebra.Idenity.html#LinearAlgebra_Idenity__ctor_System_Int32_
+  commentId: M:LinearAlgebra.Idenity.#ctor(System.Int32)
+  name.vb: New(Integer)
+  fullName: LinearAlgebra.Idenity.Idenity(int)
+  fullName.vb: LinearAlgebra.Idenity.New(Integer)
+  nameWithType: Idenity.Idenity(int)
+  nameWithType.vb: Idenity.New(Integer)
+- uid: LinearAlgebra.Idenity.#ctor*
+  name: Idenity
+  href: api/LinearAlgebra.Idenity.html#LinearAlgebra_Idenity__ctor_
+  commentId: Overload:LinearAlgebra.Idenity.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: LinearAlgebra.Idenity.Idenity
+  fullName.vb: LinearAlgebra.Idenity.New
+  nameWithType: Idenity.Idenity
+  nameWithType.vb: Idenity.New
+- uid: LinearAlgebra.Matrix
+  name: Matrix
+  href: api/LinearAlgebra.Matrix.html
+  commentId: T:LinearAlgebra.Matrix
+  fullName: LinearAlgebra.Matrix
+  nameWithType: Matrix
+- uid: LinearAlgebra.Matrix.#ctor(LinearAlgebra.Vector)
+  name: Matrix(Vector)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix__ctor_LinearAlgebra_Vector_
+  commentId: M:LinearAlgebra.Matrix.#ctor(LinearAlgebra.Vector)
+  name.vb: New(Vector)
+  fullName: LinearAlgebra.Matrix.Matrix(LinearAlgebra.Vector)
+  fullName.vb: LinearAlgebra.Matrix.New(LinearAlgebra.Vector)
+  nameWithType: Matrix.Matrix(Vector)
+  nameWithType.vb: Matrix.New(Vector)
+- uid: LinearAlgebra.Matrix.#ctor(System.Int32,System.Int32)
+  name: Matrix(int, int)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix__ctor_System_Int32_System_Int32_
+  commentId: M:LinearAlgebra.Matrix.#ctor(System.Int32,System.Int32)
+  name.vb: New(Integer, Integer)
+  fullName: LinearAlgebra.Matrix.Matrix(int, int)
+  fullName.vb: LinearAlgebra.Matrix.New(Integer, Integer)
+  nameWithType: Matrix.Matrix(int, int)
+  nameWithType.vb: Matrix.New(Integer, Integer)
+- uid: LinearAlgebra.Matrix.#ctor(System.Int32,System.Int32,System.Numerics.Complex[])
+  name: Matrix(int, int, Complex[])
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix__ctor_System_Int32_System_Int32_System_Numerics_Complex___
+  commentId: M:LinearAlgebra.Matrix.#ctor(System.Int32,System.Int32,System.Numerics.Complex[])
+  name.vb: New(Integer, Integer, Complex())
+  fullName: LinearAlgebra.Matrix.Matrix(int, int, System.Numerics.Complex[])
+  fullName.vb: LinearAlgebra.Matrix.New(Integer, Integer, System.Numerics.Complex())
+  nameWithType: Matrix.Matrix(int, int, Complex[])
+  nameWithType.vb: Matrix.New(Integer, Integer, Complex())
+- uid: LinearAlgebra.Matrix.#ctor(System.Numerics.Complex[0:,0:])
+  name: Matrix(Complex[,])
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix__ctor_System_Numerics_Complex_0__0___
+  commentId: M:LinearAlgebra.Matrix.#ctor(System.Numerics.Complex[0:,0:])
+  name.vb: New(Complex(,))
+  fullName: LinearAlgebra.Matrix.Matrix(System.Numerics.Complex[,])
+  fullName.vb: LinearAlgebra.Matrix.New(System.Numerics.Complex(,))
+  nameWithType: Matrix.Matrix(Complex[,])
+  nameWithType.vb: Matrix.New(Complex(,))
+- uid: LinearAlgebra.Matrix.#ctor*
+  name: Matrix
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix__ctor_
+  commentId: Overload:LinearAlgebra.Matrix.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: LinearAlgebra.Matrix.Matrix
+  fullName.vb: LinearAlgebra.Matrix.New
+  nameWithType: Matrix.Matrix
+  nameWithType.vb: Matrix.New
+- uid: LinearAlgebra.Matrix.AddInPlace(LinearAlgebra.Matrix)
+  name: AddInPlace(Matrix)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_AddInPlace_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Matrix.AddInPlace(LinearAlgebra.Matrix)
+  fullName: LinearAlgebra.Matrix.AddInPlace(LinearAlgebra.Matrix)
+  nameWithType: Matrix.AddInPlace(Matrix)
+- uid: LinearAlgebra.Matrix.AddInPlace*
+  name: AddInPlace
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_AddInPlace_
+  commentId: Overload:LinearAlgebra.Matrix.AddInPlace
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.AddInPlace
+  nameWithType: Matrix.AddInPlace
+- uid: LinearAlgebra.Matrix.Conjugate
+  name: Conjugate()
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Conjugate
+  commentId: M:LinearAlgebra.Matrix.Conjugate
+  fullName: LinearAlgebra.Matrix.Conjugate()
+  nameWithType: Matrix.Conjugate()
+- uid: LinearAlgebra.Matrix.Conjugate*
+  name: Conjugate
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Conjugate_
+  commentId: Overload:LinearAlgebra.Matrix.Conjugate
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.Conjugate
+  nameWithType: Matrix.Conjugate
+- uid: LinearAlgebra.Matrix.ConjugateInPlace
+  name: ConjugateInPlace()
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_ConjugateInPlace
+  commentId: M:LinearAlgebra.Matrix.ConjugateInPlace
+  fullName: LinearAlgebra.Matrix.ConjugateInPlace()
+  nameWithType: Matrix.ConjugateInPlace()
+- uid: LinearAlgebra.Matrix.ConjugateInPlace*
+  name: ConjugateInPlace
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_ConjugateInPlace_
+  commentId: Overload:LinearAlgebra.Matrix.ConjugateInPlace
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.ConjugateInPlace
+  nameWithType: Matrix.ConjugateInPlace
+- uid: LinearAlgebra.Matrix.Equals(System.Object)
+  name: Equals(object?)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Equals_System_Object_
+  commentId: M:LinearAlgebra.Matrix.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: LinearAlgebra.Matrix.Equals(object?)
+  fullName.vb: LinearAlgebra.Matrix.Equals(Object)
+  nameWithType: Matrix.Equals(object?)
+  nameWithType.vb: Matrix.Equals(Object)
+- uid: LinearAlgebra.Matrix.Equals*
+  name: Equals
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Equals_
+  commentId: Overload:LinearAlgebra.Matrix.Equals
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.Equals
+  nameWithType: Matrix.Equals
+- uid: LinearAlgebra.Matrix.GetColumn(System.Int32)
+  name: GetColumn(int)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetColumn_System_Int32_
+  commentId: M:LinearAlgebra.Matrix.GetColumn(System.Int32)
+  name.vb: GetColumn(Integer)
+  fullName: LinearAlgebra.Matrix.GetColumn(int)
+  fullName.vb: LinearAlgebra.Matrix.GetColumn(Integer)
+  nameWithType: Matrix.GetColumn(int)
+  nameWithType.vb: Matrix.GetColumn(Integer)
+- uid: LinearAlgebra.Matrix.GetColumn*
+  name: GetColumn
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetColumn_
+  commentId: Overload:LinearAlgebra.Matrix.GetColumn
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.GetColumn
+  nameWithType: Matrix.GetColumn
+- uid: LinearAlgebra.Matrix.GetHashCode
+  name: GetHashCode()
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetHashCode
+  commentId: M:LinearAlgebra.Matrix.GetHashCode
+  fullName: LinearAlgebra.Matrix.GetHashCode()
+  nameWithType: Matrix.GetHashCode()
+- uid: LinearAlgebra.Matrix.GetHashCode*
+  name: GetHashCode
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetHashCode_
+  commentId: Overload:LinearAlgebra.Matrix.GetHashCode
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.GetHashCode
+  nameWithType: Matrix.GetHashCode
+- uid: LinearAlgebra.Matrix.GetRow(System.Int32)
+  name: GetRow(int)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetRow_System_Int32_
+  commentId: M:LinearAlgebra.Matrix.GetRow(System.Int32)
+  name.vb: GetRow(Integer)
+  fullName: LinearAlgebra.Matrix.GetRow(int)
+  fullName.vb: LinearAlgebra.Matrix.GetRow(Integer)
+  nameWithType: Matrix.GetRow(int)
+  nameWithType.vb: Matrix.GetRow(Integer)
+- uid: LinearAlgebra.Matrix.GetRow*
+  name: GetRow
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetRow_
+  commentId: Overload:LinearAlgebra.Matrix.GetRow
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.GetRow
+  nameWithType: Matrix.GetRow
+- uid: LinearAlgebra.Matrix.Item(System.Int32,System.Int32)
+  name: this[int, int]
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Item_System_Int32_System_Int32_
+  commentId: P:LinearAlgebra.Matrix.Item(System.Int32,System.Int32)
+  name.vb: this[](Integer, Integer)
+  fullName: LinearAlgebra.Matrix.this[int, int]
+  fullName.vb: LinearAlgebra.Matrix.this[](Integer, Integer)
+  nameWithType: Matrix.this[int, int]
+  nameWithType.vb: Matrix.this[](Integer, Integer)
+- uid: LinearAlgebra.Matrix.Item*
+  name: this
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Item_
+  commentId: Overload:LinearAlgebra.Matrix.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: LinearAlgebra.Matrix.this
+  fullName.vb: LinearAlgebra.Matrix.this[]
+  nameWithType: Matrix.this
+  nameWithType.vb: Matrix.this[]
+- uid: LinearAlgebra.Matrix.SubtractInPlace(LinearAlgebra.Matrix)
+  name: SubtractInPlace(Matrix)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_SubtractInPlace_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Matrix.SubtractInPlace(LinearAlgebra.Matrix)
+  fullName: LinearAlgebra.Matrix.SubtractInPlace(LinearAlgebra.Matrix)
+  nameWithType: Matrix.SubtractInPlace(Matrix)
+- uid: LinearAlgebra.Matrix.SubtractInPlace*
+  name: SubtractInPlace
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_SubtractInPlace_
+  commentId: Overload:LinearAlgebra.Matrix.SubtractInPlace
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.SubtractInPlace
+  nameWithType: Matrix.SubtractInPlace
+- uid: LinearAlgebra.Matrix.ToString
+  name: ToString()
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_ToString
+  commentId: M:LinearAlgebra.Matrix.ToString
+  fullName: LinearAlgebra.Matrix.ToString()
+  nameWithType: Matrix.ToString()
+- uid: LinearAlgebra.Matrix.ToString*
+  name: ToString
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_ToString_
+  commentId: Overload:LinearAlgebra.Matrix.ToString
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.ToString
+  nameWithType: Matrix.ToString
+- uid: LinearAlgebra.Matrix.Trace
+  name: Trace()
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Trace
+  commentId: M:LinearAlgebra.Matrix.Trace
+  fullName: LinearAlgebra.Matrix.Trace()
+  nameWithType: Matrix.Trace()
+- uid: LinearAlgebra.Matrix.Trace*
+  name: Trace
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Trace_
+  commentId: Overload:LinearAlgebra.Matrix.Trace
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.Trace
+  nameWithType: Matrix.Trace
+- uid: LinearAlgebra.Matrix.Transpose
+  name: Transpose()
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Transpose
+  commentId: M:LinearAlgebra.Matrix.Transpose
+  fullName: LinearAlgebra.Matrix.Transpose()
+  nameWithType: Matrix.Transpose()
+- uid: LinearAlgebra.Matrix.Transpose*
+  name: Transpose
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Transpose_
+  commentId: Overload:LinearAlgebra.Matrix.Transpose
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.Transpose
+  nameWithType: Matrix.Transpose
+- uid: LinearAlgebra.Matrix.TransposeInPlace
+  name: TransposeInPlace()
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_TransposeInPlace
+  commentId: M:LinearAlgebra.Matrix.TransposeInPlace
+  fullName: LinearAlgebra.Matrix.TransposeInPlace()
+  nameWithType: Matrix.TransposeInPlace()
+- uid: LinearAlgebra.Matrix.TransposeInPlace*
+  name: TransposeInPlace
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_TransposeInPlace_
+  commentId: Overload:LinearAlgebra.Matrix.TransposeInPlace
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.TransposeInPlace
+  nameWithType: Matrix.TransposeInPlace
+- uid: LinearAlgebra.Matrix.cols
+  name: cols
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_cols
+  commentId: P:LinearAlgebra.Matrix.cols
+  fullName: LinearAlgebra.Matrix.cols
+  nameWithType: Matrix.cols
+- uid: LinearAlgebra.Matrix.cols*
+  name: cols
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_cols_
+  commentId: Overload:LinearAlgebra.Matrix.cols
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.cols
+  nameWithType: Matrix.cols
+- uid: LinearAlgebra.Matrix.elements
+  name: elements
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_elements
+  commentId: F:LinearAlgebra.Matrix.elements
+  fullName: LinearAlgebra.Matrix.elements
+  nameWithType: Matrix.elements
+- uid: LinearAlgebra.Matrix.op_Addition(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name: operator +(Matrix, Matrix)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_op_Addition_LinearAlgebra_Matrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Matrix.op_Addition(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name.vb: +(Matrix, Matrix)
+  fullName: LinearAlgebra.Matrix.operator +(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  fullName.vb: LinearAlgebra.Matrix.+(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  nameWithType: Matrix.operator +(Matrix, Matrix)
+  nameWithType.vb: Matrix.+(Matrix, Matrix)
+- uid: LinearAlgebra.Matrix.op_Addition*
+  name: operator +
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_op_Addition_
+  commentId: Overload:LinearAlgebra.Matrix.op_Addition
+  isSpec: "True"
+  name.vb: +
+  fullName: LinearAlgebra.Matrix.operator +
+  fullName.vb: LinearAlgebra.Matrix.+
+  nameWithType: Matrix.operator +
+  nameWithType.vb: Matrix.+
+- uid: LinearAlgebra.Matrix.op_Equality(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name: operator ==(Matrix, Matrix)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_op_Equality_LinearAlgebra_Matrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Matrix.op_Equality(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name.vb: =(Matrix, Matrix)
+  fullName: LinearAlgebra.Matrix.operator ==(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  fullName.vb: LinearAlgebra.Matrix.=(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  nameWithType: Matrix.operator ==(Matrix, Matrix)
+  nameWithType.vb: Matrix.=(Matrix, Matrix)
+- uid: LinearAlgebra.Matrix.op_Equality*
+  name: operator ==
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_op_Equality_
+  commentId: Overload:LinearAlgebra.Matrix.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: LinearAlgebra.Matrix.operator ==
+  fullName.vb: LinearAlgebra.Matrix.=
+  nameWithType: Matrix.operator ==
+  nameWithType.vb: Matrix.=
+- uid: LinearAlgebra.Matrix.op_Inequality(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name: operator !=(Matrix, Matrix)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_op_Inequality_LinearAlgebra_Matrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Matrix.op_Inequality(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name.vb: <>(Matrix, Matrix)
+  fullName: LinearAlgebra.Matrix.operator !=(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  fullName.vb: LinearAlgebra.Matrix.<>(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  nameWithType: Matrix.operator !=(Matrix, Matrix)
+  nameWithType.vb: Matrix.<>(Matrix, Matrix)
+- uid: LinearAlgebra.Matrix.op_Inequality*
+  name: operator !=
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_op_Inequality_
+  commentId: Overload:LinearAlgebra.Matrix.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: LinearAlgebra.Matrix.operator !=
+  fullName.vb: LinearAlgebra.Matrix.<>
+  nameWithType: Matrix.operator !=
+  nameWithType.vb: Matrix.<>
+- uid: LinearAlgebra.Matrix.op_Multiply(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name: operator *(Matrix, Matrix)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_op_Multiply_LinearAlgebra_Matrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Matrix.op_Multiply(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name.vb: '*(Matrix, Matrix)'
+  fullName: LinearAlgebra.Matrix.operator *(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  fullName.vb: LinearAlgebra.Matrix.*(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  nameWithType: Matrix.operator *(Matrix, Matrix)
+  nameWithType.vb: Matrix.*(Matrix, Matrix)
+- uid: LinearAlgebra.Matrix.op_Multiply(LinearAlgebra.Matrix,LinearAlgebra.Vector)
+  name: operator *(Matrix, Vector)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_op_Multiply_LinearAlgebra_Matrix_LinearAlgebra_Vector_
+  commentId: M:LinearAlgebra.Matrix.op_Multiply(LinearAlgebra.Matrix,LinearAlgebra.Vector)
+  name.vb: '*(Matrix, Vector)'
+  fullName: LinearAlgebra.Matrix.operator *(LinearAlgebra.Matrix, LinearAlgebra.Vector)
+  fullName.vb: LinearAlgebra.Matrix.*(LinearAlgebra.Matrix, LinearAlgebra.Vector)
+  nameWithType: Matrix.operator *(Matrix, Vector)
+  nameWithType.vb: Matrix.*(Matrix, Vector)
+- uid: LinearAlgebra.Matrix.op_Multiply(LinearAlgebra.Matrix,System.Numerics.Complex)
+  name: operator *(Matrix, Complex)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_op_Multiply_LinearAlgebra_Matrix_System_Numerics_Complex_
+  commentId: M:LinearAlgebra.Matrix.op_Multiply(LinearAlgebra.Matrix,System.Numerics.Complex)
+  name.vb: '*(Matrix, Complex)'
+  fullName: LinearAlgebra.Matrix.operator *(LinearAlgebra.Matrix, System.Numerics.Complex)
+  fullName.vb: LinearAlgebra.Matrix.*(LinearAlgebra.Matrix, System.Numerics.Complex)
+  nameWithType: Matrix.operator *(Matrix, Complex)
+  nameWithType.vb: Matrix.*(Matrix, Complex)
+- uid: LinearAlgebra.Matrix.op_Multiply*
+  name: operator *
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_op_Multiply_
+  commentId: Overload:LinearAlgebra.Matrix.op_Multiply
+  isSpec: "True"
+  name.vb: '*'
+  fullName: LinearAlgebra.Matrix.operator *
+  fullName.vb: LinearAlgebra.Matrix.*
+  nameWithType: Matrix.operator *
+  nameWithType.vb: Matrix.*
+- uid: LinearAlgebra.Matrix.op_Subtraction(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name: operator -(Matrix, Matrix)
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_op_Subtraction_LinearAlgebra_Matrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Matrix.op_Subtraction(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name.vb: -(Matrix, Matrix)
+  fullName: LinearAlgebra.Matrix.operator -(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  fullName.vb: LinearAlgebra.Matrix.-(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  nameWithType: Matrix.operator -(Matrix, Matrix)
+  nameWithType.vb: Matrix.-(Matrix, Matrix)
+- uid: LinearAlgebra.Matrix.op_Subtraction*
+  name: operator -
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_op_Subtraction_
+  commentId: Overload:LinearAlgebra.Matrix.op_Subtraction
+  isSpec: "True"
+  name.vb: '-'
+  fullName: LinearAlgebra.Matrix.operator -
+  fullName.vb: LinearAlgebra.Matrix.-
+  nameWithType: Matrix.operator -
+  nameWithType.vb: Matrix.-
+- uid: LinearAlgebra.Matrix.rows
+  name: rows
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_rows
+  commentId: P:LinearAlgebra.Matrix.rows
+  fullName: LinearAlgebra.Matrix.rows
+  nameWithType: Matrix.rows
+- uid: LinearAlgebra.Matrix.rows*
+  name: rows
+  href: api/LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_rows_
+  commentId: Overload:LinearAlgebra.Matrix.rows
+  isSpec: "True"
+  fullName: LinearAlgebra.Matrix.rows
+  nameWithType: Matrix.rows
+- uid: LinearAlgebra.Operations
+  name: Operations
+  href: api/LinearAlgebra.Operations.html
+  commentId: T:LinearAlgebra.Operations
+  fullName: LinearAlgebra.Operations
+  nameWithType: Operations
+- uid: LinearAlgebra.Operations.Add(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name: Add(Matrix, Matrix)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_Add_LinearAlgebra_Matrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Operations.Add(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  fullName: LinearAlgebra.Operations.Add(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  nameWithType: Operations.Add(Matrix, Matrix)
+- uid: LinearAlgebra.Operations.Add*
+  name: Add
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_Add_
+  commentId: Overload:LinearAlgebra.Operations.Add
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.Add
+  nameWithType: Operations.Add
+- uid: LinearAlgebra.Operations.Determinant(LinearAlgebra.Matrix)
+  name: Determinant(Matrix)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_Determinant_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Operations.Determinant(LinearAlgebra.Matrix)
+  fullName: LinearAlgebra.Operations.Determinant(LinearAlgebra.Matrix)
+  nameWithType: Operations.Determinant(Matrix)
+- uid: LinearAlgebra.Operations.Determinant*
+  name: Determinant
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_Determinant_
+  commentId: Overload:LinearAlgebra.Operations.Determinant
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.Determinant
+  nameWithType: Operations.Determinant
+- uid: LinearAlgebra.Operations.EuclideanNorm(LinearAlgebra.Vector)
+  name: EuclideanNorm(Vector)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_EuclideanNorm_LinearAlgebra_Vector_
+  commentId: M:LinearAlgebra.Operations.EuclideanNorm(LinearAlgebra.Vector)
+  fullName: LinearAlgebra.Operations.EuclideanNorm(LinearAlgebra.Vector)
+  nameWithType: Operations.EuclideanNorm(Vector)
+- uid: LinearAlgebra.Operations.EuclideanNorm*
+  name: EuclideanNorm
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_EuclideanNorm_
+  commentId: Overload:LinearAlgebra.Operations.EuclideanNorm
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.EuclideanNorm
+  nameWithType: Operations.EuclideanNorm
+- uid: LinearAlgebra.Operations.EuclideanNormAsComplex(LinearAlgebra.Vector)
+  name: EuclideanNormAsComplex(Vector)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_EuclideanNormAsComplex_LinearAlgebra_Vector_
+  commentId: M:LinearAlgebra.Operations.EuclideanNormAsComplex(LinearAlgebra.Vector)
+  fullName: LinearAlgebra.Operations.EuclideanNormAsComplex(LinearAlgebra.Vector)
+  nameWithType: Operations.EuclideanNormAsComplex(Vector)
+- uid: LinearAlgebra.Operations.EuclideanNormAsComplex*
+  name: EuclideanNormAsComplex
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_EuclideanNormAsComplex_
+  commentId: Overload:LinearAlgebra.Operations.EuclideanNormAsComplex
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.EuclideanNormAsComplex
+  nameWithType: Operations.EuclideanNormAsComplex
+- uid: LinearAlgebra.Operations.GenerateIdentityMatrix(System.Int32)
+  name: GenerateIdentityMatrix(int)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_GenerateIdentityMatrix_System_Int32_
+  commentId: M:LinearAlgebra.Operations.GenerateIdentityMatrix(System.Int32)
+  name.vb: GenerateIdentityMatrix(Integer)
+  fullName: LinearAlgebra.Operations.GenerateIdentityMatrix(int)
+  fullName.vb: LinearAlgebra.Operations.GenerateIdentityMatrix(Integer)
+  nameWithType: Operations.GenerateIdentityMatrix(int)
+  nameWithType.vb: Operations.GenerateIdentityMatrix(Integer)
+- uid: LinearAlgebra.Operations.GenerateIdentityMatrix*
+  name: GenerateIdentityMatrix
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_GenerateIdentityMatrix_
+  commentId: Overload:LinearAlgebra.Operations.GenerateIdentityMatrix
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.GenerateIdentityMatrix
+  nameWithType: Operations.GenerateIdentityMatrix
+- uid: LinearAlgebra.Operations.InnerProduct(LinearAlgebra.Vector,LinearAlgebra.Vector)
+  name: InnerProduct(Vector, Vector)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_InnerProduct_LinearAlgebra_Vector_LinearAlgebra_Vector_
+  commentId: M:LinearAlgebra.Operations.InnerProduct(LinearAlgebra.Vector,LinearAlgebra.Vector)
+  fullName: LinearAlgebra.Operations.InnerProduct(LinearAlgebra.Vector, LinearAlgebra.Vector)
+  nameWithType: Operations.InnerProduct(Vector, Vector)
+- uid: LinearAlgebra.Operations.InnerProduct*
+  name: InnerProduct
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_InnerProduct_
+  commentId: Overload:LinearAlgebra.Operations.InnerProduct
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.InnerProduct
+  nameWithType: Operations.InnerProduct
+- uid: LinearAlgebra.Operations.Invert(LinearAlgebra.Matrix)
+  name: Invert(Matrix)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_Invert_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Operations.Invert(LinearAlgebra.Matrix)
+  fullName: LinearAlgebra.Operations.Invert(LinearAlgebra.Matrix)
+  nameWithType: Operations.Invert(Matrix)
+- uid: LinearAlgebra.Operations.Invert*
+  name: Invert
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_Invert_
+  commentId: Overload:LinearAlgebra.Operations.Invert
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.Invert
+  nameWithType: Operations.Invert
+- uid: LinearAlgebra.Operations.IsEqual(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name: IsEqual(Matrix, Matrix)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_IsEqual_LinearAlgebra_Matrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Operations.IsEqual(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  fullName: LinearAlgebra.Operations.IsEqual(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  nameWithType: Operations.IsEqual(Matrix, Matrix)
+- uid: LinearAlgebra.Operations.IsEqual*
+  name: IsEqual
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_IsEqual_
+  commentId: Overload:LinearAlgebra.Operations.IsEqual
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.IsEqual
+  nameWithType: Operations.IsEqual
+- uid: LinearAlgebra.Operations.JoinMatrices(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name: JoinMatrices(Matrix, Matrix)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_JoinMatrices_LinearAlgebra_Matrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Operations.JoinMatrices(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  fullName: LinearAlgebra.Operations.JoinMatrices(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  nameWithType: Operations.JoinMatrices(Matrix, Matrix)
+- uid: LinearAlgebra.Operations.JoinMatrices*
+  name: JoinMatrices
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_JoinMatrices_
+  commentId: Overload:LinearAlgebra.Operations.JoinMatrices
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.JoinMatrices
+  nameWithType: Operations.JoinMatrices
+- uid: LinearAlgebra.Operations.MatrixMultiply(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name: MatrixMultiply(Matrix, Matrix)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_MatrixMultiply_LinearAlgebra_Matrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Operations.MatrixMultiply(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  fullName: LinearAlgebra.Operations.MatrixMultiply(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  nameWithType: Operations.MatrixMultiply(Matrix, Matrix)
+- uid: LinearAlgebra.Operations.MatrixMultiply*
+  name: MatrixMultiply
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_MatrixMultiply_
+  commentId: Overload:LinearAlgebra.Operations.MatrixMultiply
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.MatrixMultiply
+  nameWithType: Operations.MatrixMultiply
+- uid: LinearAlgebra.Operations.MatrixVectorMult(LinearAlgebra.Matrix,LinearAlgebra.Vector)
+  name: MatrixVectorMult(Matrix, Vector)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_MatrixVectorMult_LinearAlgebra_Matrix_LinearAlgebra_Vector_
+  commentId: M:LinearAlgebra.Operations.MatrixVectorMult(LinearAlgebra.Matrix,LinearAlgebra.Vector)
+  fullName: LinearAlgebra.Operations.MatrixVectorMult(LinearAlgebra.Matrix, LinearAlgebra.Vector)
+  nameWithType: Operations.MatrixVectorMult(Matrix, Vector)
+- uid: LinearAlgebra.Operations.MatrixVectorMult*
+  name: MatrixVectorMult
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_MatrixVectorMult_
+  commentId: Overload:LinearAlgebra.Operations.MatrixVectorMult
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.MatrixVectorMult
+  nameWithType: Operations.MatrixVectorMult
+- uid: LinearAlgebra.Operations.Multiply(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name: Multiply(Matrix, Matrix)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_Multiply_LinearAlgebra_Matrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Operations.Multiply(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  fullName: LinearAlgebra.Operations.Multiply(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  nameWithType: Operations.Multiply(Matrix, Matrix)
+- uid: LinearAlgebra.Operations.Multiply*
+  name: Multiply
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_Multiply_
+  commentId: Overload:LinearAlgebra.Operations.Multiply
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.Multiply
+  nameWithType: Operations.Multiply
+- uid: LinearAlgebra.Operations.Multscaler(LinearAlgebra.Matrix,System.Numerics.Complex)
+  name: Multscaler(Matrix, Complex)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_Multscaler_LinearAlgebra_Matrix_System_Numerics_Complex_
+  commentId: M:LinearAlgebra.Operations.Multscaler(LinearAlgebra.Matrix,System.Numerics.Complex)
+  fullName: LinearAlgebra.Operations.Multscaler(LinearAlgebra.Matrix, System.Numerics.Complex)
+  nameWithType: Operations.Multscaler(Matrix, Complex)
+- uid: LinearAlgebra.Operations.Multscaler*
+  name: Multscaler
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_Multscaler_
+  commentId: Overload:LinearAlgebra.Operations.Multscaler
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.Multscaler
+  nameWithType: Operations.Multscaler
+- uid: LinearAlgebra.Operations.OuterProduct(LinearAlgebra.Vector,LinearAlgebra.Vector)
+  name: OuterProduct(Vector, Vector)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_OuterProduct_LinearAlgebra_Vector_LinearAlgebra_Vector_
+  commentId: M:LinearAlgebra.Operations.OuterProduct(LinearAlgebra.Vector,LinearAlgebra.Vector)
+  fullName: LinearAlgebra.Operations.OuterProduct(LinearAlgebra.Vector, LinearAlgebra.Vector)
+  nameWithType: Operations.OuterProduct(Vector, Vector)
+- uid: LinearAlgebra.Operations.OuterProduct*
+  name: OuterProduct
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_OuterProduct_
+  commentId: Overload:LinearAlgebra.Operations.OuterProduct
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.OuterProduct
+  nameWithType: Operations.OuterProduct
+- uid: LinearAlgebra.Operations.Subtract(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name: Subtract(Matrix, Matrix)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_Subtract_LinearAlgebra_Matrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Operations.Subtract(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  fullName: LinearAlgebra.Operations.Subtract(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  nameWithType: Operations.Subtract(Matrix, Matrix)
+- uid: LinearAlgebra.Operations.Subtract*
+  name: Subtract
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_Subtract_
+  commentId: Overload:LinearAlgebra.Operations.Subtract
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.Subtract
+  nameWithType: Operations.Subtract
+- uid: LinearAlgebra.Operations.TensorProduct(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  name: TensorProduct(Matrix, Matrix)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_TensorProduct_LinearAlgebra_Matrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.Operations.TensorProduct(LinearAlgebra.Matrix,LinearAlgebra.Matrix)
+  fullName: LinearAlgebra.Operations.TensorProduct(LinearAlgebra.Matrix, LinearAlgebra.Matrix)
+  nameWithType: Operations.TensorProduct(Matrix, Matrix)
+- uid: LinearAlgebra.Operations.TensorProduct*
+  name: TensorProduct
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_TensorProduct_
+  commentId: Overload:LinearAlgebra.Operations.TensorProduct
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.TensorProduct
+  nameWithType: Operations.TensorProduct
+- uid: LinearAlgebra.Operations.TensorProductofVectors(LinearAlgebra.Vector,LinearAlgebra.Vector)
+  name: TensorProductofVectors(Vector, Vector)
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_TensorProductofVectors_LinearAlgebra_Vector_LinearAlgebra_Vector_
+  commentId: M:LinearAlgebra.Operations.TensorProductofVectors(LinearAlgebra.Vector,LinearAlgebra.Vector)
+  fullName: LinearAlgebra.Operations.TensorProductofVectors(LinearAlgebra.Vector, LinearAlgebra.Vector)
+  nameWithType: Operations.TensorProductofVectors(Vector, Vector)
+- uid: LinearAlgebra.Operations.TensorProductofVectors*
+  name: TensorProductofVectors
+  href: api/LinearAlgebra.Operations.html#LinearAlgebra_Operations_TensorProductofVectors_
+  commentId: Overload:LinearAlgebra.Operations.TensorProductofVectors
+  isSpec: "True"
+  fullName: LinearAlgebra.Operations.TensorProductofVectors
+  nameWithType: Operations.TensorProductofVectors
+- uid: LinearAlgebra.SparseMatrix
+  name: SparseMatrix
+  href: api/LinearAlgebra.SparseMatrix.html
+  commentId: T:LinearAlgebra.SparseMatrix
+  fullName: LinearAlgebra.SparseMatrix
+  nameWithType: SparseMatrix
+- uid: LinearAlgebra.SparseMatrix.#ctor(System.Int32,System.Int32)
+  name: SparseMatrix(int, int)
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix__ctor_System_Int32_System_Int32_
+  commentId: M:LinearAlgebra.SparseMatrix.#ctor(System.Int32,System.Int32)
+  name.vb: New(Integer, Integer)
+  fullName: LinearAlgebra.SparseMatrix.SparseMatrix(int, int)
+  fullName.vb: LinearAlgebra.SparseMatrix.New(Integer, Integer)
+  nameWithType: SparseMatrix.SparseMatrix(int, int)
+  nameWithType.vb: SparseMatrix.New(Integer, Integer)
+- uid: LinearAlgebra.SparseMatrix.#ctor(System.Numerics.Complex[0:,0:])
+  name: SparseMatrix(Complex[,])
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix__ctor_System_Numerics_Complex_0__0___
+  commentId: M:LinearAlgebra.SparseMatrix.#ctor(System.Numerics.Complex[0:,0:])
+  name.vb: New(Complex(,))
+  fullName: LinearAlgebra.SparseMatrix.SparseMatrix(System.Numerics.Complex[,])
+  fullName.vb: LinearAlgebra.SparseMatrix.New(System.Numerics.Complex(,))
+  nameWithType: SparseMatrix.SparseMatrix(Complex[,])
+  nameWithType.vb: SparseMatrix.New(Complex(,))
+- uid: LinearAlgebra.SparseMatrix.#ctor*
+  name: SparseMatrix
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix__ctor_
+  commentId: Overload:LinearAlgebra.SparseMatrix.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: LinearAlgebra.SparseMatrix.SparseMatrix
+  fullName.vb: LinearAlgebra.SparseMatrix.New
+  nameWithType: SparseMatrix.SparseMatrix
+  nameWithType.vb: SparseMatrix.New
+- uid: LinearAlgebra.SparseMatrix.Cols
+  name: Cols
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_Cols
+  commentId: P:LinearAlgebra.SparseMatrix.Cols
+  fullName: LinearAlgebra.SparseMatrix.Cols
+  nameWithType: SparseMatrix.Cols
+- uid: LinearAlgebra.SparseMatrix.Cols*
+  name: Cols
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_Cols_
+  commentId: Overload:LinearAlgebra.SparseMatrix.Cols
+  isSpec: "True"
+  fullName: LinearAlgebra.SparseMatrix.Cols
+  nameWithType: SparseMatrix.Cols
+- uid: LinearAlgebra.SparseMatrix.FromMatrix(LinearAlgebra.Matrix)
+  name: FromMatrix(Matrix)
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_FromMatrix_LinearAlgebra_Matrix_
+  commentId: M:LinearAlgebra.SparseMatrix.FromMatrix(LinearAlgebra.Matrix)
+  fullName: LinearAlgebra.SparseMatrix.FromMatrix(LinearAlgebra.Matrix)
+  nameWithType: SparseMatrix.FromMatrix(Matrix)
+- uid: LinearAlgebra.SparseMatrix.FromMatrix*
+  name: FromMatrix
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_FromMatrix_
+  commentId: Overload:LinearAlgebra.SparseMatrix.FromMatrix
+  isSpec: "True"
+  fullName: LinearAlgebra.SparseMatrix.FromMatrix
+  nameWithType: SparseMatrix.FromMatrix
+- uid: LinearAlgebra.SparseMatrix.Identity(System.Int32)
+  name: Identity(int)
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_Identity_System_Int32_
+  commentId: M:LinearAlgebra.SparseMatrix.Identity(System.Int32)
+  name.vb: Identity(Integer)
+  fullName: LinearAlgebra.SparseMatrix.Identity(int)
+  fullName.vb: LinearAlgebra.SparseMatrix.Identity(Integer)
+  nameWithType: SparseMatrix.Identity(int)
+  nameWithType.vb: SparseMatrix.Identity(Integer)
+- uid: LinearAlgebra.SparseMatrix.Identity*
+  name: Identity
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_Identity_
+  commentId: Overload:LinearAlgebra.SparseMatrix.Identity
+  isSpec: "True"
+  fullName: LinearAlgebra.SparseMatrix.Identity
+  nameWithType: SparseMatrix.Identity
+- uid: LinearAlgebra.SparseMatrix.Item(System.Int32,System.Int32)
+  name: this[int, int]
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_Item_System_Int32_System_Int32_
+  commentId: P:LinearAlgebra.SparseMatrix.Item(System.Int32,System.Int32)
+  name.vb: this[](Integer, Integer)
+  fullName: LinearAlgebra.SparseMatrix.this[int, int]
+  fullName.vb: LinearAlgebra.SparseMatrix.this[](Integer, Integer)
+  nameWithType: SparseMatrix.this[int, int]
+  nameWithType.vb: SparseMatrix.this[](Integer, Integer)
+- uid: LinearAlgebra.SparseMatrix.Item*
+  name: this
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_Item_
+  commentId: Overload:LinearAlgebra.SparseMatrix.Item
+  isSpec: "True"
+  name.vb: this[]
+  fullName: LinearAlgebra.SparseMatrix.this
+  fullName.vb: LinearAlgebra.SparseMatrix.this[]
+  nameWithType: SparseMatrix.this
+  nameWithType.vb: SparseMatrix.this[]
+- uid: LinearAlgebra.SparseMatrix.Multiply(LinearAlgebra.SparseMatrix)
+  name: Multiply(SparseMatrix)
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_Multiply_LinearAlgebra_SparseMatrix_
+  commentId: M:LinearAlgebra.SparseMatrix.Multiply(LinearAlgebra.SparseMatrix)
+  fullName: LinearAlgebra.SparseMatrix.Multiply(LinearAlgebra.SparseMatrix)
+  nameWithType: SparseMatrix.Multiply(SparseMatrix)
+- uid: LinearAlgebra.SparseMatrix.Multiply*
+  name: Multiply
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_Multiply_
+  commentId: Overload:LinearAlgebra.SparseMatrix.Multiply
+  isSpec: "True"
+  fullName: LinearAlgebra.SparseMatrix.Multiply
+  nameWithType: SparseMatrix.Multiply
+- uid: LinearAlgebra.SparseMatrix.MultiplyWithVector(System.Numerics.Complex[])
+  name: MultiplyWithVector(Complex[])
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_MultiplyWithVector_System_Numerics_Complex___
+  commentId: M:LinearAlgebra.SparseMatrix.MultiplyWithVector(System.Numerics.Complex[])
+  name.vb: MultiplyWithVector(Complex())
+  fullName: LinearAlgebra.SparseMatrix.MultiplyWithVector(System.Numerics.Complex[])
+  fullName.vb: LinearAlgebra.SparseMatrix.MultiplyWithVector(System.Numerics.Complex())
+  nameWithType: SparseMatrix.MultiplyWithVector(Complex[])
+  nameWithType.vb: SparseMatrix.MultiplyWithVector(Complex())
+- uid: LinearAlgebra.SparseMatrix.MultiplyWithVector*
+  name: MultiplyWithVector
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_MultiplyWithVector_
+  commentId: Overload:LinearAlgebra.SparseMatrix.MultiplyWithVector
+  isSpec: "True"
+  fullName: LinearAlgebra.SparseMatrix.MultiplyWithVector
+  nameWithType: SparseMatrix.MultiplyWithVector
+- uid: LinearAlgebra.SparseMatrix.ParallelTensorProduct(LinearAlgebra.SparseMatrix)
+  name: ParallelTensorProduct(SparseMatrix)
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_ParallelTensorProduct_LinearAlgebra_SparseMatrix_
+  commentId: M:LinearAlgebra.SparseMatrix.ParallelTensorProduct(LinearAlgebra.SparseMatrix)
+  fullName: LinearAlgebra.SparseMatrix.ParallelTensorProduct(LinearAlgebra.SparseMatrix)
+  nameWithType: SparseMatrix.ParallelTensorProduct(SparseMatrix)
+- uid: LinearAlgebra.SparseMatrix.ParallelTensorProduct*
+  name: ParallelTensorProduct
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_ParallelTensorProduct_
+  commentId: Overload:LinearAlgebra.SparseMatrix.ParallelTensorProduct
+  isSpec: "True"
+  fullName: LinearAlgebra.SparseMatrix.ParallelTensorProduct
+  nameWithType: SparseMatrix.ParallelTensorProduct
+- uid: LinearAlgebra.SparseMatrix.Print
+  name: Print()
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_Print
+  commentId: M:LinearAlgebra.SparseMatrix.Print
+  fullName: LinearAlgebra.SparseMatrix.Print()
+  nameWithType: SparseMatrix.Print()
+- uid: LinearAlgebra.SparseMatrix.Print*
+  name: Print
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_Print_
+  commentId: Overload:LinearAlgebra.SparseMatrix.Print
+  isSpec: "True"
+  fullName: LinearAlgebra.SparseMatrix.Print
+  nameWithType: SparseMatrix.Print
+- uid: LinearAlgebra.SparseMatrix.Rows
+  name: Rows
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_Rows
+  commentId: P:LinearAlgebra.SparseMatrix.Rows
+  fullName: LinearAlgebra.SparseMatrix.Rows
+  nameWithType: SparseMatrix.Rows
+- uid: LinearAlgebra.SparseMatrix.Rows*
+  name: Rows
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_Rows_
+  commentId: Overload:LinearAlgebra.SparseMatrix.Rows
+  isSpec: "True"
+  fullName: LinearAlgebra.SparseMatrix.Rows
+  nameWithType: SparseMatrix.Rows
+- uid: LinearAlgebra.SparseMatrix.TensorProduct(LinearAlgebra.SparseMatrix)
+  name: TensorProduct(SparseMatrix)
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_TensorProduct_LinearAlgebra_SparseMatrix_
+  commentId: M:LinearAlgebra.SparseMatrix.TensorProduct(LinearAlgebra.SparseMatrix)
+  fullName: LinearAlgebra.SparseMatrix.TensorProduct(LinearAlgebra.SparseMatrix)
+  nameWithType: SparseMatrix.TensorProduct(SparseMatrix)
+- uid: LinearAlgebra.SparseMatrix.TensorProduct*
+  name: TensorProduct
+  href: api/LinearAlgebra.SparseMatrix.html#LinearAlgebra_SparseMatrix_TensorProduct_
+  commentId: Overload:LinearAlgebra.SparseMatrix.TensorProduct
+  isSpec: "True"
+  fullName: LinearAlgebra.SparseMatrix.TensorProduct
+  nameWithType: SparseMatrix.TensorProduct
+- uid: LinearAlgebra.Vector
+  name: Vector
+  href: api/LinearAlgebra.Vector.html
+  commentId: T:LinearAlgebra.Vector
+  fullName: LinearAlgebra.Vector
+  nameWithType: Vector
+- uid: LinearAlgebra.Vector.#ctor(System.Int32)
+  name: Vector(int)
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector__ctor_System_Int32_
+  commentId: M:LinearAlgebra.Vector.#ctor(System.Int32)
+  name.vb: New(Integer)
+  fullName: LinearAlgebra.Vector.Vector(int)
+  fullName.vb: LinearAlgebra.Vector.New(Integer)
+  nameWithType: Vector.Vector(int)
+  nameWithType.vb: Vector.New(Integer)
+- uid: LinearAlgebra.Vector.#ctor(System.Numerics.Complex[])
+  name: Vector(Complex[])
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector__ctor_System_Numerics_Complex___
+  commentId: M:LinearAlgebra.Vector.#ctor(System.Numerics.Complex[])
+  name.vb: New(Complex())
+  fullName: LinearAlgebra.Vector.Vector(System.Numerics.Complex[])
+  fullName.vb: LinearAlgebra.Vector.New(System.Numerics.Complex())
+  nameWithType: Vector.Vector(Complex[])
+  nameWithType.vb: Vector.New(Complex())
+- uid: LinearAlgebra.Vector.#ctor*
+  name: Vector
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector__ctor_
+  commentId: Overload:LinearAlgebra.Vector.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: LinearAlgebra.Vector.Vector
+  fullName.vb: LinearAlgebra.Vector.New
+  nameWithType: Vector.Vector
+  nameWithType.vb: Vector.New
+- uid: LinearAlgebra.Vector.Conjugate
+  name: Conjugate()
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_Conjugate
+  commentId: M:LinearAlgebra.Vector.Conjugate
+  fullName: LinearAlgebra.Vector.Conjugate()
+  nameWithType: Vector.Conjugate()
+- uid: LinearAlgebra.Vector.Conjugate*
+  name: Conjugate
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_Conjugate_
+  commentId: Overload:LinearAlgebra.Vector.Conjugate
+  isSpec: "True"
+  fullName: LinearAlgebra.Vector.Conjugate
+  nameWithType: Vector.Conjugate
+- uid: LinearAlgebra.Vector.ConjugateInPlace
+  name: ConjugateInPlace()
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_ConjugateInPlace
+  commentId: M:LinearAlgebra.Vector.ConjugateInPlace
+  fullName: LinearAlgebra.Vector.ConjugateInPlace()
+  nameWithType: Vector.ConjugateInPlace()
+- uid: LinearAlgebra.Vector.ConjugateInPlace*
+  name: ConjugateInPlace
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_ConjugateInPlace_
+  commentId: Overload:LinearAlgebra.Vector.ConjugateInPlace
+  isSpec: "True"
+  fullName: LinearAlgebra.Vector.ConjugateInPlace
+  nameWithType: Vector.ConjugateInPlace
+- uid: LinearAlgebra.Vector.GetState
+  name: GetState()
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_GetState
+  commentId: M:LinearAlgebra.Vector.GetState
+  fullName: LinearAlgebra.Vector.GetState()
+  nameWithType: Vector.GetState()
+- uid: LinearAlgebra.Vector.GetState*
+  name: GetState
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_GetState_
+  commentId: Overload:LinearAlgebra.Vector.GetState
+  isSpec: "True"
+  fullName: LinearAlgebra.Vector.GetState
+  nameWithType: Vector.GetState
+- uid: LinearAlgebra.Vector.IsApproximatelyEqual(LinearAlgebra.Vector,System.Double)
+  name: IsApproximatelyEqual(Vector, double)
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_IsApproximatelyEqual_LinearAlgebra_Vector_System_Double_
+  commentId: M:LinearAlgebra.Vector.IsApproximatelyEqual(LinearAlgebra.Vector,System.Double)
+  name.vb: IsApproximatelyEqual(Vector, Double)
+  fullName: LinearAlgebra.Vector.IsApproximatelyEqual(LinearAlgebra.Vector, double)
+  fullName.vb: LinearAlgebra.Vector.IsApproximatelyEqual(LinearAlgebra.Vector, Double)
+  nameWithType: Vector.IsApproximatelyEqual(Vector, double)
+  nameWithType.vb: Vector.IsApproximatelyEqual(Vector, Double)
+- uid: LinearAlgebra.Vector.IsApproximatelyEqual*
+  name: IsApproximatelyEqual
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_IsApproximatelyEqual_
+  commentId: Overload:LinearAlgebra.Vector.IsApproximatelyEqual
+  isSpec: "True"
+  fullName: LinearAlgebra.Vector.IsApproximatelyEqual
+  nameWithType: Vector.IsApproximatelyEqual
+- uid: LinearAlgebra.Vector.IsColVector
+  name: IsColVector()
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_IsColVector
+  commentId: M:LinearAlgebra.Vector.IsColVector
+  fullName: LinearAlgebra.Vector.IsColVector()
+  nameWithType: Vector.IsColVector()
+- uid: LinearAlgebra.Vector.IsColVector*
+  name: IsColVector
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_IsColVector_
+  commentId: Overload:LinearAlgebra.Vector.IsColVector
+  isSpec: "True"
+  fullName: LinearAlgebra.Vector.IsColVector
+  nameWithType: Vector.IsColVector
+- uid: LinearAlgebra.Vector.IsRowVector
+  name: IsRowVector()
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_IsRowVector
+  commentId: M:LinearAlgebra.Vector.IsRowVector
+  fullName: LinearAlgebra.Vector.IsRowVector()
+  nameWithType: Vector.IsRowVector()
+- uid: LinearAlgebra.Vector.IsRowVector*
+  name: IsRowVector
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_IsRowVector_
+  commentId: Overload:LinearAlgebra.Vector.IsRowVector
+  isSpec: "True"
+  fullName: LinearAlgebra.Vector.IsRowVector
+  nameWithType: Vector.IsRowVector
+- uid: LinearAlgebra.Vector.ToMatrix
+  name: ToMatrix
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_ToMatrix
+  commentId: P:LinearAlgebra.Vector.ToMatrix
+  fullName: LinearAlgebra.Vector.ToMatrix
+  nameWithType: Vector.ToMatrix
+- uid: LinearAlgebra.Vector.ToMatrix*
+  name: ToMatrix
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_ToMatrix_
+  commentId: Overload:LinearAlgebra.Vector.ToMatrix
+  isSpec: "True"
+  fullName: LinearAlgebra.Vector.ToMatrix
+  nameWithType: Vector.ToMatrix
+- uid: LinearAlgebra.Vector.ToString
+  name: ToString()
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_ToString
+  commentId: M:LinearAlgebra.Vector.ToString
+  fullName: LinearAlgebra.Vector.ToString()
+  nameWithType: Vector.ToString()
+- uid: LinearAlgebra.Vector.ToString*
+  name: ToString
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_ToString_
+  commentId: Overload:LinearAlgebra.Vector.ToString
+  isSpec: "True"
+  fullName: LinearAlgebra.Vector.ToString
+  nameWithType: Vector.ToString
+- uid: LinearAlgebra.Vector.Transpose(LinearAlgebra.Vector)
+  name: Transpose(Vector)
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_Transpose_LinearAlgebra_Vector_
+  commentId: M:LinearAlgebra.Vector.Transpose(LinearAlgebra.Vector)
+  fullName: LinearAlgebra.Vector.Transpose(LinearAlgebra.Vector)
+  nameWithType: Vector.Transpose(Vector)
+- uid: LinearAlgebra.Vector.Transpose*
+  name: Transpose
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_Transpose_
+  commentId: Overload:LinearAlgebra.Vector.Transpose
+  isSpec: "True"
+  fullName: LinearAlgebra.Vector.Transpose
+  nameWithType: Vector.Transpose
+- uid: LinearAlgebra.Vector.TransposeInPlace
+  name: TransposeInPlace()
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_TransposeInPlace
+  commentId: M:LinearAlgebra.Vector.TransposeInPlace
+  fullName: LinearAlgebra.Vector.TransposeInPlace()
+  nameWithType: Vector.TransposeInPlace()
+- uid: LinearAlgebra.Vector.TransposeInPlace*
+  name: TransposeInPlace
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_TransposeInPlace_
+  commentId: Overload:LinearAlgebra.Vector.TransposeInPlace
+  isSpec: "True"
+  fullName: LinearAlgebra.Vector.TransposeInPlace
+  nameWithType: Vector.TransposeInPlace
+- uid: LinearAlgebra.Vector.cols
+  name: cols
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_cols
+  commentId: F:LinearAlgebra.Vector.cols
+  fullName: LinearAlgebra.Vector.cols
+  nameWithType: Vector.cols
+- uid: LinearAlgebra.Vector.elements
+  name: elements
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_elements
+  commentId: F:LinearAlgebra.Vector.elements
+  fullName: LinearAlgebra.Vector.elements
+  nameWithType: Vector.elements
+- uid: LinearAlgebra.Vector.rows
+  name: rows
+  href: api/LinearAlgebra.Vector.html#LinearAlgebra_Vector_rows
+  commentId: F:LinearAlgebra.Vector.rows
+  fullName: LinearAlgebra.Vector.rows
+  nameWithType: Vector.rows
+- uid: QuantumCircuits
+  name: QuantumCircuits
+  href: api/QuantumCircuits.html
+  commentId: N:QuantumCircuits
+  fullName: QuantumCircuits
+  nameWithType: QuantumCircuits
+- uid: QuantumCircuits.CX
+  name: CX
+  href: api/QuantumCircuits.CX.html
+  commentId: T:QuantumCircuits.CX
+  fullName: QuantumCircuits.CX
+  nameWithType: CX
+- uid: QuantumCircuits.CX.#ctor(System.Int32,System.Int32)
+  name: CX(int, int)
+  href: api/QuantumCircuits.CX.html#QuantumCircuits_CX__ctor_System_Int32_System_Int32_
+  commentId: M:QuantumCircuits.CX.#ctor(System.Int32,System.Int32)
+  name.vb: New(Integer, Integer)
+  fullName: QuantumCircuits.CX.CX(int, int)
+  fullName.vb: QuantumCircuits.CX.New(Integer, Integer)
+  nameWithType: CX.CX(int, int)
+  nameWithType.vb: CX.New(Integer, Integer)
+- uid: QuantumCircuits.CX.#ctor*
+  name: CX
+  href: api/QuantumCircuits.CX.html#QuantumCircuits_CX__ctor_
+  commentId: Overload:QuantumCircuits.CX.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.CX.CX
+  fullName.vb: QuantumCircuits.CX.New
+  nameWithType: CX.CX
+  nameWithType.vb: CX.New
+- uid: QuantumCircuits.CircuitExecution
+  name: CircuitExecution
+  href: api/QuantumCircuits.CircuitExecution.html
+  commentId: T:QuantumCircuits.CircuitExecution
+  fullName: QuantumCircuits.CircuitExecution
+  nameWithType: CircuitExecution
+- uid: QuantumCircuits.CircuitExecution.#ctor(QuantumCircuits.QuantumCircuitBuilder)
+  name: CircuitExecution(QuantumCircuitBuilder)
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution__ctor_QuantumCircuits_QuantumCircuitBuilder_
+  commentId: M:QuantumCircuits.CircuitExecution.#ctor(QuantumCircuits.QuantumCircuitBuilder)
+  name.vb: New(QuantumCircuitBuilder)
+  fullName: QuantumCircuits.CircuitExecution.CircuitExecution(QuantumCircuits.QuantumCircuitBuilder)
+  fullName.vb: QuantumCircuits.CircuitExecution.New(QuantumCircuits.QuantumCircuitBuilder)
+  nameWithType: CircuitExecution.CircuitExecution(QuantumCircuitBuilder)
+  nameWithType.vb: CircuitExecution.New(QuantumCircuitBuilder)
+- uid: QuantumCircuits.CircuitExecution.#ctor*
+  name: CircuitExecution
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution__ctor_
+  commentId: Overload:QuantumCircuits.CircuitExecution.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.CircuitExecution.CircuitExecution
+  fullName.vb: QuantumCircuits.CircuitExecution.New
+  nameWithType: CircuitExecution.CircuitExecution
+  nameWithType.vb: CircuitExecution.New
+- uid: QuantumCircuits.CircuitExecution.CNOTCreation(System.Int32,System.Int32,System.Int32)
+  name: CNOTCreation(int, int, int)
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_CNOTCreation_System_Int32_System_Int32_System_Int32_
+  commentId: M:QuantumCircuits.CircuitExecution.CNOTCreation(System.Int32,System.Int32,System.Int32)
+  name.vb: CNOTCreation(Integer, Integer, Integer)
+  fullName: QuantumCircuits.CircuitExecution.CNOTCreation(int, int, int)
+  fullName.vb: QuantumCircuits.CircuitExecution.CNOTCreation(Integer, Integer, Integer)
+  nameWithType: CircuitExecution.CNOTCreation(int, int, int)
+  nameWithType.vb: CircuitExecution.CNOTCreation(Integer, Integer, Integer)
+- uid: QuantumCircuits.CircuitExecution.CNOTCreation*
+  name: CNOTCreation
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_CNOTCreation_
+  commentId: Overload:QuantumCircuits.CircuitExecution.CNOTCreation
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.CNOTCreation
+  nameWithType: CircuitExecution.CNOTCreation
+- uid: QuantumCircuits.CircuitExecution.ExecuteCircuit
+  name: ExecuteCircuit()
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_ExecuteCircuit
+  commentId: M:QuantumCircuits.CircuitExecution.ExecuteCircuit
+  fullName: QuantumCircuits.CircuitExecution.ExecuteCircuit()
+  nameWithType: CircuitExecution.ExecuteCircuit()
+- uid: QuantumCircuits.CircuitExecution.ExecuteCircuit*
+  name: ExecuteCircuit
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_ExecuteCircuit_
+  commentId: Overload:QuantumCircuits.CircuitExecution.ExecuteCircuit
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.ExecuteCircuit
+  nameWithType: CircuitExecution.ExecuteCircuit
+- uid: QuantumCircuits.CircuitExecution.GetStateProbabilities
+  name: GetStateProbabilities()
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_GetStateProbabilities
+  commentId: M:QuantumCircuits.CircuitExecution.GetStateProbabilities
+  fullName: QuantumCircuits.CircuitExecution.GetStateProbabilities()
+  nameWithType: CircuitExecution.GetStateProbabilities()
+- uid: QuantumCircuits.CircuitExecution.GetStateProbabilities*
+  name: GetStateProbabilities
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_GetStateProbabilities_
+  commentId: Overload:QuantumCircuits.CircuitExecution.GetStateProbabilities
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.GetStateProbabilities
+  nameWithType: CircuitExecution.GetStateProbabilities
+- uid: QuantumCircuits.CircuitExecution.MeasureAllQubits
+  name: MeasureAllQubits()
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_MeasureAllQubits
+  commentId: M:QuantumCircuits.CircuitExecution.MeasureAllQubits
+  fullName: QuantumCircuits.CircuitExecution.MeasureAllQubits()
+  nameWithType: CircuitExecution.MeasureAllQubits()
+- uid: QuantumCircuits.CircuitExecution.MeasureAllQubits*
+  name: MeasureAllQubits
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_MeasureAllQubits_
+  commentId: Overload:QuantumCircuits.CircuitExecution.MeasureAllQubits
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.MeasureAllQubits
+  nameWithType: CircuitExecution.MeasureAllQubits
+- uid: QuantumCircuits.CircuitExecution.PrintBitstrings(System.Int32)
+  name: PrintBitstrings(int)
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_PrintBitstrings_System_Int32_
+  commentId: M:QuantumCircuits.CircuitExecution.PrintBitstrings(System.Int32)
+  name.vb: PrintBitstrings(Integer)
+  fullName: QuantumCircuits.CircuitExecution.PrintBitstrings(int)
+  fullName.vb: QuantumCircuits.CircuitExecution.PrintBitstrings(Integer)
+  nameWithType: CircuitExecution.PrintBitstrings(int)
+  nameWithType.vb: CircuitExecution.PrintBitstrings(Integer)
+- uid: QuantumCircuits.CircuitExecution.PrintBitstrings*
+  name: PrintBitstrings
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_PrintBitstrings_
+  commentId: Overload:QuantumCircuits.CircuitExecution.PrintBitstrings
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.PrintBitstrings
+  nameWithType: CircuitExecution.PrintBitstrings
+- uid: QuantumCircuits.CircuitExecution.PrintHistogram(System.Int32)
+  name: PrintHistogram(int)
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_PrintHistogram_System_Int32_
+  commentId: M:QuantumCircuits.CircuitExecution.PrintHistogram(System.Int32)
+  name.vb: PrintHistogram(Integer)
+  fullName: QuantumCircuits.CircuitExecution.PrintHistogram(int)
+  fullName.vb: QuantumCircuits.CircuitExecution.PrintHistogram(Integer)
+  nameWithType: CircuitExecution.PrintHistogram(int)
+  nameWithType.vb: CircuitExecution.PrintHistogram(Integer)
+- uid: QuantumCircuits.CircuitExecution.PrintHistogram*
+  name: PrintHistogram
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_PrintHistogram_
+  commentId: Overload:QuantumCircuits.CircuitExecution.PrintHistogram
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.PrintHistogram
+  nameWithType: CircuitExecution.PrintHistogram
+- uid: QuantumCircuits.CircuitExecution.QbitCount
+  name: QbitCount
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_QbitCount
+  commentId: P:QuantumCircuits.CircuitExecution.QbitCount
+  fullName: QuantumCircuits.CircuitExecution.QbitCount
+  nameWithType: CircuitExecution.QbitCount
+- uid: QuantumCircuits.CircuitExecution.QbitCount*
+  name: QbitCount
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_QbitCount_
+  commentId: Overload:QuantumCircuits.CircuitExecution.QbitCount
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.QbitCount
+  nameWithType: CircuitExecution.QbitCount
+- uid: QuantumCircuits.CircuitExecution.SimulateHistogram(System.Int32,System.Int32)
+  name: SimulateHistogram(int, int)
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_SimulateHistogram_System_Int32_System_Int32_
+  commentId: M:QuantumCircuits.CircuitExecution.SimulateHistogram(System.Int32,System.Int32)
+  name.vb: SimulateHistogram(Integer, Integer)
+  fullName: QuantumCircuits.CircuitExecution.SimulateHistogram(int, int)
+  fullName.vb: QuantumCircuits.CircuitExecution.SimulateHistogram(Integer, Integer)
+  nameWithType: CircuitExecution.SimulateHistogram(int, int)
+  nameWithType.vb: CircuitExecution.SimulateHistogram(Integer, Integer)
+- uid: QuantumCircuits.CircuitExecution.SimulateHistogram*
+  name: SimulateHistogram
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_SimulateHistogram_
+  commentId: Overload:QuantumCircuits.CircuitExecution.SimulateHistogram
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.SimulateHistogram
+  nameWithType: CircuitExecution.SimulateHistogram
+- uid: QuantumCircuits.CircuitExecution.SimulateMeasurements(System.Int32)
+  name: SimulateMeasurements(int)
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_SimulateMeasurements_System_Int32_
+  commentId: M:QuantumCircuits.CircuitExecution.SimulateMeasurements(System.Int32)
+  name.vb: SimulateMeasurements(Integer)
+  fullName: QuantumCircuits.CircuitExecution.SimulateMeasurements(int)
+  fullName.vb: QuantumCircuits.CircuitExecution.SimulateMeasurements(Integer)
+  nameWithType: CircuitExecution.SimulateMeasurements(int)
+  nameWithType.vb: CircuitExecution.SimulateMeasurements(Integer)
+- uid: QuantumCircuits.CircuitExecution.SimulateMeasurements*
+  name: SimulateMeasurements
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_SimulateMeasurements_
+  commentId: Overload:QuantumCircuits.CircuitExecution.SimulateMeasurements
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.SimulateMeasurements
+  nameWithType: CircuitExecution.SimulateMeasurements
+- uid: QuantumCircuits.CircuitExecution.StateVector
+  name: StateVector
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_StateVector
+  commentId: P:QuantumCircuits.CircuitExecution.StateVector
+  fullName: QuantumCircuits.CircuitExecution.StateVector
+  nameWithType: CircuitExecution.StateVector
+- uid: QuantumCircuits.CircuitExecution.StateVector*
+  name: StateVector
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_StateVector_
+  commentId: Overload:QuantumCircuits.CircuitExecution.StateVector
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.StateVector
+  nameWithType: CircuitExecution.StateVector
+- uid: QuantumCircuits.CircuitExecution.SwapCreation(System.Int32,System.Int32,System.Int32)
+  name: SwapCreation(int, int, int)
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_SwapCreation_System_Int32_System_Int32_System_Int32_
+  commentId: M:QuantumCircuits.CircuitExecution.SwapCreation(System.Int32,System.Int32,System.Int32)
+  name.vb: SwapCreation(Integer, Integer, Integer)
+  fullName: QuantumCircuits.CircuitExecution.SwapCreation(int, int, int)
+  fullName.vb: QuantumCircuits.CircuitExecution.SwapCreation(Integer, Integer, Integer)
+  nameWithType: CircuitExecution.SwapCreation(int, int, int)
+  nameWithType.vb: CircuitExecution.SwapCreation(Integer, Integer, Integer)
+- uid: QuantumCircuits.CircuitExecution.SwapCreation*
+  name: SwapCreation
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_SwapCreation_
+  commentId: Overload:QuantumCircuits.CircuitExecution.SwapCreation
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.SwapCreation
+  nameWithType: CircuitExecution.SwapCreation
+- uid: QuantumCircuits.CircuitExecution.ToString
+  name: ToString()
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_ToString
+  commentId: M:QuantumCircuits.CircuitExecution.ToString
+  fullName: QuantumCircuits.CircuitExecution.ToString()
+  nameWithType: CircuitExecution.ToString()
+- uid: QuantumCircuits.CircuitExecution.ToString*
+  name: ToString
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_ToString_
+  commentId: Overload:QuantumCircuits.CircuitExecution.ToString
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.ToString
+  nameWithType: CircuitExecution.ToString
+- uid: QuantumCircuits.CircuitExecution.ToffoliCreation(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: ToffoliCreation(int, int, int, int)
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_ToffoliCreation_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:QuantumCircuits.CircuitExecution.ToffoliCreation(System.Int32,System.Int32,System.Int32,System.Int32)
+  name.vb: ToffoliCreation(Integer, Integer, Integer, Integer)
+  fullName: QuantumCircuits.CircuitExecution.ToffoliCreation(int, int, int, int)
+  fullName.vb: QuantumCircuits.CircuitExecution.ToffoliCreation(Integer, Integer, Integer, Integer)
+  nameWithType: CircuitExecution.ToffoliCreation(int, int, int, int)
+  nameWithType.vb: CircuitExecution.ToffoliCreation(Integer, Integer, Integer, Integer)
+- uid: QuantumCircuits.CircuitExecution.ToffoliCreation*
+  name: ToffoliCreation
+  href: api/QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_ToffoliCreation_
+  commentId: Overload:QuantumCircuits.CircuitExecution.ToffoliCreation
+  isSpec: "True"
+  fullName: QuantumCircuits.CircuitExecution.ToffoliCreation
+  nameWithType: CircuitExecution.ToffoliCreation
+- uid: QuantumCircuits.Gate
+  name: Gate
+  href: api/QuantumCircuits.Gate.html
+  commentId: T:QuantumCircuits.Gate
+  fullName: QuantumCircuits.Gate
+  nameWithType: Gate
+- uid: QuantumCircuits.Gate.#ctor(QuantumCircuits.GateTypes,LinearAlgebra.SparseMatrix,System.Int32[],System.Int32[])
+  name: Gate(GateTypes, SparseMatrix, int[], int[])
+  href: api/QuantumCircuits.Gate.html#QuantumCircuits_Gate__ctor_QuantumCircuits_GateTypes_LinearAlgebra_SparseMatrix_System_Int32___System_Int32___
+  commentId: M:QuantumCircuits.Gate.#ctor(QuantumCircuits.GateTypes,LinearAlgebra.SparseMatrix,System.Int32[],System.Int32[])
+  name.vb: New(GateTypes, SparseMatrix, Integer(), Integer())
+  fullName: QuantumCircuits.Gate.Gate(QuantumCircuits.GateTypes, LinearAlgebra.SparseMatrix, int[], int[])
+  fullName.vb: QuantumCircuits.Gate.New(QuantumCircuits.GateTypes, LinearAlgebra.SparseMatrix, Integer(), Integer())
+  nameWithType: Gate.Gate(GateTypes, SparseMatrix, int[], int[])
+  nameWithType.vb: Gate.New(GateTypes, SparseMatrix, Integer(), Integer())
+- uid: QuantumCircuits.Gate.#ctor*
+  name: Gate
+  href: api/QuantumCircuits.Gate.html#QuantumCircuits_Gate__ctor_
+  commentId: Overload:QuantumCircuits.Gate.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.Gate.Gate
+  fullName.vb: QuantumCircuits.Gate.New
+  nameWithType: Gate.Gate
+  nameWithType.vb: Gate.New
+- uid: QuantumCircuits.Gate.Controls
+  name: Controls
+  href: api/QuantumCircuits.Gate.html#QuantumCircuits_Gate_Controls
+  commentId: P:QuantumCircuits.Gate.Controls
+  fullName: QuantumCircuits.Gate.Controls
+  nameWithType: Gate.Controls
+- uid: QuantumCircuits.Gate.Controls*
+  name: Controls
+  href: api/QuantumCircuits.Gate.html#QuantumCircuits_Gate_Controls_
+  commentId: Overload:QuantumCircuits.Gate.Controls
+  isSpec: "True"
+  fullName: QuantumCircuits.Gate.Controls
+  nameWithType: Gate.Controls
+- uid: QuantumCircuits.Gate.Operation
+  name: Operation
+  href: api/QuantumCircuits.Gate.html#QuantumCircuits_Gate_Operation
+  commentId: P:QuantumCircuits.Gate.Operation
+  fullName: QuantumCircuits.Gate.Operation
+  nameWithType: Gate.Operation
+- uid: QuantumCircuits.Gate.Operation*
+  name: Operation
+  href: api/QuantumCircuits.Gate.html#QuantumCircuits_Gate_Operation_
+  commentId: Overload:QuantumCircuits.Gate.Operation
+  isSpec: "True"
+  fullName: QuantumCircuits.Gate.Operation
+  nameWithType: Gate.Operation
+- uid: QuantumCircuits.Gate.Targets
+  name: Targets
+  href: api/QuantumCircuits.Gate.html#QuantumCircuits_Gate_Targets
+  commentId: P:QuantumCircuits.Gate.Targets
+  fullName: QuantumCircuits.Gate.Targets
+  nameWithType: Gate.Targets
+- uid: QuantumCircuits.Gate.Targets*
+  name: Targets
+  href: api/QuantumCircuits.Gate.html#QuantumCircuits_Gate_Targets_
+  commentId: Overload:QuantumCircuits.Gate.Targets
+  isSpec: "True"
+  fullName: QuantumCircuits.Gate.Targets
+  nameWithType: Gate.Targets
+- uid: QuantumCircuits.Gate.ToString
+  name: ToString()
+  href: api/QuantumCircuits.Gate.html#QuantumCircuits_Gate_ToString
+  commentId: M:QuantumCircuits.Gate.ToString
+  fullName: QuantumCircuits.Gate.ToString()
+  nameWithType: Gate.ToString()
+- uid: QuantumCircuits.Gate.ToString*
+  name: ToString
+  href: api/QuantumCircuits.Gate.html#QuantumCircuits_Gate_ToString_
+  commentId: Overload:QuantumCircuits.Gate.ToString
+  isSpec: "True"
+  fullName: QuantumCircuits.Gate.ToString
+  nameWithType: Gate.ToString
+- uid: QuantumCircuits.Gate.Type
+  name: Type
+  href: api/QuantumCircuits.Gate.html#QuantumCircuits_Gate_Type
+  commentId: P:QuantumCircuits.Gate.Type
+  fullName: QuantumCircuits.Gate.Type
+  nameWithType: Gate.Type
+- uid: QuantumCircuits.Gate.Type*
+  name: Type
+  href: api/QuantumCircuits.Gate.html#QuantumCircuits_Gate_Type_
+  commentId: Overload:QuantumCircuits.Gate.Type
+  isSpec: "True"
+  fullName: QuantumCircuits.Gate.Type
+  nameWithType: Gate.Type
+- uid: QuantumCircuits.GateTypes
+  name: GateTypes
+  href: api/QuantumCircuits.GateTypes.html
+  commentId: T:QuantumCircuits.GateTypes
+  fullName: QuantumCircuits.GateTypes
+  nameWithType: GateTypes
+- uid: QuantumCircuits.GateTypes.CXC
+  name: CXC
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_CXC
+  commentId: F:QuantumCircuits.GateTypes.CXC
+  fullName: QuantumCircuits.GateTypes.CXC
+  nameWithType: GateTypes.CXC
+- uid: QuantumCircuits.GateTypes.CXT
+  name: CXT
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_CXT
+  commentId: F:QuantumCircuits.GateTypes.CXT
+  fullName: QuantumCircuits.GateTypes.CXT
+  nameWithType: GateTypes.CXT
+- uid: QuantumCircuits.GateTypes.HGT
+  name: HGT
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_HGT
+  commentId: F:QuantumCircuits.GateTypes.HGT
+  fullName: QuantumCircuits.GateTypes.HGT
+  nameWithType: GateTypes.HGT
+- uid: QuantumCircuits.GateTypes.NOP
+  name: NOP
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_NOP
+  commentId: F:QuantumCircuits.GateTypes.NOP
+  fullName: QuantumCircuits.GateTypes.NOP
+  nameWithType: GateTypes.NOP
+- uid: QuantumCircuits.GateTypes.RXT
+  name: RXT
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_RXT
+  commentId: F:QuantumCircuits.GateTypes.RXT
+  fullName: QuantumCircuits.GateTypes.RXT
+  nameWithType: GateTypes.RXT
+- uid: QuantumCircuits.GateTypes.RYT
+  name: RYT
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_RYT
+  commentId: F:QuantumCircuits.GateTypes.RYT
+  fullName: QuantumCircuits.GateTypes.RYT
+  nameWithType: GateTypes.RYT
+- uid: QuantumCircuits.GateTypes.RZT
+  name: RZT
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_RZT
+  commentId: F:QuantumCircuits.GateTypes.RZT
+  fullName: QuantumCircuits.GateTypes.RZT
+  nameWithType: GateTypes.RZT
+- uid: QuantumCircuits.GateTypes.SWP
+  name: SWP
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_SWP
+  commentId: F:QuantumCircuits.GateTypes.SWP
+  fullName: QuantumCircuits.GateTypes.SWP
+  nameWithType: GateTypes.SWP
+- uid: QuantumCircuits.GateTypes.SWT
+  name: SWT
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_SWT
+  commentId: F:QuantumCircuits.GateTypes.SWT
+  fullName: QuantumCircuits.GateTypes.SWT
+  nameWithType: GateTypes.SWT
+- uid: QuantumCircuits.GateTypes.TGT
+  name: TGT
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_TGT
+  commentId: F:QuantumCircuits.GateTypes.TGT
+  fullName: QuantumCircuits.GateTypes.TGT
+  nameWithType: GateTypes.TGT
+- uid: QuantumCircuits.GateTypes.TOC
+  name: TOC
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_TOC
+  commentId: F:QuantumCircuits.GateTypes.TOC
+  fullName: QuantumCircuits.GateTypes.TOC
+  nameWithType: GateTypes.TOC
+- uid: QuantumCircuits.GateTypes.TOF
+  name: TOF
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_TOF
+  commentId: F:QuantumCircuits.GateTypes.TOF
+  fullName: QuantumCircuits.GateTypes.TOF
+  nameWithType: GateTypes.TOF
+- uid: QuantumCircuits.GateTypes.XGT
+  name: XGT
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_XGT
+  commentId: F:QuantumCircuits.GateTypes.XGT
+  fullName: QuantumCircuits.GateTypes.XGT
+  nameWithType: GateTypes.XGT
+- uid: QuantumCircuits.GateTypes.YGT
+  name: YGT
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_YGT
+  commentId: F:QuantumCircuits.GateTypes.YGT
+  fullName: QuantumCircuits.GateTypes.YGT
+  nameWithType: GateTypes.YGT
+- uid: QuantumCircuits.GateTypes.ZGT
+  name: ZGT
+  href: api/QuantumCircuits.GateTypes.html#QuantumCircuits_GateTypes_ZGT
+  commentId: F:QuantumCircuits.GateTypes.ZGT
+  fullName: QuantumCircuits.GateTypes.ZGT
+  nameWithType: GateTypes.ZGT
+- uid: QuantumCircuits.H
+  name: H
+  href: api/QuantumCircuits.H.html
+  commentId: T:QuantumCircuits.H
+  fullName: QuantumCircuits.H
+  nameWithType: H
+- uid: QuantumCircuits.H.#ctor(System.Int32)
+  name: H(int)
+  href: api/QuantumCircuits.H.html#QuantumCircuits_H__ctor_System_Int32_
+  commentId: M:QuantumCircuits.H.#ctor(System.Int32)
+  name.vb: New(Integer)
+  fullName: QuantumCircuits.H.H(int)
+  fullName.vb: QuantumCircuits.H.New(Integer)
+  nameWithType: H.H(int)
+  nameWithType.vb: H.New(Integer)
+- uid: QuantumCircuits.H.#ctor*
+  name: H
+  href: api/QuantumCircuits.H.html#QuantumCircuits_H__ctor_
+  commentId: Overload:QuantumCircuits.H.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.H.H
+  fullName.vb: QuantumCircuits.H.New
+  nameWithType: H.H
+  nameWithType.vb: H.New
+- uid: QuantumCircuits.NOP
+  name: NOP
+  href: api/QuantumCircuits.NOP.html
+  commentId: T:QuantumCircuits.NOP
+  fullName: QuantumCircuits.NOP
+  nameWithType: NOP
+- uid: QuantumCircuits.NOP.#ctor(System.Int32,QuantumCircuits.GateTypes)
+  name: NOP(int, GateTypes)
+  href: api/QuantumCircuits.NOP.html#QuantumCircuits_NOP__ctor_System_Int32_QuantumCircuits_GateTypes_
+  commentId: M:QuantumCircuits.NOP.#ctor(System.Int32,QuantumCircuits.GateTypes)
+  name.vb: New(Integer, GateTypes)
+  fullName: QuantumCircuits.NOP.NOP(int, QuantumCircuits.GateTypes)
+  fullName.vb: QuantumCircuits.NOP.New(Integer, QuantumCircuits.GateTypes)
+  nameWithType: NOP.NOP(int, GateTypes)
+  nameWithType.vb: NOP.New(Integer, GateTypes)
+- uid: QuantumCircuits.NOP.#ctor*
+  name: NOP
+  href: api/QuantumCircuits.NOP.html#QuantumCircuits_NOP__ctor_
+  commentId: Overload:QuantumCircuits.NOP.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.NOP.NOP
+  fullName.vb: QuantumCircuits.NOP.New
+  nameWithType: NOP.NOP
+  nameWithType.vb: NOP.New
+- uid: QuantumCircuits.QuantumCircuitBuilder
+  name: QuantumCircuitBuilder
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html
+  commentId: T:QuantumCircuits.QuantumCircuitBuilder
+  fullName: QuantumCircuits.QuantumCircuitBuilder
+  nameWithType: QuantumCircuitBuilder
+- uid: QuantumCircuits.QuantumCircuitBuilder.#ctor(System.Int32,System.Int32)
+  name: QuantumCircuitBuilder(int, int)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder__ctor_System_Int32_System_Int32_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.#ctor(System.Int32,System.Int32)
+  name.vb: New(Integer, Integer)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.QuantumCircuitBuilder(int, int)
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.New(Integer, Integer)
+  nameWithType: QuantumCircuitBuilder.QuantumCircuitBuilder(int, int)
+  nameWithType.vb: QuantumCircuitBuilder.New(Integer, Integer)
+- uid: QuantumCircuits.QuantumCircuitBuilder.#ctor*
+  name: QuantumCircuitBuilder
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder__ctor_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.QuantumCircuitBuilder.QuantumCircuitBuilder
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.New
+  nameWithType: QuantumCircuitBuilder.QuantumCircuitBuilder
+  nameWithType.vb: QuantumCircuitBuilder.New
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateCX(System.Int32,System.Int32)
+  name: AddGateCX(int, int)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateCX_System_Int32_System_Int32_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.AddGateCX(System.Int32,System.Int32)
+  name.vb: AddGateCX(Integer, Integer)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateCX(int, int)
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.AddGateCX(Integer, Integer)
+  nameWithType: QuantumCircuitBuilder.AddGateCX(int, int)
+  nameWithType.vb: QuantumCircuitBuilder.AddGateCX(Integer, Integer)
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateCX*
+  name: AddGateCX
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateCX_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.AddGateCX
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateCX
+  nameWithType: QuantumCircuitBuilder.AddGateCX
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateH(System.Int32)
+  name: AddGateH(int)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateH_System_Int32_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.AddGateH(System.Int32)
+  name.vb: AddGateH(Integer)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateH(int)
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.AddGateH(Integer)
+  nameWithType: QuantumCircuitBuilder.AddGateH(int)
+  nameWithType.vb: QuantumCircuitBuilder.AddGateH(Integer)
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateH*
+  name: AddGateH
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateH_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.AddGateH
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateH
+  nameWithType: QuantumCircuitBuilder.AddGateH
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateRX(System.Int32,System.Double)
+  name: AddGateRX(int, double)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateRX_System_Int32_System_Double_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.AddGateRX(System.Int32,System.Double)
+  name.vb: AddGateRX(Integer, Double)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateRX(int, double)
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.AddGateRX(Integer, Double)
+  nameWithType: QuantumCircuitBuilder.AddGateRX(int, double)
+  nameWithType.vb: QuantumCircuitBuilder.AddGateRX(Integer, Double)
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateRX*
+  name: AddGateRX
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateRX_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.AddGateRX
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateRX
+  nameWithType: QuantumCircuitBuilder.AddGateRX
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateRY(System.Int32,System.Double)
+  name: AddGateRY(int, double)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateRY_System_Int32_System_Double_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.AddGateRY(System.Int32,System.Double)
+  name.vb: AddGateRY(Integer, Double)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateRY(int, double)
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.AddGateRY(Integer, Double)
+  nameWithType: QuantumCircuitBuilder.AddGateRY(int, double)
+  nameWithType.vb: QuantumCircuitBuilder.AddGateRY(Integer, Double)
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateRY*
+  name: AddGateRY
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateRY_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.AddGateRY
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateRY
+  nameWithType: QuantumCircuitBuilder.AddGateRY
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateRZ(System.Int32,System.Double)
+  name: AddGateRZ(int, double)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateRZ_System_Int32_System_Double_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.AddGateRZ(System.Int32,System.Double)
+  name.vb: AddGateRZ(Integer, Double)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateRZ(int, double)
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.AddGateRZ(Integer, Double)
+  nameWithType: QuantumCircuitBuilder.AddGateRZ(int, double)
+  nameWithType.vb: QuantumCircuitBuilder.AddGateRZ(Integer, Double)
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateRZ*
+  name: AddGateRZ
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateRZ_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.AddGateRZ
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateRZ
+  nameWithType: QuantumCircuitBuilder.AddGateRZ
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateSWP(System.Int32,System.Int32)
+  name: AddGateSWP(int, int)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateSWP_System_Int32_System_Int32_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.AddGateSWP(System.Int32,System.Int32)
+  name.vb: AddGateSWP(Integer, Integer)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateSWP(int, int)
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.AddGateSWP(Integer, Integer)
+  nameWithType: QuantumCircuitBuilder.AddGateSWP(int, int)
+  nameWithType.vb: QuantumCircuitBuilder.AddGateSWP(Integer, Integer)
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateSWP*
+  name: AddGateSWP
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateSWP_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.AddGateSWP
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateSWP
+  nameWithType: QuantumCircuitBuilder.AddGateSWP
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateT(System.Int32)
+  name: AddGateT(int)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateT_System_Int32_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.AddGateT(System.Int32)
+  name.vb: AddGateT(Integer)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateT(int)
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.AddGateT(Integer)
+  nameWithType: QuantumCircuitBuilder.AddGateT(int)
+  nameWithType.vb: QuantumCircuitBuilder.AddGateT(Integer)
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateT*
+  name: AddGateT
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateT_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.AddGateT
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateT
+  nameWithType: QuantumCircuitBuilder.AddGateT
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateTOF(System.Int32,System.Int32,System.Int32)
+  name: AddGateTOF(int, int, int)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateTOF_System_Int32_System_Int32_System_Int32_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.AddGateTOF(System.Int32,System.Int32,System.Int32)
+  name.vb: AddGateTOF(Integer, Integer, Integer)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateTOF(int, int, int)
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.AddGateTOF(Integer, Integer, Integer)
+  nameWithType: QuantumCircuitBuilder.AddGateTOF(int, int, int)
+  nameWithType.vb: QuantumCircuitBuilder.AddGateTOF(Integer, Integer, Integer)
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateTOF*
+  name: AddGateTOF
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateTOF_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.AddGateTOF
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateTOF
+  nameWithType: QuantumCircuitBuilder.AddGateTOF
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateX(System.Int32)
+  name: AddGateX(int)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateX_System_Int32_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.AddGateX(System.Int32)
+  name.vb: AddGateX(Integer)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateX(int)
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.AddGateX(Integer)
+  nameWithType: QuantumCircuitBuilder.AddGateX(int)
+  nameWithType.vb: QuantumCircuitBuilder.AddGateX(Integer)
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateX*
+  name: AddGateX
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateX_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.AddGateX
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateX
+  nameWithType: QuantumCircuitBuilder.AddGateX
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateY(System.Int32)
+  name: AddGateY(int)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateY_System_Int32_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.AddGateY(System.Int32)
+  name.vb: AddGateY(Integer)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateY(int)
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.AddGateY(Integer)
+  nameWithType: QuantumCircuitBuilder.AddGateY(int)
+  nameWithType.vb: QuantumCircuitBuilder.AddGateY(Integer)
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateY*
+  name: AddGateY
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateY_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.AddGateY
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateY
+  nameWithType: QuantumCircuitBuilder.AddGateY
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateZ(System.Int32)
+  name: AddGateZ(int)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateZ_System_Int32_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.AddGateZ(System.Int32)
+  name.vb: AddGateZ(Integer)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateZ(int)
+  fullName.vb: QuantumCircuits.QuantumCircuitBuilder.AddGateZ(Integer)
+  nameWithType: QuantumCircuitBuilder.AddGateZ(int)
+  nameWithType.vb: QuantumCircuitBuilder.AddGateZ(Integer)
+- uid: QuantumCircuits.QuantumCircuitBuilder.AddGateZ*
+  name: AddGateZ
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_AddGateZ_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.AddGateZ
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.AddGateZ
+  nameWithType: QuantumCircuitBuilder.AddGateZ
+- uid: QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol(QuantumCircuits.Gate)
+  name: GetBoxedAsciiSymbol(Gate)
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_GetBoxedAsciiSymbol_QuantumCircuits_Gate_
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol(QuantumCircuits.Gate)
+  fullName: QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol(QuantumCircuits.Gate)
+  nameWithType: QuantumCircuitBuilder.GetBoxedAsciiSymbol(Gate)
+- uid: QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol*
+  name: GetBoxedAsciiSymbol
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_GetBoxedAsciiSymbol_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol
+  nameWithType: QuantumCircuitBuilder.GetBoxedAsciiSymbol
+- uid: QuantumCircuits.QuantumCircuitBuilder.ToString
+  name: ToString()
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_ToString
+  commentId: M:QuantumCircuits.QuantumCircuitBuilder.ToString
+  fullName: QuantumCircuits.QuantumCircuitBuilder.ToString()
+  nameWithType: QuantumCircuitBuilder.ToString()
+- uid: QuantumCircuits.QuantumCircuitBuilder.ToString*
+  name: ToString
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_ToString_
+  commentId: Overload:QuantumCircuits.QuantumCircuitBuilder.ToString
+  isSpec: "True"
+  fullName: QuantumCircuits.QuantumCircuitBuilder.ToString
+  nameWithType: QuantumCircuitBuilder.ToString
+- uid: QuantumCircuits.QuantumCircuitBuilder.classicalLines
+  name: classicalLines
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_classicalLines
+  commentId: F:QuantumCircuits.QuantumCircuitBuilder.classicalLines
+  fullName: QuantumCircuits.QuantumCircuitBuilder.classicalLines
+  nameWithType: QuantumCircuitBuilder.classicalLines
+- uid: QuantumCircuits.QuantumCircuitBuilder.quantumLines
+  name: quantumLines
+  href: api/QuantumCircuits.QuantumCircuitBuilder.html#QuantumCircuits_QuantumCircuitBuilder_quantumLines
+  commentId: F:QuantumCircuits.QuantumCircuitBuilder.quantumLines
+  fullName: QuantumCircuits.QuantumCircuitBuilder.quantumLines
+  nameWithType: QuantumCircuitBuilder.quantumLines
+- uid: QuantumCircuits.RX
+  name: RX
+  href: api/QuantumCircuits.RX.html
+  commentId: T:QuantumCircuits.RX
+  fullName: QuantumCircuits.RX
+  nameWithType: RX
+- uid: QuantumCircuits.RX.#ctor(System.Int32,System.Double)
+  name: RX(int, double)
+  href: api/QuantumCircuits.RX.html#QuantumCircuits_RX__ctor_System_Int32_System_Double_
+  commentId: M:QuantumCircuits.RX.#ctor(System.Int32,System.Double)
+  name.vb: New(Integer, Double)
+  fullName: QuantumCircuits.RX.RX(int, double)
+  fullName.vb: QuantumCircuits.RX.New(Integer, Double)
+  nameWithType: RX.RX(int, double)
+  nameWithType.vb: RX.New(Integer, Double)
+- uid: QuantumCircuits.RX.#ctor*
+  name: RX
+  href: api/QuantumCircuits.RX.html#QuantumCircuits_RX__ctor_
+  commentId: Overload:QuantumCircuits.RX.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.RX.RX
+  fullName.vb: QuantumCircuits.RX.New
+  nameWithType: RX.RX
+  nameWithType.vb: RX.New
+- uid: QuantumCircuits.RY
+  name: RY
+  href: api/QuantumCircuits.RY.html
+  commentId: T:QuantumCircuits.RY
+  fullName: QuantumCircuits.RY
+  nameWithType: RY
+- uid: QuantumCircuits.RY.#ctor(System.Int32,System.Double)
+  name: RY(int, double)
+  href: api/QuantumCircuits.RY.html#QuantumCircuits_RY__ctor_System_Int32_System_Double_
+  commentId: M:QuantumCircuits.RY.#ctor(System.Int32,System.Double)
+  name.vb: New(Integer, Double)
+  fullName: QuantumCircuits.RY.RY(int, double)
+  fullName.vb: QuantumCircuits.RY.New(Integer, Double)
+  nameWithType: RY.RY(int, double)
+  nameWithType.vb: RY.New(Integer, Double)
+- uid: QuantumCircuits.RY.#ctor*
+  name: RY
+  href: api/QuantumCircuits.RY.html#QuantumCircuits_RY__ctor_
+  commentId: Overload:QuantumCircuits.RY.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.RY.RY
+  fullName.vb: QuantumCircuits.RY.New
+  nameWithType: RY.RY
+  nameWithType.vb: RY.New
+- uid: QuantumCircuits.RZ
+  name: RZ
+  href: api/QuantumCircuits.RZ.html
+  commentId: T:QuantumCircuits.RZ
+  fullName: QuantumCircuits.RZ
+  nameWithType: RZ
+- uid: QuantumCircuits.RZ.#ctor(System.Int32,System.Double)
+  name: RZ(int, double)
+  href: api/QuantumCircuits.RZ.html#QuantumCircuits_RZ__ctor_System_Int32_System_Double_
+  commentId: M:QuantumCircuits.RZ.#ctor(System.Int32,System.Double)
+  name.vb: New(Integer, Double)
+  fullName: QuantumCircuits.RZ.RZ(int, double)
+  fullName.vb: QuantumCircuits.RZ.New(Integer, Double)
+  nameWithType: RZ.RZ(int, double)
+  nameWithType.vb: RZ.New(Integer, Double)
+- uid: QuantumCircuits.RZ.#ctor*
+  name: RZ
+  href: api/QuantumCircuits.RZ.html#QuantumCircuits_RZ__ctor_
+  commentId: Overload:QuantumCircuits.RZ.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.RZ.RZ
+  fullName.vb: QuantumCircuits.RZ.New
+  nameWithType: RZ.RZ
+  nameWithType.vb: RZ.New
+- uid: QuantumCircuits.SWAP
+  name: SWAP
+  href: api/QuantumCircuits.SWAP.html
+  commentId: T:QuantumCircuits.SWAP
+  fullName: QuantumCircuits.SWAP
+  nameWithType: SWAP
+- uid: QuantumCircuits.SWAP.#ctor(System.Int32,System.Int32)
+  name: SWAP(int, int)
+  href: api/QuantumCircuits.SWAP.html#QuantumCircuits_SWAP__ctor_System_Int32_System_Int32_
+  commentId: M:QuantumCircuits.SWAP.#ctor(System.Int32,System.Int32)
+  name.vb: New(Integer, Integer)
+  fullName: QuantumCircuits.SWAP.SWAP(int, int)
+  fullName.vb: QuantumCircuits.SWAP.New(Integer, Integer)
+  nameWithType: SWAP.SWAP(int, int)
+  nameWithType.vb: SWAP.New(Integer, Integer)
+- uid: QuantumCircuits.SWAP.#ctor*
+  name: SWAP
+  href: api/QuantumCircuits.SWAP.html#QuantumCircuits_SWAP__ctor_
+  commentId: Overload:QuantumCircuits.SWAP.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.SWAP.SWAP
+  fullName.vb: QuantumCircuits.SWAP.New
+  nameWithType: SWAP.SWAP
+  nameWithType.vb: SWAP.New
+- uid: QuantumCircuits.T
+  name: T
+  href: api/QuantumCircuits.T.html
+  commentId: T:QuantumCircuits.T
+  fullName: QuantumCircuits.T
+  nameWithType: T
+- uid: QuantumCircuits.T.#ctor(System.Int32)
+  name: T(int)
+  href: api/QuantumCircuits.T.html#QuantumCircuits_T__ctor_System_Int32_
+  commentId: M:QuantumCircuits.T.#ctor(System.Int32)
+  name.vb: New(Integer)
+  fullName: QuantumCircuits.T.T(int)
+  fullName.vb: QuantumCircuits.T.New(Integer)
+  nameWithType: T.T(int)
+  nameWithType.vb: T.New(Integer)
+- uid: QuantumCircuits.T.#ctor*
+  name: T
+  href: api/QuantumCircuits.T.html#QuantumCircuits_T__ctor_
+  commentId: Overload:QuantumCircuits.T.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.T.T
+  fullName.vb: QuantumCircuits.T.New
+  nameWithType: T.T
+  nameWithType.vb: T.New
+- uid: QuantumCircuits.Toff
+  name: Toff
+  href: api/QuantumCircuits.Toff.html
+  commentId: T:QuantumCircuits.Toff
+  fullName: QuantumCircuits.Toff
+  nameWithType: Toff
+- uid: QuantumCircuits.Toff.#ctor(System.Int32,System.Int32,System.Int32)
+  name: Toff(int, int, int)
+  href: api/QuantumCircuits.Toff.html#QuantumCircuits_Toff__ctor_System_Int32_System_Int32_System_Int32_
+  commentId: M:QuantumCircuits.Toff.#ctor(System.Int32,System.Int32,System.Int32)
+  name.vb: New(Integer, Integer, Integer)
+  fullName: QuantumCircuits.Toff.Toff(int, int, int)
+  fullName.vb: QuantumCircuits.Toff.New(Integer, Integer, Integer)
+  nameWithType: Toff.Toff(int, int, int)
+  nameWithType.vb: Toff.New(Integer, Integer, Integer)
+- uid: QuantumCircuits.Toff.#ctor*
+  name: Toff
+  href: api/QuantumCircuits.Toff.html#QuantumCircuits_Toff__ctor_
+  commentId: Overload:QuantumCircuits.Toff.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.Toff.Toff
+  fullName.vb: QuantumCircuits.Toff.New
+  nameWithType: Toff.Toff
+  nameWithType.vb: Toff.New
+- uid: QuantumCircuits.X
+  name: X
+  href: api/QuantumCircuits.X.html
+  commentId: T:QuantumCircuits.X
+  fullName: QuantumCircuits.X
+  nameWithType: X
+- uid: QuantumCircuits.X.#ctor(System.Int32)
+  name: X(int)
+  href: api/QuantumCircuits.X.html#QuantumCircuits_X__ctor_System_Int32_
+  commentId: M:QuantumCircuits.X.#ctor(System.Int32)
+  name.vb: New(Integer)
+  fullName: QuantumCircuits.X.X(int)
+  fullName.vb: QuantumCircuits.X.New(Integer)
+  nameWithType: X.X(int)
+  nameWithType.vb: X.New(Integer)
+- uid: QuantumCircuits.X.#ctor*
+  name: X
+  href: api/QuantumCircuits.X.html#QuantumCircuits_X__ctor_
+  commentId: Overload:QuantumCircuits.X.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.X.X
+  fullName.vb: QuantumCircuits.X.New
+  nameWithType: X.X
+  nameWithType.vb: X.New
+- uid: QuantumCircuits.Y
+  name: Y
+  href: api/QuantumCircuits.Y.html
+  commentId: T:QuantumCircuits.Y
+  fullName: QuantumCircuits.Y
+  nameWithType: Y
+- uid: QuantumCircuits.Y.#ctor(System.Int32)
+  name: Y(int)
+  href: api/QuantumCircuits.Y.html#QuantumCircuits_Y__ctor_System_Int32_
+  commentId: M:QuantumCircuits.Y.#ctor(System.Int32)
+  name.vb: New(Integer)
+  fullName: QuantumCircuits.Y.Y(int)
+  fullName.vb: QuantumCircuits.Y.New(Integer)
+  nameWithType: Y.Y(int)
+  nameWithType.vb: Y.New(Integer)
+- uid: QuantumCircuits.Y.#ctor*
+  name: Y
+  href: api/QuantumCircuits.Y.html#QuantumCircuits_Y__ctor_
+  commentId: Overload:QuantumCircuits.Y.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.Y.Y
+  fullName.vb: QuantumCircuits.Y.New
+  nameWithType: Y.Y
+  nameWithType.vb: Y.New
+- uid: QuantumCircuits.Z
+  name: Z
+  href: api/QuantumCircuits.Z.html
+  commentId: T:QuantumCircuits.Z
+  fullName: QuantumCircuits.Z
+  nameWithType: Z
+- uid: QuantumCircuits.Z.#ctor(System.Int32)
+  name: Z(int)
+  href: api/QuantumCircuits.Z.html#QuantumCircuits_Z__ctor_System_Int32_
+  commentId: M:QuantumCircuits.Z.#ctor(System.Int32)
+  name.vb: New(Integer)
+  fullName: QuantumCircuits.Z.Z(int)
+  fullName.vb: QuantumCircuits.Z.New(Integer)
+  nameWithType: Z.Z(int)
+  nameWithType.vb: Z.New(Integer)
+- uid: QuantumCircuits.Z.#ctor*
+  name: Z
+  href: api/QuantumCircuits.Z.html#QuantumCircuits_Z__ctor_
+  commentId: Overload:QuantumCircuits.Z.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: QuantumCircuits.Z.Z
+  fullName.vb: QuantumCircuits.Z.New
+  nameWithType: Z.Z
+  nameWithType.vb: Z.New

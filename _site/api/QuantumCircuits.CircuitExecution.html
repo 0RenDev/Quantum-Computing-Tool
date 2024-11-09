@@ -1,0 +1,695 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CircuitExecution </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CircuitExecution ">
+      
+      <meta name="description" content="This class is responsible for executing a quantum circuit">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/0RenDev/Quantum-Computing-Tool/new/main/apiSpec/new?filename=QuantumCircuits_CircuitExecution.md&amp;value=---%0Auid%3A%20QuantumCircuits.CircuitExecution%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="QuantumCircuits.CircuitExecution">
+
+
+
+  <h1 id="QuantumCircuits_CircuitExecution" data-uid="QuantumCircuits.CircuitExecution" class="text-break">
+Class CircuitExecution  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="QuantumCircuits.html">QuantumCircuits</a></dd></dl>
+  
+  </div>
+
+  <div class="markdown summary"><p>This class is responsible for executing a quantum circuit</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CircuitExecution</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">CircuitExecution</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="QuantumCircuits_CircuitExecution__ctor_" data-uid="QuantumCircuits.CircuitExecution.#ctor*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution__ctor_QuantumCircuits_QuantumCircuitBuilder_" data-uid="QuantumCircuits.CircuitExecution.#ctor(QuantumCircuits.QuantumCircuitBuilder)">
+  CircuitExecution(QuantumCircuitBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="QuantumCircuits.CircuitExecution.html">CircuitExecution</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CircuitExecution(QuantumCircuitBuilder inputcircuit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inputcircuit</code> <a class="xref" href="QuantumCircuits.QuantumCircuitBuilder.html">QuantumCircuitBuilder</a></dt>
+    <dd><p>The inputcircuit.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="QuantumCircuits_CircuitExecution_QbitCount_" data-uid="QuantumCircuits.CircuitExecution.QbitCount*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_QbitCount" data-uid="QuantumCircuits.CircuitExecution.QbitCount">
+  QbitCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the qbit count.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int QbitCount { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The qbit count.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="QuantumCircuits_CircuitExecution_StateVector_" data-uid="QuantumCircuits.CircuitExecution.StateVector*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_StateVector" data-uid="QuantumCircuits.CircuitExecution.StateVector">
+  StateVector
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the state vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Complex[] StateVector { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.complex">Complex</a>[]</dt>
+    <dd><p>The state vector.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="QuantumCircuits_CircuitExecution_CNOTCreation_" data-uid="QuantumCircuits.CircuitExecution.CNOTCreation*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_CNOTCreation_System_Int32_System_Int32_System_Int32_" data-uid="QuantumCircuits.CircuitExecution.CNOTCreation(System.Int32,System.Int32,System.Int32)">
+  CNOTCreation(int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a tensored CNOT operator matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SparseMatrix CNOTCreation(int gatesize, int controlbit, int targetbit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gatesize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The size of the gate.</p>
+</dd>
+    <dt><code>controlbit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The control qubit.</p>
+</dd>
+    <dt><code>targetbit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The target qubit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LinearAlgebra.SparseMatrix.html">SparseMatrix</a></dt>
+    <dd><p>A <a class="xref" href="LinearAlgebra.SparseMatrix.html">SparseMatrix</a> representation of the tensored CNOT operator matrix</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="QuantumCircuits_CircuitExecution_ExecuteCircuit_" data-uid="QuantumCircuits.CircuitExecution.ExecuteCircuit*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_ExecuteCircuit" data-uid="QuantumCircuits.CircuitExecution.ExecuteCircuit">
+  ExecuteCircuit()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes the quantum circuit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector ExecuteCircuit()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LinearAlgebra.Vector.html">Vector</a></dt>
+    <dd><p>The result statevector as a <a class="xref" href="LinearAlgebra.Vector.html">Vector</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="QuantumCircuits_CircuitExecution_GetStateProbabilities_" data-uid="QuantumCircuits.CircuitExecution.GetStateProbabilities*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_GetStateProbabilities" data-uid="QuantumCircuits.CircuitExecution.GetStateProbabilities">
+  GetStateProbabilities()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculates the probability distribution for the entire system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double[] GetStateProbabilities()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>[]</dt>
+    <dd><p>An array of doubles representing the probability of each basis state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="QuantumCircuits_CircuitExecution_MeasureAllQubits_" data-uid="QuantumCircuits.CircuitExecution.MeasureAllQubits*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_MeasureAllQubits" data-uid="QuantumCircuits.CircuitExecution.MeasureAllQubits">
+  MeasureAllQubits()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Measures all qubits.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] MeasureAllQubits()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>An array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> of bits for the measured state.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="QuantumCircuits_CircuitExecution_PrintBitstrings_" data-uid="QuantumCircuits.CircuitExecution.PrintBitstrings*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_PrintBitstrings_System_Int32_" data-uid="QuantumCircuits.CircuitExecution.PrintBitstrings(System.Int32)">
+  PrintBitstrings(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L545"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Prints simulated measurement bitstring(s) to the console.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PrintBitstrings(int iterations = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of simulations to perform.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="QuantumCircuits_CircuitExecution_PrintHistogram_" data-uid="QuantumCircuits.CircuitExecution.PrintHistogram*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_PrintHistogram_System_Int32_" data-uid="QuantumCircuits.CircuitExecution.PrintHistogram(System.Int32)">
+  PrintHistogram(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L558"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Prints a sideways histogram based on the probabilities of each basis state alongside their respective probability.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PrintHistogram(int bars = 100)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bars</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="QuantumCircuits_CircuitExecution_SimulateHistogram_" data-uid="QuantumCircuits.CircuitExecution.SimulateHistogram*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_SimulateHistogram_System_Int32_System_Int32_" data-uid="QuantumCircuits.CircuitExecution.SimulateHistogram(System.Int32,System.Int32)">
+  SimulateHistogram(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Prints a sideways histogram of simulated measurement results, normalized to a specified number of bars.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SimulateHistogram(int iterations = 1000, int bars = 100)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of simulations to perform.</p>
+</dd>
+    <dt><code>bars</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The total number of hyphens to display in the histogram.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="QuantumCircuits_CircuitExecution_SimulateMeasurements_" data-uid="QuantumCircuits.CircuitExecution.SimulateMeasurements*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_SimulateMeasurements_System_Int32_" data-uid="QuantumCircuits.CircuitExecution.SimulateMeasurements(System.Int32)">
+  SimulateMeasurements(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L500"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Simulates measurements on the entire quantum system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; SimulateMeasurements(int iterations = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>iterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of simulations to perform.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>A list of bitstrings representing the measurement outcomes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="QuantumCircuits_CircuitExecution_SwapCreation_" data-uid="QuantumCircuits.CircuitExecution.SwapCreation*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_SwapCreation_System_Int32_System_Int32_System_Int32_" data-uid="QuantumCircuits.CircuitExecution.SwapCreation(System.Int32,System.Int32,System.Int32)">
+  SwapCreation(int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a tensored SWAP operator matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SparseMatrix SwapCreation(int gatesize, int target1, int target2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gatesize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The size of the gate.</p>
+</dd>
+    <dt><code>target1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The first target qubit.</p>
+</dd>
+    <dt><code>target2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The second target qubit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LinearAlgebra.SparseMatrix.html">SparseMatrix</a></dt>
+    <dd><p>A <a class="xref" href="LinearAlgebra.SparseMatrix.html">SparseMatrix</a> representation of the tensored SWAP operator matrix</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="QuantumCircuits_CircuitExecution_ToString_" data-uid="QuantumCircuits.CircuitExecution.ToString*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_ToString" data-uid="QuantumCircuits.CircuitExecution.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L628"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts to string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> that represents this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="QuantumCircuits_CircuitExecution_ToffoliCreation_" data-uid="QuantumCircuits.CircuitExecution.ToffoliCreation*"></a>
+
+  <h3 id="QuantumCircuits_CircuitExecution_ToffoliCreation_System_Int32_System_Int32_System_Int32_System_Int32_" data-uid="QuantumCircuits.CircuitExecution.ToffoliCreation(System.Int32,System.Int32,System.Int32,System.Int32)">
+  ToffoliCreation(int, int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a tensored Toffoli operator matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SparseMatrix ToffoliCreation(int gatesize, int controlbit1, int controlbit2, int targetbit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gatesize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The size of the gate.</p>
+</dd>
+    <dt><code>controlbit1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The first control qubit.</p>
+</dd>
+    <dt><code>controlbit2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The second control qubit.</p>
+</dd>
+    <dt><code>targetbit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The target qubit.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="LinearAlgebra.SparseMatrix.html">SparseMatrix</a></dt>
+    <dd><p>A <a class="xref" href="LinearAlgebra.SparseMatrix.html">SparseMatrix</a> representation of the tensored Tofolli operator matrix</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/0RenDev/Quantum-Computing-Tool/blob/main/src/QuantumCircuits/CircuitExecution.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

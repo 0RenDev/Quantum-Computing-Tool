@@ -1,0 +1,348 @@
+{
+  "source_base_path": "C:/Users/seanm/OneDrive/Documents/ASU/ASU Fall 2024/CSE 424/Quantum-Computing-Tool",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LinearAlgebra.Idenity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LinearAlgebra.Idenity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LinearAlgebra.Matrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LinearAlgebra.Matrix.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LinearAlgebra.Operations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LinearAlgebra.Operations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LinearAlgebra.SparseMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LinearAlgebra.SparseMatrix.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LinearAlgebra.Vector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LinearAlgebra.Vector.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/LinearAlgebra.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/LinearAlgebra.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.CX.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.CX.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.CircuitExecution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.CircuitExecution.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.Gate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.Gate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.GateTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.GateTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.H.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.H.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.NOP.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.NOP.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.QuantumCircuitBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.QuantumCircuitBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.RX.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.RX.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.RY.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.RY.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.RZ.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.RZ.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.SWAP.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.SWAP.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.T.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.T.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.Toff.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.Toff.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.X.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.X.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.Y.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.Y.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.Z.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.Z.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumCircuits.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumCircuits.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/LinearAlgebra/README_LA.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/LinearAlgebra/README_LA.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
