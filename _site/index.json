@@ -136,8 +136,8 @@
   },
   "index.html": {
     "href": "index.html",
-    "title": "This is the HOMEPAGE.",
-    "keywords": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+    "title": "Welcome to the Documentation!",
+    "keywords": "Welcome to the Documentation! Welcome to the homepage of the documentation for this project. Below are links to the main sections: Docs API"
   },
   "src/LinearAlgebra/README_LA.html": {
     "href": "src/LinearAlgebra/README_LA.html",
