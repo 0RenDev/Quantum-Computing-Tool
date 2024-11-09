@@ -1,0 +1,623 @@
+### YamlMime:ManagedReference
+items:
+- uid: LinearAlgebra.Idenity
+  commentId: T:LinearAlgebra.Idenity
+  id: Idenity
+  parent: LinearAlgebra
+  children:
+  - LinearAlgebra.Idenity.#ctor(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: Idenity
+  nameWithType: Idenity
+  fullName: LinearAlgebra.Idenity
+  type: Class
+  source:
+    remote:
+      path: src/LinearAlgebra/LinearAlgebra_matrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Idenity
+    path: src/LinearAlgebra/LinearAlgebra_matrix.cs
+    startLine: 466
+  namespace: LinearAlgebra
+  summary: This class represents an identity matrix in linear algebra. An identity matrix is a square matrix with ones on the main diagonal and zeros elsewhere.
+  example: []
+  syntax:
+    content: 'public class Idenity : Matrix'
+    content.vb: Public Class Idenity Inherits Matrix
+  seealso:
+  - linkId: LinearAlgebra.Matrix
+    commentId: T:LinearAlgebra.Matrix
+  inheritance:
+  - System.Object
+  - LinearAlgebra.Matrix
+  inheritedMembers:
+  - LinearAlgebra.Matrix.rows
+  - LinearAlgebra.Matrix.cols
+  - LinearAlgebra.Matrix.elements
+  - LinearAlgebra.Matrix.GetRow(System.Int32)
+  - LinearAlgebra.Matrix.GetColumn(System.Int32)
+  - LinearAlgebra.Matrix.Item(System.Int32,System.Int32)
+  - LinearAlgebra.Matrix.Transpose
+  - LinearAlgebra.Matrix.TransposeInPlace
+  - LinearAlgebra.Matrix.Trace
+  - LinearAlgebra.Matrix.Conjugate
+  - LinearAlgebra.Matrix.ConjugateInPlace
+  - LinearAlgebra.Matrix.ToString
+  - LinearAlgebra.Matrix.Equals(System.Object)
+  - LinearAlgebra.Matrix.GetHashCode
+  - LinearAlgebra.Matrix.AddInPlace(LinearAlgebra.Matrix)
+  - LinearAlgebra.Matrix.SubtractInPlace(LinearAlgebra.Matrix)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: LinearAlgebra.Idenity.#ctor(System.Int32)
+  commentId: M:LinearAlgebra.Idenity.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: LinearAlgebra.Idenity
+  langs:
+  - csharp
+  - vb
+  name: Idenity(int)
+  nameWithType: Idenity.Idenity(int)
+  fullName: LinearAlgebra.Idenity.Idenity(int)
+  type: Constructor
+  source:
+    remote:
+      path: src/LinearAlgebra/LinearAlgebra_matrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: .ctor
+    path: src/LinearAlgebra/LinearAlgebra_matrix.cs
+    startLine: 472
+  namespace: LinearAlgebra
+  summary: Initializes a new instance of the <xref href="LinearAlgebra.Idenity" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public Idenity(int size)
+    parameters:
+    - id: size
+      type: System.Int32
+      description: The size of the matrix.
+    content.vb: Public Sub New(size As Integer)
+  overload: LinearAlgebra.Idenity.#ctor*
+  nameWithType.vb: Idenity.New(Integer)
+  fullName.vb: LinearAlgebra.Idenity.New(Integer)
+  name.vb: New(Integer)
+references:
+- uid: LinearAlgebra.Matrix
+  commentId: T:LinearAlgebra.Matrix
+  parent: LinearAlgebra
+  href: LinearAlgebra.Matrix.html
+  name: Matrix
+  nameWithType: Matrix
+  fullName: LinearAlgebra.Matrix
+- uid: LinearAlgebra
+  commentId: N:LinearAlgebra
+  href: LinearAlgebra.html
+  name: LinearAlgebra
+  nameWithType: LinearAlgebra
+  fullName: LinearAlgebra
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: LinearAlgebra.Matrix.rows
+  commentId: P:LinearAlgebra.Matrix.rows
+  parent: LinearAlgebra.Matrix
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_rows
+  name: rows
+  nameWithType: Matrix.rows
+  fullName: LinearAlgebra.Matrix.rows
+- uid: LinearAlgebra.Matrix.cols
+  commentId: P:LinearAlgebra.Matrix.cols
+  parent: LinearAlgebra.Matrix
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_cols
+  name: cols
+  nameWithType: Matrix.cols
+  fullName: LinearAlgebra.Matrix.cols
+- uid: LinearAlgebra.Matrix.elements
+  commentId: F:LinearAlgebra.Matrix.elements
+  parent: LinearAlgebra.Matrix
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_elements
+  name: elements
+  nameWithType: Matrix.elements
+  fullName: LinearAlgebra.Matrix.elements
+- uid: LinearAlgebra.Matrix.GetRow(System.Int32)
+  commentId: M:LinearAlgebra.Matrix.GetRow(System.Int32)
+  parent: LinearAlgebra.Matrix
+  isExternal: true
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetRow_System_Int32_
+  name: GetRow(int)
+  nameWithType: Matrix.GetRow(int)
+  fullName: LinearAlgebra.Matrix.GetRow(int)
+  nameWithType.vb: Matrix.GetRow(Integer)
+  fullName.vb: LinearAlgebra.Matrix.GetRow(Integer)
+  name.vb: GetRow(Integer)
+  spec.csharp:
+  - uid: LinearAlgebra.Matrix.GetRow(System.Int32)
+    name: GetRow
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetRow_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.GetRow(System.Int32)
+    name: GetRow
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetRow_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LinearAlgebra.Matrix.GetColumn(System.Int32)
+  commentId: M:LinearAlgebra.Matrix.GetColumn(System.Int32)
+  parent: LinearAlgebra.Matrix
+  isExternal: true
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetColumn_System_Int32_
+  name: GetColumn(int)
+  nameWithType: Matrix.GetColumn(int)
+  fullName: LinearAlgebra.Matrix.GetColumn(int)
+  nameWithType.vb: Matrix.GetColumn(Integer)
+  fullName.vb: LinearAlgebra.Matrix.GetColumn(Integer)
+  name.vb: GetColumn(Integer)
+  spec.csharp:
+  - uid: LinearAlgebra.Matrix.GetColumn(System.Int32)
+    name: GetColumn
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetColumn_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.GetColumn(System.Int32)
+    name: GetColumn
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetColumn_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LinearAlgebra.Matrix.Item(System.Int32,System.Int32)
+  commentId: P:LinearAlgebra.Matrix.Item(System.Int32,System.Int32)
+  parent: LinearAlgebra.Matrix
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: this[int, int]
+  nameWithType: Matrix.this[int, int]
+  fullName: LinearAlgebra.Matrix.this[int, int]
+  nameWithType.vb: Matrix.this[](Integer, Integer)
+  fullName.vb: LinearAlgebra.Matrix.this[](Integer, Integer)
+  name.vb: this[](Integer, Integer)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ']'
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.Item(System.Int32,System.Int32)
+    name: this[]
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Item_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: LinearAlgebra.Matrix.Transpose
+  commentId: M:LinearAlgebra.Matrix.Transpose
+  parent: LinearAlgebra.Matrix
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Transpose
+  name: Transpose()
+  nameWithType: Matrix.Transpose()
+  fullName: LinearAlgebra.Matrix.Transpose()
+  spec.csharp:
+  - uid: LinearAlgebra.Matrix.Transpose
+    name: Transpose
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Transpose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.Transpose
+    name: Transpose
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Transpose
+  - name: (
+  - name: )
+- uid: LinearAlgebra.Matrix.TransposeInPlace
+  commentId: M:LinearAlgebra.Matrix.TransposeInPlace
+  parent: LinearAlgebra.Matrix
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_TransposeInPlace
+  name: TransposeInPlace()
+  nameWithType: Matrix.TransposeInPlace()
+  fullName: LinearAlgebra.Matrix.TransposeInPlace()
+  spec.csharp:
+  - uid: LinearAlgebra.Matrix.TransposeInPlace
+    name: TransposeInPlace
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_TransposeInPlace
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.TransposeInPlace
+    name: TransposeInPlace
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_TransposeInPlace
+  - name: (
+  - name: )
+- uid: LinearAlgebra.Matrix.Trace
+  commentId: M:LinearAlgebra.Matrix.Trace
+  parent: LinearAlgebra.Matrix
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Trace
+  name: Trace()
+  nameWithType: Matrix.Trace()
+  fullName: LinearAlgebra.Matrix.Trace()
+  spec.csharp:
+  - uid: LinearAlgebra.Matrix.Trace
+    name: Trace
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Trace
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.Trace
+    name: Trace
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Trace
+  - name: (
+  - name: )
+- uid: LinearAlgebra.Matrix.Conjugate
+  commentId: M:LinearAlgebra.Matrix.Conjugate
+  parent: LinearAlgebra.Matrix
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Conjugate
+  name: Conjugate()
+  nameWithType: Matrix.Conjugate()
+  fullName: LinearAlgebra.Matrix.Conjugate()
+  spec.csharp:
+  - uid: LinearAlgebra.Matrix.Conjugate
+    name: Conjugate
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Conjugate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.Conjugate
+    name: Conjugate
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Conjugate
+  - name: (
+  - name: )
+- uid: LinearAlgebra.Matrix.ConjugateInPlace
+  commentId: M:LinearAlgebra.Matrix.ConjugateInPlace
+  parent: LinearAlgebra.Matrix
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_ConjugateInPlace
+  name: ConjugateInPlace()
+  nameWithType: Matrix.ConjugateInPlace()
+  fullName: LinearAlgebra.Matrix.ConjugateInPlace()
+  spec.csharp:
+  - uid: LinearAlgebra.Matrix.ConjugateInPlace
+    name: ConjugateInPlace
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_ConjugateInPlace
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.ConjugateInPlace
+    name: ConjugateInPlace
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_ConjugateInPlace
+  - name: (
+  - name: )
+- uid: LinearAlgebra.Matrix.ToString
+  commentId: M:LinearAlgebra.Matrix.ToString
+  parent: LinearAlgebra.Matrix
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_ToString
+  name: ToString()
+  nameWithType: Matrix.ToString()
+  fullName: LinearAlgebra.Matrix.ToString()
+  spec.csharp:
+  - uid: LinearAlgebra.Matrix.ToString
+    name: ToString
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.ToString
+    name: ToString
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_ToString
+  - name: (
+  - name: )
+- uid: LinearAlgebra.Matrix.Equals(System.Object)
+  commentId: M:LinearAlgebra.Matrix.Equals(System.Object)
+  parent: LinearAlgebra.Matrix
+  isExternal: true
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: Matrix.Equals(object)
+  fullName: LinearAlgebra.Matrix.Equals(object)
+  nameWithType.vb: Matrix.Equals(Object)
+  fullName.vb: LinearAlgebra.Matrix.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: LinearAlgebra.Matrix.Equals(System.Object)
+    name: Equals
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.Equals(System.Object)
+    name: Equals
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: LinearAlgebra.Matrix.GetHashCode
+  commentId: M:LinearAlgebra.Matrix.GetHashCode
+  parent: LinearAlgebra.Matrix
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetHashCode
+  name: GetHashCode()
+  nameWithType: Matrix.GetHashCode()
+  fullName: LinearAlgebra.Matrix.GetHashCode()
+  spec.csharp:
+  - uid: LinearAlgebra.Matrix.GetHashCode
+    name: GetHashCode
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.GetHashCode
+    name: GetHashCode
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_GetHashCode
+  - name: (
+  - name: )
+- uid: LinearAlgebra.Matrix.AddInPlace(LinearAlgebra.Matrix)
+  commentId: M:LinearAlgebra.Matrix.AddInPlace(LinearAlgebra.Matrix)
+  parent: LinearAlgebra.Matrix
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_AddInPlace_LinearAlgebra_Matrix_
+  name: AddInPlace(Matrix)
+  nameWithType: Matrix.AddInPlace(Matrix)
+  fullName: LinearAlgebra.Matrix.AddInPlace(LinearAlgebra.Matrix)
+  spec.csharp:
+  - uid: LinearAlgebra.Matrix.AddInPlace(LinearAlgebra.Matrix)
+    name: AddInPlace
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_AddInPlace_LinearAlgebra_Matrix_
+  - name: (
+  - uid: LinearAlgebra.Matrix
+    name: Matrix
+    href: LinearAlgebra.Matrix.html
+  - name: )
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.AddInPlace(LinearAlgebra.Matrix)
+    name: AddInPlace
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_AddInPlace_LinearAlgebra_Matrix_
+  - name: (
+  - uid: LinearAlgebra.Matrix
+    name: Matrix
+    href: LinearAlgebra.Matrix.html
+  - name: )
+- uid: LinearAlgebra.Matrix.SubtractInPlace(LinearAlgebra.Matrix)
+  commentId: M:LinearAlgebra.Matrix.SubtractInPlace(LinearAlgebra.Matrix)
+  parent: LinearAlgebra.Matrix
+  href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_SubtractInPlace_LinearAlgebra_Matrix_
+  name: SubtractInPlace(Matrix)
+  nameWithType: Matrix.SubtractInPlace(Matrix)
+  fullName: LinearAlgebra.Matrix.SubtractInPlace(LinearAlgebra.Matrix)
+  spec.csharp:
+  - uid: LinearAlgebra.Matrix.SubtractInPlace(LinearAlgebra.Matrix)
+    name: SubtractInPlace
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_SubtractInPlace_LinearAlgebra_Matrix_
+  - name: (
+  - uid: LinearAlgebra.Matrix
+    name: Matrix
+    href: LinearAlgebra.Matrix.html
+  - name: )
+  spec.vb:
+  - uid: LinearAlgebra.Matrix.SubtractInPlace(LinearAlgebra.Matrix)
+    name: SubtractInPlace
+    href: LinearAlgebra.Matrix.html#LinearAlgebra_Matrix_SubtractInPlace_LinearAlgebra_Matrix_
+  - name: (
+  - uid: LinearAlgebra.Matrix
+    name: Matrix
+    href: LinearAlgebra.Matrix.html
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: LinearAlgebra.Idenity
+  commentId: T:LinearAlgebra.Idenity
+  href: LinearAlgebra.Idenity.html
+  name: Idenity
+  nameWithType: Idenity
+  fullName: LinearAlgebra.Idenity
+- uid: LinearAlgebra.Idenity.#ctor*
+  commentId: Overload:LinearAlgebra.Idenity.#ctor
+  href: LinearAlgebra.Idenity.html#LinearAlgebra_Idenity__ctor_System_Int32_
+  name: Idenity
+  nameWithType: Idenity.Idenity
+  fullName: LinearAlgebra.Idenity.Idenity
+  nameWithType.vb: Idenity.New
+  fullName.vb: LinearAlgebra.Idenity.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

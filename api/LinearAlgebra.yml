@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: LinearAlgebra
+  commentId: N:LinearAlgebra
+  id: LinearAlgebra
+  children:
+  - LinearAlgebra.Idenity
+  - LinearAlgebra.Matrix
+  - LinearAlgebra.Operations
+  - LinearAlgebra.SparseMatrix
+  - LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: LinearAlgebra
+  nameWithType: LinearAlgebra
+  fullName: LinearAlgebra
+  type: Namespace
+references:
+- uid: LinearAlgebra.Matrix
+  commentId: T:LinearAlgebra.Matrix
+  parent: LinearAlgebra
+  href: LinearAlgebra.Matrix.html
+  name: Matrix
+  nameWithType: Matrix
+  fullName: LinearAlgebra.Matrix
+- uid: LinearAlgebra.Idenity
+  commentId: T:LinearAlgebra.Idenity
+  href: LinearAlgebra.Idenity.html
+  name: Idenity
+  nameWithType: Idenity
+  fullName: LinearAlgebra.Idenity
+- uid: LinearAlgebra.Operations
+  commentId: T:LinearAlgebra.Operations
+  href: LinearAlgebra.Operations.html
+  name: Operations
+  nameWithType: Operations
+  fullName: LinearAlgebra.Operations
+- uid: LinearAlgebra.Vector
+  commentId: T:LinearAlgebra.Vector
+  parent: LinearAlgebra
+  href: LinearAlgebra.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: LinearAlgebra.Vector
+- uid: LinearAlgebra.SparseMatrix
+  commentId: T:LinearAlgebra.SparseMatrix
+  parent: LinearAlgebra
+  href: LinearAlgebra.SparseMatrix.html
+  name: SparseMatrix
+  nameWithType: SparseMatrix
+  fullName: LinearAlgebra.SparseMatrix
+- uid: LinearAlgebra
+  commentId: N:LinearAlgebra
+  href: LinearAlgebra.html
+  name: LinearAlgebra
+  nameWithType: LinearAlgebra
+  fullName: LinearAlgebra

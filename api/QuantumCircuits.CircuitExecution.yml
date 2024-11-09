@@ -1,0 +1,1092 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumCircuits.CircuitExecution
+  commentId: T:QuantumCircuits.CircuitExecution
+  id: CircuitExecution
+  parent: QuantumCircuits
+  children:
+  - QuantumCircuits.CircuitExecution.#ctor(QuantumCircuits.QuantumCircuitBuilder)
+  - QuantumCircuits.CircuitExecution.CNOTCreation(System.Int32,System.Int32,System.Int32)
+  - QuantumCircuits.CircuitExecution.ExecuteCircuit
+  - QuantumCircuits.CircuitExecution.GetStateProbabilities
+  - QuantumCircuits.CircuitExecution.MeasureAllQubits
+  - QuantumCircuits.CircuitExecution.PrintBitstrings(System.Int32)
+  - QuantumCircuits.CircuitExecution.PrintHistogram(System.Int32)
+  - QuantumCircuits.CircuitExecution.QbitCount
+  - QuantumCircuits.CircuitExecution.SimulateHistogram(System.Int32,System.Int32)
+  - QuantumCircuits.CircuitExecution.SimulateMeasurements(System.Int32)
+  - QuantumCircuits.CircuitExecution.StateVector
+  - QuantumCircuits.CircuitExecution.SwapCreation(System.Int32,System.Int32,System.Int32)
+  - QuantumCircuits.CircuitExecution.ToString
+  - QuantumCircuits.CircuitExecution.ToffoliCreation(System.Int32,System.Int32,System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: CircuitExecution
+  nameWithType: CircuitExecution
+  fullName: QuantumCircuits.CircuitExecution
+  type: Class
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: CircuitExecution
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 14
+  namespace: QuantumCircuits
+  summary: This class is responsible for executing a quantum circuit
+  example: []
+  syntax:
+    content: public class CircuitExecution
+    content.vb: Public Class CircuitExecution
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: QuantumCircuits.CircuitExecution.QbitCount
+  commentId: P:QuantumCircuits.CircuitExecution.QbitCount
+  id: QbitCount
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: QbitCount
+  nameWithType: CircuitExecution.QbitCount
+  fullName: QuantumCircuits.CircuitExecution.QbitCount
+  type: Property
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: QbitCount
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 32
+  namespace: QuantumCircuits
+  summary: Gets the qbit count.
+  example: []
+  syntax:
+    content: public int QbitCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: The qbit count.
+    content.vb: Public Property QbitCount As Integer
+  overload: QuantumCircuits.CircuitExecution.QbitCount*
+- uid: QuantumCircuits.CircuitExecution.StateVector
+  commentId: P:QuantumCircuits.CircuitExecution.StateVector
+  id: StateVector
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: StateVector
+  nameWithType: CircuitExecution.StateVector
+  fullName: QuantumCircuits.CircuitExecution.StateVector
+  type: Property
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: StateVector
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 40
+  namespace: QuantumCircuits
+  summary: Gets the state vector.
+  example: []
+  syntax:
+    content: public Complex[] StateVector { get; }
+    parameters: []
+    return:
+      type: System.Numerics.Complex[]
+      description: The state vector.
+    content.vb: Public Property StateVector As Complex()
+  overload: QuantumCircuits.CircuitExecution.StateVector*
+- uid: QuantumCircuits.CircuitExecution.#ctor(QuantumCircuits.QuantumCircuitBuilder)
+  commentId: M:QuantumCircuits.CircuitExecution.#ctor(QuantumCircuits.QuantumCircuitBuilder)
+  id: '#ctor(QuantumCircuits.QuantumCircuitBuilder)'
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: CircuitExecution(QuantumCircuitBuilder)
+  nameWithType: CircuitExecution.CircuitExecution(QuantumCircuitBuilder)
+  fullName: QuantumCircuits.CircuitExecution.CircuitExecution(QuantumCircuits.QuantumCircuitBuilder)
+  type: Constructor
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: .ctor
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 46
+  namespace: QuantumCircuits
+  summary: Initializes a new instance of the <xref href="QuantumCircuits.CircuitExecution" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public CircuitExecution(QuantumCircuitBuilder inputcircuit)
+    parameters:
+    - id: inputcircuit
+      type: QuantumCircuits.QuantumCircuitBuilder
+      description: The inputcircuit.
+    content.vb: Public Sub New(inputcircuit As QuantumCircuitBuilder)
+  overload: QuantumCircuits.CircuitExecution.#ctor*
+  nameWithType.vb: CircuitExecution.New(QuantumCircuitBuilder)
+  fullName.vb: QuantumCircuits.CircuitExecution.New(QuantumCircuits.QuantumCircuitBuilder)
+  name.vb: New(QuantumCircuitBuilder)
+- uid: QuantumCircuits.CircuitExecution.ExecuteCircuit
+  commentId: M:QuantumCircuits.CircuitExecution.ExecuteCircuit
+  id: ExecuteCircuit
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: ExecuteCircuit()
+  nameWithType: CircuitExecution.ExecuteCircuit()
+  fullName: QuantumCircuits.CircuitExecution.ExecuteCircuit()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: ExecuteCircuit
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 93
+  namespace: QuantumCircuits
+  summary: Executes the quantum circuit.
+  example: []
+  syntax:
+    content: public Vector ExecuteCircuit()
+    return:
+      type: LinearAlgebra.Vector
+      description: The result statevector as a <xref href="LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function ExecuteCircuit() As Vector
+  overload: QuantumCircuits.CircuitExecution.ExecuteCircuit*
+- uid: QuantumCircuits.CircuitExecution.CNOTCreation(System.Int32,System.Int32,System.Int32)
+  commentId: M:QuantumCircuits.CircuitExecution.CNOTCreation(System.Int32,System.Int32,System.Int32)
+  id: CNOTCreation(System.Int32,System.Int32,System.Int32)
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: CNOTCreation(int, int, int)
+  nameWithType: CircuitExecution.CNOTCreation(int, int, int)
+  fullName: QuantumCircuits.CircuitExecution.CNOTCreation(int, int, int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: CNOTCreation
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 211
+  namespace: QuantumCircuits
+  summary: Creates a tensored CNOT operator matrix.
+  example: []
+  syntax:
+    content: public SparseMatrix CNOTCreation(int gatesize, int controlbit, int targetbit)
+    parameters:
+    - id: gatesize
+      type: System.Int32
+      description: The size of the gate.
+    - id: controlbit
+      type: System.Int32
+      description: The control qubit.
+    - id: targetbit
+      type: System.Int32
+      description: The target qubit.
+    return:
+      type: LinearAlgebra.SparseMatrix
+      description: A <xref href="LinearAlgebra.SparseMatrix" data-throw-if-not-resolved="false"></xref> representation of the tensored CNOT operator matrix
+    content.vb: Public Function CNOTCreation(gatesize As Integer, controlbit As Integer, targetbit As Integer) As SparseMatrix
+  overload: QuantumCircuits.CircuitExecution.CNOTCreation*
+  nameWithType.vb: CircuitExecution.CNOTCreation(Integer, Integer, Integer)
+  fullName.vb: QuantumCircuits.CircuitExecution.CNOTCreation(Integer, Integer, Integer)
+  name.vb: CNOTCreation(Integer, Integer, Integer)
+- uid: QuantumCircuits.CircuitExecution.SwapCreation(System.Int32,System.Int32,System.Int32)
+  commentId: M:QuantumCircuits.CircuitExecution.SwapCreation(System.Int32,System.Int32,System.Int32)
+  id: SwapCreation(System.Int32,System.Int32,System.Int32)
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: SwapCreation(int, int, int)
+  nameWithType: CircuitExecution.SwapCreation(int, int, int)
+  fullName: QuantumCircuits.CircuitExecution.SwapCreation(int, int, int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: SwapCreation
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 255
+  namespace: QuantumCircuits
+  summary: Creates a tensored SWAP operator matrix.
+  example: []
+  syntax:
+    content: public SparseMatrix SwapCreation(int gatesize, int target1, int target2)
+    parameters:
+    - id: gatesize
+      type: System.Int32
+      description: The size of the gate.
+    - id: target1
+      type: System.Int32
+      description: The first target qubit.
+    - id: target2
+      type: System.Int32
+      description: The second target qubit.
+    return:
+      type: LinearAlgebra.SparseMatrix
+      description: A <xref href="LinearAlgebra.SparseMatrix" data-throw-if-not-resolved="false"></xref> representation of the tensored SWAP operator matrix
+    content.vb: Public Function SwapCreation(gatesize As Integer, target1 As Integer, target2 As Integer) As SparseMatrix
+  overload: QuantumCircuits.CircuitExecution.SwapCreation*
+  nameWithType.vb: CircuitExecution.SwapCreation(Integer, Integer, Integer)
+  fullName.vb: QuantumCircuits.CircuitExecution.SwapCreation(Integer, Integer, Integer)
+  name.vb: SwapCreation(Integer, Integer, Integer)
+- uid: QuantumCircuits.CircuitExecution.ToffoliCreation(System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:QuantumCircuits.CircuitExecution.ToffoliCreation(System.Int32,System.Int32,System.Int32,System.Int32)
+  id: ToffoliCreation(System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: ToffoliCreation(int, int, int, int)
+  nameWithType: CircuitExecution.ToffoliCreation(int, int, int, int)
+  fullName: QuantumCircuits.CircuitExecution.ToffoliCreation(int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: ToffoliCreation
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 302
+  namespace: QuantumCircuits
+  summary: Creates a tensored Toffoli operator matrix.
+  example: []
+  syntax:
+    content: public SparseMatrix ToffoliCreation(int gatesize, int controlbit1, int controlbit2, int targetbit)
+    parameters:
+    - id: gatesize
+      type: System.Int32
+      description: The size of the gate.
+    - id: controlbit1
+      type: System.Int32
+      description: The first control qubit.
+    - id: controlbit2
+      type: System.Int32
+      description: The second control qubit.
+    - id: targetbit
+      type: System.Int32
+      description: The target qubit.
+    return:
+      type: LinearAlgebra.SparseMatrix
+      description: A <xref href="LinearAlgebra.SparseMatrix" data-throw-if-not-resolved="false"></xref> representation of the tensored Tofolli operator matrix
+    content.vb: Public Function ToffoliCreation(gatesize As Integer, controlbit1 As Integer, controlbit2 As Integer, targetbit As Integer) As SparseMatrix
+  overload: QuantumCircuits.CircuitExecution.ToffoliCreation*
+  nameWithType.vb: CircuitExecution.ToffoliCreation(Integer, Integer, Integer, Integer)
+  fullName.vb: QuantumCircuits.CircuitExecution.ToffoliCreation(Integer, Integer, Integer, Integer)
+  name.vb: ToffoliCreation(Integer, Integer, Integer, Integer)
+- uid: QuantumCircuits.CircuitExecution.MeasureAllQubits
+  commentId: M:QuantumCircuits.CircuitExecution.MeasureAllQubits
+  id: MeasureAllQubits
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: MeasureAllQubits()
+  nameWithType: CircuitExecution.MeasureAllQubits()
+  fullName: QuantumCircuits.CircuitExecution.MeasureAllQubits()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: MeasureAllQubits
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 400
+  namespace: QuantumCircuits
+  summary: Measures all qubits.
+  example: []
+  syntax:
+    content: public byte[] MeasureAllQubits()
+    return:
+      type: System.Byte[]
+      description: An array of <xref href="System.Byte" data-throw-if-not-resolved="false"></xref> of bits for the measured state.
+    content.vb: Public Function MeasureAllQubits() As Byte()
+  overload: QuantumCircuits.CircuitExecution.MeasureAllQubits*
+- uid: QuantumCircuits.CircuitExecution.GetStateProbabilities
+  commentId: M:QuantumCircuits.CircuitExecution.GetStateProbabilities
+  id: GetStateProbabilities
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: GetStateProbabilities()
+  nameWithType: CircuitExecution.GetStateProbabilities()
+  fullName: QuantumCircuits.CircuitExecution.GetStateProbabilities()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: GetStateProbabilities
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 471
+  namespace: QuantumCircuits
+  summary: Calculates the probability distribution for the entire system.
+  example: []
+  syntax:
+    content: public double[] GetStateProbabilities()
+    return:
+      type: System.Double[]
+      description: An array of doubles representing the probability of each basis state.
+    content.vb: Public Function GetStateProbabilities() As Double()
+  overload: QuantumCircuits.CircuitExecution.GetStateProbabilities*
+- uid: QuantumCircuits.CircuitExecution.SimulateMeasurements(System.Int32)
+  commentId: M:QuantumCircuits.CircuitExecution.SimulateMeasurements(System.Int32)
+  id: SimulateMeasurements(System.Int32)
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: SimulateMeasurements(int)
+  nameWithType: CircuitExecution.SimulateMeasurements(int)
+  fullName: QuantumCircuits.CircuitExecution.SimulateMeasurements(int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: SimulateMeasurements
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 499
+  namespace: QuantumCircuits
+  summary: Simulates measurements on the entire quantum system.
+  example: []
+  syntax:
+    content: public List<string> SimulateMeasurements(int iterations = 1)
+    parameters:
+    - id: iterations
+      type: System.Int32
+      description: The number of simulations to perform.
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: A list of bitstrings representing the measurement outcomes.
+    content.vb: Public Function SimulateMeasurements(iterations As Integer = 1) As List(Of String)
+  overload: QuantumCircuits.CircuitExecution.SimulateMeasurements*
+  nameWithType.vb: CircuitExecution.SimulateMeasurements(Integer)
+  fullName.vb: QuantumCircuits.CircuitExecution.SimulateMeasurements(Integer)
+  name.vb: SimulateMeasurements(Integer)
+- uid: QuantumCircuits.CircuitExecution.PrintBitstrings(System.Int32)
+  commentId: M:QuantumCircuits.CircuitExecution.PrintBitstrings(System.Int32)
+  id: PrintBitstrings(System.Int32)
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: PrintBitstrings(int)
+  nameWithType: CircuitExecution.PrintBitstrings(int)
+  fullName: QuantumCircuits.CircuitExecution.PrintBitstrings(int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: PrintBitstrings
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 544
+  namespace: QuantumCircuits
+  summary: Prints simulated measurement bitstring(s) to the console.
+  example: []
+  syntax:
+    content: public void PrintBitstrings(int iterations = 1)
+    parameters:
+    - id: iterations
+      type: System.Int32
+      description: The number of simulations to perform.
+    content.vb: Public Sub PrintBitstrings(iterations As Integer = 1)
+  overload: QuantumCircuits.CircuitExecution.PrintBitstrings*
+  nameWithType.vb: CircuitExecution.PrintBitstrings(Integer)
+  fullName.vb: QuantumCircuits.CircuitExecution.PrintBitstrings(Integer)
+  name.vb: PrintBitstrings(Integer)
+- uid: QuantumCircuits.CircuitExecution.PrintHistogram(System.Int32)
+  commentId: M:QuantumCircuits.CircuitExecution.PrintHistogram(System.Int32)
+  id: PrintHistogram(System.Int32)
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: PrintHistogram(int)
+  nameWithType: CircuitExecution.PrintHistogram(int)
+  fullName: QuantumCircuits.CircuitExecution.PrintHistogram(int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: PrintHistogram
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 557
+  namespace: QuantumCircuits
+  summary: Prints a sideways histogram based on the probabilities of each basis state alongside their respective probability.
+  example: []
+  syntax:
+    content: public void PrintHistogram(int bars = 100)
+    parameters:
+    - id: bars
+      type: System.Int32
+    content.vb: Public Sub PrintHistogram(bars As Integer = 100)
+  overload: QuantumCircuits.CircuitExecution.PrintHistogram*
+  nameWithType.vb: CircuitExecution.PrintHistogram(Integer)
+  fullName.vb: QuantumCircuits.CircuitExecution.PrintHistogram(Integer)
+  name.vb: PrintHistogram(Integer)
+- uid: QuantumCircuits.CircuitExecution.SimulateHistogram(System.Int32,System.Int32)
+  commentId: M:QuantumCircuits.CircuitExecution.SimulateHistogram(System.Int32,System.Int32)
+  id: SimulateHistogram(System.Int32,System.Int32)
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: SimulateHistogram(int, int)
+  nameWithType: CircuitExecution.SimulateHistogram(int, int)
+  fullName: QuantumCircuits.CircuitExecution.SimulateHistogram(int, int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: SimulateHistogram
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 585
+  namespace: QuantumCircuits
+  summary: Prints a sideways histogram of simulated measurement results, normalized to a specified number of bars.
+  example: []
+  syntax:
+    content: public void SimulateHistogram(int iterations = 1000, int bars = 100)
+    parameters:
+    - id: iterations
+      type: System.Int32
+      description: The number of simulations to perform.
+    - id: bars
+      type: System.Int32
+      description: The total number of hyphens to display in the histogram.
+    content.vb: Public Sub SimulateHistogram(iterations As Integer = 1000, bars As Integer = 100)
+  overload: QuantumCircuits.CircuitExecution.SimulateHistogram*
+  nameWithType.vb: CircuitExecution.SimulateHistogram(Integer, Integer)
+  fullName.vb: QuantumCircuits.CircuitExecution.SimulateHistogram(Integer, Integer)
+  name.vb: SimulateHistogram(Integer, Integer)
+- uid: QuantumCircuits.CircuitExecution.ToString
+  commentId: M:QuantumCircuits.CircuitExecution.ToString
+  id: ToString
+  parent: QuantumCircuits.CircuitExecution
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: CircuitExecution.ToString()
+  fullName: QuantumCircuits.CircuitExecution.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumCircuits/CircuitExecution.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: ToString
+    path: src/QuantumCircuits/CircuitExecution.cs
+    startLine: 627
+  namespace: QuantumCircuits
+  summary: Converts to string.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> that represents this instance.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: QuantumCircuits.CircuitExecution.ToString*
+references:
+- uid: QuantumCircuits
+  commentId: N:QuantumCircuits
+  href: QuantumCircuits.html
+  name: QuantumCircuits
+  nameWithType: QuantumCircuits
+  fullName: QuantumCircuits
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: QuantumCircuits.CircuitExecution.QbitCount*
+  commentId: Overload:QuantumCircuits.CircuitExecution.QbitCount
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_QbitCount
+  name: QbitCount
+  nameWithType: CircuitExecution.QbitCount
+  fullName: QuantumCircuits.CircuitExecution.QbitCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: QuantumCircuits.CircuitExecution.StateVector*
+  commentId: Overload:QuantumCircuits.CircuitExecution.StateVector
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_StateVector
+  name: StateVector
+  nameWithType: CircuitExecution.StateVector
+  fullName: QuantumCircuits.CircuitExecution.StateVector
+- uid: System.Numerics.Complex[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  name: Complex[]
+  nameWithType: Complex[]
+  fullName: System.Numerics.Complex[]
+  nameWithType.vb: Complex()
+  fullName.vb: System.Numerics.Complex()
+  name.vb: Complex()
+  spec.csharp:
+  - uid: System.Numerics.Complex
+    name: Complex
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Numerics.Complex
+    name: Complex
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  - name: (
+  - name: )
+- uid: QuantumCircuits.CircuitExecution
+  commentId: T:QuantumCircuits.CircuitExecution
+  href: QuantumCircuits.CircuitExecution.html
+  name: CircuitExecution
+  nameWithType: CircuitExecution
+  fullName: QuantumCircuits.CircuitExecution
+- uid: QuantumCircuits.CircuitExecution.#ctor*
+  commentId: Overload:QuantumCircuits.CircuitExecution.#ctor
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution__ctor_QuantumCircuits_QuantumCircuitBuilder_
+  name: CircuitExecution
+  nameWithType: CircuitExecution.CircuitExecution
+  fullName: QuantumCircuits.CircuitExecution.CircuitExecution
+  nameWithType.vb: CircuitExecution.New
+  fullName.vb: QuantumCircuits.CircuitExecution.New
+  name.vb: New
+- uid: QuantumCircuits.QuantumCircuitBuilder
+  commentId: T:QuantumCircuits.QuantumCircuitBuilder
+  parent: QuantumCircuits
+  href: QuantumCircuits.QuantumCircuitBuilder.html
+  name: QuantumCircuitBuilder
+  nameWithType: QuantumCircuitBuilder
+  fullName: QuantumCircuits.QuantumCircuitBuilder
+- uid: LinearAlgebra.Vector
+  commentId: T:LinearAlgebra.Vector
+  parent: LinearAlgebra
+  href: LinearAlgebra.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: LinearAlgebra.Vector
+- uid: QuantumCircuits.CircuitExecution.ExecuteCircuit*
+  commentId: Overload:QuantumCircuits.CircuitExecution.ExecuteCircuit
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_ExecuteCircuit
+  name: ExecuteCircuit
+  nameWithType: CircuitExecution.ExecuteCircuit
+  fullName: QuantumCircuits.CircuitExecution.ExecuteCircuit
+- uid: LinearAlgebra
+  commentId: N:LinearAlgebra
+  href: LinearAlgebra.html
+  name: LinearAlgebra
+  nameWithType: LinearAlgebra
+  fullName: LinearAlgebra
+- uid: LinearAlgebra.SparseMatrix
+  commentId: T:LinearAlgebra.SparseMatrix
+  parent: LinearAlgebra
+  href: LinearAlgebra.SparseMatrix.html
+  name: SparseMatrix
+  nameWithType: SparseMatrix
+  fullName: LinearAlgebra.SparseMatrix
+- uid: QuantumCircuits.CircuitExecution.CNOTCreation*
+  commentId: Overload:QuantumCircuits.CircuitExecution.CNOTCreation
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_CNOTCreation_System_Int32_System_Int32_System_Int32_
+  name: CNOTCreation
+  nameWithType: CircuitExecution.CNOTCreation
+  fullName: QuantumCircuits.CircuitExecution.CNOTCreation
+- uid: QuantumCircuits.CircuitExecution.SwapCreation*
+  commentId: Overload:QuantumCircuits.CircuitExecution.SwapCreation
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_SwapCreation_System_Int32_System_Int32_System_Int32_
+  name: SwapCreation
+  nameWithType: CircuitExecution.SwapCreation
+  fullName: QuantumCircuits.CircuitExecution.SwapCreation
+- uid: QuantumCircuits.CircuitExecution.ToffoliCreation*
+  commentId: Overload:QuantumCircuits.CircuitExecution.ToffoliCreation
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_ToffoliCreation_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: ToffoliCreation
+  nameWithType: CircuitExecution.ToffoliCreation
+  fullName: QuantumCircuits.CircuitExecution.ToffoliCreation
+- uid: System.Byte
+  commentId: T:System.Byte
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: QuantumCircuits.CircuitExecution.MeasureAllQubits*
+  commentId: Overload:QuantumCircuits.CircuitExecution.MeasureAllQubits
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_MeasureAllQubits
+  name: MeasureAllQubits
+  nameWithType: CircuitExecution.MeasureAllQubits
+  fullName: QuantumCircuits.CircuitExecution.MeasureAllQubits
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: QuantumCircuits.CircuitExecution.GetStateProbabilities*
+  commentId: Overload:QuantumCircuits.CircuitExecution.GetStateProbabilities
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_GetStateProbabilities
+  name: GetStateProbabilities
+  nameWithType: CircuitExecution.GetStateProbabilities
+  fullName: QuantumCircuits.CircuitExecution.GetStateProbabilities
+- uid: System.Double[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double[]
+  nameWithType: double[]
+  fullName: double[]
+  nameWithType.vb: Double()
+  fullName.vb: Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: (
+  - name: )
+- uid: QuantumCircuits.CircuitExecution.SimulateMeasurements*
+  commentId: Overload:QuantumCircuits.CircuitExecution.SimulateMeasurements
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_SimulateMeasurements_System_Int32_
+  name: SimulateMeasurements
+  nameWithType: CircuitExecution.SimulateMeasurements
+  fullName: QuantumCircuits.CircuitExecution.SimulateMeasurements
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: QuantumCircuits.CircuitExecution.PrintBitstrings*
+  commentId: Overload:QuantumCircuits.CircuitExecution.PrintBitstrings
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_PrintBitstrings_System_Int32_
+  name: PrintBitstrings
+  nameWithType: CircuitExecution.PrintBitstrings
+  fullName: QuantumCircuits.CircuitExecution.PrintBitstrings
+- uid: QuantumCircuits.CircuitExecution.PrintHistogram*
+  commentId: Overload:QuantumCircuits.CircuitExecution.PrintHistogram
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_PrintHistogram_System_Int32_
+  name: PrintHistogram
+  nameWithType: CircuitExecution.PrintHistogram
+  fullName: QuantumCircuits.CircuitExecution.PrintHistogram
+- uid: QuantumCircuits.CircuitExecution.SimulateHistogram*
+  commentId: Overload:QuantumCircuits.CircuitExecution.SimulateHistogram
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_SimulateHistogram_System_Int32_System_Int32_
+  name: SimulateHistogram
+  nameWithType: CircuitExecution.SimulateHistogram
+  fullName: QuantumCircuits.CircuitExecution.SimulateHistogram
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: QuantumCircuits.CircuitExecution.ToString*
+  commentId: Overload:QuantumCircuits.CircuitExecution.ToString
+  href: QuantumCircuits.CircuitExecution.html#QuantumCircuits_CircuitExecution_ToString
+  name: ToString
+  nameWithType: CircuitExecution.ToString
+  fullName: QuantumCircuits.CircuitExecution.ToString
