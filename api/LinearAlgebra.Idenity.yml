@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Idenity
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs

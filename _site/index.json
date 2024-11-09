@@ -137,7 +137,7 @@
   "index.html": {
     "href": "index.html",
     "title": "Welcome to the Documentation!",
-    "keywords": "Welcome to the Documentation! Welcome to the homepage of the documentation for this project. Below are links to the main sections: Docs API"
+    "keywords": "Welcome to the Documentation! Welcome to the homepage of the documentation for this project."
   },
   "src/LinearAlgebra/README_LA.html": {
     "href": "src/LinearAlgebra/README_LA.html",

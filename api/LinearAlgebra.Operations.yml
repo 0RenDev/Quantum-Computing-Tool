@@ -32,7 +32,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Operations
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Add
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Subtract
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Multiply
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: MatrixMultiply
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: MatrixVectorMult
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Multscaler
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -303,7 +303,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: IsEqual
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -339,7 +339,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: TensorProduct
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -375,7 +375,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: TensorProductofVectors
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -411,7 +411,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: InnerProduct
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -454,7 +454,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: OuterProduct
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -497,7 +497,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: EuclideanNorm
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -534,7 +534,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: EuclideanNormAsComplex
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -567,7 +567,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Determinant
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -604,7 +604,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: GenerateIdentityMatrix
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -640,7 +640,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Invert
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs
@@ -677,7 +677,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_Operations.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: JoinMatrices
     path: src/LinearAlgebra/LinearAlgebra_Operations.cs

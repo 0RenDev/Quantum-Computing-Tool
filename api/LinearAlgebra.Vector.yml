@@ -30,7 +30,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Vector
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: rows
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: cols
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: elements
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Conjugate
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: ConjugateInPlace
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -266,7 +266,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: IsRowVector
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -295,7 +295,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: IsColVector
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -324,7 +324,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Transpose
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -357,7 +357,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: TransposeInPlace
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -383,7 +383,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: IsApproximatelyEqual
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -422,7 +422,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: ToMatrix
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -452,7 +452,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: GetState
     path: src/LinearAlgebra/LinearAlgebra_vector.cs
@@ -481,7 +481,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_vector.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: ToString
     path: src/LinearAlgebra/LinearAlgebra_vector.cs

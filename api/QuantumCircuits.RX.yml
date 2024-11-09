@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/Gate.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: RX
     path: src/QuantumCircuits/Gate.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/Gate.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/QuantumCircuits/Gate.cs

@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: CircuitExecution
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: QbitCount
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: StateVector
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -123,7 +123,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: ExecuteCircuit
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -185,7 +185,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: CNOTCreation
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: SwapCreation
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -269,7 +269,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: ToffoliCreation
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -314,7 +314,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: MeasureAllQubits
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -343,7 +343,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: GetStateProbabilities
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -372,7 +372,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: SimulateMeasurements
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -408,7 +408,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: PrintBitstrings
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -441,7 +441,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: PrintHistogram
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -473,7 +473,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: SimulateHistogram
     path: src/QuantumCircuits/CircuitExecution.cs
@@ -509,7 +509,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/CircuitExecution.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: ToString
     path: src/QuantumCircuits/CircuitExecution.cs

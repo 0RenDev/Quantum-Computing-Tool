@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: SparseMatrix
     path: src/LinearAlgebra/SparseMatrix.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Rows
     path: src/LinearAlgebra/SparseMatrix.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Cols
     path: src/LinearAlgebra/SparseMatrix.cs
@@ -120,7 +120,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/LinearAlgebra/SparseMatrix.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/LinearAlgebra/SparseMatrix.cs
@@ -189,7 +189,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: FromMatrix
     path: src/LinearAlgebra/SparseMatrix.cs
@@ -222,7 +222,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: this[]
     path: src/LinearAlgebra/SparseMatrix.cs
@@ -261,7 +261,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Multiply
     path: src/LinearAlgebra/SparseMatrix.cs
@@ -298,7 +298,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: TensorProduct
     path: src/LinearAlgebra/SparseMatrix.cs
@@ -331,7 +331,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: ParallelTensorProduct
     path: src/LinearAlgebra/SparseMatrix.cs
@@ -368,7 +368,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: MultiplyWithVector
     path: src/LinearAlgebra/SparseMatrix.cs
@@ -408,7 +408,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Print
     path: src/LinearAlgebra/SparseMatrix.cs
@@ -434,7 +434,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/SparseMatrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Identity
     path: src/LinearAlgebra/SparseMatrix.cs

@@ -42,7 +42,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Matrix
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: rows
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: cols
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: elements
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -277,7 +277,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -310,7 +310,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: GetRow
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -350,7 +350,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: GetColumn
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -390,7 +390,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: this[]
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -429,7 +429,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Transpose
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -458,7 +458,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: TransposeInPlace
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -488,7 +488,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Trace
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -521,7 +521,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Conjugate
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -550,7 +550,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: ConjugateInPlace
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -576,7 +576,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: ToString
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -606,7 +606,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: op_Addition
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -645,7 +645,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: op_Subtraction
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -684,7 +684,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: op_Multiply
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -723,7 +723,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: op_Multiply
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -762,7 +762,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: op_Multiply
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -801,7 +801,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: op_Equality
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -840,7 +840,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: op_Inequality
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -879,7 +879,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Equals
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -916,7 +916,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: GetHashCode
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -946,7 +946,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: AddInPlace
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs
@@ -980,7 +980,7 @@ items:
   source:
     remote:
       path: src/LinearAlgebra/LinearAlgebra_matrix.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: SubtractInPlace
     path: src/LinearAlgebra/LinearAlgebra_matrix.cs

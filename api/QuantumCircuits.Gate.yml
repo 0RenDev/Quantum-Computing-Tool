@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/Gate.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Gate
     path: src/QuantumCircuits/Gate.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/Gate.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/QuantumCircuits/Gate.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/Gate.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Type
     path: src/QuantumCircuits/Gate.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/Gate.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Operation
     path: src/QuantumCircuits/Gate.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/Gate.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Controls
     path: src/QuantumCircuits/Gate.cs
@@ -197,7 +197,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/Gate.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: Targets
     path: src/QuantumCircuits/Gate.cs
@@ -226,7 +226,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/Gate.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: ToString
     path: src/QuantumCircuits/Gate.cs

@@ -31,7 +31,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: QuantumCircuitBuilder
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: quantumLines
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: classicalLines
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: .ctor
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: AddGateX
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: AddGateY
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -229,7 +229,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: AddGateZ
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -266,7 +266,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: AddGateT
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -303,7 +303,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: AddGateH
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -340,7 +340,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: AddGateCX
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -385,7 +385,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: AddGateSWP
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: AddGateTOF
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -478,7 +478,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: AddGateRX
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -518,7 +518,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: AddGateRY
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -558,7 +558,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: AddGateRZ
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -598,7 +598,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: ToString
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs
@@ -628,7 +628,7 @@ items:
   source:
     remote:
       path: src/QuantumCircuits/QuantumCircuitBuilder.cs
-      branch: main
+      branch: gh-pages
       repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
     id: GetBoxedAsciiSymbol
     path: src/QuantumCircuits/QuantumCircuitBuilder.cs

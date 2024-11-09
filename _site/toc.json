@@ -1,2 +1,2 @@
 
-{"items":[{"name":"Home","href":"index.html","topicHref":"index.html"},{"name":"Docs","href":"docs/introduction.html","tocHref":"docs/toc.html","topicHref":"docs/introduction.html"},{"name":"API","href":"api/index.html","topicHref":"api/index.html"}],"pdf":true}
+{"items":[{"name":"Docs","href":"docs/introduction.html","tocHref":"docs/toc.html","topicHref":"docs/introduction.html"},{"name":"API","href":"api/LinearAlgebra.html","tocHref":"api/toc.html","topicHref":"api/LinearAlgebra.html","topicUid":"LinearAlgebra"}],"pdf":true}
