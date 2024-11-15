@@ -165,7 +165,66 @@ namespace Console_Testing
         }
 
 
-
+         public void TestCircuit()
+         {
+             // build a circuit with one quantum and one classical line
+             QuantumCircuitBuilder qc = new QuantumCircuitBuilder(5, 0);
+        
+             
+        
+             //input bits
+             qc.AddGateX(0);
+             qc.AddGateH(1);
+             qc.AddGateH(2);
+             qc.AddGateTOF(2, 1, 0);
+             qc.AddGateZ(0);
+             qc.AddGateCX(1, 2);
+             qc.AddGateT(0);
+             qc.AddGateX(0);
+             qc.AddGateH(1);
+             qc.AddGateH(2);
+             qc.AddGateTOF(2, 1, 0);
+             qc.AddGateZ(0);
+             qc.AddGateCX(1, 2);
+             qc.AddGateT(0);
+             qc.AddGateRX(2, Math.PI / 2);
+             qc.AddGateRY(3, Math.PI / 2);
+             qc.AddGateRZ(4, Math.PI / 2);
+             qc.AddGateTOF(4, 0, 2);
+             qc.AddGateSWP(3, 4);
+             qc.AddGateX(4);
+             qc.AddGateCX(3, 1);
+             qc.AddGateRX(2, Math.PI / 2);
+             qc.AddGateRY(3, Math.PI / 2);
+             qc.AddGateRZ(4, Math.PI / 2);
+             qc.AddGateTOF(4, 0, 2);
+             qc.AddGateSWP(3, 4);
+             qc.AddGateX(4);
+             qc.AddGateCX(3, 1);
+        
+        
+             // print out circuit
+             Console.WriteLine(qc.ToString());
+        
+             CircuitExecution exe = new CircuitExecution(qc);
+        
+             // print out execution columns
+             // Console.WriteLine(exe.ToString());
+        
+             // returns the statevector after executing all columns
+             LinearAlgebra.Vector result = exe.ExecuteCircuit();
+        
+             Console.WriteLine(result.ToString());
+        
+             // prints bitstrings
+             exe.PrintBitstrings(10);
+        
+             // prints histogram with param1 simulationed bitstring values and param2 bars
+             exe.SimulateHistogram(10000, 100);
+        
+             // prints histogram based off of the probabilities of each basis state
+             exe.PrintHistogram();
+         }
 
 
 
