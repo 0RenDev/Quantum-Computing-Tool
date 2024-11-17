@@ -620,6 +620,118 @@ namespace QuantumCircuits
         }
 
         /// <summary>
+        /// Gets the operator matrix for a given character.
+        /// </summary>
+        /// <param name="gateSymbol">The character representing the gate X, Y, Z and I are all that are supported.</param>
+        /// <returns>The SparseMatrix representing the operator matrix of the gate.</returns>
+        private SparseMatrix GetGateMatrix(char gateSymbol)
+        {
+            switch (gateSymbol)
+            {
+                // matrices for these are intrinsic so just use generalized target qubit 0
+                case 'I':
+                    return new NOP(0, GateTypes.NOP).Operation;
+                case 'X':
+                    return new X(0).Operation;
+                case 'Y':
+                    return new Y(0).Operation;
+                case 'Z':
+                    return new Z(0).Operation;
+                default:
+                    throw new ArgumentException($"Ruh roh '{gateSymbol}' is in observable string. Only 'X', 'Y', 'Z', and 'I' are supported.");
+            }
+        }
+
+
+        /// <summary>
+        /// Calculates expectation value using inputted observable matrix and the statevector.
+        /// </summary>
+        /// <param name="observable">The observable matrix used to perform calculations.</param>
+        /// <param name="decimalPlaces">Optional parameter to control the number of decimal places it rounds to, if negative don't round.</param>
+        /// <returns>A double representing the calculated expectation value after observing with the observable.</returns>
+        public double GetExpectationValue(SparseMatrix observable, int decimalPlaces=6)
+        {
+            // O * |psi>
+            Complex[] Opsi = observable.MultiplyWithVector(StateVector);
+
+            // <psi| (O |psi>)
+            Complex expectationValue = new Complex(0, 0);
+            for (int i = 0; i < StateVector.Length; i++)
+            {
+                expectationValue += Complex.Conjugate(StateVector[i]) * Opsi[i];
+            }
+
+            // if -1, return unrounded value, else, return value rounded to decimalPlaces many digits
+            return decimalPlaces < 0 ? expectationValue.Real : Math.Round(expectationValue.Real, decimalPlaces);
+        }
+
+        /// <summary>
+        /// Calculates expectation value using inputted observable matrix string representation and the statevector.
+        /// </summary>
+        /// <param name="observable">A string consisting of a sequence of gates to represent the observable. Big-Endian for ease of use.</param>
+        /// <param name="decimalPlaces">Optional parameter to control the number of decimal places it rounds to, if negative don't round.</param>
+        /// <returns>A double representing the calculated expectation value after observing with the observable.</returns>
+        public double GetExpectationValue(string observable, int decimalPlaces=6)
+        {
+            if (observable.Length != QbitCount)
+            {
+                throw new ArgumentException("Observable string does not have 1 gate per qubit in the Hilbert space.");
+            }
+
+            // initialize to identity scalar
+            SparseMatrix fullObservable = new SparseMatrix(new Complex[,] { { 1 } });
+
+            // again, Big-Endian processing since it is easier to input, result is the same
+            for (int i = 0; i < observable.Length; i++)
+            {
+                char gateSymbol = observable[i];
+                SparseMatrix gateMatrix = GetGateMatrix(gateSymbol); // only X Y Z and I supported 
+
+                // update observable with new gate matrix representation
+                fullObservable = fullObservable.TensorProduct(gateMatrix);
+            }
+
+            return GetExpectationValue(fullObservable, decimalPlaces);
+        }
+
+        /// <summary>
+        /// Calculates expectation values for each inputted observable string using the statevector and other overloaded functions.
+        /// </summary>
+        /// <param name="observables">A string array of observable matrix string representations.</param>
+        /// <param name="decimalPlaces">Optional parameter to control the number of decimal places it rounds to, if negative don't round.</param>
+        /// <returns>A list of doubles representing the expectation value for the corresponding observable.</returns>
+        public List<double> GetExpectationValue(string[] observables, int decimalPlaces=6)
+        {
+            List<double> results = new List<double>();
+
+            foreach (string observable in observables)
+            {
+                double expectation = GetExpectationValue(observable, decimalPlaces);
+                results.Add(expectation);
+            }
+
+            return results;
+        }
+
+        /// <summary>
+        /// Prints the expectation values for an inputted array of observable string representations.
+        /// </summary>
+        /// <param name="observables">A string array of observable matrix string representations.</param>
+        /// <param name="decimalPlaces">Optional parameter to control the number of decimal places it rounds to, if negative don't round.</param>
+        public void PrintExpectationValues(string[] observables, int decimalPlaces = 6)
+        {
+            Console.WriteLine("Observable   | Expectation Value");
+            Console.WriteLine(new string('-', 30));
+
+            List<double> expectationValues = GetExpectationValue(observables, decimalPlaces);
+
+            for(int i = 0; i<observables.Length; i++)
+            {
+                Console.WriteLine($"{observables[i].PadRight(12)} | {expectationValues[i]}");
+            }
+        }
+
+        /// <summary>
         /// Converts to string.
         /// </summary>
         /// <returns>

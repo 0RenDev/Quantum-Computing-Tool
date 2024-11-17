@@ -226,7 +226,47 @@ namespace Console_Testing
              exe.PrintHistogram();
          }
 
+        public void TestExpectationValue()
+        {
+            // build a circuit with one quantum and one classical line
+            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(2, 0);
 
+            //input bits
+            qc.AddGateH(0);
+            qc.AddGateCX(0, 1);
+
+            // print out circuit
+            Console.WriteLine(qc.ToString());
+
+            CircuitExecution exe = new CircuitExecution(qc);
+
+            // returns the statevector after executing all columns
+            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+
+            Console.WriteLine(result.ToString());
+
+            string observable1 = "ZZ";
+            string observable2 = "XX";
+
+            // to stop rounding add -1 as a second parameter
+            double expectationValue1 = exe.GetExpectationValue(observable1);
+            double expectationValue2 = exe.GetExpectationValue(observable2);
+
+            Console.WriteLine($"\nExpectation Value for 'ZZ': {expectationValue1}");
+            Console.WriteLine($"Expectation Value for 'XX': {expectationValue2}\n");
+
+            // testcase from IBM Quantum Challenge 2024
+            string[] observables = ["IZ", "IX", "ZI", "XI", "ZZ", "XX"];
+
+            exe.PrintExpectationValues(observables, -1);
+
+            //List<double> expectationValues = exe.GetExpectationValue(observables, -1);
+            //for(int i = 0; i<observables.Length; i++)
+            //{
+            //    Console.WriteLine($"Observable: {observables[i]} yields {expectationValues[i]}");
+            //}
+
+        }
 
 
 
