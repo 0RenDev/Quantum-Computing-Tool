@@ -12,12 +12,192 @@ using System.Threading.Tasks;
 using System.Globalization;
 using Assert = NUnit.Framework.Assert;
 using System.Diagnostics;
+using OfficeOpenXml;
 
 namespace QuantumCircuit.Tests
 {
+    
+
     [TestFixture()]
     public class QuantumCircuitTests
-    {
+    { // Install EPPlus NuGet package for Excel handling.
+
+        [Test]
+        public void TestCircuitPerformanceGrapher()
+        {
+            int maxQubits = 14;
+            int maxTotalGates = 50;
+            int numberOfExecutions = 50;
+
+            List<(int qubits, int gates, double avgTime)> results = new List<(int, int, double)>();
+
+            Random random = new Random();
+
+            for (int totalNumberOfGates = 1; totalNumberOfGates <= maxTotalGates; totalNumberOfGates++)
+            {
+                for (int numberOfQubits = 1; numberOfQubits <= maxQubits; numberOfQubits++)
+                {
+                    double totalExecutionTime = 0;
+
+                    for (int executionIndex = 0; executionIndex < numberOfExecutions; executionIndex++)
+                    {
+                        QuantumCircuitBuilder qc = new QuantumCircuitBuilder(numberOfQubits, 0);
+
+                        for (int gateIndex = 0; gateIndex < totalNumberOfGates; gateIndex++)
+                        {
+                            int gateType = random.Next(1, 6); // Random gate type (1 = H, 2 = X, etc.)
+                            int targetQubit = random.Next(0, numberOfQubits);
+
+                            switch (gateType)
+                            {
+                                case 1: // H
+                                    qc.AddGateH(targetQubit);
+                                    break;
+
+                                case 2: // X
+                                    qc.AddGateX(targetQubit);
+                                    break;
+
+                                case 3: // Z
+                                    qc.AddGateZ(targetQubit);
+                                    break;
+
+                                case 4: // CX
+                                    if (numberOfQubits >= 2)
+                                    {
+                                        int control = targetQubit;
+                                        int target = (targetQubit + 1) % numberOfQubits;
+                                        qc.AddGateCX(control, target);
+                                    }
+                                    break;
+
+                                case 5: // TOF
+                                    if (numberOfQubits >= 3)
+                                    {
+                                        int control1 = targetQubit;
+                                        int control2 = (targetQubit + 1) % numberOfQubits;
+                                        int target = (targetQubit + 2) % numberOfQubits;
+                                        qc.AddGateTOF(control1, control2, target);
+                                    }
+                                    break;
+                            }
+                        }
+
+                        CircuitExecution exe = new CircuitExecution(qc);
+                        Stopwatch stopwatch = Stopwatch.StartNew();
+                        exe.ExecuteCircuit();
+                        stopwatch.Stop();
+
+                        totalExecutionTime += stopwatch.Elapsed.TotalMilliseconds;
+                    }
+
+                    double averageExecutionTime = totalExecutionTime / numberOfExecutions;
+                    results.Add((numberOfQubits, totalNumberOfGates, averageExecutionTime));
+                }
+            }
+
+            ExportResultsToExcel(results, "CircuitPerformance.xlsx");
+        }
+
+        private void ExportResultsToExcel(List<(int qubits, int gates, double avgTime)> results, string filePath)
+        {
+            using (ExcelPackage excel = new ExcelPackage())
+            {
+                var sheet = excel.Workbook.Worksheets.Add("Circuit Performance");
+                sheet.Cells[1, 1].Value = "Qubits";
+                sheet.Cells[1, 2].Value = "Gates";
+                sheet.Cells[1, 3].Value = "Avg Time (ms)";
+
+                for (int i = 0; i < results.Count; i++)
+                {
+                    sheet.Cells[i + 2, 1].Value = results[i].qubits;
+                    sheet.Cells[i + 2, 2].Value = results[i].gates;
+                    sheet.Cells[i + 2, 3].Value = results[i].avgTime;
+                }
+
+                excel.SaveAs(new System.IO.FileInfo(filePath));
+            }
+
+            Console.WriteLine($"Results exported to {filePath}");
+        }
+
+
+
+        [Test]
+        public void TestCircuitPerformance()
+        {
+            int numberOfQubits = 18;  
+            int totalNumberOfGates = 20;  
+            int numberOfExecutions = 1;  
+
+            Random random = new Random();
+            double totalExecutionTime = 0;
+
+            for (int executionIndex = 0; executionIndex < numberOfExecutions; executionIndex++)
+            {
+                QuantumCircuitBuilder qc = new QuantumCircuitBuilder(numberOfQubits, 0);
+                for (int gateIndex = 0; gateIndex < totalNumberOfGates; gateIndex++)
+                {
+                    int gateType = random.Next(1, 6); // 1 = H, 2 = X, 3 = Z, 4 = CX, 5 = TOF.
+                    int targetQubit = random.Next(0, numberOfQubits);
+
+                    switch (gateType)
+                    {
+                        case 1: // H.
+                            qc.AddGateH(targetQubit);
+                            break;
+
+                        case 2: // X.
+                            qc.AddGateX(targetQubit);
+                            break;
+
+                        case 3: // Z.
+                            qc.AddGateZ(targetQubit);
+                            break;
+
+                        case 4: // CX.
+                            if (targetQubit < numberOfQubits - 1)
+                            {
+                                qc.AddGateCX(targetQubit, targetQubit + 1);
+                            }
+                            else
+                            {
+                                qc.AddGateCX(targetQubit - 1, targetQubit);
+                            }
+                            break;
+
+                        case 5: // TOF.
+                            if (targetQubit < numberOfQubits - 2)
+                            {
+                                qc.AddGateTOF(targetQubit, targetQubit + 1, targetQubit + 2);
+                            }
+                            else if (targetQubit == numberOfQubits - 2)
+                            {
+                                qc.AddGateTOF(targetQubit - 1, targetQubit, targetQubit + 1);
+                            }
+                            else
+                            {
+                                qc.AddGateTOF(targetQubit - 2, targetQubit - 1, targetQubit);
+                            }
+                            break;
+                    }
+                }
+
+                CircuitExecution exe = new CircuitExecution(qc);
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                exe.ExecuteCircuit();
+                stopwatch.Stop();
+
+                totalExecutionTime += stopwatch.Elapsed.TotalMilliseconds;
+            }
+
+            // Calculate and display the average execution time
+            double averageExecutionTime = totalExecutionTime / numberOfExecutions;
+            Console.WriteLine($"Average execution time for {numberOfExecutions} executions: {averageExecutionTime:F2} ms");
+        }
+
+
+
         [Test]
         public void QuantumCircuitExecutionTest()
         {
@@ -30,6 +210,8 @@ namespace QuantumCircuit.Tests
             CircuitExecution exe = new(qc); 
 
             LinearAlgebra.Vector result = exe.ExecuteCircuit();
+
+            Console.WriteLine(qc.ToString());
 
             Assert.AreEqual(result.GetState(), new Complex[] { 0, 1 / Complex.Sqrt(2), 1 / Complex.Sqrt(2), 0 });
         }
