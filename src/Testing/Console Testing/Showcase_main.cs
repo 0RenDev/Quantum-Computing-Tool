@@ -34,9 +34,9 @@ class Program
         */
         example.TestCircuit();
         //example.HalfAdderTest();
-        
-        //example.TestExpectationValue();
 
+        //example.TestExpectationValue();
+        //example.TestLinearCombinationExpectationValue();
         Console.ReadKey();
     }
 

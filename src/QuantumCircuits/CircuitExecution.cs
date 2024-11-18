@@ -620,6 +620,33 @@ namespace QuantumCircuits
         }
 
         /// <summary>
+        /// Checks if the provided object is null.
+        /// </summary>
+        /// <param name="obj">The object we check.</param>
+        /// <param name="parameterName">The name of the parameter.</param>
+        private void ValidateNotNull(object obj, string parameterName)
+        {
+            if (obj == null)
+            {
+                throw new ArgumentNullException(parameterName, $"{parameterName} cannot be null.");
+            }
+        }
+
+        /// <summary>
+        /// Checks if the sizes of two collections match.
+        /// </summary>
+        /// <param name="size1">Size of the first collection.</param>
+        /// <param name="size2">Size of the second collection.</param>
+        /// <param name="errorMessage">Custom error message to display if the sizes do not match.</param>
+        private void ValidateSizeMatch(int size1, int size2, string errorMessage)
+        {
+            if (size1 != size2)
+            {
+                throw new ArgumentException($"{errorMessage} (Sizes: {size1} and {size2})");
+            }
+        }
+
+        /// <summary>
         /// Gets the operator matrix for a given character.
         /// </summary>
         /// <param name="gateSymbol">The character representing the gate X, Y, Z and I are all that are supported.</param>
@@ -651,6 +678,9 @@ namespace QuantumCircuits
         /// <returns>A double representing the calculated expectation value after observing with the observable.</returns>
         public double GetExpectationValue(SparseMatrix observable, int decimalPlaces=6)
         {
+            // error checking
+            ValidateNotNull(observable, nameof(observable));
+
             // O * |psi>
             Complex[] Opsi = observable.MultiplyWithVector(StateVector);
 
@@ -673,10 +703,8 @@ namespace QuantumCircuits
         /// <returns>A double representing the calculated expectation value after observing with the observable.</returns>
         public double GetExpectationValue(string observable, int decimalPlaces=6)
         {
-            if (observable.Length != QbitCount)
-            {
-                throw new ArgumentException("Observable string does not have 1 gate per qubit in the Hilbert space.");
-            }
+            ValidateNotNull(observable, nameof(observable));
+            ValidateSizeMatch(observable.Length, QbitCount, "Observable string does not have 1 gate per qubit in the Hilbert space.");
 
             // initialize to identity scalar
             SparseMatrix fullObservable = new SparseMatrix(new Complex[,] { { 1 } });
@@ -702,6 +730,8 @@ namespace QuantumCircuits
         /// <returns>A list of doubles representing the expectation value for the corresponding observable.</returns>
         public List<double> GetExpectationValue(string[] observables, int decimalPlaces=6)
         {
+            ValidateNotNull(observables, nameof(observables));
+
             List<double> results = new List<double>();
 
             foreach (string observable in observables)
@@ -714,18 +744,48 @@ namespace QuantumCircuits
         }
 
         /// <summary>
+        /// Calculates the linear combination expectation value.
+        /// </summary>
+        /// <param name="coefficients">An array of coefficients corresponding to each observable.</param>
+        /// <param name="observables">An array of observable string representations.</param>
+        /// <param name="decimalPlaces">Optional parameter to control the number of decimal places it rounds to, if negative don't round.</param>
+        /// <returns>The expectation value of the linear combination.</returns>
+        public double GetExpectationValue(double[] coefficients, string[] observables, int decimalPlaces = 6)
+        {
+            // error checking
+            ValidateNotNull(coefficients, nameof(coefficients));
+            ValidateSizeMatch(coefficients.Length, observables.Length, "Coefficient list size and observable array size must match.");
+
+            List<double> expectationValues = GetExpectationValue(observables, -1); // use unrounded in the intermediate step for more precision, round later 
+
+            double linCombinationExpectationValue = 0.0;
+            for (int i = 0; i < coefficients.Length; i++)
+            {
+                linCombinationExpectationValue += coefficients[i] * expectationValues[i];
+            }
+
+            // round now
+            if (decimalPlaces >= 0)
+            {
+                linCombinationExpectationValue = Math.Round(linCombinationExpectationValue, decimalPlaces);
+            }
+
+            return linCombinationExpectationValue;
+        }
+
+        /// <summary>
         /// Prints the expectation values for an inputted array of observable string representations.
         /// </summary>
         /// <param name="observables">A string array of observable matrix string representations.</param>
         /// <param name="decimalPlaces">Optional parameter to control the number of decimal places it rounds to, if negative don't round.</param>
         public void PrintExpectationValues(string[] observables, int decimalPlaces = 6)
         {
+            List<double> expectationValues = GetExpectationValue(observables, decimalPlaces);
+
             Console.WriteLine("Observable   | Expectation Value");
             Console.WriteLine(new string('-', 30));
 
-            List<double> expectationValues = GetExpectationValue(observables, decimalPlaces);
-
-            for(int i = 0; i<observables.Length; i++)
+            for (int i = 0; i < observables.Length; i++)
             {
                 Console.WriteLine($"{observables[i].PadRight(12)} | {expectationValues[i]}");
             }

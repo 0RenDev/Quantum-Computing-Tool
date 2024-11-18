@@ -258,7 +258,7 @@ namespace Console_Testing
             // testcase from IBM Quantum Challenge 2024
             string[] observables = ["IZ", "IX", "ZI", "XI", "ZZ", "XX"];
 
-            exe.PrintExpectationValues(observables, -1);
+            exe.PrintExpectationValues(observables, 6);
 
             //List<double> expectationValues = exe.GetExpectationValue(observables, -1);
             //for(int i = 0; i<observables.Length; i++)
@@ -268,7 +268,42 @@ namespace Console_Testing
 
         }
 
+        public void TestLinearCombinationExpectationValue()
+        {
+            // build a circuit with one quantum and one classical line
+            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(3, 0);
 
+            //input bits
+            qc.AddGateH(0);
+            qc.AddGateCX(0, 1);
+            qc.AddGateCX(1, 2);
+
+            // print out circuit
+            Console.WriteLine(qc.ToString());
+
+            CircuitExecution exe = new CircuitExecution(qc);
+
+            // returns the statevector after executing all columns
+            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+
+            Console.WriteLine(result.ToString());
+
+            string[] observables = new string[]
+            {
+                "ZZZ", "XXX", "YYY", "IZZ", "ZIZ", "ZZI"    
+            };
+
+            double[] coefficients = new double[] 
+            { 
+                0.5, 0.3, 0.2, -0.1, -0.1, -0.1 
+            };
+
+            exe.PrintExpectationValues(observables);
+
+            double expectationValue = exe.GetExpectationValue(coefficients, observables);
+
+            Console.WriteLine("\nExpectation Value of the linear combination: " + expectationValue);
+        }
 
 
 
