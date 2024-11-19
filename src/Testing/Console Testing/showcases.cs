@@ -2,6 +2,7 @@ using LinearAlgebra;
 using System.Diagnostics;
 using System.Numerics;
 using QuantumCircuits;
+using System;
 
 namespace Console_Testing
 {
@@ -256,7 +257,7 @@ namespace Console_Testing
             Console.WriteLine($"Expectation Value for 'XX': {expectationValue2}\n");
 
             // testcase from IBM Quantum Challenge 2024
-            string[] observables = ["IZ", "IX", "ZI", "XI", "ZZ", "XX"];
+            string[] observables = { "IZ", "IX", "ZI", "XI", "ZZ", "XX" };
 
             exe.PrintExpectationValues(observables, 6);
 

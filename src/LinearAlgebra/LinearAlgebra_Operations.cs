@@ -1,6 +1,8 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Numerics;
+using System.Threading;
 
 namespace LinearAlgebra
 {
@@ -145,7 +147,7 @@ namespace LinearAlgebra
                 doneEvents[i] = new ManualResetEvent(false);
 
                 // Add a delegate to the thread pool
-                ThreadPool.QueueUserWorkItem(delegate (object? state)
+                ThreadPool.QueueUserWorkItem(delegate (object state)
                 {
                     if (state != null)
                     {
@@ -195,7 +197,7 @@ namespace LinearAlgebra
 
             for(int i = 0; i < rows; i++)
             {
-                Vector row = new(matrix.GetRow(i));
+                Vector row = new Vector(matrix.GetRow(i));
                 result[i] = InnerProduct(row, vector);
             }
 
@@ -386,7 +388,7 @@ namespace LinearAlgebra
                 throw new ArgumentException("One or more vectors has a length of zero.");
             }
 
-            Matrix outerProduct = new(len1, len2);
+            Matrix outerProduct = new Matrix(len1, len2);
 
             for (int i = 0; i < len1; i++)
             {
