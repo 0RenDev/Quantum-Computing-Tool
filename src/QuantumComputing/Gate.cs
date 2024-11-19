@@ -1,12 +1,12 @@
-﻿using LinearAlgebra;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using QuantumComputing.LinearAlgebra;
 
-namespace QuantumCircuits
+namespace QuantumComputing.QuantumCircuits
 {
     /// <summary>
     /// An <see cref="System.Enum"/> of the supported Gate Types

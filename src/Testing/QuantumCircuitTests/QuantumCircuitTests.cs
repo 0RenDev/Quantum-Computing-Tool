@@ -1,6 +1,6 @@
 using NUnit.Framework;
-using QuantumCircuits;
-using LinearAlgebra;
+using QuantumComputing.QuantumCircuits;
+using QuantumComputing.LinearAlgebra;
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -209,17 +209,17 @@ namespace QuantumCircuit.Tests
 
             CircuitExecution exe = new CircuitExecution(qc); 
 
-            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+            QuantumComputing.LinearAlgebra.Vector result = exe.ExecuteCircuit();
 
             Console.WriteLine(qc.ToString());
 
             Assert.AreEqual(result.GetState(), new Complex[] { 0, 1 / Complex.Sqrt(2), 1 / Complex.Sqrt(2), 0 });
         }
 
-        public static LinearAlgebra.Vector[] ReadStateVectorsFromCsv(string filename)
+        public static QuantumComputing.LinearAlgebra.Vector[] ReadStateVectorsFromCsv(string filename)
         {
             // Create a list to hold the vectors
-            List<LinearAlgebra.Vector> stateVectors = new List<LinearAlgebra.Vector>();
+            List<QuantumComputing.LinearAlgebra.Vector> stateVectors = new List<QuantumComputing.LinearAlgebra.Vector>();
 
             // Open the file for reading
             using (var reader = new StreamReader(filename))
@@ -245,7 +245,7 @@ namespace QuantumCircuit.Tests
                     }
 
                     // Create a Vector and add it to the list
-                    stateVectors.Add(new LinearAlgebra.Vector(elements));
+                    stateVectors.Add(new QuantumComputing.LinearAlgebra.Vector(elements));
                 }
             }
 
@@ -297,7 +297,7 @@ namespace QuantumCircuit.Tests
             //qc.addGateSWAP(0, 1);
             CircuitExecution exe = new CircuitExecution(qc);
 
-            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+            QuantumComputing.LinearAlgebra.Vector result = exe.ExecuteCircuit();
             Console.Write(result);
         }
 
@@ -305,7 +305,7 @@ namespace QuantumCircuit.Tests
         [Test]
         public void massiveQCT()
         {
-            LinearAlgebra.Vector[] stateVectors = ReadStateVectorsFromCsv("..\\..\\..\\MassiveQubitTest.csv");
+            QuantumComputing.LinearAlgebra.Vector[] stateVectors = ReadStateVectorsFromCsv("..\\..\\..\\MassiveQubitTest.csv");
             QuantumCircuitBuilder qc = new QuantumCircuitBuilder(5, 0);  // 5 lines
         
             // Build the circuit
@@ -322,7 +322,7 @@ namespace QuantumCircuit.Tests
             }
         
             CircuitExecution exe = new CircuitExecution(qc);
-            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+            QuantumComputing.LinearAlgebra.Vector result = exe.ExecuteCircuit();
         
             Console.Write(result);
             Console.WriteLine(stateVectors[0]);
@@ -335,7 +335,7 @@ namespace QuantumCircuit.Tests
         [Test]
         public void QiskitComparisonTest()
         {
-            LinearAlgebra.Vector[] stateVectors = ReadStateVectorsFromCsv("..\\..\\..\\statevectors.csv");
+            QuantumComputing.LinearAlgebra.Vector[] stateVectors = ReadStateVectorsFromCsv("..\\..\\..\\statevectors.csv");
             QuantumCircuitBuilder qc = new QuantumCircuitBuilder(1,0);
 
 
@@ -344,9 +344,9 @@ namespace QuantumCircuit.Tests
 
             CircuitExecution exe = new CircuitExecution(qc);
 
-            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+            QuantumComputing.LinearAlgebra.Vector result = exe.ExecuteCircuit();
 
-            LinearAlgebra.Vector[] resultArr = new LinearAlgebra.Vector[44];
+            QuantumComputing.LinearAlgebra.Vector[] resultArr = new QuantumComputing.LinearAlgebra.Vector[44];
 
             resultArr[0] = result;
 

@@ -1,8 +1,8 @@
 using System;
 using System.Numerics;
-using LinearAlgebra;
+using QuantumComputing.LinearAlgebra;
 using NUnit.Framework;
-using Vector = LinearAlgebra.Vector;
+using Vector = QuantumComputing.LinearAlgebra.Vector;
 
 
 namespace Linear_Algebra_Testing

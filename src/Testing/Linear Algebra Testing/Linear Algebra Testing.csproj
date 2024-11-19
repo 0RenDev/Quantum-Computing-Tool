@@ -20,7 +20,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\LinearAlgebra\LinearAlgebra.csproj" />
+		<ProjectReference Include="..\..\QuantumComputing\QuantumComputing.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
 using System.Text;
 
-namespace LinearAlgebra
+namespace QuantumComputing.LinearAlgebra
 {
     /// <summary>
     /// This class represents a vector in linear algebra. A vector is a one-dimensional array of complex numbers.

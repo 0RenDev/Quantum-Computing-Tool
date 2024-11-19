@@ -1,5 +1,5 @@
-﻿using LinearAlgebra;
-using QuantumCircuits;
+﻿using QuantumComputing.LinearAlgebra;
+using QuantumComputing.QuantumCircuits;
 using System;
 using System.Numerics;
 
