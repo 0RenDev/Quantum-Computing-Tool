@@ -3,7 +3,7 @@ using System.Data.Common;
 using System.Numerics;
 using System.Text;
 
-namespace LinearAlgebra
+namespace QuantumComputing.LinearAlgebra
 {
     // this is one of the library classes 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------

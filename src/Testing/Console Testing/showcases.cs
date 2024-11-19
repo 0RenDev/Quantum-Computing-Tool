@@ -1,8 +1,8 @@
-using LinearAlgebra;
 using System.Diagnostics;
 using System.Numerics;
-using QuantumCircuits;
 using System;
+using QuantumComputing.LinearAlgebra;
+using QuantumComputing.QuantumCircuits;
 
 namespace Console_Testing
 {
@@ -213,7 +213,7 @@ namespace Console_Testing
              // Console.WriteLine(exe.ToString());
         
              // returns the statevector after executing all columns
-             LinearAlgebra.Vector result = exe.ExecuteCircuit();
+             QuantumComputing.LinearAlgebra.Vector result = exe.ExecuteCircuit();
         
              Console.WriteLine(result.ToString());
         
@@ -242,7 +242,7 @@ namespace Console_Testing
             CircuitExecution exe = new CircuitExecution(qc);
 
             // returns the statevector after executing all columns
-            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+            QuantumComputing.LinearAlgebra.Vector result = exe.ExecuteCircuit();
 
             Console.WriteLine(result.ToString());
 
@@ -285,7 +285,7 @@ namespace Console_Testing
             CircuitExecution exe = new CircuitExecution(qc);
 
             // returns the statevector after executing all columns
-            LinearAlgebra.Vector result = exe.ExecuteCircuit();
+            QuantumComputing.LinearAlgebra.Vector result = exe.ExecuteCircuit();
 
             Console.WriteLine(result.ToString());
 

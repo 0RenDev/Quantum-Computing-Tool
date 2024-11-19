@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace LinearAlgebra
+namespace QuantumComputing.LinearAlgebra
 {
     /// <summary>
     /// A special representation of a <see cref="Matrix"/>. A SparseMatrix stores only the non-zero elements to conserve memory and computation.

@@ -1,13 +1,13 @@
-﻿using LinearAlgebra;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using QuantumComputing.LinearAlgebra;
 
-namespace QuantumCircuits
+namespace QuantumComputing.QuantumCircuits
 {
     /// <summary>
     /// This class is responsible for executing a quantum circuit

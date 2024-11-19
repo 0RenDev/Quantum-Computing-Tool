@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Numerics;
 using System.Threading;
 
-namespace LinearAlgebra
+namespace QuantumComputing.LinearAlgebra
 {
     // this is one of the library classes 
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------

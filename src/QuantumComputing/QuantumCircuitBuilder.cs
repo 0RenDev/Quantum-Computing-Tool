@@ -1,11 +1,10 @@
-﻿using LinearAlgebra;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
 using System.Linq;
 
-namespace QuantumCircuits
+namespace QuantumComputing.QuantumCircuits
 {
     /// <summary>
     /// This class is used to build a quantum circuit by adding gates to the circuit lines.
