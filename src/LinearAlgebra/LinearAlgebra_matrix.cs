@@ -1,4 +1,5 @@
-﻿using System.Data.Common;
+﻿using System;
+using System.Data.Common;
 using System.Numerics;
 using System.Text;
 
@@ -397,7 +398,7 @@ namespace LinearAlgebra
         /// </summary>
         /// <param name="obj">The object.</param>
         /// <returns></returns>
-        public override bool Equals(object? obj)
+        public override bool Equals(object obj)
         {
             if (obj is null)
             {

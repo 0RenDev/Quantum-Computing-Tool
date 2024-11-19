@@ -258,8 +258,8 @@ namespace Linear_Algebra_Testing
         public void InnerProduct_Success()
         {
             // Arrange 
-            Vector vector1 = new([1, 2, 3, 4, 5]);
-            Vector vector2 = new([6, 7, 8, 9, 10]);
+            Vector vector1 = new Vector(new Complex[] { 1, 2, 3, 4, 5 });
+            Vector vector2 = new Vector(new Complex[] {6, 7, 8, 9, 10});
 
             // Act
             Complex result = Operations.InnerProduct(vector1, vector2);
@@ -273,8 +273,8 @@ namespace Linear_Algebra_Testing
         public void OuterProduct_Success()
         {
             // Arrange
-            Vector vector1 = new([1, 2, 3, 4, 5]);
-            Vector vector2 = new([6, 7, 8, 9, 10]);
+            Vector vector1 = new Vector(new Complex[] { 1, 2, 3, 4, 5 });
+            Vector vector2 = new Vector(new Complex[] { 6, 7, 8, 9, 10 });
 
             // Act 
             Matrix result = Operations.OuterProduct(vector1, vector2);

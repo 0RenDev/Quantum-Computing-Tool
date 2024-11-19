@@ -1,6 +1,5 @@
 using System;
 using System.Numerics; // Required for Complex numbers
-using System.Runtime.Intrinsics;
 using Console_Testing;
 using LinearAlgebra;
 
@@ -32,7 +31,7 @@ class Program
         //Console.WriteLine("-------------\nQbit Evolution Demo");
         //Showcases.QbitEvolutionDemo();
         */
-        example.TestCircuit();
+        //  example.TestCircuit();
         //example.HalfAdderTest();
 
         //example.TestExpectationValue();

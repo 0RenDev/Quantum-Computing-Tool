@@ -1,7 +1,9 @@
 ﻿using LinearAlgebra;
 using System;
+using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
+using System.Linq;
 
 namespace QuantumCircuits
 {
@@ -162,7 +164,7 @@ namespace QuantumCircuits
         /// </exception>
         public void AddGateCX(int control, int target)
         {
-            ValidateQubits([control, target]);
+            ValidateQubits(new int[] { control, target });
 
             ValidateTarget(target);
             ValidateTarget(control, "Control");
@@ -200,7 +202,7 @@ namespace QuantumCircuits
         /// </exception>
         public void AddGateSWP(int target1, int target2)
         {
-            ValidateQubits([target1, target2]);
+            ValidateQubits(new int[] { target1, target2 });
 
             ValidateTarget(target1, "Target1");
             ValidateTarget(target2, "Target2");
@@ -239,7 +241,7 @@ namespace QuantumCircuits
         /// </exception>
         public void AddGateTOF(int control1, int control2, int target)
         {
-            ValidateQubits([control1, control2, target]);
+            ValidateQubits(new int[] { control1, control2, target });
     
             ValidateTarget(control1, "Control1");
             ValidateTarget(control2, "Control2");
