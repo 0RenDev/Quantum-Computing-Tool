@@ -1,0 +1,919 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix
+  commentId: T:QuantumComputing.LinearAlgebra.SparseMatrix
+  id: SparseMatrix
+  parent: QuantumComputing.LinearAlgebra
+  children:
+  - QuantumComputing.LinearAlgebra.SparseMatrix.#ctor(System.Int32,System.Int32)
+  - QuantumComputing.LinearAlgebra.SparseMatrix.#ctor(System.Numerics.Complex[0:,0:])
+  - QuantumComputing.LinearAlgebra.SparseMatrix.Cols
+  - QuantumComputing.LinearAlgebra.SparseMatrix.FromMatrix(QuantumComputing.LinearAlgebra.Matrix)
+  - QuantumComputing.LinearAlgebra.SparseMatrix.Identity(System.Int32)
+  - QuantumComputing.LinearAlgebra.SparseMatrix.Item(System.Int32,System.Int32)
+  - QuantumComputing.LinearAlgebra.SparseMatrix.Multiply(QuantumComputing.LinearAlgebra.SparseMatrix)
+  - QuantumComputing.LinearAlgebra.SparseMatrix.MultiplyWithVector(System.Numerics.Complex[])
+  - QuantumComputing.LinearAlgebra.SparseMatrix.ParallelTensorProduct(QuantumComputing.LinearAlgebra.SparseMatrix)
+  - QuantumComputing.LinearAlgebra.SparseMatrix.Print
+  - QuantumComputing.LinearAlgebra.SparseMatrix.Rows
+  - QuantumComputing.LinearAlgebra.SparseMatrix.TensorProduct(QuantumComputing.LinearAlgebra.SparseMatrix)
+  langs:
+  - csharp
+  - vb
+  name: SparseMatrix
+  nameWithType: SparseMatrix
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix
+  type: Class
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: SparseMatrix
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 14
+  namespace: QuantumComputing.LinearAlgebra
+  summary: A special representation of a <xref href="QuantumComputing.LinearAlgebra.Matrix" data-throw-if-not-resolved="false"></xref>. A SparseMatrix stores only the non-zero elements to conserve memory and computation.
+  example: []
+  syntax:
+    content: public class SparseMatrix
+    content.vb: Public Class SparseMatrix
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.Rows
+  commentId: P:QuantumComputing.LinearAlgebra.SparseMatrix.Rows
+  id: Rows
+  parent: QuantumComputing.LinearAlgebra.SparseMatrix
+  langs:
+  - csharp
+  - vb
+  name: Rows
+  nameWithType: SparseMatrix.Rows
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.Rows
+  type: Property
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Rows
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 23
+  namespace: QuantumComputing.LinearAlgebra
+  summary: The number of rows
+  example: []
+  syntax:
+    content: public int Rows { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Rows As Integer
+  overload: QuantumComputing.LinearAlgebra.SparseMatrix.Rows*
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.Cols
+  commentId: P:QuantumComputing.LinearAlgebra.SparseMatrix.Cols
+  id: Cols
+  parent: QuantumComputing.LinearAlgebra.SparseMatrix
+  langs:
+  - csharp
+  - vb
+  name: Cols
+  nameWithType: SparseMatrix.Cols
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.Cols
+  type: Property
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Cols
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 28
+  namespace: QuantumComputing.LinearAlgebra
+  summary: The number of columns
+  example: []
+  syntax:
+    content: public int Cols { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Cols As Integer
+  overload: QuantumComputing.LinearAlgebra.SparseMatrix.Cols*
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.#ctor(System.Int32,System.Int32)
+  commentId: M:QuantumComputing.LinearAlgebra.SparseMatrix.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: QuantumComputing.LinearAlgebra.SparseMatrix
+  langs:
+  - csharp
+  - vb
+  name: SparseMatrix(int, int)
+  nameWithType: SparseMatrix.SparseMatrix(int, int)
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.SparseMatrix(int, int)
+  type: Constructor
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: .ctor
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 35
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Constructor to initialize a sparse matrix of a given size
+  example: []
+  syntax:
+    content: public SparseMatrix(int rows, int cols)
+    parameters:
+    - id: rows
+      type: System.Int32
+      description: ''
+    - id: cols
+      type: System.Int32
+      description: ''
+    content.vb: Public Sub New(rows As Integer, cols As Integer)
+  overload: QuantumComputing.LinearAlgebra.SparseMatrix.#ctor*
+  nameWithType.vb: SparseMatrix.New(Integer, Integer)
+  fullName.vb: QuantumComputing.LinearAlgebra.SparseMatrix.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.#ctor(System.Numerics.Complex[0:,0:])
+  commentId: M:QuantumComputing.LinearAlgebra.SparseMatrix.#ctor(System.Numerics.Complex[0:,0:])
+  id: '#ctor(System.Numerics.Complex[0:,0:])'
+  parent: QuantumComputing.LinearAlgebra.SparseMatrix
+  langs:
+  - csharp
+  - vb
+  name: SparseMatrix(Complex[,])
+  nameWithType: SparseMatrix.SparseMatrix(Complex[,])
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.SparseMatrix(System.Numerics.Complex[,])
+  type: Constructor
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: .ctor
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 46
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Constructor to initialize a sparse matrix of a given <xref href="QuantumComputing.LinearAlgebra.Matrix" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public SparseMatrix(Complex[,] matrix)
+    parameters:
+    - id: matrix
+      type: System.Numerics.Complex[,]
+      description: ''
+    content.vb: Public Sub New(matrix As Complex(,))
+  overload: QuantumComputing.LinearAlgebra.SparseMatrix.#ctor*
+  nameWithType.vb: SparseMatrix.New(Complex(,))
+  fullName.vb: QuantumComputing.LinearAlgebra.SparseMatrix.New(System.Numerics.Complex(,))
+  name.vb: New(Complex(,))
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.FromMatrix(QuantumComputing.LinearAlgebra.Matrix)
+  commentId: M:QuantumComputing.LinearAlgebra.SparseMatrix.FromMatrix(QuantumComputing.LinearAlgebra.Matrix)
+  id: FromMatrix(QuantumComputing.LinearAlgebra.Matrix)
+  parent: QuantumComputing.LinearAlgebra.SparseMatrix
+  langs:
+  - csharp
+  - vb
+  name: FromMatrix(Matrix)
+  nameWithType: SparseMatrix.FromMatrix(Matrix)
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.FromMatrix(QuantumComputing.LinearAlgebra.Matrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: FromMatrix
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 71
+  namespace: QuantumComputing.LinearAlgebra
+  summary: A static method to convert a <xref href="QuantumComputing.LinearAlgebra.Matrix" data-throw-if-not-resolved="false"></xref> to a <xref href="QuantumComputing.LinearAlgebra.SparseMatrix" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public static SparseMatrix FromMatrix(Matrix matrix)
+    parameters:
+    - id: matrix
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    return:
+      type: QuantumComputing.LinearAlgebra.SparseMatrix
+      description: ''
+    content.vb: Public Shared Function FromMatrix(matrix As Matrix) As SparseMatrix
+  overload: QuantumComputing.LinearAlgebra.SparseMatrix.FromMatrix*
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.Item(System.Int32,System.Int32)
+  commentId: P:QuantumComputing.LinearAlgebra.SparseMatrix.Item(System.Int32,System.Int32)
+  id: Item(System.Int32,System.Int32)
+  parent: QuantumComputing.LinearAlgebra.SparseMatrix
+  langs:
+  - csharp
+  - vb
+  name: this[int, int]
+  nameWithType: SparseMatrix.this[int, int]
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.this[int, int]
+  type: Property
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: this[]
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 98
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Index the element at row x col
+  example: []
+  syntax:
+    content: public Complex this[int row, int col] { get; set; }
+    parameters:
+    - id: row
+      type: System.Int32
+      description: ''
+    - id: col
+      type: System.Int32
+      description: ''
+    return:
+      type: System.Numerics.Complex
+      description: ''
+    content.vb: Public Default Property this[](row As Integer, col As Integer) As Complex
+  overload: QuantumComputing.LinearAlgebra.SparseMatrix.Item*
+  nameWithType.vb: SparseMatrix.this[](Integer, Integer)
+  fullName.vb: QuantumComputing.LinearAlgebra.SparseMatrix.this[](Integer, Integer)
+  name.vb: this[](Integer, Integer)
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.Multiply(QuantumComputing.LinearAlgebra.SparseMatrix)
+  commentId: M:QuantumComputing.LinearAlgebra.SparseMatrix.Multiply(QuantumComputing.LinearAlgebra.SparseMatrix)
+  id: Multiply(QuantumComputing.LinearAlgebra.SparseMatrix)
+  parent: QuantumComputing.LinearAlgebra.SparseMatrix
+  langs:
+  - csharp
+  - vb
+  name: Multiply(SparseMatrix)
+  nameWithType: SparseMatrix.Multiply(SparseMatrix)
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.Multiply(QuantumComputing.LinearAlgebra.SparseMatrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Multiply
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 110
+  namespace: QuantumComputing.LinearAlgebra
+  summary: A method to peform the matrix multiplication between two <xref href="QuantumComputing.LinearAlgebra.SparseMatrix" data-throw-if-not-resolved="false"></xref>. Note that this is a right multiplicaiton, so it computes self * other
+  example: []
+  syntax:
+    content: public SparseMatrix Multiply(SparseMatrix other)
+    parameters:
+    - id: other
+      type: QuantumComputing.LinearAlgebra.SparseMatrix
+      description: ''
+    return:
+      type: QuantumComputing.LinearAlgebra.SparseMatrix
+      description: ''
+    content.vb: Public Function Multiply(other As SparseMatrix) As SparseMatrix
+  overload: QuantumComputing.LinearAlgebra.SparseMatrix.Multiply*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: ''
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.TensorProduct(QuantumComputing.LinearAlgebra.SparseMatrix)
+  commentId: M:QuantumComputing.LinearAlgebra.SparseMatrix.TensorProduct(QuantumComputing.LinearAlgebra.SparseMatrix)
+  id: TensorProduct(QuantumComputing.LinearAlgebra.SparseMatrix)
+  parent: QuantumComputing.LinearAlgebra.SparseMatrix
+  langs:
+  - csharp
+  - vb
+  name: TensorProduct(SparseMatrix)
+  nameWithType: SparseMatrix.TensorProduct(SparseMatrix)
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.TensorProduct(QuantumComputing.LinearAlgebra.SparseMatrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: TensorProduct
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 139
+  namespace: QuantumComputing.LinearAlgebra
+  summary: A methdo to perform the tensor product with another <xref href="QuantumComputing.LinearAlgebra.SparseMatrix" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public SparseMatrix TensorProduct(SparseMatrix other)
+    parameters:
+    - id: other
+      type: QuantumComputing.LinearAlgebra.SparseMatrix
+      description: ''
+    return:
+      type: QuantumComputing.LinearAlgebra.SparseMatrix
+      description: ''
+    content.vb: Public Function TensorProduct(other As SparseMatrix) As SparseMatrix
+  overload: QuantumComputing.LinearAlgebra.SparseMatrix.TensorProduct*
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.ParallelTensorProduct(QuantumComputing.LinearAlgebra.SparseMatrix)
+  commentId: M:QuantumComputing.LinearAlgebra.SparseMatrix.ParallelTensorProduct(QuantumComputing.LinearAlgebra.SparseMatrix)
+  id: ParallelTensorProduct(QuantumComputing.LinearAlgebra.SparseMatrix)
+  parent: QuantumComputing.LinearAlgebra.SparseMatrix
+  langs:
+  - csharp
+  - vb
+  name: ParallelTensorProduct(SparseMatrix)
+  nameWithType: SparseMatrix.ParallelTensorProduct(SparseMatrix)
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.ParallelTensorProduct(QuantumComputing.LinearAlgebra.SparseMatrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: ParallelTensorProduct
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 173
+  namespace: QuantumComputing.LinearAlgebra
+  summary: A method to perform the tensor product with another <xref href="QuantumComputing.LinearAlgebra.SparseMatrix" data-throw-if-not-resolved="false"></xref> that is parallelized to increase performance on large matrices.
+  example: []
+  syntax:
+    content: public SparseMatrix ParallelTensorProduct(SparseMatrix other)
+    parameters:
+    - id: other
+      type: QuantumComputing.LinearAlgebra.SparseMatrix
+      description: ''
+    return:
+      type: QuantumComputing.LinearAlgebra.SparseMatrix
+      description: ''
+    content.vb: Public Function ParallelTensorProduct(other As SparseMatrix) As SparseMatrix
+  overload: QuantumComputing.LinearAlgebra.SparseMatrix.ParallelTensorProduct*
+  exceptions:
+  - type: System.NullReferenceException
+    commentId: T:System.NullReferenceException
+    description: ''
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.MultiplyWithVector(System.Numerics.Complex[])
+  commentId: M:QuantumComputing.LinearAlgebra.SparseMatrix.MultiplyWithVector(System.Numerics.Complex[])
+  id: MultiplyWithVector(System.Numerics.Complex[])
+  parent: QuantumComputing.LinearAlgebra.SparseMatrix
+  langs:
+  - csharp
+  - vb
+  name: MultiplyWithVector(Complex[])
+  nameWithType: SparseMatrix.MultiplyWithVector(Complex[])
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.MultiplyWithVector(System.Numerics.Complex[])
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: MultiplyWithVector
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 230
+  namespace: QuantumComputing.LinearAlgebra
+  summary: A method to perform a SparseMatrix * <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref> multiplication
+  example: []
+  syntax:
+    content: public Complex[] MultiplyWithVector(Complex[] vector)
+    parameters:
+    - id: vector
+      type: System.Numerics.Complex[]
+      description: ''
+    return:
+      type: System.Numerics.Complex[]
+      description: ''
+    content.vb: Public Function MultiplyWithVector(vector As Complex()) As Complex()
+  overload: QuantumComputing.LinearAlgebra.SparseMatrix.MultiplyWithVector*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: ''
+  nameWithType.vb: SparseMatrix.MultiplyWithVector(Complex())
+  fullName.vb: QuantumComputing.LinearAlgebra.SparseMatrix.MultiplyWithVector(System.Numerics.Complex())
+  name.vb: MultiplyWithVector(Complex())
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.Print
+  commentId: M:QuantumComputing.LinearAlgebra.SparseMatrix.Print
+  id: Print
+  parent: QuantumComputing.LinearAlgebra.SparseMatrix
+  langs:
+  - csharp
+  - vb
+  name: Print()
+  nameWithType: SparseMatrix.Print()
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.Print()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Print
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 253
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Method to display the sparse matrix (for debugging purposes)
+  example: []
+  syntax:
+    content: public void Print()
+    content.vb: Public Sub Print()
+  overload: QuantumComputing.LinearAlgebra.SparseMatrix.Print*
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.Identity(System.Int32)
+  commentId: M:QuantumComputing.LinearAlgebra.SparseMatrix.Identity(System.Int32)
+  id: Identity(System.Int32)
+  parent: QuantumComputing.LinearAlgebra.SparseMatrix
+  langs:
+  - csharp
+  - vb
+  name: Identity(int)
+  nameWithType: SparseMatrix.Identity(int)
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.Identity(int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/SparseMatrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Identity
+    path: src/QuantumComputing/SparseMatrix.cs
+    startLine: 270
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Return the identity matrix as a SparseMatrix
+  example: []
+  syntax:
+    content: public static SparseMatrix Identity(int size)
+    parameters:
+    - id: size
+      type: System.Int32
+      description: ''
+    return:
+      type: QuantumComputing.LinearAlgebra.SparseMatrix
+      description: ''
+    content.vb: Public Shared Function Identity(size As Integer) As SparseMatrix
+  overload: QuantumComputing.LinearAlgebra.SparseMatrix.Identity*
+  nameWithType.vb: SparseMatrix.Identity(Integer)
+  fullName.vb: QuantumComputing.LinearAlgebra.SparseMatrix.Identity(Integer)
+  name.vb: Identity(Integer)
+references:
+- uid: QuantumComputing.LinearAlgebra.Matrix
+  commentId: T:QuantumComputing.LinearAlgebra.Matrix
+  parent: QuantumComputing.LinearAlgebra
+  href: QuantumComputing.LinearAlgebra.Matrix.html
+  name: Matrix
+  nameWithType: Matrix
+  fullName: QuantumComputing.LinearAlgebra.Matrix
+- uid: QuantumComputing.LinearAlgebra
+  commentId: N:QuantumComputing.LinearAlgebra
+  href: QuantumComputing.html
+  name: QuantumComputing.LinearAlgebra
+  nameWithType: QuantumComputing.LinearAlgebra
+  fullName: QuantumComputing.LinearAlgebra
+  spec.csharp:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.LinearAlgebra
+    name: LinearAlgebra
+    href: QuantumComputing.LinearAlgebra.html
+  spec.vb:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.LinearAlgebra
+    name: LinearAlgebra
+    href: QuantumComputing.LinearAlgebra.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.Rows*
+  commentId: Overload:QuantumComputing.LinearAlgebra.SparseMatrix.Rows
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html#QuantumComputing_LinearAlgebra_SparseMatrix_Rows
+  name: Rows
+  nameWithType: SparseMatrix.Rows
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.Rows
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.Cols*
+  commentId: Overload:QuantumComputing.LinearAlgebra.SparseMatrix.Cols
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html#QuantumComputing_LinearAlgebra_SparseMatrix_Cols
+  name: Cols
+  nameWithType: SparseMatrix.Cols
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.Cols
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.#ctor*
+  commentId: Overload:QuantumComputing.LinearAlgebra.SparseMatrix.#ctor
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html#QuantumComputing_LinearAlgebra_SparseMatrix__ctor_System_Int32_System_Int32_
+  name: SparseMatrix
+  nameWithType: SparseMatrix.SparseMatrix
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.SparseMatrix
+  nameWithType.vb: SparseMatrix.New
+  fullName.vb: QuantumComputing.LinearAlgebra.SparseMatrix.New
+  name.vb: New
+- uid: System.Numerics.Complex[,]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  name: Complex[,]
+  nameWithType: Complex[,]
+  fullName: System.Numerics.Complex[,]
+  nameWithType.vb: Complex(,)
+  fullName.vb: System.Numerics.Complex(,)
+  name.vb: Complex(,)
+  spec.csharp:
+  - uid: System.Numerics.Complex
+    name: Complex
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  - name: '['
+  - name: ','
+  - name: ']'
+  spec.vb:
+  - uid: System.Numerics.Complex
+    name: Complex
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  - name: (
+  - name: ','
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix
+  commentId: T:QuantumComputing.LinearAlgebra.SparseMatrix
+  parent: QuantumComputing.LinearAlgebra
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html
+  name: SparseMatrix
+  nameWithType: SparseMatrix
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.FromMatrix*
+  commentId: Overload:QuantumComputing.LinearAlgebra.SparseMatrix.FromMatrix
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html#QuantumComputing_LinearAlgebra_SparseMatrix_FromMatrix_QuantumComputing_LinearAlgebra_Matrix_
+  name: FromMatrix
+  nameWithType: SparseMatrix.FromMatrix
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.FromMatrix
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.Item*
+  commentId: Overload:QuantumComputing.LinearAlgebra.SparseMatrix.Item
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html#QuantumComputing_LinearAlgebra_SparseMatrix_Item_System_Int32_System_Int32_
+  name: this
+  nameWithType: SparseMatrix.this
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.this
+  nameWithType.vb: SparseMatrix.this[]
+  fullName.vb: QuantumComputing.LinearAlgebra.SparseMatrix.this[]
+  name.vb: this[]
+- uid: System.Numerics.Complex
+  commentId: T:System.Numerics.Complex
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  name: Complex
+  nameWithType: Complex
+  fullName: System.Numerics.Complex
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.Multiply*
+  commentId: Overload:QuantumComputing.LinearAlgebra.SparseMatrix.Multiply
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html#QuantumComputing_LinearAlgebra_SparseMatrix_Multiply_QuantumComputing_LinearAlgebra_SparseMatrix_
+  name: Multiply
+  nameWithType: SparseMatrix.Multiply
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.Multiply
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.TensorProduct*
+  commentId: Overload:QuantumComputing.LinearAlgebra.SparseMatrix.TensorProduct
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html#QuantumComputing_LinearAlgebra_SparseMatrix_TensorProduct_QuantumComputing_LinearAlgebra_SparseMatrix_
+  name: TensorProduct
+  nameWithType: SparseMatrix.TensorProduct
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.TensorProduct
+- uid: System.NullReferenceException
+  commentId: T:System.NullReferenceException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullreferenceexception
+  name: NullReferenceException
+  nameWithType: NullReferenceException
+  fullName: System.NullReferenceException
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.ParallelTensorProduct*
+  commentId: Overload:QuantumComputing.LinearAlgebra.SparseMatrix.ParallelTensorProduct
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html#QuantumComputing_LinearAlgebra_SparseMatrix_ParallelTensorProduct_QuantumComputing_LinearAlgebra_SparseMatrix_
+  name: ParallelTensorProduct
+  nameWithType: SparseMatrix.ParallelTensorProduct
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.ParallelTensorProduct
+- uid: QuantumComputing.LinearAlgebra.Vector
+  commentId: T:QuantumComputing.LinearAlgebra.Vector
+  parent: QuantumComputing.LinearAlgebra
+  href: QuantumComputing.LinearAlgebra.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: QuantumComputing.LinearAlgebra.Vector
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.MultiplyWithVector*
+  commentId: Overload:QuantumComputing.LinearAlgebra.SparseMatrix.MultiplyWithVector
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html#QuantumComputing_LinearAlgebra_SparseMatrix_MultiplyWithVector_System_Numerics_Complex___
+  name: MultiplyWithVector
+  nameWithType: SparseMatrix.MultiplyWithVector
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.MultiplyWithVector
+- uid: System.Numerics.Complex[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  name: Complex[]
+  nameWithType: Complex[]
+  fullName: System.Numerics.Complex[]
+  nameWithType.vb: Complex()
+  fullName.vb: System.Numerics.Complex()
+  name.vb: Complex()
+  spec.csharp:
+  - uid: System.Numerics.Complex
+    name: Complex
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Numerics.Complex
+    name: Complex
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  - name: (
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.Print*
+  commentId: Overload:QuantumComputing.LinearAlgebra.SparseMatrix.Print
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html#QuantumComputing_LinearAlgebra_SparseMatrix_Print
+  name: Print
+  nameWithType: SparseMatrix.Print
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.Print
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix.Identity*
+  commentId: Overload:QuantumComputing.LinearAlgebra.SparseMatrix.Identity
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html#QuantumComputing_LinearAlgebra_SparseMatrix_Identity_System_Int32_
+  name: Identity
+  nameWithType: SparseMatrix.Identity
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix.Identity

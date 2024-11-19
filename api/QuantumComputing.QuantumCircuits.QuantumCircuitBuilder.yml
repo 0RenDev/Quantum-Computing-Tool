@@ -1,0 +1,1108 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  commentId: T:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  id: QuantumCircuitBuilder
+  parent: QuantumComputing.QuantumCircuits
+  children:
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.#ctor(System.Int32,System.Int32)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateCX(System.Int32,System.Int32)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateH(System.Int32)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRX(System.Int32,System.Double)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRY(System.Int32,System.Double)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRZ(System.Int32,System.Double)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateSWP(System.Int32,System.Int32)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateT(System.Int32)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateTOF(System.Int32,System.Int32,System.Int32)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateX(System.Int32)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateY(System.Int32)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateZ(System.Int32)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol(QuantumComputing.QuantumCircuits.Gate)
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.ToString
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.classicalLines
+  - QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.quantumLines
+  langs:
+  - csharp
+  - vb
+  name: QuantumCircuitBuilder
+  nameWithType: QuantumCircuitBuilder
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  type: Class
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: QuantumCircuitBuilder
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 11
+  namespace: QuantumComputing.QuantumCircuits
+  summary: This class is used to build a quantum circuit by adding gates to the circuit lines.
+  example: []
+  syntax:
+    content: public class QuantumCircuitBuilder
+    content.vb: Public Class QuantumCircuitBuilder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.quantumLines
+  commentId: F:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.quantumLines
+  id: quantumLines
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: quantumLines
+  nameWithType: QuantumCircuitBuilder.quantumLines
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.quantumLines
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: quantumLines
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 17
+  namespace: QuantumComputing.QuantumCircuits
+  summary: The quantum lines represent the series of quantum gates that are applied to a qubit.
+  example: []
+  syntax:
+    content: public List<Gate>[] quantumLines
+    return:
+      type: System.Collections.Generic.List{QuantumComputing.QuantumCircuits.Gate}[]
+    content.vb: Public quantumLines As List(Of Gate)()
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.classicalLines
+  commentId: F:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.classicalLines
+  id: classicalLines
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: classicalLines
+  nameWithType: QuantumCircuitBuilder.classicalLines
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.classicalLines
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: classicalLines
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 22
+  namespace: QuantumComputing.QuantumCircuits
+  summary: The classical lines represent the series of classical gates that are applied to a classical bit.
+  example: []
+  syntax:
+    content: public List<Gate>[] classicalLines
+    return:
+      type: System.Collections.Generic.List{QuantumComputing.QuantumCircuits.Gate}[]
+    content.vb: Public classicalLines As List(Of Gate)()
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.#ctor(System.Int32,System.Int32)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: QuantumCircuitBuilder(int, int)
+  nameWithType: QuantumCircuitBuilder.QuantumCircuitBuilder(int, int)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.QuantumCircuitBuilder(int, int)
+  type: Constructor
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: .ctor
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 29
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Initializes a new instance of the <xref href="QuantumComputing.QuantumCircuits.QuantumCircuitBuilder" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public QuantumCircuitBuilder(int numQuantumLines, int numClassicalLines)
+    parameters:
+    - id: numQuantumLines
+      type: System.Int32
+      description: The number quantum lines.
+    - id: numClassicalLines
+      type: System.Int32
+      description: The number classical lines.
+    content.vb: Public Sub New(numQuantumLines As Integer, numClassicalLines As Integer)
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.#ctor*
+  nameWithType.vb: QuantumCircuitBuilder.New(Integer, Integer)
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateX(System.Int32)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateX(System.Int32)
+  id: AddGateX(System.Int32)
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddGateX(int)
+  nameWithType: QuantumCircuitBuilder.AddGateX(int)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateX(int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: AddGateX
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 88
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Adds the gate X.
+  example: []
+  syntax:
+    content: public void AddGateX(int target)
+    parameters:
+    - id: target
+      type: System.Int32
+      description: The target qubit
+    content.vb: Public Sub AddGateX(target As Integer)
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateX*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: target outside of circuit bounds
+  nameWithType.vb: QuantumCircuitBuilder.AddGateX(Integer)
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateX(Integer)
+  name.vb: AddGateX(Integer)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateY(System.Int32)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateY(System.Int32)
+  id: AddGateY(System.Int32)
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddGateY(int)
+  nameWithType: QuantumCircuitBuilder.AddGateY(int)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateY(int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: AddGateY
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 102
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Adds the gate Y.
+  example: []
+  syntax:
+    content: public void AddGateY(int target)
+    parameters:
+    - id: target
+      type: System.Int32
+      description: The target qubit
+    content.vb: Public Sub AddGateY(target As Integer)
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateY*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: target outside of circuit bounds
+  nameWithType.vb: QuantumCircuitBuilder.AddGateY(Integer)
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateY(Integer)
+  name.vb: AddGateY(Integer)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateZ(System.Int32)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateZ(System.Int32)
+  id: AddGateZ(System.Int32)
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddGateZ(int)
+  nameWithType: QuantumCircuitBuilder.AddGateZ(int)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateZ(int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: AddGateZ
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 116
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Adds the gate Z.
+  example: []
+  syntax:
+    content: public void AddGateZ(int target)
+    parameters:
+    - id: target
+      type: System.Int32
+      description: The target qubit
+    content.vb: Public Sub AddGateZ(target As Integer)
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateZ*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: target outside of circuit bounds
+  nameWithType.vb: QuantumCircuitBuilder.AddGateZ(Integer)
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateZ(Integer)
+  name.vb: AddGateZ(Integer)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateT(System.Int32)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateT(System.Int32)
+  id: AddGateT(System.Int32)
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddGateT(int)
+  nameWithType: QuantumCircuitBuilder.AddGateT(int)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateT(int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: AddGateT
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 130
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Adds the gate T.
+  example: []
+  syntax:
+    content: public void AddGateT(int target)
+    parameters:
+    - id: target
+      type: System.Int32
+      description: The target qubit
+    content.vb: Public Sub AddGateT(target As Integer)
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateT*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: target outside of circuit bounds
+  nameWithType.vb: QuantumCircuitBuilder.AddGateT(Integer)
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateT(Integer)
+  name.vb: AddGateT(Integer)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateH(System.Int32)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateH(System.Int32)
+  id: AddGateH(System.Int32)
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddGateH(int)
+  nameWithType: QuantumCircuitBuilder.AddGateH(int)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateH(int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: AddGateH
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 144
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Adds the gate H.
+  example: []
+  syntax:
+    content: public void AddGateH(int target)
+    parameters:
+    - id: target
+      type: System.Int32
+      description: The target qubit
+    content.vb: Public Sub AddGateH(target As Integer)
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateH*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: target outside of circuit bounds
+  nameWithType.vb: QuantumCircuitBuilder.AddGateH(Integer)
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateH(Integer)
+  name.vb: AddGateH(Integer)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateCX(System.Int32,System.Int32)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateCX(System.Int32,System.Int32)
+  id: AddGateCX(System.Int32,System.Int32)
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddGateCX(int, int)
+  nameWithType: QuantumCircuitBuilder.AddGateCX(int, int)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateCX(int, int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: AddGateCX
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 163
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Adds the gate CX (Controlled Not).
+  example: []
+  syntax:
+    content: public void AddGateCX(int control, int target)
+    parameters:
+    - id: control
+      type: System.Int32
+      description: The control qubit.
+    - id: target
+      type: System.Int32
+      description: The target qubit.
+    content.vb: Public Sub AddGateCX(control As Integer, target As Integer)
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateCX*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      target and control cannot be the same value
+
+      or
+
+      target or control outside of circuit bounds
+  nameWithType.vb: QuantumCircuitBuilder.AddGateCX(Integer, Integer)
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateCX(Integer, Integer)
+  name.vb: AddGateCX(Integer, Integer)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateSWP(System.Int32,System.Int32)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateSWP(System.Int32,System.Int32)
+  id: AddGateSWP(System.Int32,System.Int32)
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddGateSWP(int, int)
+  nameWithType: QuantumCircuitBuilder.AddGateSWP(int, int)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateSWP(int, int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: AddGateSWP
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 201
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Adds the gate SWP.
+  example: []
+  syntax:
+    content: public void AddGateSWP(int target1, int target2)
+    parameters:
+    - id: target1
+      type: System.Int32
+      description: The first target qubit.
+    - id: target2
+      type: System.Int32
+      description: The second target qubit.
+    content.vb: Public Sub AddGateSWP(target1 As Integer, target2 As Integer)
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateSWP*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      target and control cannot be the same value
+
+      or
+
+      target or control outside of circuit bounds
+  nameWithType.vb: QuantumCircuitBuilder.AddGateSWP(Integer, Integer)
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateSWP(Integer, Integer)
+  name.vb: AddGateSWP(Integer, Integer)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateTOF(System.Int32,System.Int32,System.Int32)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateTOF(System.Int32,System.Int32,System.Int32)
+  id: AddGateTOF(System.Int32,System.Int32,System.Int32)
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddGateTOF(int, int, int)
+  nameWithType: QuantumCircuitBuilder.AddGateTOF(int, int, int)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateTOF(int, int, int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: AddGateTOF
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 240
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Adds the gate TOF.
+  example: []
+  syntax:
+    content: public void AddGateTOF(int control1, int control2, int target)
+    parameters:
+    - id: control1
+      type: System.Int32
+      description: The first control qubit.
+    - id: control2
+      type: System.Int32
+      description: The second control qubit.
+    - id: target
+      type: System.Int32
+      description: The target qubit.
+    content.vb: Public Sub AddGateTOF(control1 As Integer, control2 As Integer, target As Integer)
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateTOF*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      target or controls can be the same value
+
+      or
+
+      target or control outside of circuit bounds
+  nameWithType.vb: QuantumCircuitBuilder.AddGateTOF(Integer, Integer, Integer)
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateTOF(Integer, Integer, Integer)
+  name.vb: AddGateTOF(Integer, Integer, Integer)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRX(System.Int32,System.Double)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRX(System.Int32,System.Double)
+  id: AddGateRX(System.Int32,System.Double)
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddGateRX(int, double)
+  nameWithType: QuantumCircuitBuilder.AddGateRX(int, double)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRX(int, double)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: AddGateRX
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 284
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Adds the gate RX.
+  example: []
+  syntax:
+    content: public void AddGateRX(int target, double theta)
+    parameters:
+    - id: target
+      type: System.Int32
+      description: The target qubit
+    - id: theta
+      type: System.Double
+      description: Angle of rotation in radians
+    content.vb: Public Sub AddGateRX(target As Integer, theta As Double)
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRX*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: target outside of circuit bounds
+  nameWithType.vb: QuantumCircuitBuilder.AddGateRX(Integer, Double)
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRX(Integer, Double)
+  name.vb: AddGateRX(Integer, Double)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRY(System.Int32,System.Double)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRY(System.Int32,System.Double)
+  id: AddGateRY(System.Int32,System.Double)
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddGateRY(int, double)
+  nameWithType: QuantumCircuitBuilder.AddGateRY(int, double)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRY(int, double)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: AddGateRY
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 299
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Adds the gate RY.
+  example: []
+  syntax:
+    content: public void AddGateRY(int target, double theta)
+    parameters:
+    - id: target
+      type: System.Int32
+      description: The target qubit
+    - id: theta
+      type: System.Double
+      description: Angle of rotation in radians
+    content.vb: Public Sub AddGateRY(target As Integer, theta As Double)
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRY*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: target outside of circuit bounds
+  nameWithType.vb: QuantumCircuitBuilder.AddGateRY(Integer, Double)
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRY(Integer, Double)
+  name.vb: AddGateRY(Integer, Double)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRZ(System.Int32,System.Double)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRZ(System.Int32,System.Double)
+  id: AddGateRZ(System.Int32,System.Double)
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddGateRZ(int, double)
+  nameWithType: QuantumCircuitBuilder.AddGateRZ(int, double)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRZ(int, double)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: AddGateRZ
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 314
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Adds the gate RZ.
+  example: []
+  syntax:
+    content: public void AddGateRZ(int target, double theta)
+    parameters:
+    - id: target
+      type: System.Int32
+      description: The target qubit
+    - id: theta
+      type: System.Double
+      description: Angle of rotation in radians
+    content.vb: Public Sub AddGateRZ(target As Integer, theta As Double)
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRZ*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: target outside of circuit bounds
+  nameWithType.vb: QuantumCircuitBuilder.AddGateRZ(Integer, Double)
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRZ(Integer, Double)
+  name.vb: AddGateRZ(Integer, Double)
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.ToString
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.ToString
+  id: ToString
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: QuantumCircuitBuilder.ToString()
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: ToString
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 330
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Converts to string.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> that represents this instance.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.ToString*
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol(QuantumComputing.QuantumCircuits.Gate)
+  commentId: M:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol(QuantumComputing.QuantumCircuits.Gate)
+  id: GetBoxedAsciiSymbol(QuantumComputing.QuantumCircuits.Gate)
+  parent: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  langs:
+  - csharp
+  - vb
+  name: GetBoxedAsciiSymbol(Gate)
+  nameWithType: QuantumCircuitBuilder.GetBoxedAsciiSymbol(Gate)
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol(QuantumComputing.QuantumCircuits.Gate)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/QuantumCircuitBuilder.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: GetBoxedAsciiSymbol
+    path: src/QuantumComputing/QuantumCircuitBuilder.cs
+    startLine: 394
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Helper method for circuit ToString. Makes an array of strings to represent a gate.
+  example: []
+  syntax:
+    content: public string[] GetBoxedAsciiSymbol(Gate gate)
+    parameters:
+    - id: gate
+      type: QuantumComputing.QuantumCircuits.Gate
+      description: The <xref href="QuantumComputing.QuantumCircuits.Gate" data-throw-if-not-resolved="false"></xref> to generate ASCII symbols for.
+    return:
+      type: System.String[]
+      description: An array of <xref href="System.String" data-throw-if-not-resolved="false"></xref> array representing the ASCII symbol of the gate.
+    content.vb: Public Function GetBoxedAsciiSymbol(gate As Gate) As String()
+  overload: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol*
+references:
+- uid: QuantumComputing.QuantumCircuits
+  commentId: N:QuantumComputing.QuantumCircuits
+  href: QuantumComputing.html
+  name: QuantumComputing.QuantumCircuits
+  nameWithType: QuantumComputing.QuantumCircuits
+  fullName: QuantumComputing.QuantumCircuits
+  spec.csharp:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.QuantumCircuits
+    name: QuantumCircuits
+    href: QuantumComputing.QuantumCircuits.html
+  spec.vb:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.QuantumCircuits
+    name: QuantumCircuits
+    href: QuantumComputing.QuantumCircuits.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{QuantumComputing.QuantumCircuits.Gate}[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Gate>[]
+  nameWithType: List<Gate>[]
+  fullName: System.Collections.Generic.List<QuantumComputing.QuantumCircuits.Gate>[]
+  nameWithType.vb: List(Of Gate)()
+  fullName.vb: System.Collections.Generic.List(Of QuantumComputing.QuantumCircuits.Gate)()
+  name.vb: List(Of Gate)()
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: QuantumComputing.QuantumCircuits.Gate
+    name: Gate
+    href: QuantumComputing.QuantumCircuits.Gate.html
+  - name: '>'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: QuantumComputing.QuantumCircuits.Gate
+    name: Gate
+    href: QuantumComputing.QuantumCircuits.Gate.html
+  - name: )
+  - name: (
+  - name: )
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  commentId: T:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+  parent: QuantumComputing.QuantumCircuits
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html
+  name: QuantumCircuitBuilder
+  nameWithType: QuantumCircuitBuilder
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.#ctor*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.#ctor
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder__ctor_System_Int32_System_Int32_
+  name: QuantumCircuitBuilder
+  nameWithType: QuantumCircuitBuilder.QuantumCircuitBuilder
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.QuantumCircuitBuilder
+  nameWithType.vb: QuantumCircuitBuilder.New
+  fullName.vb: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateX*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateX
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_AddGateX_System_Int32_
+  name: AddGateX
+  nameWithType: QuantumCircuitBuilder.AddGateX
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateX
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateY*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateY
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_AddGateY_System_Int32_
+  name: AddGateY
+  nameWithType: QuantumCircuitBuilder.AddGateY
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateY
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateZ*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateZ
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_AddGateZ_System_Int32_
+  name: AddGateZ
+  nameWithType: QuantumCircuitBuilder.AddGateZ
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateZ
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateT*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateT
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_AddGateT_System_Int32_
+  name: AddGateT
+  nameWithType: QuantumCircuitBuilder.AddGateT
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateT
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateH*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateH
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_AddGateH_System_Int32_
+  name: AddGateH
+  nameWithType: QuantumCircuitBuilder.AddGateH
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateH
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateCX*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateCX
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_AddGateCX_System_Int32_System_Int32_
+  name: AddGateCX
+  nameWithType: QuantumCircuitBuilder.AddGateCX
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateCX
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateSWP*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateSWP
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_AddGateSWP_System_Int32_System_Int32_
+  name: AddGateSWP
+  nameWithType: QuantumCircuitBuilder.AddGateSWP
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateSWP
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateTOF*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateTOF
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_AddGateTOF_System_Int32_System_Int32_System_Int32_
+  name: AddGateTOF
+  nameWithType: QuantumCircuitBuilder.AddGateTOF
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateTOF
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRX*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRX
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_AddGateRX_System_Int32_System_Double_
+  name: AddGateRX
+  nameWithType: QuantumCircuitBuilder.AddGateRX
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRX
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRY*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRY
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_AddGateRY_System_Int32_System_Double_
+  name: AddGateRY
+  nameWithType: QuantumCircuitBuilder.AddGateRY
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRY
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRZ*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRZ
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_AddGateRZ_System_Int32_System_Double_
+  name: AddGateRZ
+  nameWithType: QuantumCircuitBuilder.AddGateRZ
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.AddGateRZ
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.ToString*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.ToString
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_ToString
+  name: ToString
+  nameWithType: QuantumCircuitBuilder.ToString
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.ToString
+- uid: QuantumComputing.QuantumCircuits.Gate
+  commentId: T:QuantumComputing.QuantumCircuits.Gate
+  parent: QuantumComputing.QuantumCircuits
+  href: QuantumComputing.QuantumCircuits.Gate.html
+  name: Gate
+  nameWithType: Gate
+  fullName: QuantumComputing.QuantumCircuits.Gate
+- uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol*
+  commentId: Overload:QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol
+  href: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.html#QuantumComputing_QuantumCircuits_QuantumCircuitBuilder_GetBoxedAsciiSymbol_QuantumComputing_QuantumCircuits_Gate_
+  name: GetBoxedAsciiSymbol
+  nameWithType: QuantumCircuitBuilder.GetBoxedAsciiSymbol
+  fullName: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder.GetBoxedAsciiSymbol
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )

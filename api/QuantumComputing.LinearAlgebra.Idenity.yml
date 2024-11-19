@@ -1,0 +1,639 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumComputing.LinearAlgebra.Idenity
+  commentId: T:QuantumComputing.LinearAlgebra.Idenity
+  id: Idenity
+  parent: QuantumComputing.LinearAlgebra
+  children:
+  - QuantumComputing.LinearAlgebra.Idenity.#ctor(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: Idenity
+  nameWithType: Idenity
+  fullName: QuantumComputing.LinearAlgebra.Idenity
+  type: Class
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_matrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Idenity
+    path: src/QuantumComputing/LinearAlgebra_matrix.cs
+    startLine: 467
+  namespace: QuantumComputing.LinearAlgebra
+  summary: This class represents an identity matrix in linear algebra. An identity matrix is a square matrix with ones on the main diagonal and zeros elsewhere.
+  example: []
+  syntax:
+    content: 'public class Idenity : Matrix'
+    content.vb: Public Class Idenity Inherits Matrix
+  seealso:
+  - linkId: QuantumComputing.LinearAlgebra.Matrix
+    commentId: T:QuantumComputing.LinearAlgebra.Matrix
+  inheritance:
+  - System.Object
+  - QuantumComputing.LinearAlgebra.Matrix
+  inheritedMembers:
+  - QuantumComputing.LinearAlgebra.Matrix.rows
+  - QuantumComputing.LinearAlgebra.Matrix.cols
+  - QuantumComputing.LinearAlgebra.Matrix.elements
+  - QuantumComputing.LinearAlgebra.Matrix.GetRow(System.Int32)
+  - QuantumComputing.LinearAlgebra.Matrix.GetColumn(System.Int32)
+  - QuantumComputing.LinearAlgebra.Matrix.Item(System.Int32,System.Int32)
+  - QuantumComputing.LinearAlgebra.Matrix.Transpose
+  - QuantumComputing.LinearAlgebra.Matrix.TransposeInPlace
+  - QuantumComputing.LinearAlgebra.Matrix.Trace
+  - QuantumComputing.LinearAlgebra.Matrix.Conjugate
+  - QuantumComputing.LinearAlgebra.Matrix.ConjugateInPlace
+  - QuantumComputing.LinearAlgebra.Matrix.ToString
+  - QuantumComputing.LinearAlgebra.Matrix.Equals(System.Object)
+  - QuantumComputing.LinearAlgebra.Matrix.GetHashCode
+  - QuantumComputing.LinearAlgebra.Matrix.AddInPlace(QuantumComputing.LinearAlgebra.Matrix)
+  - QuantumComputing.LinearAlgebra.Matrix.SubtractInPlace(QuantumComputing.LinearAlgebra.Matrix)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: QuantumComputing.LinearAlgebra.Idenity.#ctor(System.Int32)
+  commentId: M:QuantumComputing.LinearAlgebra.Idenity.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: QuantumComputing.LinearAlgebra.Idenity
+  langs:
+  - csharp
+  - vb
+  name: Idenity(int)
+  nameWithType: Idenity.Idenity(int)
+  fullName: QuantumComputing.LinearAlgebra.Idenity.Idenity(int)
+  type: Constructor
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_matrix.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: .ctor
+    path: src/QuantumComputing/LinearAlgebra_matrix.cs
+    startLine: 473
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Initializes a new instance of the <xref href="QuantumComputing.LinearAlgebra.Idenity" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public Idenity(int size)
+    parameters:
+    - id: size
+      type: System.Int32
+      description: The size of the matrix.
+    content.vb: Public Sub New(size As Integer)
+  overload: QuantumComputing.LinearAlgebra.Idenity.#ctor*
+  nameWithType.vb: Idenity.New(Integer)
+  fullName.vb: QuantumComputing.LinearAlgebra.Idenity.New(Integer)
+  name.vb: New(Integer)
+references:
+- uid: QuantumComputing.LinearAlgebra.Matrix
+  commentId: T:QuantumComputing.LinearAlgebra.Matrix
+  parent: QuantumComputing.LinearAlgebra
+  href: QuantumComputing.LinearAlgebra.Matrix.html
+  name: Matrix
+  nameWithType: Matrix
+  fullName: QuantumComputing.LinearAlgebra.Matrix
+- uid: QuantumComputing.LinearAlgebra
+  commentId: N:QuantumComputing.LinearAlgebra
+  href: QuantumComputing.html
+  name: QuantumComputing.LinearAlgebra
+  nameWithType: QuantumComputing.LinearAlgebra
+  fullName: QuantumComputing.LinearAlgebra
+  spec.csharp:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.LinearAlgebra
+    name: LinearAlgebra
+    href: QuantumComputing.LinearAlgebra.html
+  spec.vb:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.LinearAlgebra
+    name: LinearAlgebra
+    href: QuantumComputing.LinearAlgebra.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: QuantumComputing.LinearAlgebra.Matrix.rows
+  commentId: P:QuantumComputing.LinearAlgebra.Matrix.rows
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_rows
+  name: rows
+  nameWithType: Matrix.rows
+  fullName: QuantumComputing.LinearAlgebra.Matrix.rows
+- uid: QuantumComputing.LinearAlgebra.Matrix.cols
+  commentId: P:QuantumComputing.LinearAlgebra.Matrix.cols
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_cols
+  name: cols
+  nameWithType: Matrix.cols
+  fullName: QuantumComputing.LinearAlgebra.Matrix.cols
+- uid: QuantumComputing.LinearAlgebra.Matrix.elements
+  commentId: F:QuantumComputing.LinearAlgebra.Matrix.elements
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_elements
+  name: elements
+  nameWithType: Matrix.elements
+  fullName: QuantumComputing.LinearAlgebra.Matrix.elements
+- uid: QuantumComputing.LinearAlgebra.Matrix.GetRow(System.Int32)
+  commentId: M:QuantumComputing.LinearAlgebra.Matrix.GetRow(System.Int32)
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  isExternal: true
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_GetRow_System_Int32_
+  name: GetRow(int)
+  nameWithType: Matrix.GetRow(int)
+  fullName: QuantumComputing.LinearAlgebra.Matrix.GetRow(int)
+  nameWithType.vb: Matrix.GetRow(Integer)
+  fullName.vb: QuantumComputing.LinearAlgebra.Matrix.GetRow(Integer)
+  name.vb: GetRow(Integer)
+  spec.csharp:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.GetRow(System.Int32)
+    name: GetRow
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_GetRow_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.GetRow(System.Int32)
+    name: GetRow
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_GetRow_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Matrix.GetColumn(System.Int32)
+  commentId: M:QuantumComputing.LinearAlgebra.Matrix.GetColumn(System.Int32)
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  isExternal: true
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_GetColumn_System_Int32_
+  name: GetColumn(int)
+  nameWithType: Matrix.GetColumn(int)
+  fullName: QuantumComputing.LinearAlgebra.Matrix.GetColumn(int)
+  nameWithType.vb: Matrix.GetColumn(Integer)
+  fullName.vb: QuantumComputing.LinearAlgebra.Matrix.GetColumn(Integer)
+  name.vb: GetColumn(Integer)
+  spec.csharp:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.GetColumn(System.Int32)
+    name: GetColumn
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_GetColumn_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.GetColumn(System.Int32)
+    name: GetColumn
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_GetColumn_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Matrix.Item(System.Int32,System.Int32)
+  commentId: P:QuantumComputing.LinearAlgebra.Matrix.Item(System.Int32,System.Int32)
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: this[int, int]
+  nameWithType: Matrix.this[int, int]
+  fullName: QuantumComputing.LinearAlgebra.Matrix.this[int, int]
+  nameWithType.vb: Matrix.this[](Integer, Integer)
+  fullName.vb: QuantumComputing.LinearAlgebra.Matrix.this[](Integer, Integer)
+  name.vb: this[](Integer, Integer)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ']'
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.Item(System.Int32,System.Int32)
+    name: this[]
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Item_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Matrix.Transpose
+  commentId: M:QuantumComputing.LinearAlgebra.Matrix.Transpose
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Transpose
+  name: Transpose()
+  nameWithType: Matrix.Transpose()
+  fullName: QuantumComputing.LinearAlgebra.Matrix.Transpose()
+  spec.csharp:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.Transpose
+    name: Transpose
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Transpose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.Transpose
+    name: Transpose
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Transpose
+  - name: (
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Matrix.TransposeInPlace
+  commentId: M:QuantumComputing.LinearAlgebra.Matrix.TransposeInPlace
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_TransposeInPlace
+  name: TransposeInPlace()
+  nameWithType: Matrix.TransposeInPlace()
+  fullName: QuantumComputing.LinearAlgebra.Matrix.TransposeInPlace()
+  spec.csharp:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.TransposeInPlace
+    name: TransposeInPlace
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_TransposeInPlace
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.TransposeInPlace
+    name: TransposeInPlace
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_TransposeInPlace
+  - name: (
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Matrix.Trace
+  commentId: M:QuantumComputing.LinearAlgebra.Matrix.Trace
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Trace
+  name: Trace()
+  nameWithType: Matrix.Trace()
+  fullName: QuantumComputing.LinearAlgebra.Matrix.Trace()
+  spec.csharp:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.Trace
+    name: Trace
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Trace
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.Trace
+    name: Trace
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Trace
+  - name: (
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Matrix.Conjugate
+  commentId: M:QuantumComputing.LinearAlgebra.Matrix.Conjugate
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Conjugate
+  name: Conjugate()
+  nameWithType: Matrix.Conjugate()
+  fullName: QuantumComputing.LinearAlgebra.Matrix.Conjugate()
+  spec.csharp:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.Conjugate
+    name: Conjugate
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Conjugate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.Conjugate
+    name: Conjugate
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Conjugate
+  - name: (
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Matrix.ConjugateInPlace
+  commentId: M:QuantumComputing.LinearAlgebra.Matrix.ConjugateInPlace
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_ConjugateInPlace
+  name: ConjugateInPlace()
+  nameWithType: Matrix.ConjugateInPlace()
+  fullName: QuantumComputing.LinearAlgebra.Matrix.ConjugateInPlace()
+  spec.csharp:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.ConjugateInPlace
+    name: ConjugateInPlace
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_ConjugateInPlace
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.ConjugateInPlace
+    name: ConjugateInPlace
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_ConjugateInPlace
+  - name: (
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Matrix.ToString
+  commentId: M:QuantumComputing.LinearAlgebra.Matrix.ToString
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_ToString
+  name: ToString()
+  nameWithType: Matrix.ToString()
+  fullName: QuantumComputing.LinearAlgebra.Matrix.ToString()
+  spec.csharp:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.ToString
+    name: ToString
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.ToString
+    name: ToString
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_ToString
+  - name: (
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Matrix.Equals(System.Object)
+  commentId: M:QuantumComputing.LinearAlgebra.Matrix.Equals(System.Object)
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  isExternal: true
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: Matrix.Equals(object)
+  fullName: QuantumComputing.LinearAlgebra.Matrix.Equals(object)
+  nameWithType.vb: Matrix.Equals(Object)
+  fullName.vb: QuantumComputing.LinearAlgebra.Matrix.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.Equals(System.Object)
+    name: Equals
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.Equals(System.Object)
+    name: Equals
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Matrix.GetHashCode
+  commentId: M:QuantumComputing.LinearAlgebra.Matrix.GetHashCode
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_GetHashCode
+  name: GetHashCode()
+  nameWithType: Matrix.GetHashCode()
+  fullName: QuantumComputing.LinearAlgebra.Matrix.GetHashCode()
+  spec.csharp:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.GetHashCode
+    name: GetHashCode
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.GetHashCode
+    name: GetHashCode
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_GetHashCode
+  - name: (
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Matrix.AddInPlace(QuantumComputing.LinearAlgebra.Matrix)
+  commentId: M:QuantumComputing.LinearAlgebra.Matrix.AddInPlace(QuantumComputing.LinearAlgebra.Matrix)
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_AddInPlace_QuantumComputing_LinearAlgebra_Matrix_
+  name: AddInPlace(Matrix)
+  nameWithType: Matrix.AddInPlace(Matrix)
+  fullName: QuantumComputing.LinearAlgebra.Matrix.AddInPlace(QuantumComputing.LinearAlgebra.Matrix)
+  spec.csharp:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.AddInPlace(QuantumComputing.LinearAlgebra.Matrix)
+    name: AddInPlace
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_AddInPlace_QuantumComputing_LinearAlgebra_Matrix_
+  - name: (
+  - uid: QuantumComputing.LinearAlgebra.Matrix
+    name: Matrix
+    href: QuantumComputing.LinearAlgebra.Matrix.html
+  - name: )
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.AddInPlace(QuantumComputing.LinearAlgebra.Matrix)
+    name: AddInPlace
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_AddInPlace_QuantumComputing_LinearAlgebra_Matrix_
+  - name: (
+  - uid: QuantumComputing.LinearAlgebra.Matrix
+    name: Matrix
+    href: QuantumComputing.LinearAlgebra.Matrix.html
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Matrix.SubtractInPlace(QuantumComputing.LinearAlgebra.Matrix)
+  commentId: M:QuantumComputing.LinearAlgebra.Matrix.SubtractInPlace(QuantumComputing.LinearAlgebra.Matrix)
+  parent: QuantumComputing.LinearAlgebra.Matrix
+  href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_SubtractInPlace_QuantumComputing_LinearAlgebra_Matrix_
+  name: SubtractInPlace(Matrix)
+  nameWithType: Matrix.SubtractInPlace(Matrix)
+  fullName: QuantumComputing.LinearAlgebra.Matrix.SubtractInPlace(QuantumComputing.LinearAlgebra.Matrix)
+  spec.csharp:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.SubtractInPlace(QuantumComputing.LinearAlgebra.Matrix)
+    name: SubtractInPlace
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_SubtractInPlace_QuantumComputing_LinearAlgebra_Matrix_
+  - name: (
+  - uid: QuantumComputing.LinearAlgebra.Matrix
+    name: Matrix
+    href: QuantumComputing.LinearAlgebra.Matrix.html
+  - name: )
+  spec.vb:
+  - uid: QuantumComputing.LinearAlgebra.Matrix.SubtractInPlace(QuantumComputing.LinearAlgebra.Matrix)
+    name: SubtractInPlace
+    href: QuantumComputing.LinearAlgebra.Matrix.html#QuantumComputing_LinearAlgebra_Matrix_SubtractInPlace_QuantumComputing_LinearAlgebra_Matrix_
+  - name: (
+  - uid: QuantumComputing.LinearAlgebra.Matrix
+    name: Matrix
+    href: QuantumComputing.LinearAlgebra.Matrix.html
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: QuantumComputing.LinearAlgebra.Idenity
+  commentId: T:QuantumComputing.LinearAlgebra.Idenity
+  href: QuantumComputing.LinearAlgebra.Idenity.html
+  name: Idenity
+  nameWithType: Idenity
+  fullName: QuantumComputing.LinearAlgebra.Idenity
+- uid: QuantumComputing.LinearAlgebra.Idenity.#ctor*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Idenity.#ctor
+  href: QuantumComputing.LinearAlgebra.Idenity.html#QuantumComputing_LinearAlgebra_Idenity__ctor_System_Int32_
+  name: Idenity
+  nameWithType: Idenity.Idenity
+  fullName: QuantumComputing.LinearAlgebra.Idenity.Idenity
+  nameWithType.vb: Idenity.New
+  fullName.vb: QuantumComputing.LinearAlgebra.Idenity.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

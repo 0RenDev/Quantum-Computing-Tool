@@ -1,0 +1,612 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumComputing.QuantumCircuits.Gate
+  commentId: T:QuantumComputing.QuantumCircuits.Gate
+  id: Gate
+  parent: QuantumComputing.QuantumCircuits
+  children:
+  - QuantumComputing.QuantumCircuits.Gate.#ctor(QuantumComputing.QuantumCircuits.GateTypes,QuantumComputing.LinearAlgebra.SparseMatrix,System.Int32[],System.Int32[])
+  - QuantumComputing.QuantumCircuits.Gate.Controls
+  - QuantumComputing.QuantumCircuits.Gate.Operation
+  - QuantumComputing.QuantumCircuits.Gate.Targets
+  - QuantumComputing.QuantumCircuits.Gate.ToString
+  - QuantumComputing.QuantumCircuits.Gate.Type
+  langs:
+  - csharp
+  - vb
+  name: Gate
+  nameWithType: Gate
+  fullName: QuantumComputing.QuantumCircuits.Gate
+  type: Class
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Gate
+    path: src/QuantumComputing/Gate.cs
+    startLine: 80
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Constuctor for a Quantum Gate
+  example: []
+  syntax:
+    content: public class Gate
+    content.vb: Public Class Gate
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - QuantumComputing.QuantumCircuits.CX
+  - QuantumComputing.QuantumCircuits.H
+  - QuantumComputing.QuantumCircuits.NOP
+  - QuantumComputing.QuantumCircuits.RX
+  - QuantumComputing.QuantumCircuits.RY
+  - QuantumComputing.QuantumCircuits.RZ
+  - QuantumComputing.QuantumCircuits.SWAP
+  - QuantumComputing.QuantumCircuits.T
+  - QuantumComputing.QuantumCircuits.Toff
+  - QuantumComputing.QuantumCircuits.X
+  - QuantumComputing.QuantumCircuits.Y
+  - QuantumComputing.QuantumCircuits.Z
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: QuantumComputing.QuantumCircuits.Gate.Type
+  commentId: P:QuantumComputing.QuantumCircuits.Gate.Type
+  id: Type
+  parent: QuantumComputing.QuantumCircuits.Gate
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Gate.Type
+  fullName: QuantumComputing.QuantumCircuits.Gate.Type
+  type: Property
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Type
+    path: src/QuantumComputing/Gate.cs
+    startLine: 85
+  namespace: QuantumComputing.QuantumCircuits
+  summary: The type of gate. See <xref href="QuantumComputing.QuantumCircuits.GateTypes" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public GateTypes Type { get; }
+    parameters: []
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+    content.vb: Public Property Type As GateTypes
+  overload: QuantumComputing.QuantumCircuits.Gate.Type*
+- uid: QuantumComputing.QuantumCircuits.Gate.Operation
+  commentId: P:QuantumComputing.QuantumCircuits.Gate.Operation
+  id: Operation
+  parent: QuantumComputing.QuantumCircuits.Gate
+  langs:
+  - csharp
+  - vb
+  name: Operation
+  nameWithType: Gate.Operation
+  fullName: QuantumComputing.QuantumCircuits.Gate.Operation
+  type: Property
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Operation
+    path: src/QuantumComputing/Gate.cs
+    startLine: 90
+  namespace: QuantumComputing.QuantumCircuits
+  summary: The operator matrix of the gate
+  example: []
+  syntax:
+    content: public SparseMatrix Operation { get; }
+    parameters: []
+    return:
+      type: QuantumComputing.LinearAlgebra.SparseMatrix
+    content.vb: Public Property Operation As SparseMatrix
+  overload: QuantumComputing.QuantumCircuits.Gate.Operation*
+- uid: QuantumComputing.QuantumCircuits.Gate.Controls
+  commentId: P:QuantumComputing.QuantumCircuits.Gate.Controls
+  id: Controls
+  parent: QuantumComputing.QuantumCircuits.Gate
+  langs:
+  - csharp
+  - vb
+  name: Controls
+  nameWithType: Gate.Controls
+  fullName: QuantumComputing.QuantumCircuits.Gate.Controls
+  type: Property
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Controls
+    path: src/QuantumComputing/Gate.cs
+    startLine: 95
+  namespace: QuantumComputing.QuantumCircuits
+  summary: The control qubits
+  example: []
+  syntax:
+    content: public int[] Controls { get; protected set; }
+    parameters: []
+    return:
+      type: System.Int32[]
+    content.vb: Public Property Controls As Integer()
+  overload: QuantumComputing.QuantumCircuits.Gate.Controls*
+- uid: QuantumComputing.QuantumCircuits.Gate.Targets
+  commentId: P:QuantumComputing.QuantumCircuits.Gate.Targets
+  id: Targets
+  parent: QuantumComputing.QuantumCircuits.Gate
+  langs:
+  - csharp
+  - vb
+  name: Targets
+  nameWithType: Gate.Targets
+  fullName: QuantumComputing.QuantumCircuits.Gate.Targets
+  type: Property
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Targets
+    path: src/QuantumComputing/Gate.cs
+    startLine: 100
+  namespace: QuantumComputing.QuantumCircuits
+  summary: The target qubits
+  example: []
+  syntax:
+    content: public int[] Targets { get; protected set; }
+    parameters: []
+    return:
+      type: System.Int32[]
+    content.vb: Public Property Targets As Integer()
+  overload: QuantumComputing.QuantumCircuits.Gate.Targets*
+- uid: QuantumComputing.QuantumCircuits.Gate.#ctor(QuantumComputing.QuantumCircuits.GateTypes,QuantumComputing.LinearAlgebra.SparseMatrix,System.Int32[],System.Int32[])
+  commentId: M:QuantumComputing.QuantumCircuits.Gate.#ctor(QuantumComputing.QuantumCircuits.GateTypes,QuantumComputing.LinearAlgebra.SparseMatrix,System.Int32[],System.Int32[])
+  id: '#ctor(QuantumComputing.QuantumCircuits.GateTypes,QuantumComputing.LinearAlgebra.SparseMatrix,System.Int32[],System.Int32[])'
+  parent: QuantumComputing.QuantumCircuits.Gate
+  langs:
+  - csharp
+  - vb
+  name: Gate(GateTypes, SparseMatrix, int[], int[])
+  nameWithType: Gate.Gate(GateTypes, SparseMatrix, int[], int[])
+  fullName: QuantumComputing.QuantumCircuits.Gate.Gate(QuantumComputing.QuantumCircuits.GateTypes, QuantumComputing.LinearAlgebra.SparseMatrix, int[], int[])
+  type: Constructor
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: .ctor
+    path: src/QuantumComputing/Gate.cs
+    startLine: 106
+  namespace: QuantumComputing.QuantumCircuits
+  example: []
+  syntax:
+    content: public Gate(GateTypes type, SparseMatrix operation, int[] controls, int[] targets)
+    parameters:
+    - id: type
+      type: QuantumComputing.QuantumCircuits.GateTypes
+      description: The <xref href="QuantumComputing.QuantumCircuits.GateTypes" data-throw-if-not-resolved="false"></xref> of the gate
+    - id: operation
+      type: QuantumComputing.LinearAlgebra.SparseMatrix
+      description: A <xref href="QuantumComputing.LinearAlgebra.SparseMatrix" data-throw-if-not-resolved="false"></xref> of the gate's operator matrix
+    - id: controls
+      type: System.Int32[]
+      description: The control qubits as an array of qubits (as indexes)
+    - id: targets
+      type: System.Int32[]
+      description: The target qubits as an array of qubits (as indexes)
+    content.vb: Public Sub New(type As GateTypes, operation As SparseMatrix, controls As Integer(), targets As Integer())
+  overload: QuantumComputing.QuantumCircuits.Gate.#ctor*
+  nameWithType.vb: Gate.New(GateTypes, SparseMatrix, Integer(), Integer())
+  fullName.vb: QuantumComputing.QuantumCircuits.Gate.New(QuantumComputing.QuantumCircuits.GateTypes, QuantumComputing.LinearAlgebra.SparseMatrix, Integer(), Integer())
+  name.vb: New(GateTypes, SparseMatrix, Integer(), Integer())
+- uid: QuantumComputing.QuantumCircuits.Gate.ToString
+  commentId: M:QuantumComputing.QuantumCircuits.Gate.ToString
+  id: ToString
+  parent: QuantumComputing.QuantumCircuits.Gate
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Gate.ToString()
+  fullName: QuantumComputing.QuantumCircuits.Gate.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: ToString
+    path: src/QuantumComputing/Gate.cs
+    startLine: 118
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Returns the <xref href="System.String" data-throw-if-not-resolved="false"></xref> representation of the Gate
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: QuantumComputing.QuantumCircuits.Gate.ToString*
+references:
+- uid: QuantumComputing.QuantumCircuits
+  commentId: N:QuantumComputing.QuantumCircuits
+  href: QuantumComputing.html
+  name: QuantumComputing.QuantumCircuits
+  nameWithType: QuantumComputing.QuantumCircuits
+  fullName: QuantumComputing.QuantumCircuits
+  spec.csharp:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.QuantumCircuits
+    name: QuantumCircuits
+    href: QuantumComputing.QuantumCircuits.html
+  spec.vb:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.QuantumCircuits
+    name: QuantumCircuits
+    href: QuantumComputing.QuantumCircuits.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: QuantumComputing.QuantumCircuits.GateTypes
+  commentId: T:QuantumComputing.QuantumCircuits.GateTypes
+  parent: QuantumComputing.QuantumCircuits
+  href: QuantumComputing.QuantumCircuits.GateTypes.html
+  name: GateTypes
+  nameWithType: GateTypes
+  fullName: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.Gate.Type*
+  commentId: Overload:QuantumComputing.QuantumCircuits.Gate.Type
+  href: QuantumComputing.QuantumCircuits.Gate.html#QuantumComputing_QuantumCircuits_Gate_Type
+  name: Type
+  nameWithType: Gate.Type
+  fullName: QuantumComputing.QuantumCircuits.Gate.Type
+- uid: QuantumComputing.QuantumCircuits.Gate.Operation*
+  commentId: Overload:QuantumComputing.QuantumCircuits.Gate.Operation
+  href: QuantumComputing.QuantumCircuits.Gate.html#QuantumComputing_QuantumCircuits_Gate_Operation
+  name: Operation
+  nameWithType: Gate.Operation
+  fullName: QuantumComputing.QuantumCircuits.Gate.Operation
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix
+  commentId: T:QuantumComputing.LinearAlgebra.SparseMatrix
+  parent: QuantumComputing.LinearAlgebra
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html
+  name: SparseMatrix
+  nameWithType: SparseMatrix
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix
+- uid: QuantumComputing.LinearAlgebra
+  commentId: N:QuantumComputing.LinearAlgebra
+  href: QuantumComputing.html
+  name: QuantumComputing.LinearAlgebra
+  nameWithType: QuantumComputing.LinearAlgebra
+  fullName: QuantumComputing.LinearAlgebra
+  spec.csharp:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.LinearAlgebra
+    name: LinearAlgebra
+    href: QuantumComputing.LinearAlgebra.html
+  spec.vb:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.LinearAlgebra
+    name: LinearAlgebra
+    href: QuantumComputing.LinearAlgebra.html
+- uid: QuantumComputing.QuantumCircuits.Gate.Controls*
+  commentId: Overload:QuantumComputing.QuantumCircuits.Gate.Controls
+  href: QuantumComputing.QuantumCircuits.Gate.html#QuantumComputing_QuantumCircuits_Gate_Controls
+  name: Controls
+  nameWithType: Gate.Controls
+  fullName: QuantumComputing.QuantumCircuits.Gate.Controls
+- uid: System.Int32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int[]
+  nameWithType: int[]
+  fullName: int[]
+  nameWithType.vb: Integer()
+  fullName.vb: Integer()
+  name.vb: Integer()
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: (
+  - name: )
+- uid: QuantumComputing.QuantumCircuits.Gate.Targets*
+  commentId: Overload:QuantumComputing.QuantumCircuits.Gate.Targets
+  href: QuantumComputing.QuantumCircuits.Gate.html#QuantumComputing_QuantumCircuits_Gate_Targets
+  name: Targets
+  nameWithType: Gate.Targets
+  fullName: QuantumComputing.QuantumCircuits.Gate.Targets
+- uid: QuantumComputing.QuantumCircuits.Gate.#ctor*
+  commentId: Overload:QuantumComputing.QuantumCircuits.Gate.#ctor
+  href: QuantumComputing.QuantumCircuits.Gate.html#QuantumComputing_QuantumCircuits_Gate__ctor_QuantumComputing_QuantumCircuits_GateTypes_QuantumComputing_LinearAlgebra_SparseMatrix_System_Int32___System_Int32___
+  name: Gate
+  nameWithType: Gate.Gate
+  fullName: QuantumComputing.QuantumCircuits.Gate.Gate
+  nameWithType.vb: Gate.New
+  fullName.vb: QuantumComputing.QuantumCircuits.Gate.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: QuantumComputing.QuantumCircuits.Gate.ToString*
+  commentId: Overload:QuantumComputing.QuantumCircuits.Gate.ToString
+  href: QuantumComputing.QuantumCircuits.Gate.html#QuantumComputing_QuantumCircuits_Gate_ToString
+  name: ToString
+  nameWithType: Gate.ToString
+  fullName: QuantumComputing.QuantumCircuits.Gate.ToString

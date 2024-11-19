@@ -1,0 +1,470 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumComputing.QuantumCircuits.GateTypes
+  commentId: T:QuantumComputing.QuantumCircuits.GateTypes
+  id: GateTypes
+  parent: QuantumComputing.QuantumCircuits
+  children:
+  - QuantumComputing.QuantumCircuits.GateTypes.CXC
+  - QuantumComputing.QuantumCircuits.GateTypes.CXT
+  - QuantumComputing.QuantumCircuits.GateTypes.HGT
+  - QuantumComputing.QuantumCircuits.GateTypes.NOP
+  - QuantumComputing.QuantumCircuits.GateTypes.RXT
+  - QuantumComputing.QuantumCircuits.GateTypes.RYT
+  - QuantumComputing.QuantumCircuits.GateTypes.RZT
+  - QuantumComputing.QuantumCircuits.GateTypes.SWP
+  - QuantumComputing.QuantumCircuits.GateTypes.SWT
+  - QuantumComputing.QuantumCircuits.GateTypes.TGT
+  - QuantumComputing.QuantumCircuits.GateTypes.TOC
+  - QuantumComputing.QuantumCircuits.GateTypes.TOF
+  - QuantumComputing.QuantumCircuits.GateTypes.XGT
+  - QuantumComputing.QuantumCircuits.GateTypes.YGT
+  - QuantumComputing.QuantumCircuits.GateTypes.ZGT
+  langs:
+  - csharp
+  - vb
+  name: GateTypes
+  nameWithType: GateTypes
+  fullName: QuantumComputing.QuantumCircuits.GateTypes
+  type: Enum
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: GateTypes
+    path: src/QuantumComputing/Gate.cs
+    startLine: 13
+  namespace: QuantumComputing.QuantumCircuits
+  summary: An <xref href="System.Enum" data-throw-if-not-resolved="false"></xref> of the supported Gate Types
+  example: []
+  syntax:
+    content: public enum GateTypes
+    content.vb: Public Enum GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.XGT
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.XGT
+  id: XGT
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: XGT
+  nameWithType: GateTypes.XGT
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.XGT
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: XGT
+    path: src/QuantumComputing/Gate.cs
+    startLine: 18
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Not Gate
+  example: []
+  syntax:
+    content: XGT = 0
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.YGT
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.YGT
+  id: YGT
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: YGT
+  nameWithType: GateTypes.YGT
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.YGT
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: YGT
+    path: src/QuantumComputing/Gate.cs
+    startLine: 22
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Y Gate
+  example: []
+  syntax:
+    content: YGT = 1
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.ZGT
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.ZGT
+  id: ZGT
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: ZGT
+  nameWithType: GateTypes.ZGT
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.ZGT
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: ZGT
+    path: src/QuantumComputing/Gate.cs
+    startLine: 26
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Z Gate
+  example: []
+  syntax:
+    content: ZGT = 2
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.TGT
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.TGT
+  id: TGT
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: TGT
+  nameWithType: GateTypes.TGT
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.TGT
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: TGT
+    path: src/QuantumComputing/Gate.cs
+    startLine: 30
+  namespace: QuantumComputing.QuantumCircuits
+  summary: T Gate
+  example: []
+  syntax:
+    content: TGT = 3
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.HGT
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.HGT
+  id: HGT
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: HGT
+  nameWithType: GateTypes.HGT
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.HGT
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: HGT
+    path: src/QuantumComputing/Gate.cs
+    startLine: 34
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Hadamard Gate
+  example: []
+  syntax:
+    content: HGT = 4
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.CXT
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.CXT
+  id: CXT
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: CXT
+  nameWithType: GateTypes.CXT
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.CXT
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: CXT
+    path: src/QuantumComputing/Gate.cs
+    startLine: 38
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Controlled Not Gate Target
+  example: []
+  syntax:
+    content: CXT = 5
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.CXC
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.CXC
+  id: CXC
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: CXC
+  nameWithType: GateTypes.CXC
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.CXC
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: CXC
+    path: src/QuantumComputing/Gate.cs
+    startLine: 42
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Controlled Not Gate Control
+  example: []
+  syntax:
+    content: CXC = 6
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.SWP
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.SWP
+  id: SWP
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: SWP
+  nameWithType: GateTypes.SWP
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.SWP
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: SWP
+    path: src/QuantumComputing/Gate.cs
+    startLine: 46
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Swap Gate target
+  example: []
+  syntax:
+    content: SWP = 7
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.SWT
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.SWT
+  id: SWT
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: SWT
+  nameWithType: GateTypes.SWT
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.SWT
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: SWT
+    path: src/QuantumComputing/Gate.cs
+    startLine: 50
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Swap Gate target
+  example: []
+  syntax:
+    content: SWT = 8
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.TOF
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.TOF
+  id: TOF
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: TOF
+  nameWithType: GateTypes.TOF
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.TOF
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: TOF
+    path: src/QuantumComputing/Gate.cs
+    startLine: 54
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Toffoli Gate
+  example: []
+  syntax:
+    content: TOF = 9
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.TOC
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.TOC
+  id: TOC
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: TOC
+  nameWithType: GateTypes.TOC
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.TOC
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: TOC
+    path: src/QuantumComputing/Gate.cs
+    startLine: 58
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Toffoli Gate controls
+  example: []
+  syntax:
+    content: TOC = 10
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.RXT
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.RXT
+  id: RXT
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: RXT
+  nameWithType: GateTypes.RXT
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.RXT
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: RXT
+    path: src/QuantumComputing/Gate.cs
+    startLine: 62
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Rx Gate
+  example: []
+  syntax:
+    content: RXT = 11
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.RYT
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.RYT
+  id: RYT
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: RYT
+  nameWithType: GateTypes.RYT
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.RYT
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: RYT
+    path: src/QuantumComputing/Gate.cs
+    startLine: 66
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Ry Gate
+  example: []
+  syntax:
+    content: RYT = 12
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.RZT
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.RZT
+  id: RZT
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: RZT
+  nameWithType: GateTypes.RZT
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.RZT
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: RZT
+    path: src/QuantumComputing/Gate.cs
+    startLine: 70
+  namespace: QuantumComputing.QuantumCircuits
+  summary: Rz Gate
+  example: []
+  syntax:
+    content: RZT = 13
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+- uid: QuantumComputing.QuantumCircuits.GateTypes.NOP
+  commentId: F:QuantumComputing.QuantumCircuits.GateTypes.NOP
+  id: NOP
+  parent: QuantumComputing.QuantumCircuits.GateTypes
+  langs:
+  - csharp
+  - vb
+  name: NOP
+  nameWithType: GateTypes.NOP
+  fullName: QuantumComputing.QuantumCircuits.GateTypes.NOP
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/Gate.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: NOP
+    path: src/QuantumComputing/Gate.cs
+    startLine: 74
+  namespace: QuantumComputing.QuantumCircuits
+  summary: No operation gate used to fill gaps
+  example: []
+  syntax:
+    content: NOP = 14
+    return:
+      type: QuantumComputing.QuantumCircuits.GateTypes
+references:
+- uid: System.Enum
+  commentId: T:System.Enum
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.enum
+  name: Enum
+  nameWithType: Enum
+  fullName: System.Enum
+- uid: QuantumComputing.QuantumCircuits
+  commentId: N:QuantumComputing.QuantumCircuits
+  href: QuantumComputing.html
+  name: QuantumComputing.QuantumCircuits
+  nameWithType: QuantumComputing.QuantumCircuits
+  fullName: QuantumComputing.QuantumCircuits
+  spec.csharp:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.QuantumCircuits
+    name: QuantumCircuits
+    href: QuantumComputing.QuantumCircuits.html
+  spec.vb:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.QuantumCircuits
+    name: QuantumCircuits
+    href: QuantumComputing.QuantumCircuits.html
+- uid: QuantumComputing.QuantumCircuits.GateTypes
+  commentId: T:QuantumComputing.QuantumCircuits.GateTypes
+  parent: QuantumComputing.QuantumCircuits
+  href: QuantumComputing.QuantumCircuits.GateTypes.html
+  name: GateTypes
+  nameWithType: GateTypes
+  fullName: QuantumComputing.QuantumCircuits.GateTypes

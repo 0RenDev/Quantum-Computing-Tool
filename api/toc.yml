@@ -1,51 +1,51 @@
 ### YamlMime:TableOfContent
 items:
-- uid: LinearAlgebra
-  name: LinearAlgebra
+- uid: QuantumComputing.LinearAlgebra
+  name: QuantumComputing.LinearAlgebra
   items:
-  - uid: LinearAlgebra.Idenity
+  - uid: QuantumComputing.LinearAlgebra.Idenity
     name: Idenity
-  - uid: LinearAlgebra.Matrix
+  - uid: QuantumComputing.LinearAlgebra.Matrix
     name: Matrix
-  - uid: LinearAlgebra.Operations
+  - uid: QuantumComputing.LinearAlgebra.Operations
     name: Operations
-  - uid: LinearAlgebra.SparseMatrix
+  - uid: QuantumComputing.LinearAlgebra.SparseMatrix
     name: SparseMatrix
-  - uid: LinearAlgebra.Vector
+  - uid: QuantumComputing.LinearAlgebra.Vector
     name: Vector
-- uid: QuantumCircuits
-  name: QuantumCircuits
+- uid: QuantumComputing.QuantumCircuits
+  name: QuantumComputing.QuantumCircuits
   items:
-  - uid: QuantumCircuits.CX
+  - uid: QuantumComputing.QuantumCircuits.CX
     name: CX
-  - uid: QuantumCircuits.CircuitExecution
+  - uid: QuantumComputing.QuantumCircuits.CircuitExecution
     name: CircuitExecution
-  - uid: QuantumCircuits.Gate
+  - uid: QuantumComputing.QuantumCircuits.Gate
     name: Gate
-  - uid: QuantumCircuits.GateTypes
+  - uid: QuantumComputing.QuantumCircuits.GateTypes
     name: GateTypes
-  - uid: QuantumCircuits.H
+  - uid: QuantumComputing.QuantumCircuits.H
     name: H
-  - uid: QuantumCircuits.NOP
+  - uid: QuantumComputing.QuantumCircuits.NOP
     name: NOP
-  - uid: QuantumCircuits.QuantumCircuitBuilder
+  - uid: QuantumComputing.QuantumCircuits.QuantumCircuitBuilder
     name: QuantumCircuitBuilder
-  - uid: QuantumCircuits.RX
+  - uid: QuantumComputing.QuantumCircuits.RX
     name: RX
-  - uid: QuantumCircuits.RY
+  - uid: QuantumComputing.QuantumCircuits.RY
     name: RY
-  - uid: QuantumCircuits.RZ
+  - uid: QuantumComputing.QuantumCircuits.RZ
     name: RZ
-  - uid: QuantumCircuits.SWAP
+  - uid: QuantumComputing.QuantumCircuits.SWAP
     name: SWAP
-  - uid: QuantumCircuits.T
+  - uid: QuantumComputing.QuantumCircuits.T
     name: T
-  - uid: QuantumCircuits.Toff
+  - uid: QuantumComputing.QuantumCircuits.Toff
     name: Toff
-  - uid: QuantumCircuits.X
+  - uid: QuantumComputing.QuantumCircuits.X
     name: X
-  - uid: QuantumCircuits.Y
+  - uid: QuantumComputing.QuantumCircuits.Y
     name: Y
-  - uid: QuantumCircuits.Z
+  - uid: QuantumComputing.QuantumCircuits.Z
     name: Z
 memberLayout: SamePage

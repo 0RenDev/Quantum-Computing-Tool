@@ -1,0 +1,1166 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumComputing.LinearAlgebra.Operations
+  commentId: T:QuantumComputing.LinearAlgebra.Operations
+  id: Operations
+  parent: QuantumComputing.LinearAlgebra
+  children:
+  - QuantumComputing.LinearAlgebra.Operations.Add(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  - QuantumComputing.LinearAlgebra.Operations.Determinant(QuantumComputing.LinearAlgebra.Matrix)
+  - QuantumComputing.LinearAlgebra.Operations.EuclideanNorm(QuantumComputing.LinearAlgebra.Vector)
+  - QuantumComputing.LinearAlgebra.Operations.EuclideanNormAsComplex(QuantumComputing.LinearAlgebra.Vector)
+  - QuantumComputing.LinearAlgebra.Operations.GenerateIdentityMatrix(System.Int32)
+  - QuantumComputing.LinearAlgebra.Operations.InnerProduct(QuantumComputing.LinearAlgebra.Vector,QuantumComputing.LinearAlgebra.Vector)
+  - QuantumComputing.LinearAlgebra.Operations.Invert(QuantumComputing.LinearAlgebra.Matrix)
+  - QuantumComputing.LinearAlgebra.Operations.IsEqual(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  - QuantumComputing.LinearAlgebra.Operations.JoinMatrices(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  - QuantumComputing.LinearAlgebra.Operations.MatrixMultiply(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  - QuantumComputing.LinearAlgebra.Operations.MatrixVectorMult(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Vector)
+  - QuantumComputing.LinearAlgebra.Operations.Multiply(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  - QuantumComputing.LinearAlgebra.Operations.Multscaler(QuantumComputing.LinearAlgebra.Matrix,System.Numerics.Complex)
+  - QuantumComputing.LinearAlgebra.Operations.OuterProduct(QuantumComputing.LinearAlgebra.Vector,QuantumComputing.LinearAlgebra.Vector)
+  - QuantumComputing.LinearAlgebra.Operations.Subtract(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  - QuantumComputing.LinearAlgebra.Operations.TensorProduct(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  - QuantumComputing.LinearAlgebra.Operations.TensorProductofVectors(QuantumComputing.LinearAlgebra.Vector,QuantumComputing.LinearAlgebra.Vector)
+  langs:
+  - csharp
+  - vb
+  name: Operations
+  nameWithType: Operations
+  fullName: QuantumComputing.LinearAlgebra.Operations
+  type: Class
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Operations
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 15
+  namespace: QuantumComputing.LinearAlgebra
+  summary: This class contains common linear algebra operations that can be performed on matrices and vectors.
+  example: []
+  syntax:
+    content: public class Operations
+    content.vb: Public Class Operations
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: QuantumComputing.LinearAlgebra.Operations.Add(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.Add(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  id: Add(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: Add(Matrix, Matrix)
+  nameWithType: Operations.Add(Matrix, Matrix)
+  fullName: QuantumComputing.LinearAlgebra.Operations.Add(QuantumComputing.LinearAlgebra.Matrix, QuantumComputing.LinearAlgebra.Matrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Add
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 24
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Adds the instance with the specified matrix.
+  example: []
+  syntax:
+    content: public static Matrix Add(Matrix matrix1, Matrix matrix2)
+    parameters:
+    - id: matrix1
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The first matrix.
+    - id: matrix2
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The second matrix.
+    return:
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    content.vb: Public Shared Function Add(matrix1 As Matrix, matrix2 As Matrix) As Matrix
+  overload: QuantumComputing.LinearAlgebra.Operations.Add*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The dimensions of both matrices must match.
+- uid: QuantumComputing.LinearAlgebra.Operations.Subtract(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.Subtract(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  id: Subtract(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: Subtract(Matrix, Matrix)
+  nameWithType: Operations.Subtract(Matrix, Matrix)
+  fullName: QuantumComputing.LinearAlgebra.Operations.Subtract(QuantumComputing.LinearAlgebra.Matrix, QuantumComputing.LinearAlgebra.Matrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Subtract
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 52
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Subtracts the specified matrix from the instance.
+  example: []
+  syntax:
+    content: public static Matrix Subtract(Matrix matrix1, Matrix matrix2)
+    parameters:
+    - id: matrix1
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The first matrix.
+    - id: matrix2
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The second matrix.
+    return:
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    content.vb: Public Shared Function Subtract(matrix1 As Matrix, matrix2 As Matrix) As Matrix
+  overload: QuantumComputing.LinearAlgebra.Operations.Subtract*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The dimensions of both matrices must match.
+- uid: QuantumComputing.LinearAlgebra.Operations.Multiply(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.Multiply(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  id: Multiply(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: Multiply(Matrix, Matrix)
+  nameWithType: Operations.Multiply(Matrix, Matrix)
+  fullName: QuantumComputing.LinearAlgebra.Operations.Multiply(QuantumComputing.LinearAlgebra.Matrix, QuantumComputing.LinearAlgebra.Matrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Multiply
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 80
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Multiplies the specified matrix with the instance.
+  example: []
+  syntax:
+    content: public static Matrix Multiply(Matrix matrix1, Matrix matrix2)
+    parameters:
+    - id: matrix1
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The first matrix.
+    - id: matrix2
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The second matrix.
+    return:
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    content.vb: Public Shared Function Multiply(matrix1 As Matrix, matrix2 As Matrix) As Matrix
+  overload: QuantumComputing.LinearAlgebra.Operations.Multiply*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The number of columns in the first matrix must match the number of rows in the second matrix.
+- uid: QuantumComputing.LinearAlgebra.Operations.MatrixMultiply(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.MatrixMultiply(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  id: MatrixMultiply(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: MatrixMultiply(Matrix, Matrix)
+  nameWithType: Operations.MatrixMultiply(Matrix, Matrix)
+  fullName: QuantumComputing.LinearAlgebra.Operations.MatrixMultiply(QuantumComputing.LinearAlgebra.Matrix, QuantumComputing.LinearAlgebra.Matrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: MatrixMultiply
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 110
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Multiplies the matrices concurrently.
+  example: []
+  syntax:
+    content: public static Matrix MatrixMultiply(Matrix a, Matrix b)
+    parameters:
+    - id: a
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The first matrix.
+    - id: b
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The second matrix.
+    return:
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    content.vb: Public Shared Function MatrixMultiply(a As Matrix, b As Matrix) As Matrix
+  overload: QuantumComputing.LinearAlgebra.Operations.MatrixMultiply*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The number of columns in the first matrix must match the number of rows in the second matrix.
+- uid: QuantumComputing.LinearAlgebra.Operations.MatrixVectorMult(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Vector)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.MatrixVectorMult(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Vector)
+  id: MatrixVectorMult(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Vector)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: MatrixVectorMult(Matrix, Vector)
+  nameWithType: Operations.MatrixVectorMult(Matrix, Vector)
+  fullName: QuantumComputing.LinearAlgebra.Operations.MatrixVectorMult(QuantumComputing.LinearAlgebra.Matrix, QuantumComputing.LinearAlgebra.Vector)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: MatrixVectorMult
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 185
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Multiplies the matrix with the vector.
+  example: []
+  syntax:
+    content: public static Vector MatrixVectorMult(Matrix matrix, Vector vector)
+    parameters:
+    - id: matrix
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The matrix.
+    - id: vector
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: The vector.
+    return:
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: A <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Shared Function MatrixVectorMult(matrix As Matrix, vector As Vector) As Vector
+  overload: QuantumComputing.LinearAlgebra.Operations.MatrixVectorMult*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Left Multiplications must have similar dimensions.
+- uid: QuantumComputing.LinearAlgebra.Operations.Multscaler(QuantumComputing.LinearAlgebra.Matrix,System.Numerics.Complex)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.Multscaler(QuantumComputing.LinearAlgebra.Matrix,System.Numerics.Complex)
+  id: Multscaler(QuantumComputing.LinearAlgebra.Matrix,System.Numerics.Complex)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: Multscaler(Matrix, Complex)
+  nameWithType: Operations.Multscaler(Matrix, Complex)
+  fullName: QuantumComputing.LinearAlgebra.Operations.Multscaler(QuantumComputing.LinearAlgebra.Matrix, System.Numerics.Complex)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Multscaler
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 212
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Multiplies a matrix with a scalar.
+  example: []
+  syntax:
+    content: public static Matrix Multscaler(Matrix matrix1, Complex scaler)
+    parameters:
+    - id: matrix1
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The matrix.
+    - id: scaler
+      type: System.Numerics.Complex
+      description: The scaler.
+    return:
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    content.vb: Public Shared Function Multscaler(matrix1 As Matrix, scaler As Complex) As Matrix
+  overload: QuantumComputing.LinearAlgebra.Operations.Multscaler*
+- uid: QuantumComputing.LinearAlgebra.Operations.IsEqual(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.IsEqual(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  id: IsEqual(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: IsEqual(Matrix, Matrix)
+  nameWithType: Operations.IsEqual(Matrix, Matrix)
+  fullName: QuantumComputing.LinearAlgebra.Operations.IsEqual(QuantumComputing.LinearAlgebra.Matrix, QuantumComputing.LinearAlgebra.Matrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: IsEqual
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 237
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Determines whether the specified a is equal.
+  example: []
+  syntax:
+    content: public static bool IsEqual(Matrix a, Matrix b)
+    parameters:
+    - id: a
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The first matrix.
+    - id: b
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The second matrix.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the specified a is equal; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsEqual(a As Matrix, b As Matrix) As Boolean
+  overload: QuantumComputing.LinearAlgebra.Operations.IsEqual*
+- uid: QuantumComputing.LinearAlgebra.Operations.TensorProduct(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.TensorProduct(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  id: TensorProduct(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: TensorProduct(Matrix, Matrix)
+  nameWithType: Operations.TensorProduct(Matrix, Matrix)
+  fullName: QuantumComputing.LinearAlgebra.Operations.TensorProduct(QuantumComputing.LinearAlgebra.Matrix, QuantumComputing.LinearAlgebra.Matrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: TensorProduct
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 262
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Tensors the product.
+  example: []
+  syntax:
+    content: public static Matrix TensorProduct(Matrix matrix1, Matrix matrix2)
+    parameters:
+    - id: matrix1
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The matrix1.
+    - id: matrix2
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: The matrix2.
+    return:
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    content.vb: Public Shared Function TensorProduct(matrix1 As Matrix, matrix2 As Matrix) As Matrix
+  overload: QuantumComputing.LinearAlgebra.Operations.TensorProduct*
+- uid: QuantumComputing.LinearAlgebra.Operations.TensorProductofVectors(QuantumComputing.LinearAlgebra.Vector,QuantumComputing.LinearAlgebra.Vector)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.TensorProductofVectors(QuantumComputing.LinearAlgebra.Vector,QuantumComputing.LinearAlgebra.Vector)
+  id: TensorProductofVectors(QuantumComputing.LinearAlgebra.Vector,QuantumComputing.LinearAlgebra.Vector)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: TensorProductofVectors(Vector, Vector)
+  nameWithType: Operations.TensorProductofVectors(Vector, Vector)
+  fullName: QuantumComputing.LinearAlgebra.Operations.TensorProductofVectors(QuantumComputing.LinearAlgebra.Vector, QuantumComputing.LinearAlgebra.Vector)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: TensorProductofVectors
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 295
+  namespace: QuantumComputing.LinearAlgebra
+  summary: A method to tensor two <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref> together.
+  example: []
+  syntax:
+    content: public static Vector TensorProductofVectors(Vector vector1, Vector vector2)
+    parameters:
+    - id: vector1
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: ''
+    - id: vector2
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: ''
+    return:
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: A <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function TensorProductofVectors(vector1 As Vector, vector2 As Vector) As Vector
+  overload: QuantumComputing.LinearAlgebra.Operations.TensorProductofVectors*
+- uid: QuantumComputing.LinearAlgebra.Operations.InnerProduct(QuantumComputing.LinearAlgebra.Vector,QuantumComputing.LinearAlgebra.Vector)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.InnerProduct(QuantumComputing.LinearAlgebra.Vector,QuantumComputing.LinearAlgebra.Vector)
+  id: InnerProduct(QuantumComputing.LinearAlgebra.Vector,QuantumComputing.LinearAlgebra.Vector)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: InnerProduct(Vector, Vector)
+  nameWithType: Operations.InnerProduct(Vector, Vector)
+  fullName: QuantumComputing.LinearAlgebra.Operations.InnerProduct(QuantumComputing.LinearAlgebra.Vector, QuantumComputing.LinearAlgebra.Vector)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: InnerProduct
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 322
+  namespace: QuantumComputing.LinearAlgebra
+  summary: A method to perform the inner product (dot product) of two <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static Complex InnerProduct(Vector vector1, Vector vector2)
+    parameters:
+    - id: vector1
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: ''
+    - id: vector2
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: ''
+    return:
+      type: System.Numerics.Complex
+      description: ''
+    content.vb: Public Shared Function InnerProduct(vector1 As Vector, vector2 As Vector) As Complex
+  overload: QuantumComputing.LinearAlgebra.Operations.InnerProduct*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: ''
+- uid: QuantumComputing.LinearAlgebra.Operations.OuterProduct(QuantumComputing.LinearAlgebra.Vector,QuantumComputing.LinearAlgebra.Vector)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.OuterProduct(QuantumComputing.LinearAlgebra.Vector,QuantumComputing.LinearAlgebra.Vector)
+  id: OuterProduct(QuantumComputing.LinearAlgebra.Vector,QuantumComputing.LinearAlgebra.Vector)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: OuterProduct(Vector, Vector)
+  nameWithType: Operations.OuterProduct(Vector, Vector)
+  fullName: QuantumComputing.LinearAlgebra.Operations.OuterProduct(QuantumComputing.LinearAlgebra.Vector, QuantumComputing.LinearAlgebra.Vector)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: OuterProduct
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 365
+  namespace: QuantumComputing.LinearAlgebra
+  summary: A method to perform the outer product (cross product) of two <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static Matrix OuterProduct(Vector vector1, Vector vector2)
+    parameters:
+    - id: vector1
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: ''
+    - id: vector2
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: ''
+    return:
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    content.vb: Public Shared Function OuterProduct(vector1 As Vector, vector2 As Vector) As Matrix
+  overload: QuantumComputing.LinearAlgebra.Operations.OuterProduct*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: ''
+- uid: QuantumComputing.LinearAlgebra.Operations.EuclideanNorm(QuantumComputing.LinearAlgebra.Vector)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.EuclideanNorm(QuantumComputing.LinearAlgebra.Vector)
+  id: EuclideanNorm(QuantumComputing.LinearAlgebra.Vector)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: EuclideanNorm(Vector)
+  nameWithType: Operations.EuclideanNorm(Vector)
+  fullName: QuantumComputing.LinearAlgebra.Operations.EuclideanNorm(QuantumComputing.LinearAlgebra.Vector)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: EuclideanNorm
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 413
+  namespace: QuantumComputing.LinearAlgebra
+  summary: >-
+    A method to calculate the Euclidean norm of a <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>.
+
+
+    The Euclidean norm refers to the squart root of the sum of the squares of the elements of the <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static double EuclideanNorm(Vector vector)
+    parameters:
+    - id: vector
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: ''
+    return:
+      type: System.Double
+      description: ''
+    content.vb: Public Shared Function EuclideanNorm(vector As Vector) As Double
+  overload: QuantumComputing.LinearAlgebra.Operations.EuclideanNorm*
+- uid: QuantumComputing.LinearAlgebra.Operations.EuclideanNormAsComplex(QuantumComputing.LinearAlgebra.Vector)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.EuclideanNormAsComplex(QuantumComputing.LinearAlgebra.Vector)
+  id: EuclideanNormAsComplex(QuantumComputing.LinearAlgebra.Vector)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: EuclideanNormAsComplex(Vector)
+  nameWithType: Operations.EuclideanNormAsComplex(Vector)
+  fullName: QuantumComputing.LinearAlgebra.Operations.EuclideanNormAsComplex(QuantumComputing.LinearAlgebra.Vector)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: EuclideanNormAsComplex
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 430
+  namespace: QuantumComputing.LinearAlgebra
+  summary: A method to calculate the Euclidean norm of a <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref> as a <xref href="System.Numerics.Complex" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public static Complex EuclideanNormAsComplex(Vector vector)
+    parameters:
+    - id: vector
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: ''
+    return:
+      type: System.Numerics.Complex
+      description: ''
+    content.vb: Public Shared Function EuclideanNormAsComplex(vector As Vector) As Complex
+  overload: QuantumComputing.LinearAlgebra.Operations.EuclideanNormAsComplex*
+- uid: QuantumComputing.LinearAlgebra.Operations.Determinant(QuantumComputing.LinearAlgebra.Matrix)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.Determinant(QuantumComputing.LinearAlgebra.Matrix)
+  id: Determinant(QuantumComputing.LinearAlgebra.Matrix)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: Determinant(Matrix)
+  nameWithType: Operations.Determinant(Matrix)
+  fullName: QuantumComputing.LinearAlgebra.Operations.Determinant(QuantumComputing.LinearAlgebra.Matrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Determinant
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 441
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Calculate determinant of a <xref href="QuantumComputing.LinearAlgebra.Matrix" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public static double Determinant(Matrix matrix)
+    parameters:
+    - id: matrix
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    return:
+      type: System.Double
+      description: ''
+    content.vb: Public Shared Function Determinant(matrix As Matrix) As Double
+  overload: QuantumComputing.LinearAlgebra.Operations.Determinant*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: ''
+- uid: QuantumComputing.LinearAlgebra.Operations.GenerateIdentityMatrix(System.Int32)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.GenerateIdentityMatrix(System.Int32)
+  id: GenerateIdentityMatrix(System.Int32)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: GenerateIdentityMatrix(int)
+  nameWithType: Operations.GenerateIdentityMatrix(int)
+  fullName: QuantumComputing.LinearAlgebra.Operations.GenerateIdentityMatrix(int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: GenerateIdentityMatrix
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 512
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Return a <xref href="QuantumComputing.LinearAlgebra.Matrix" data-throw-if-not-resolved="false"></xref> with all ones along the diaganol
+  example: []
+  syntax:
+    content: public static Matrix GenerateIdentityMatrix(int size)
+    parameters:
+    - id: size
+      type: System.Int32
+      description: ''
+    return:
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    content.vb: Public Shared Function GenerateIdentityMatrix(size As Integer) As Matrix
+  overload: QuantumComputing.LinearAlgebra.Operations.GenerateIdentityMatrix*
+  nameWithType.vb: Operations.GenerateIdentityMatrix(Integer)
+  fullName.vb: QuantumComputing.LinearAlgebra.Operations.GenerateIdentityMatrix(Integer)
+  name.vb: GenerateIdentityMatrix(Integer)
+- uid: QuantumComputing.LinearAlgebra.Operations.Invert(QuantumComputing.LinearAlgebra.Matrix)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.Invert(QuantumComputing.LinearAlgebra.Matrix)
+  id: Invert(QuantumComputing.LinearAlgebra.Matrix)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: Invert(Matrix)
+  nameWithType: Operations.Invert(Matrix)
+  fullName: QuantumComputing.LinearAlgebra.Operations.Invert(QuantumComputing.LinearAlgebra.Matrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Invert
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 536
+  namespace: QuantumComputing.LinearAlgebra
+  summary: A method to convert the inverse of a <xref href="QuantumComputing.LinearAlgebra.Matrix" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static Matrix Invert(Matrix matrix)
+    parameters:
+    - id: matrix
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    return:
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    content.vb: Public Shared Function Invert(matrix As Matrix) As Matrix
+  overload: QuantumComputing.LinearAlgebra.Operations.Invert*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: ''
+- uid: QuantumComputing.LinearAlgebra.Operations.JoinMatrices(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  commentId: M:QuantumComputing.LinearAlgebra.Operations.JoinMatrices(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  id: JoinMatrices(QuantumComputing.LinearAlgebra.Matrix,QuantumComputing.LinearAlgebra.Matrix)
+  parent: QuantumComputing.LinearAlgebra.Operations
+  langs:
+  - csharp
+  - vb
+  name: JoinMatrices(Matrix, Matrix)
+  nameWithType: Operations.JoinMatrices(Matrix, Matrix)
+  fullName: QuantumComputing.LinearAlgebra.Operations.JoinMatrices(QuantumComputing.LinearAlgebra.Matrix, QuantumComputing.LinearAlgebra.Matrix)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_Operations.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: JoinMatrices
+    path: src/QuantumComputing/LinearAlgebra_Operations.cs
+    startLine: 595
+  namespace: QuantumComputing.LinearAlgebra
+  summary: A method for joining two <xref href="QuantumComputing.LinearAlgebra.Matrix" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static Matrix JoinMatrices(Matrix matrix1, Matrix matrix2)
+    parameters:
+    - id: matrix1
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    - id: matrix2
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    return:
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: ''
+    content.vb: Public Shared Function JoinMatrices(matrix1 As Matrix, matrix2 As Matrix) As Matrix
+  overload: QuantumComputing.LinearAlgebra.Operations.JoinMatrices*
+references:
+- uid: QuantumComputing.LinearAlgebra
+  commentId: N:QuantumComputing.LinearAlgebra
+  href: QuantumComputing.html
+  name: QuantumComputing.LinearAlgebra
+  nameWithType: QuantumComputing.LinearAlgebra
+  fullName: QuantumComputing.LinearAlgebra
+  spec.csharp:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.LinearAlgebra
+    name: LinearAlgebra
+    href: QuantumComputing.LinearAlgebra.html
+  spec.vb:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.LinearAlgebra
+    name: LinearAlgebra
+    href: QuantumComputing.LinearAlgebra.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: QuantumComputing.LinearAlgebra.Operations.Add*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.Add
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_Add_QuantumComputing_LinearAlgebra_Matrix_QuantumComputing_LinearAlgebra_Matrix_
+  name: Add
+  nameWithType: Operations.Add
+  fullName: QuantumComputing.LinearAlgebra.Operations.Add
+- uid: QuantumComputing.LinearAlgebra.Matrix
+  commentId: T:QuantumComputing.LinearAlgebra.Matrix
+  parent: QuantumComputing.LinearAlgebra
+  href: QuantumComputing.LinearAlgebra.Matrix.html
+  name: Matrix
+  nameWithType: Matrix
+  fullName: QuantumComputing.LinearAlgebra.Matrix
+- uid: QuantumComputing.LinearAlgebra.Operations.Subtract*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.Subtract
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_Subtract_QuantumComputing_LinearAlgebra_Matrix_QuantumComputing_LinearAlgebra_Matrix_
+  name: Subtract
+  nameWithType: Operations.Subtract
+  fullName: QuantumComputing.LinearAlgebra.Operations.Subtract
+- uid: QuantumComputing.LinearAlgebra.Operations.Multiply*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.Multiply
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_Multiply_QuantumComputing_LinearAlgebra_Matrix_QuantumComputing_LinearAlgebra_Matrix_
+  name: Multiply
+  nameWithType: Operations.Multiply
+  fullName: QuantumComputing.LinearAlgebra.Operations.Multiply
+- uid: QuantumComputing.LinearAlgebra.Operations.MatrixMultiply*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.MatrixMultiply
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_MatrixMultiply_QuantumComputing_LinearAlgebra_Matrix_QuantumComputing_LinearAlgebra_Matrix_
+  name: MatrixMultiply
+  nameWithType: Operations.MatrixMultiply
+  fullName: QuantumComputing.LinearAlgebra.Operations.MatrixMultiply
+- uid: QuantumComputing.LinearAlgebra.Vector
+  commentId: T:QuantumComputing.LinearAlgebra.Vector
+  parent: QuantumComputing.LinearAlgebra
+  href: QuantumComputing.LinearAlgebra.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: QuantumComputing.LinearAlgebra.Vector
+- uid: QuantumComputing.LinearAlgebra.Operations.MatrixVectorMult*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.MatrixVectorMult
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_MatrixVectorMult_QuantumComputing_LinearAlgebra_Matrix_QuantumComputing_LinearAlgebra_Vector_
+  name: MatrixVectorMult
+  nameWithType: Operations.MatrixVectorMult
+  fullName: QuantumComputing.LinearAlgebra.Operations.MatrixVectorMult
+- uid: QuantumComputing.LinearAlgebra.Operations.Multscaler*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.Multscaler
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_Multscaler_QuantumComputing_LinearAlgebra_Matrix_System_Numerics_Complex_
+  name: Multscaler
+  nameWithType: Operations.Multscaler
+  fullName: QuantumComputing.LinearAlgebra.Operations.Multscaler
+- uid: System.Numerics.Complex
+  commentId: T:System.Numerics.Complex
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  name: Complex
+  nameWithType: Complex
+  fullName: System.Numerics.Complex
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: QuantumComputing.LinearAlgebra.Operations.IsEqual*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.IsEqual
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_IsEqual_QuantumComputing_LinearAlgebra_Matrix_QuantumComputing_LinearAlgebra_Matrix_
+  name: IsEqual
+  nameWithType: Operations.IsEqual
+  fullName: QuantumComputing.LinearAlgebra.Operations.IsEqual
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: QuantumComputing.LinearAlgebra.Operations.TensorProduct*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.TensorProduct
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_TensorProduct_QuantumComputing_LinearAlgebra_Matrix_QuantumComputing_LinearAlgebra_Matrix_
+  name: TensorProduct
+  nameWithType: Operations.TensorProduct
+  fullName: QuantumComputing.LinearAlgebra.Operations.TensorProduct
+- uid: QuantumComputing.LinearAlgebra.Operations.TensorProductofVectors*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.TensorProductofVectors
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_TensorProductofVectors_QuantumComputing_LinearAlgebra_Vector_QuantumComputing_LinearAlgebra_Vector_
+  name: TensorProductofVectors
+  nameWithType: Operations.TensorProductofVectors
+  fullName: QuantumComputing.LinearAlgebra.Operations.TensorProductofVectors
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: QuantumComputing.LinearAlgebra.Operations.InnerProduct*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.InnerProduct
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_InnerProduct_QuantumComputing_LinearAlgebra_Vector_QuantumComputing_LinearAlgebra_Vector_
+  name: InnerProduct
+  nameWithType: Operations.InnerProduct
+  fullName: QuantumComputing.LinearAlgebra.Operations.InnerProduct
+- uid: QuantumComputing.LinearAlgebra.Operations.OuterProduct*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.OuterProduct
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_OuterProduct_QuantumComputing_LinearAlgebra_Vector_QuantumComputing_LinearAlgebra_Vector_
+  name: OuterProduct
+  nameWithType: Operations.OuterProduct
+  fullName: QuantumComputing.LinearAlgebra.Operations.OuterProduct
+- uid: QuantumComputing.LinearAlgebra.Operations.EuclideanNorm*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.EuclideanNorm
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_EuclideanNorm_QuantumComputing_LinearAlgebra_Vector_
+  name: EuclideanNorm
+  nameWithType: Operations.EuclideanNorm
+  fullName: QuantumComputing.LinearAlgebra.Operations.EuclideanNorm
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: QuantumComputing.LinearAlgebra.Operations.EuclideanNormAsComplex*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.EuclideanNormAsComplex
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_EuclideanNormAsComplex_QuantumComputing_LinearAlgebra_Vector_
+  name: EuclideanNormAsComplex
+  nameWithType: Operations.EuclideanNormAsComplex
+  fullName: QuantumComputing.LinearAlgebra.Operations.EuclideanNormAsComplex
+- uid: QuantumComputing.LinearAlgebra.Operations.Determinant*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.Determinant
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_Determinant_QuantumComputing_LinearAlgebra_Matrix_
+  name: Determinant
+  nameWithType: Operations.Determinant
+  fullName: QuantumComputing.LinearAlgebra.Operations.Determinant
+- uid: QuantumComputing.LinearAlgebra.Operations.GenerateIdentityMatrix*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.GenerateIdentityMatrix
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_GenerateIdentityMatrix_System_Int32_
+  name: GenerateIdentityMatrix
+  nameWithType: Operations.GenerateIdentityMatrix
+  fullName: QuantumComputing.LinearAlgebra.Operations.GenerateIdentityMatrix
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: QuantumComputing.LinearAlgebra.Operations.Invert*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.Invert
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_Invert_QuantumComputing_LinearAlgebra_Matrix_
+  name: Invert
+  nameWithType: Operations.Invert
+  fullName: QuantumComputing.LinearAlgebra.Operations.Invert
+- uid: QuantumComputing.LinearAlgebra.Operations.JoinMatrices*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Operations.JoinMatrices
+  href: QuantumComputing.LinearAlgebra.Operations.html#QuantumComputing_LinearAlgebra_Operations_JoinMatrices_QuantumComputing_LinearAlgebra_Matrix_QuantumComputing_LinearAlgebra_Matrix_
+  name: JoinMatrices
+  nameWithType: Operations.JoinMatrices
+  fullName: QuantumComputing.LinearAlgebra.Operations.JoinMatrices

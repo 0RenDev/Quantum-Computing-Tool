@@ -1,0 +1,74 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumComputing.LinearAlgebra
+  commentId: N:QuantumComputing.LinearAlgebra
+  id: QuantumComputing.LinearAlgebra
+  children:
+  - QuantumComputing.LinearAlgebra.Idenity
+  - QuantumComputing.LinearAlgebra.Matrix
+  - QuantumComputing.LinearAlgebra.Operations
+  - QuantumComputing.LinearAlgebra.SparseMatrix
+  - QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: QuantumComputing.LinearAlgebra
+  nameWithType: QuantumComputing.LinearAlgebra
+  fullName: QuantumComputing.LinearAlgebra
+  type: Namespace
+references:
+- uid: QuantumComputing.LinearAlgebra.Matrix
+  commentId: T:QuantumComputing.LinearAlgebra.Matrix
+  parent: QuantumComputing.LinearAlgebra
+  href: QuantumComputing.LinearAlgebra.Matrix.html
+  name: Matrix
+  nameWithType: Matrix
+  fullName: QuantumComputing.LinearAlgebra.Matrix
+- uid: QuantumComputing.LinearAlgebra.Idenity
+  commentId: T:QuantumComputing.LinearAlgebra.Idenity
+  href: QuantumComputing.LinearAlgebra.Idenity.html
+  name: Idenity
+  nameWithType: Idenity
+  fullName: QuantumComputing.LinearAlgebra.Idenity
+- uid: QuantumComputing.LinearAlgebra.Operations
+  commentId: T:QuantumComputing.LinearAlgebra.Operations
+  href: QuantumComputing.LinearAlgebra.Operations.html
+  name: Operations
+  nameWithType: Operations
+  fullName: QuantumComputing.LinearAlgebra.Operations
+- uid: QuantumComputing.LinearAlgebra.Vector
+  commentId: T:QuantumComputing.LinearAlgebra.Vector
+  parent: QuantumComputing.LinearAlgebra
+  href: QuantumComputing.LinearAlgebra.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: QuantumComputing.LinearAlgebra.Vector
+- uid: QuantumComputing.LinearAlgebra.SparseMatrix
+  commentId: T:QuantumComputing.LinearAlgebra.SparseMatrix
+  parent: QuantumComputing.LinearAlgebra
+  href: QuantumComputing.LinearAlgebra.SparseMatrix.html
+  name: SparseMatrix
+  nameWithType: SparseMatrix
+  fullName: QuantumComputing.LinearAlgebra.SparseMatrix
+- uid: QuantumComputing.LinearAlgebra
+  commentId: N:QuantumComputing.LinearAlgebra
+  href: QuantumComputing.html
+  name: QuantumComputing.LinearAlgebra
+  nameWithType: QuantumComputing.LinearAlgebra
+  fullName: QuantumComputing.LinearAlgebra
+  spec.csharp:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.LinearAlgebra
+    name: LinearAlgebra
+    href: QuantumComputing.LinearAlgebra.html
+  spec.vb:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.LinearAlgebra
+    name: LinearAlgebra
+    href: QuantumComputing.LinearAlgebra.html

@@ -1,0 +1,944 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumComputing.LinearAlgebra.Vector
+  commentId: T:QuantumComputing.LinearAlgebra.Vector
+  id: Vector
+  parent: QuantumComputing.LinearAlgebra
+  children:
+  - QuantumComputing.LinearAlgebra.Vector.#ctor(System.Int32)
+  - QuantumComputing.LinearAlgebra.Vector.#ctor(System.Numerics.Complex[])
+  - QuantumComputing.LinearAlgebra.Vector.Conjugate
+  - QuantumComputing.LinearAlgebra.Vector.ConjugateInPlace
+  - QuantumComputing.LinearAlgebra.Vector.GetState
+  - QuantumComputing.LinearAlgebra.Vector.IsApproximatelyEqual(QuantumComputing.LinearAlgebra.Vector,System.Double)
+  - QuantumComputing.LinearAlgebra.Vector.IsColVector
+  - QuantumComputing.LinearAlgebra.Vector.IsRowVector
+  - QuantumComputing.LinearAlgebra.Vector.ToMatrix
+  - QuantumComputing.LinearAlgebra.Vector.ToString
+  - QuantumComputing.LinearAlgebra.Vector.Transpose(QuantumComputing.LinearAlgebra.Vector)
+  - QuantumComputing.LinearAlgebra.Vector.TransposeInPlace
+  - QuantumComputing.LinearAlgebra.Vector.cols
+  - QuantumComputing.LinearAlgebra.Vector.elements
+  - QuantumComputing.LinearAlgebra.Vector.rows
+  langs:
+  - csharp
+  - vb
+  name: Vector
+  nameWithType: Vector
+  fullName: QuantumComputing.LinearAlgebra.Vector
+  type: Class
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Vector
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 8
+  namespace: QuantumComputing.LinearAlgebra
+  summary: This class represents a vector in linear algebra. A vector is a one-dimensional array of complex numbers.
+  example: []
+  syntax:
+    content: public class Vector
+    content.vb: Public Class Vector
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: QuantumComputing.LinearAlgebra.Vector.rows
+  commentId: F:QuantumComputing.LinearAlgebra.Vector.rows
+  id: rows
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: rows
+  nameWithType: Vector.rows
+  fullName: QuantumComputing.LinearAlgebra.Vector.rows
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: rows
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 13
+  namespace: QuantumComputing.LinearAlgebra
+  summary: The number of rows in the vector.
+  example: []
+  syntax:
+    content: public int rows
+    return:
+      type: System.Int32
+    content.vb: Public rows As Integer
+- uid: QuantumComputing.LinearAlgebra.Vector.cols
+  commentId: F:QuantumComputing.LinearAlgebra.Vector.cols
+  id: cols
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: cols
+  nameWithType: Vector.cols
+  fullName: QuantumComputing.LinearAlgebra.Vector.cols
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: cols
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 18
+  namespace: QuantumComputing.LinearAlgebra
+  summary: The number of columns in the vector.
+  example: []
+  syntax:
+    content: public int cols
+    return:
+      type: System.Int32
+    content.vb: Public cols As Integer
+- uid: QuantumComputing.LinearAlgebra.Vector.elements
+  commentId: F:QuantumComputing.LinearAlgebra.Vector.elements
+  id: elements
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: elements
+  nameWithType: Vector.elements
+  fullName: QuantumComputing.LinearAlgebra.Vector.elements
+  type: Field
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: elements
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 23
+  namespace: QuantumComputing.LinearAlgebra
+  summary: The elements of the vector.
+  example: []
+  syntax:
+    content: public Complex[] elements
+    return:
+      type: System.Numerics.Complex[]
+    content.vb: Public elements As Complex()
+- uid: QuantumComputing.LinearAlgebra.Vector.#ctor(System.Int32)
+  commentId: M:QuantumComputing.LinearAlgebra.Vector.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: Vector(int)
+  nameWithType: Vector.Vector(int)
+  fullName: QuantumComputing.LinearAlgebra.Vector.Vector(int)
+  type: Constructor
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: .ctor
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 29
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Initializes a new instance of the <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public Vector(int rows)
+    parameters:
+    - id: rows
+      type: System.Int32
+      description: The number of rows (or number of elements) in the vector.
+    content.vb: Public Sub New(rows As Integer)
+  overload: QuantumComputing.LinearAlgebra.Vector.#ctor*
+  nameWithType.vb: Vector.New(Integer)
+  fullName.vb: QuantumComputing.LinearAlgebra.Vector.New(Integer)
+  name.vb: New(Integer)
+- uid: QuantumComputing.LinearAlgebra.Vector.#ctor(System.Numerics.Complex[])
+  commentId: M:QuantumComputing.LinearAlgebra.Vector.#ctor(System.Numerics.Complex[])
+  id: '#ctor(System.Numerics.Complex[])'
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: Vector(Complex[])
+  nameWithType: Vector.Vector(Complex[])
+  fullName: QuantumComputing.LinearAlgebra.Vector.Vector(System.Numerics.Complex[])
+  type: Constructor
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: .ctor
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 40
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Initializes a new instance of the <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public Vector(Complex[] elements)
+    parameters:
+    - id: elements
+      type: System.Numerics.Complex[]
+      description: The elements of the Vector.
+    content.vb: Public Sub New(elements As Complex())
+  overload: QuantumComputing.LinearAlgebra.Vector.#ctor*
+  nameWithType.vb: Vector.New(Complex())
+  fullName.vb: QuantumComputing.LinearAlgebra.Vector.New(System.Numerics.Complex())
+  name.vb: New(Complex())
+- uid: QuantumComputing.LinearAlgebra.Vector.Conjugate
+  commentId: M:QuantumComputing.LinearAlgebra.Vector.Conjugate
+  id: Conjugate
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: Conjugate()
+  nameWithType: Vector.Conjugate()
+  fullName: QuantumComputing.LinearAlgebra.Vector.Conjugate()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Conjugate
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 55
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Conjugates this <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public Vector Conjugate()
+    return:
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: A conjugated <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function Conjugate() As Vector
+  overload: QuantumComputing.LinearAlgebra.Vector.Conjugate*
+- uid: QuantumComputing.LinearAlgebra.Vector.ConjugateInPlace
+  commentId: M:QuantumComputing.LinearAlgebra.Vector.ConjugateInPlace
+  id: ConjugateInPlace
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: ConjugateInPlace()
+  nameWithType: Vector.ConjugateInPlace()
+  fullName: QuantumComputing.LinearAlgebra.Vector.ConjugateInPlace()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: ConjugateInPlace
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 71
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Conjugates the <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref> in place. This method modifies the original <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void ConjugateInPlace()
+    content.vb: Public Sub ConjugateInPlace()
+  overload: QuantumComputing.LinearAlgebra.Vector.ConjugateInPlace*
+- uid: QuantumComputing.LinearAlgebra.Vector.IsRowVector
+  commentId: M:QuantumComputing.LinearAlgebra.Vector.IsRowVector
+  id: IsRowVector
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: IsRowVector()
+  nameWithType: Vector.IsRowVector()
+  fullName: QuantumComputing.LinearAlgebra.Vector.IsRowVector()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: IsRowVector
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 85
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Determines whether [is row vector].
+  example: []
+  syntax:
+    content: public bool IsRowVector()
+    return:
+      type: System.Boolean
+      description: <code>true</code> if [is row vector]; otherwise, <code>false</code>.
+    content.vb: Public Function IsRowVector() As Boolean
+  overload: QuantumComputing.LinearAlgebra.Vector.IsRowVector*
+- uid: QuantumComputing.LinearAlgebra.Vector.IsColVector
+  commentId: M:QuantumComputing.LinearAlgebra.Vector.IsColVector
+  id: IsColVector
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: IsColVector()
+  nameWithType: Vector.IsColVector()
+  fullName: QuantumComputing.LinearAlgebra.Vector.IsColVector()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: IsColVector
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 93
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Determines whether [is col vector].
+  example: []
+  syntax:
+    content: public bool IsColVector()
+    return:
+      type: System.Boolean
+      description: <code>true</code> if [is col vector]; otherwise, <code>false</code>.
+    content.vb: Public Function IsColVector() As Boolean
+  overload: QuantumComputing.LinearAlgebra.Vector.IsColVector*
+- uid: QuantumComputing.LinearAlgebra.Vector.Transpose(QuantumComputing.LinearAlgebra.Vector)
+  commentId: M:QuantumComputing.LinearAlgebra.Vector.Transpose(QuantumComputing.LinearAlgebra.Vector)
+  id: Transpose(QuantumComputing.LinearAlgebra.Vector)
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: Transpose(Vector)
+  nameWithType: Vector.Transpose(Vector)
+  fullName: QuantumComputing.LinearAlgebra.Vector.Transpose(QuantumComputing.LinearAlgebra.Vector)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: Transpose
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 100
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Transposes the specified vector.
+  example: []
+  syntax:
+    content: public static Vector Transpose(Vector vector)
+    parameters:
+    - id: vector
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: The vector.
+    return:
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: A transposed <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Shared Function Transpose(vector As Vector) As Vector
+  overload: QuantumComputing.LinearAlgebra.Vector.Transpose*
+- uid: QuantumComputing.LinearAlgebra.Vector.TransposeInPlace
+  commentId: M:QuantumComputing.LinearAlgebra.Vector.TransposeInPlace
+  id: TransposeInPlace
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: TransposeInPlace()
+  nameWithType: Vector.TransposeInPlace()
+  fullName: QuantumComputing.LinearAlgebra.Vector.TransposeInPlace()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: TransposeInPlace
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 115
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Transposes the <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref> in place. This method modifies the original <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void TransposeInPlace()
+    content.vb: Public Sub TransposeInPlace()
+  overload: QuantumComputing.LinearAlgebra.Vector.TransposeInPlace*
+- uid: QuantumComputing.LinearAlgebra.Vector.IsApproximatelyEqual(QuantumComputing.LinearAlgebra.Vector,System.Double)
+  commentId: M:QuantumComputing.LinearAlgebra.Vector.IsApproximatelyEqual(QuantumComputing.LinearAlgebra.Vector,System.Double)
+  id: IsApproximatelyEqual(QuantumComputing.LinearAlgebra.Vector,System.Double)
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: IsApproximatelyEqual(Vector, double)
+  nameWithType: Vector.IsApproximatelyEqual(Vector, double)
+  fullName: QuantumComputing.LinearAlgebra.Vector.IsApproximatelyEqual(QuantumComputing.LinearAlgebra.Vector, double)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: IsApproximatelyEqual
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 131
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Determines whether [is approximately equal] [the specified other].
+  example: []
+  syntax:
+    content: public bool IsApproximatelyEqual(Vector other, double tolerance = 1E-10)
+    parameters:
+    - id: other
+      type: QuantumComputing.LinearAlgebra.Vector
+      description: The other <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>.
+    - id: tolerance
+      type: System.Double
+      description: The tolerance. Default tolerance is 1e-10
+    return:
+      type: System.Boolean
+      description: <code>true</code> if [is approximately equal] [the specified other]; otherwise, <code>false</code>.
+    content.vb: Public Function IsApproximatelyEqual(other As Vector, tolerance As Double = 1E-10) As Boolean
+  overload: QuantumComputing.LinearAlgebra.Vector.IsApproximatelyEqual*
+  nameWithType.vb: Vector.IsApproximatelyEqual(Vector, Double)
+  fullName.vb: QuantumComputing.LinearAlgebra.Vector.IsApproximatelyEqual(QuantumComputing.LinearAlgebra.Vector, Double)
+  name.vb: IsApproximatelyEqual(Vector, Double)
+- uid: QuantumComputing.LinearAlgebra.Vector.ToMatrix
+  commentId: P:QuantumComputing.LinearAlgebra.Vector.ToMatrix
+  id: ToMatrix
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: ToMatrix
+  nameWithType: Vector.ToMatrix
+  fullName: QuantumComputing.LinearAlgebra.Vector.ToMatrix
+  type: Property
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: ToMatrix
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 151
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Converts to matrix.
+  example: []
+  syntax:
+    content: public Matrix ToMatrix { get; }
+    parameters: []
+    return:
+      type: QuantumComputing.LinearAlgebra.Matrix
+      description: To <xref href="QuantumComputing.LinearAlgebra.Matrix" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public ReadOnly Property ToMatrix As Matrix
+  overload: QuantumComputing.LinearAlgebra.Vector.ToMatrix*
+- uid: QuantumComputing.LinearAlgebra.Vector.GetState
+  commentId: M:QuantumComputing.LinearAlgebra.Vector.GetState
+  id: GetState
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: GetState()
+  nameWithType: Vector.GetState()
+  fullName: QuantumComputing.LinearAlgebra.Vector.GetState()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: GetState
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 157
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Gets the state of the <xref href="QuantumComputing.LinearAlgebra.Vector" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Complex[] GetState()
+    return:
+      type: System.Numerics.Complex[]
+      description: An array of <xref href="System.Numerics.Complex" data-throw-if-not-resolved="false"></xref> of the elements.
+    content.vb: Public Function GetState() As Complex()
+  overload: QuantumComputing.LinearAlgebra.Vector.GetState*
+- uid: QuantumComputing.LinearAlgebra.Vector.ToString
+  commentId: M:QuantumComputing.LinearAlgebra.Vector.ToString
+  id: ToString
+  parent: QuantumComputing.LinearAlgebra.Vector
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Vector.ToString()
+  fullName: QuantumComputing.LinearAlgebra.Vector.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumComputing/LinearAlgebra_vector.cs
+      branch: main
+      repo: https://github.com/0RenDev/Quantum-Computing-Tool.git
+    id: ToString
+    path: src/QuantumComputing/LinearAlgebra_vector.cs
+    startLine: 165
+  namespace: QuantumComputing.LinearAlgebra
+  summary: Converts to string.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> that represents this instance.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: QuantumComputing.LinearAlgebra.Vector.ToString*
+references:
+- uid: QuantumComputing.LinearAlgebra
+  commentId: N:QuantumComputing.LinearAlgebra
+  href: QuantumComputing.html
+  name: QuantumComputing.LinearAlgebra
+  nameWithType: QuantumComputing.LinearAlgebra
+  fullName: QuantumComputing.LinearAlgebra
+  spec.csharp:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.LinearAlgebra
+    name: LinearAlgebra
+    href: QuantumComputing.LinearAlgebra.html
+  spec.vb:
+  - uid: QuantumComputing
+    name: QuantumComputing
+    href: QuantumComputing.html
+  - name: .
+  - uid: QuantumComputing.LinearAlgebra
+    name: LinearAlgebra
+    href: QuantumComputing.LinearAlgebra.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Numerics.Complex[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  name: Complex[]
+  nameWithType: Complex[]
+  fullName: System.Numerics.Complex[]
+  nameWithType.vb: Complex()
+  fullName.vb: System.Numerics.Complex()
+  name.vb: Complex()
+  spec.csharp:
+  - uid: System.Numerics.Complex
+    name: Complex
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Numerics.Complex
+    name: Complex
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  - name: (
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Vector
+  commentId: T:QuantumComputing.LinearAlgebra.Vector
+  parent: QuantumComputing.LinearAlgebra
+  href: QuantumComputing.LinearAlgebra.Vector.html
+  name: Vector
+  nameWithType: Vector
+  fullName: QuantumComputing.LinearAlgebra.Vector
+- uid: QuantumComputing.LinearAlgebra.Vector.#ctor*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Vector.#ctor
+  href: QuantumComputing.LinearAlgebra.Vector.html#QuantumComputing_LinearAlgebra_Vector__ctor_System_Int32_
+  name: Vector
+  nameWithType: Vector.Vector
+  fullName: QuantumComputing.LinearAlgebra.Vector.Vector
+  nameWithType.vb: Vector.New
+  fullName.vb: QuantumComputing.LinearAlgebra.Vector.New
+  name.vb: New
+- uid: QuantumComputing.LinearAlgebra.Vector.Conjugate*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Vector.Conjugate
+  href: QuantumComputing.LinearAlgebra.Vector.html#QuantumComputing_LinearAlgebra_Vector_Conjugate
+  name: Conjugate
+  nameWithType: Vector.Conjugate
+  fullName: QuantumComputing.LinearAlgebra.Vector.Conjugate
+- uid: QuantumComputing.LinearAlgebra.Vector.ConjugateInPlace*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Vector.ConjugateInPlace
+  href: QuantumComputing.LinearAlgebra.Vector.html#QuantumComputing_LinearAlgebra_Vector_ConjugateInPlace
+  name: ConjugateInPlace
+  nameWithType: Vector.ConjugateInPlace
+  fullName: QuantumComputing.LinearAlgebra.Vector.ConjugateInPlace
+- uid: QuantumComputing.LinearAlgebra.Vector.IsRowVector*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Vector.IsRowVector
+  href: QuantumComputing.LinearAlgebra.Vector.html#QuantumComputing_LinearAlgebra_Vector_IsRowVector
+  name: IsRowVector
+  nameWithType: Vector.IsRowVector
+  fullName: QuantumComputing.LinearAlgebra.Vector.IsRowVector
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: QuantumComputing.LinearAlgebra.Vector.IsColVector*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Vector.IsColVector
+  href: QuantumComputing.LinearAlgebra.Vector.html#QuantumComputing_LinearAlgebra_Vector_IsColVector
+  name: IsColVector
+  nameWithType: Vector.IsColVector
+  fullName: QuantumComputing.LinearAlgebra.Vector.IsColVector
+- uid: QuantumComputing.LinearAlgebra.Vector.Transpose*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Vector.Transpose
+  href: QuantumComputing.LinearAlgebra.Vector.html#QuantumComputing_LinearAlgebra_Vector_Transpose_QuantumComputing_LinearAlgebra_Vector_
+  name: Transpose
+  nameWithType: Vector.Transpose
+  fullName: QuantumComputing.LinearAlgebra.Vector.Transpose
+- uid: QuantumComputing.LinearAlgebra.Vector.TransposeInPlace*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Vector.TransposeInPlace
+  href: QuantumComputing.LinearAlgebra.Vector.html#QuantumComputing_LinearAlgebra_Vector_TransposeInPlace
+  name: TransposeInPlace
+  nameWithType: Vector.TransposeInPlace
+  fullName: QuantumComputing.LinearAlgebra.Vector.TransposeInPlace
+- uid: QuantumComputing.LinearAlgebra.Vector.IsApproximatelyEqual*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Vector.IsApproximatelyEqual
+  href: QuantumComputing.LinearAlgebra.Vector.html#QuantumComputing_LinearAlgebra_Vector_IsApproximatelyEqual_QuantumComputing_LinearAlgebra_Vector_System_Double_
+  name: IsApproximatelyEqual
+  nameWithType: Vector.IsApproximatelyEqual
+  fullName: QuantumComputing.LinearAlgebra.Vector.IsApproximatelyEqual
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: QuantumComputing.LinearAlgebra.Matrix
+  commentId: T:QuantumComputing.LinearAlgebra.Matrix
+  parent: QuantumComputing.LinearAlgebra
+  href: QuantumComputing.LinearAlgebra.Matrix.html
+  name: Matrix
+  nameWithType: Matrix
+  fullName: QuantumComputing.LinearAlgebra.Matrix
+- uid: QuantumComputing.LinearAlgebra.Vector.ToMatrix*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Vector.ToMatrix
+  href: QuantumComputing.LinearAlgebra.Vector.html#QuantumComputing_LinearAlgebra_Vector_ToMatrix
+  name: ToMatrix
+  nameWithType: Vector.ToMatrix
+  fullName: QuantumComputing.LinearAlgebra.Vector.ToMatrix
+- uid: System.Numerics.Complex
+  commentId: T:System.Numerics.Complex
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  name: Complex
+  nameWithType: Complex
+  fullName: System.Numerics.Complex
+- uid: QuantumComputing.LinearAlgebra.Vector.GetState*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Vector.GetState
+  href: QuantumComputing.LinearAlgebra.Vector.html#QuantumComputing_LinearAlgebra_Vector_GetState
+  name: GetState
+  nameWithType: Vector.GetState
+  fullName: QuantumComputing.LinearAlgebra.Vector.GetState
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: QuantumComputing.LinearAlgebra.Vector.ToString*
+  commentId: Overload:QuantumComputing.LinearAlgebra.Vector.ToString
+  href: QuantumComputing.LinearAlgebra.Vector.html#QuantumComputing_LinearAlgebra_Vector_ToString
+  name: ToString
+  nameWithType: Vector.ToString
+  fullName: QuantumComputing.LinearAlgebra.Vector.ToString
