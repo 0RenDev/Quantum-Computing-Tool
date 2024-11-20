@@ -300,6 +300,7 @@ namespace QuantumCircuit.Tests
 
             CircuitExecution exe = new CircuitExecution(qc);
 
+            exe.ExecuteCircuit();
             double result = exe.GetExpectationValue("ZZ");
             
             double testOne = 1; 
@@ -308,21 +309,24 @@ namespace QuantumCircuit.Tests
             
         }
 
-
-        [Test]public void StringArrayExpectationValueTest(){
+        [Test]
+        public void StringArrayExpectationValueTest(){
             QuantumCircuitBuilder qc = new QuantumCircuitBuilder(2,0);
             qc.AddGateH(0);
             qc.AddGateCX(0, 1);
 
             CircuitExecution exe = new CircuitExecution(qc);
+            exe.ExecuteCircuit();
 
             List<double> result = exe.GetExpectationValue(["IZ", "IX", "ZI", "XI", "ZZ", "XX"]);
 
-            List<double> testTwo = new List<double>{0,0,0,0,1,1}; 
+            List<double> testTwo = new List<double>{0.0,0.0,0.0,0.0,1.0,1.0}; 
 
-            Assert.AreEqual(testTwo, result);
-        
+
+            Assert.AreEqual(testTwo, result);        
         }
+
+
         [Test]
         public void zTest()
         {

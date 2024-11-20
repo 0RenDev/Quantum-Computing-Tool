@@ -3,7 +3,7 @@ using System.Numerics; // Required for Complex numbers
 using System.Runtime.Intrinsics;
 using Console_Testing;
 using LinearAlgebra;
-
+using QuantumCircuits;
 
 class Program
 {
@@ -13,6 +13,8 @@ class Program
         // instance containong examples
         Showcases example = new Showcases();
 
+
+        
         // run specific examples
         //example.timeTestTensor(44, 41, 96, 82);
         //example.timeTestTensor(106, 12, 90, 16);
