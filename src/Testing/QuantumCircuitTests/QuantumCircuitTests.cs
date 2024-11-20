@@ -293,16 +293,18 @@ namespace QuantumCircuit.Tests
 
         [Test]
         public void ExpectationValueTest(){
-            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(3,0);
+            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(2,0);
             qc.AddGateH(0);
-            qc.AddGateH(1);
-            qc.AddGateH(2);
+            qc.AddGateCX(0, 1);
 
-            CircuitExecution exe = new(qc);
+            CircuitExecution exe = new CircuitExecution(qc);
 
-            Double result = exe.GetExpectationValue("XXX", 6);
+            double result = exe.GetExpectationValue("ZZ");
+            
+            double testOne = 1; 
 
-            Console.Write(result);
+            Assert.AreEqual(testOne, result);
+            
             
         }
 
@@ -311,7 +313,7 @@ namespace QuantumCircuit.Tests
         {
             QuantumCircuitBuilder qc = new QuantumCircuitBuilder(3, 0);
             //qc.addGateSWAP(0, 1);
-            CircuitExecution exe = new(qc);
+            CircuitExecution exe = new CircuitExecution(qc);
 
             LinearAlgebra.Vector result = exe.ExecuteCircuit();
             Console.Write(result);
