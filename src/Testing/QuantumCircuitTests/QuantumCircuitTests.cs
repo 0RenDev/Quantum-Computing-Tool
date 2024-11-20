@@ -290,6 +290,22 @@ namespace QuantumCircuit.Tests
             }
         }
 
+
+        [Test]
+        public void ExpectationValueTest(){
+            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(3,0);
+            qc.AddGateH(0);
+            qc.AddGateH(1);
+            qc.AddGateH(2);
+
+            CircuitExecution exe = new(qc);
+
+            Double result = exe.GetExpectationValue("XXX", 6);
+
+            Console.Write(result);
+            
+        }
+
         [Test]
         public void zTest()
         {
@@ -1066,5 +1082,8 @@ namespace QuantumCircuit.Tests
             Assert.IsTrue(allApproxEqual, "Vectors are not approximately equal");
            
         }
+
+    
+    
     }
 }

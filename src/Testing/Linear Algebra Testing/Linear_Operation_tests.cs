@@ -283,6 +283,8 @@ namespace Linear_Algebra_Testing
             Complex[,] expected = new Complex[,] { { 6, 7, 8, 9, 10 }, { 12, 14, 16, 18, 20 }, { 18, 21, 24, 27, 30 }, { 24, 28, 32, 36, 40 }, { 30, 35, 40, 45, 50 } };
             MatrixTestUtilities.AssertMatrixAreEqual(expected, result.elements);
         }
+
+        
     }
 }
 
