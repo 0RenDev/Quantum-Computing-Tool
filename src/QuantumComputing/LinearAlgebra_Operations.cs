@@ -267,7 +267,7 @@ namespace QuantumComputing.LinearAlgebra
             int rows2 = matrix2.rows;
             int cols2 = matrix2.cols;
 
-            // Tensor product matrix is an n*mxk*p matrix for two matrices nxk and mxp
+            // Tensor product matrix is an n*m x k*p matrix for two matrices nxk and mxp
             Complex[,] resultElements = new Complex[rows1 * rows2, cols1 * cols2];
 
             for (int i = 0; i < rows1; i++)
