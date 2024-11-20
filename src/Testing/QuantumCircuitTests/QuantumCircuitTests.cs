@@ -13,6 +13,7 @@ using System.Globalization;
 using Assert = NUnit.Framework.Assert;
 using System.Diagnostics;
 using OfficeOpenXml;
+using System.Xml.Schema;
 
 namespace QuantumCircuit.Tests
 {
@@ -292,7 +293,7 @@ namespace QuantumCircuit.Tests
 
 
         [Test]
-        public void ExpectationValueTest(){
+        public void OneStringExpectationValueTest(){
             QuantumCircuitBuilder qc = new QuantumCircuitBuilder(2,0);
             qc.AddGateH(0);
             qc.AddGateCX(0, 1);
@@ -305,9 +306,23 @@ namespace QuantumCircuit.Tests
 
             Assert.AreEqual(testOne, result);
             
-            
         }
 
+
+        [Test]public void StringArrayExpectationValueTest(){
+            QuantumCircuitBuilder qc = new QuantumCircuitBuilder(2,0);
+            qc.AddGateH(0);
+            qc.AddGateCX(0, 1);
+
+            CircuitExecution exe = new CircuitExecution(qc);
+
+            List<double> result = exe.GetExpectationValue(["IZ", "IX", "ZI", "XI", "ZZ", "XX"]);
+
+            List<double> testTwo = new List<double>{0,0,0,0,1,1}; 
+
+            Assert.AreEqual(testTwo, result);
+        
+        }
         [Test]
         public void zTest()
         {
