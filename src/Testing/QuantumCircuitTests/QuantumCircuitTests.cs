@@ -319,7 +319,7 @@ namespace QuantumCircuit.Tests
             List<double> result = exe.GetExpectationValue(["IZ", "IX", "ZI", "XI", "ZZ", "XX"]);
 
             List<double> testTwo = new List<double>{0,0,0,0,1,1}; 
-
+            
             Assert.AreEqual(testTwo, result);
         
         }
@@ -329,6 +329,8 @@ namespace QuantumCircuit.Tests
             QuantumCircuitBuilder qc = new QuantumCircuitBuilder(3, 0);
             //qc.addGateSWAP(0, 1);
             CircuitExecution exe = new CircuitExecution(qc);
+            exe.ExecuteCircuit();
+
 
             QuantumComputing.LinearAlgebra.Vector result = exe.ExecuteCircuit();
             Console.Write(result);
