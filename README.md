@@ -54,6 +54,8 @@ To build and run this project, you will need:
 2. Open LinearAlgebra.sln in Visual Studio.
 3. Build the solution.
 
+---
+
 ## Usage
 
 Here's a simple example of how to build and execute a quantum circuit using our tool:
@@ -88,6 +90,8 @@ public class QuantumCircuitDemo
 }
 ```
 
+---
+
 ## Documentation
 
 This project includes comprehensive documentation to help you use/understnad the ASU Quantum Computing Tool for Education. The documentation provides:
@@ -109,6 +113,8 @@ To build and view the documentation locally:
    docfx ./docfx.json --serve
    ```
 4. Then visit the [Docs](https://localhost:8080)
+
+---
 
 ## Contributing
 
